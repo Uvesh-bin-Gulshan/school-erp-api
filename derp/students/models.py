@@ -39,4 +39,40 @@ class SoftwareSupport(models.Model):
         return self.name
 
 
+class Writer(models.Model):
+    id = models.AutoField(primary_key=True)
+    name = models.CharField(max_length=100)
+    date_of_birth = models.DateField()
+    date_of_join = models.DateField()
+    role = models.CharField(max_length=100)
+    photo = models.ImageField(upload_to='writer_photos', default='default.jpg', null=True, blank=True)
+
+    def __str__(self):
+        return self.name
+
+class Subject(models.Model):
+    id = models.AutoField(primary_key=True)
+    name = models.CharField(max_length=100)
+    sub_code = models.CharField(max_length=20, unique=True)
+    description = models.TextField(blank=True, null=True)
+
+    def __str__(self):
+        return self.name
+
+
+class Book(models.Model):
+    book_id = models.AutoField(primary_key=True)
+    title = models.CharField(max_length=200)
+    author = models.CharField(max_length=100)
+    translator = models.CharField(max_length=100, blank=True, null=True)
+    publisher = models.CharField(max_length=100)
+    num_volumes = models.PositiveIntegerField()
+    publication_year = models.PositiveIntegerField()
+    subject = models.ForeignKey(Subject, on_delete=models.CASCADE, related_name='books')
+    edition = models.CharField(max_length=50, blank=True, null=True)
+    num_copies = models.PositiveIntegerField()
+
+    def __str__(self):
+        return self.title
+
 # Create your models here.
