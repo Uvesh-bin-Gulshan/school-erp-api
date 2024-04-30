@@ -12,3 +12,4 @@ media/
 
 # Ignore any local settings file
 local_settings.py
+migrations/__init__.py

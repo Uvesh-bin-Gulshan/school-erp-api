@@ -1,9 +1,11 @@
 from django.db import models
-from django.contrib.auth.models import User,AbstractUser
+from django.contrib.auth.models import AbstractUser
 
 
 class User(AbstractUser):
-   pass
+    roles=models.ManyToManyField('Role',blank=False)
+
+ 
 
 
 class Role(models.Model):
@@ -20,10 +22,5 @@ class Permission(models.Model):
     def __str__(self):
         return self.name
     
-class UserProfile(models.Model):
-    user=models.OneToOneField(User,on_delete=models.CASCADE)
-    roles=models.ManyToManyField(Role,blank=False)
-
-    def __str__(self):
-        return self.user.username
+   
     
