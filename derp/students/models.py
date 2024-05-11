@@ -46,3 +46,8 @@ class Grade(models.Model):
     id=models.AutoField(unique=True,primary_key=True)
     grade_id=models.CharField(shortuuid,unique=True,max_length=6,editable=False)
     name=models.CharField(max_length=25)
+
+
+
+    def __str__(self):
+        return self.name
