@@ -28,7 +28,7 @@ class StudentDetail(models.Model):
 
 
 class TeacherProfile(models.Model):
-    id = models.AutoField(primary_key=True,unique=True,)
+    id = models.AutoField(primary_key=True)
     teacher_id=models.CharField(shortuuid,max_length=6,editable=False)
 
     name = models.CharField(max_length=100)
@@ -43,8 +43,8 @@ class TeacherProfile(models.Model):
         return self.name
 
 class Grade(models.Model):
-    id=models.AutoField(unique=True,primary_key=True)
-    grade_id=models.CharField(shortuuid,unique=True,max_length=6,editable=False)
+    id=models.AutoField(primary_key=True)
+    grade_id=models.CharField(shortuuid,max_length=6,editable=False)
     name=models.CharField(max_length=25)
 
 

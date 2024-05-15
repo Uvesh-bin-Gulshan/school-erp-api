@@ -30,7 +30,12 @@ class Admission(models.Model):
     admission_id=models.CharField(shortuuid,max_length=6,editable=False)
     student_name = models.CharField(max_length=200)
     guardian_name = models.CharField(max_length=40)
-    profile_image = models.ImageField(upload_to='admission_images/', blank=True, null=True)
+    profile_image = models.ImageField(
+    upload_to='admission_images/',
+    default='admission_images/default_profile.png',
+    blank=True,
+    null=True,
+)   
     applied_for = models.ForeignKey(Grade,max_length=100,on_delete=models.PROTECT)
     date_of_birth = models.DateField()
     state = models.CharField(max_length=100)
@@ -62,6 +67,7 @@ class Student(models.Model):
     admission = models.OneToOneField(Admission,on_delete=models.CASCADE)
     class Meta:
         ordering = ['id']
+
     
     
 @receiver(post_save, sender=Admission)
