@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'userauth.apps.UserauthAppConfig',
     'admission.apps.AdmissionConfig',
     'students.apps.StudentsConfig',
+    'academic.apps.AcademicAppConfig',
      'import_export',
     
 
