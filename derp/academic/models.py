@@ -51,8 +51,6 @@ class MonthlySubjectSyllabusStatus(models.Model):
       monthly_summary=models.CharField(max_length=300)
 
 
-
-
 class SyllabusStatusVerification(models.Model):
         status_verification_id=models.CharField(shortuuid,max_length=6,editable=False,primary_key=True)
         monthly_Syllabus_approval=models.ForeignKey(MonthlySubjectSyllabusStatus,on_delete=models.PROTECT)
