@@ -35,7 +35,35 @@ class Subject(models.Model):
         course_id=models.ForeignKey(Course,on_delete=models.PROTECT,null=False,blank=False)
 
 
-class SubjectSyllabusStatus(models.Model):
+class AnnuallySubjectSyllabusStatus(models.Model):
+      annual_status_id=models.CharField(shortuuid,max_length=6,editable=False,primary_key=True)
       subject_code=models.ForeignKey(Subject,on_delete=models.PROTECT)
       teacher=models.CharField(max_length=20)
+      syllabus_status=models.IntegerField()
+      yearly_summary=models.CharField(max_length=300)
+
+
+class MonthlySubjectSyllabusStatus(models.Model):
+      month_status_id=models.CharField(shortuuid,max_length=6,editable=False,primary_key=True)
+      subject_syllabus_status=models.ForeignKey(AnnuallySubjectSyllabusStatus,on_delete=models.PROTECT)
+      month=models.DateField()
+      status=models.IntegerField()
+      monthly_summary=models.CharField(max_length=300)
+
+
+
+
+class SyllabusStatusVerification(models.Model):
+        status_verification_id=models.CharField(shortuuid,max_length=6,editable=False,primary_key=True)
+        monthly_Syllabus_approval=models.ForeignKey(MonthlySubjectSyllabusStatus,on_delete=models.PROTECT)
+        feedback=models.TextField(max_length=300,null=True,blank=True)
+        is_approved=models.BooleanField(default=False)
+        approved_date=models.DateTimeField()
+
+
+      
+
+
+
+
 
