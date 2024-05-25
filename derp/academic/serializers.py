@@ -26,7 +26,7 @@ class AnnuallySubjectSyllabusStatusSerializer(serializers.ModelSerializer):
 class MonthlySubjectSyllabusStatusSerializer(serializers.ModelSerializer):
     class Meta:
         model= Department
-        fields=['month_status_id','subject_syllabus_status','month','status','monthly_summary']
+        fields=['month_status_id','annual_status','month','status','monthly_summary']
 
 class SyllabusStatusVerificationSerializer(serializers.ModelSerializer):
     class Meta:
