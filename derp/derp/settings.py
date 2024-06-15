@@ -1,3 +1,4 @@
+from import_export.formats.base_formats import XLSX
 """
 Django settings for derp project.
 
@@ -40,21 +41,23 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'rest_framework',
+    'rest_framework.authtoken',
     'userauth.apps.UserauthAppConfig',
     'admission.apps.AdmissionConfig',
     'students.apps.StudentsConfig',
     'academic.apps.AcademicAppConfig',
      'import_export',
-    
+     'corsheaders',
 
 ]
-from import_export.formats.base_formats import XLSX
 IMPORT_EXPORT_FORMATS = [XLSX]
 ADMIN_CHARTS_NVD3_JS_PATH = 'bow/nvd3/build/nv.d3.js'
 ADMIN_CHARTS_NVD3_CSS_PATH = 'bow/nvd3/build/nv.d3.css'
 ADMIN_CHARTS_D3_JS_PATH = 'bow/d3/d3.js'
 
 MIDDLEWARE = [
+    'corsheaders.middleware.CorsMiddleware',
+
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -65,6 +68,7 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = 'derp.urls'
+CORS_ALLOW_ALL_ORIGINS = True
 
 TEMPLATES = [
     {

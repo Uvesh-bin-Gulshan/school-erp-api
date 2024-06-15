@@ -21,7 +21,10 @@ from django.conf.urls.static import static
 urlpatterns = [
     path('admin/', admin.site.urls),
     # path('admin_tools_stats/', include('admin_tools_stats.urls')),
-    path('academic',include('academic.urls',namespace='academic'))
+    path('academic/',include('academic.urls',namespace='academic')),
+    path('admission/',include('admission.urls',namespace='admission')),
+
+    path('userauth/',include('userauth.urls',namespace='userauth')),
 
 ]
 if settings.DEBUG:
