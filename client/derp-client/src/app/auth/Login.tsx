@@ -1,6 +1,7 @@
 "use client"
 import React from 'react'
 
+
 import {
   Form,
   FormControl,
@@ -20,6 +21,9 @@ import toast from "react-hot-toast"
 import { redirect } from 'next/navigation'
 import { failedtoastMessage, submitForm, successtoastMessage } from '@/lib/services'
 import { useRouter } from 'next/navigation'
+import { FormInput } from '../_component/FormInput'
+import SelectComponent from '../_component/SelectComponent'
+import SubmitButton from '../_component/SubmitButton'
 // import {page}  from '@/app/admin/page'
 const Login = () => {
   const form = useForm({
@@ -30,7 +34,11 @@ const Login = () => {
     },
   });
   const router = useRouter();
-  
+  const options = [
+    { value: 'light', label: 'Light' },
+    { value: 'dark', label: 'Dark' },
+    { value: 'system', label: 'System' },
+  ]
   const handleForm = async (event: React.FormEvent) => {
     event.preventDefault();
     
@@ -59,9 +67,9 @@ const Login = () => {
       <form onSubmit={handleForm} className="space-y-8 w-56  text-center">
         <FormField name="username" render={({ field }) => (
           <FormItem>
-            <FormLabel>Username</FormLabel>
             <FormControl>
-              <Input placeholder="shadcn" {...field} />
+            <FormInput {...field} id="username" label="User Name" type="text" />
+
             </FormControl>
             <FormDescription>
               This is your public display name.
@@ -69,6 +77,7 @@ const Login = () => {
             <FormMessage />
           </FormItem>
         )} />
+       
         <FormField name="password" render={({ field }) => (
           <FormItem>
             <FormLabel>Password</FormLabel>
@@ -81,7 +90,7 @@ const Login = () => {
             <FormMessage />
           </FormItem>
         )} />
-        <Button type="submit">Submit</Button>
+      <SubmitButton text="Save"  />
       </form>
     </Form>
 

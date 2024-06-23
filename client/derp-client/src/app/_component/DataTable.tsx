@@ -2,6 +2,9 @@
 
 import {
   ColumnDef,
+  ColumnFiltersState,
+  getFilteredRowModel,
+
   flexRender,
   getCoreRowModel,
   useReactTable,
@@ -15,6 +18,9 @@ import {
   TableHeader,
   TableRow,
 } from "@/components/ui/table"
+import React from "react"
+import { Input } from "@/components/ui/input"
+import FilterInput from "./FilterInput"
 
 interface DataTableProps<TData, TValue> {
   columns: ColumnDef<TData, TValue>[]
@@ -25,16 +31,39 @@ export function DataTable<TData, TValue>({
   columns,
   data,
 }: DataTableProps<TData, TValue>) {
+  const [columnFilters, setColumnFilters] = React.useState<ColumnFiltersState>(
+    []
+  )
   const table = useReactTable({
     data,
     columns,
+    onColumnFiltersChange: setColumnFilters,
+    getFilteredRowModel: getFilteredRowModel(),
     getCoreRowModel: getCoreRowModel(),
+    state: {
+      columnFilters,
+    },
   })
-
+  
   return (
+
+    <>
+          <FilterInput column="email" table={table} />
+
+    
+    <div className="flex items-center py-4">
+    <Input
+      placeholder="Filter emails..."
+      value={(table.getColumn("email")?.getFilterValue() as string) ?? ""}
+      onChange={(event) =>
+        table.getColumn("email")?.setFilterValue(event.target.value)
+      }
+      className="max-w-sm"
+    />
+  </div>
     <div className="rounded-xl  ">
       <Table>
-        <TableHeader className="bg-gray-100 text-sx">
+        <TableHeader className="bg-white text-sx">
           {table.getHeaderGroups().map((headerGroup) => (
             <TableRow className="" key={headerGroup.id}>
               {headerGroup.headers.map((header) => {
@@ -76,5 +105,7 @@ export function DataTable<TData, TValue>({
         </TableBody>
       </Table>
     </div>
+    
+    </>
   )
 }
