@@ -7,7 +7,7 @@ import { BreadcrumbWithCustomSeparator } from '@/app/_component/BreadCrumb'
 const items = [
   { href: "/", label: "Home" },
   { href: "/components", label: "Components" },
-  { label: "Breadcrumb" },
+  { label: "Admissions" },
 ];
 const Page =async () => {
     const data= await getAdmissionList()
@@ -18,10 +18,10 @@ const Page =async () => {
 
 <Sidebar>
 <div>
-<BreadcrumbWithCustomSeparator items={items} separator={<span> / </span>} />
+<BreadcrumbWithCustomSeparator items={items} separator={<span> :: </span>} />
 </div>
 
-<div className='m-12 bg-white '>
+<div className='m-12 bg-white p-4 h-96'>
   <AddAdmissions />
 
 <ViewAdmissions  data={data}/>

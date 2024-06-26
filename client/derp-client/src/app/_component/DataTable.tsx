@@ -21,6 +21,7 @@ import {
 import React from "react"
 import { Input } from "@/components/ui/input"
 import FilterInput from "./FilterInput"
+import { Filter } from "lucide-react"
 
 interface DataTableProps<TData, TValue> {
   columns: ColumnDef<TData, TValue>[]
@@ -48,13 +49,12 @@ export function DataTable<TData, TValue>({
   return (
 
     <>
-          <FilterInput column="email" table={table} />
 
     
     <div className="flex items-center py-4">
     <Input
       placeholder="Filter emails..."
-      value={(table.getColumn("email")?.getFilterValue() as string) ?? ""}
+      value={(table.getColumn(`${columnFilters}`)?.getFilterValue() as string) ?? ""}
       onChange={(event) =>
         table.getColumn("email")?.setFilterValue(event.target.value)
       }

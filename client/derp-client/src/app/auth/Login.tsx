@@ -63,17 +63,16 @@ const Login = () => {
   
   return (
 <>
+
 <Form {...form} >
-      <form onSubmit={handleForm} className="space-y-8 w-56  text-center">
-        <FormField name="username" render={({ field }) => (
-          <FormItem>
+      <form onSubmit={handleForm} className="text-left p-2 ">
+        <FormField  name="username" render={({ field }) => (
+          <FormItem >
             <FormControl>
             <FormInput {...field} id="username" label="User Name" type="text" />
 
             </FormControl>
-            <FormDescription>
-              This is your public display name.
-            </FormDescription>
+        
             <FormMessage />
           </FormItem>
         )} />
@@ -84,13 +83,11 @@ const Login = () => {
             <FormControl>
               <Input type="password" {...field} />
             </FormControl>
-            <FormDescription>
-              This is your password.
-            </FormDescription>
+        
             <FormMessage />
           </FormItem>
         )} />
-      <SubmitButton text="Save"  />
+      <SubmitButton className="w-full mt-4" text="Save"  />
       </form>
     </Form>
 

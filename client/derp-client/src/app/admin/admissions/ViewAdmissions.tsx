@@ -11,8 +11,8 @@ const ViewAdmissions = ({data}:{data:any}) => {
 
 <DataTable 
 
-
 columns={columns}
+
 
 data={data}/>
 

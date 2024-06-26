@@ -5,8 +5,8 @@ const NavBar = () => {
   return (
 <>
 
-<div>
-<NavLink href='/'>Home</NavLink>
+<div >
+<NavLink href='/'>Home</NavLink><br/>
 <NavLink href='../admin/admissions'>Admissions</NavLink>
 
 
