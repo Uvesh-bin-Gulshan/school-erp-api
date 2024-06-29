@@ -4,10 +4,12 @@ import {
   ColumnDef,
   ColumnFiltersState,
   getFilteredRowModel,
-
   flexRender,
   getCoreRowModel,
   useReactTable,
+  getPaginationRowModel,
+  SortingState,
+  getSortedRowModel,
 } from "@tanstack/react-table"
 
 import {
@@ -20,54 +22,87 @@ import {
 } from "@/components/ui/table"
 import React from "react"
 import { Input } from "@/components/ui/input"
-import FilterInput from "./FilterInput"
-import { Filter } from "lucide-react"
+import { Button } from "@/components/ui/button"
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
 
 interface DataTableProps<TData, TValue> {
   columns: ColumnDef<TData, TValue>[]
   data: TData[]
+  initialColumnFilters?: ColumnFiltersState
 }
 
 export function DataTable<TData, TValue>({
   columns,
   data,
+  initialColumnFilters = [],
 }: DataTableProps<TData, TValue>) {
   const [columnFilters, setColumnFilters] = React.useState<ColumnFiltersState>(
-    []
+    initialColumnFilters
   )
+  const [sorting, setSorting] = React.useState<SortingState>([])
+  const [selectedColumn, setSelectedColumn] = React.useState<string | undefined>(undefined)
+  const [filterValue, setFilterValue] = React.useState<string>("")
+
   const table = useReactTable({
     data,
     columns,
     onColumnFiltersChange: setColumnFilters,
     getFilteredRowModel: getFilteredRowModel(),
     getCoreRowModel: getCoreRowModel(),
+    getPaginationRowModel: getPaginationRowModel(),
+    onSortingChange: setSorting,
+    getSortedRowModel: getSortedRowModel(),
     state: {
+      sorting,
       columnFilters,
     },
   })
-  
-  return (
 
-    <>
-
-    
-    <div className="flex items-center py-4">
-    <Input
-      placeholder="Filter emails..."
-      value={(table.getColumn(`${columnFilters}`)?.getFilterValue() as string) ?? ""}
-      onChange={(event) =>
-        table.getColumn("email")?.setFilterValue(event.target.value)
+  const handleFilterChange = (columnId: string, value: string) => {
+    setColumnFilters((old) => {
+      const newFilters = old.filter((filter) => filter.id !== columnId)
+      if (value) {
+        newFilters.push({ id: columnId, value })
       }
-      className="max-w-sm"
-    />
-  </div>
-    <div className="rounded-xl  ">
-      <Table>
-        <TableHeader className="bg-white text-sx">
-          {table.getHeaderGroups().map((headerGroup) => (
-            <TableRow className="" key={headerGroup.id}>
-              {headerGroup.headers.map((header) => {
-                return (
+      return newFilters
+    })
+  }
+
+  React.useEffect(() => {
+    if (selectedColumn) {
+      handleFilterChange(selectedColumn, filterValue)
+    }
+  }, [selectedColumn, filterValue])
+
+  return (
+    <>
+      <div className="flex items-center py-4 space-x-2">
+        <Select onValueChange={(value) => setSelectedColumn(value)}>
+          <SelectTrigger className="w-48">
+            <SelectValue placeholder="Select a column" />
+          </SelectTrigger>
+          <SelectContent>
+            {columns.map((column) => (
+              <SelectItem key={column.id ?? column.accessorKey as string} value={column.id ?? column.accessorKey as string}>
+                {typeof column.header === "function" ? column.id ?? column.accessorKey : column.header}
+              </SelectItem>
+            ))}
+          </SelectContent>
+        </Select>
+        <Input
+          placeholder="Enter filter value"
+          value={filterValue}
+          onChange={(event) => setFilterValue(event.target.value)}
+          className="max-w-sm"
+          disabled={!selectedColumn}
+        />
+      </div>
+      <div className="rounded-xl">
+        <Table>
+          <TableHeader className="bg-white text-sx">
+            {table.getHeaderGroups().map((headerGroup) => (
+              <TableRow key={headerGroup.id}>
+                {headerGroup.headers.map((header) => (
                   <TableHead key={header.id}>
                     {header.isPlaceholder
                       ? null
@@ -76,36 +111,49 @@ export function DataTable<TData, TValue>({
                           header.getContext()
                         )}
                   </TableHead>
-                )
-              })}
-            </TableRow>
-          ))}
-        </TableHeader>
-        <TableBody>
-          {table.getRowModel().rows?.length ? (
-            table.getRowModel().rows.map((row) => (
-              <TableRow className=" "
-                key={row.id}
-                data-state={row.getIsSelected() && "selected"}
-              >
-                {row.getVisibleCells().map((cell) => (
-                  <TableCell className="border-b-2 bg-white border-yellow-600" key={cell.id}>
-                    {flexRender(cell.column.columnDef.cell, cell.getContext())}
-                  </TableCell>
                 ))}
               </TableRow>
-            ))
-          ) : (
-            <TableRow>
-              <TableCell colSpan={columns.length} className="h-24 text-center">
-                No results.
-              </TableCell>
-            </TableRow>
-          )}
-        </TableBody>
-      </Table>
-    </div>
-    
+            ))}
+          </TableHeader>
+          <TableBody>
+            {table.getRowModel().rows.length ? (
+              table.getRowModel().rows.map((row) => (
+                <TableRow key={row.id} data-state={row.getIsSelected() && "selected"}>
+                  {row.getVisibleCells().map((cell) => (
+                    <TableCell key={cell.id} className="border-b-2 bg-white border-yellow-600">
+                      {flexRender(cell.column.columnDef.cell, cell.getContext())}
+                    </TableCell>
+                  ))}
+                </TableRow>
+              ))
+            ) : (
+              <TableRow>
+                <TableCell colSpan={columns.length} className="h-24 text-center">
+                  No results.
+                </TableCell>
+              </TableRow>
+            )}
+          </TableBody>
+        </Table>
+      </div>
+      <div className="flex items-center justify-end space-x-2 py-4">
+        <Button
+          variant="outline"
+          size="sm"
+          onClick={() => table.previousPage()}
+          disabled={!table.getCanPreviousPage()}
+        >
+          Previous
+        </Button>
+        <Button
+          variant="outline"
+          size="sm"
+          onClick={() => table.nextPage()}
+          disabled={!table.getCanNextPage()}
+        >
+          Next
+        </Button>
+      </div>
     </>
   )
 }

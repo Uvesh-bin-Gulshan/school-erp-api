@@ -11,6 +11,7 @@ const items = [
 ];
 const Page =async () => {
     const data= await getAdmissionList()
+    console.log(data)
   return (
 <>
 

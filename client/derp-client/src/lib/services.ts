@@ -27,7 +27,7 @@ export const submitForm = async (data:any) => {
 
 
 
- export const getAdmissionList=async()=>{
+export const getAdmissionList=async()=>{
 const response =await fetch(ADMISSION_LIST)
 console.log(response)
 if(!response.ok){
@@ -38,10 +38,10 @@ const data = await response.json();
 console.log(data)
 return data;
 
- }
+}
 
 
- export const  successtoastMessage=(message:string)=>{
+export const  successtoastMessage=(message:string)=>{
   toast.success(message);
  }
 
