@@ -3,7 +3,7 @@ from .views import *
 app_name='academic'
 urlpatterns = [
    # Departtment APIs
-   path('/department/lists',DepartmentView.as_view({'get':'list'}),name='department-list'),
+   path('/department/list',DepartmentView.as_view({'get':'list'}),name='department-list'),
    path('/department/create',DepartmentView.as_view({'post':'create'}),name='department-create'),
    path('/department/retrieve/<str:pk>/',DepartmentView.as_view({'get':'retrieve'}),name='department-retrieve'),
    path('/department/delete/<str:pk>/',DepartmentView.as_view({'delete':'delete'}),name='department-delete'),
