@@ -19,6 +19,14 @@ class DepartmentView(viewsets.ViewSet):
             return Response(serializer.data,status=201)
         return Response(serializer.errors,status=400)
     
+    def retrieve(self, request, pk=None):
+        try:
+            department = Department.objects.get(pk=pk)
+        except Department.DoesNotExist:
+            return Response(status=404)
+        serializer = DepartmentSerializer(department)
+        return Response(serializer.data)
+    
     def update(self,request,pk):
         department=Department.objects.get(pk=pk)
         serializer=DepartmentSerializer(department,data=request.data)
@@ -45,6 +53,14 @@ class SubjectView(viewsets.ViewSet):
             serializer.save()
             return Response(serializer.data,status=201)
         return Response(serializer.errors,status=400)
+    
+    def retrieve(self, request, pk=None):
+        try:
+            subject = Subject.objects.get(pk=pk)
+        except Subject.DoesNotExist:
+            return Response(status=404)
+        serializer = SubjectSerializer(subject)
+        return Response(serializer.data)
     
     def update(self,request,pk):
         subject=Subject.objects.get(pk=pk)
@@ -73,6 +89,14 @@ class CourseView(viewsets.ViewSet):
             return Response(serializer.data,status=201)
         return Response(serializer.errors,status=400)
     
+    def retrieve(self, request, pk=None):
+        try:
+            course = Course.objects.get(pk=pk)
+        except Course.DoesNotExist:
+            return Response(status=404)
+        serializer = CourseSerializer(course)
+        return Response(serializer.data)
+    
     def update(self,request,pk):
         course=Course.objects.get(pk=pk)
         serializer=CourseSerializer(course,data=request.data)
@@ -99,6 +123,14 @@ class AnnuallySubjectSyllabusStatusView(viewsets.ViewSet):
             serializer.save()
             return Response(serializer.data,status=201)
         return Response(serializer.errors,status=400)
+    
+    def retrieve(self, request, pk=None):
+        try:
+            status = AnnuallySubjectSyllabusStatus.objects.get(pk=pk)
+        except AnnuallySubjectSyllabusStatus.DoesNotExist:
+            return Response(status=404)
+        serializer = AnnuallySubjectSyllabusStatusSerializer(status)
+        return Response(serializer.data)
     
     def update(self,request,pk):
         status=AnnuallySubjectSyllabusStatus.objects.get(pk=pk)
@@ -127,6 +159,14 @@ class MonthlySubjectSyllabusStatusView(viewsets.ViewSet):
             return Response(serializer.data,status=201)
         return Response(serializer.errors,status=400)
     
+    def retrieve(self, request, pk=None):
+        try:
+            status = MonthlySubjectSyllabusStatus.objects.get(pk=pk)
+        except MonthlySubjectSyllabusStatus.DoesNotExist:
+            return Response(status=404)
+        serializer = MonthlySubjectSyllabusStatusSerializer(status)
+        return Response(serializer.data)
+    
     def update(self,request,pk):
         status=MonthlySubjectSyllabusStatus.objects.get(pk=pk)
         serializer=MonthlySubjectSyllabusStatus(status,data=request.data)
@@ -141,29 +181,37 @@ class MonthlySubjectSyllabusStatusView(viewsets.ViewSet):
         return Response(status=204)
     
 # SyllabusStatusVerification View
-class SyllabusStatusVerification(viewsets.ViewSet):
+class SyllabusStatusVerificationView(viewsets.ViewSet):
     def list(self,request):
         queryset=SyllabusStatusVerification.objects.all()
         serializer=SyllabusStatusVerificationSerializer(queryset,many=True)
         return Response(serializer.data)
     
     def create(self,request):
-        serializer=MonthlySubjectSyllabusStatusSerializer(data=request.data)
+        serializer=SyllabusStatusVerificationSerializer(data=request.data)
         if serializer.is_valid():
             serializer.save()
             return Response(serializer.data,status=201)
         return Response(serializer.errors,status=400)
     
+    def retrieve(self, request, pk=None):
+        try:
+            verification = SyllabusStatusVerification.objects.get(pk=pk)
+        except SyllabusStatusVerification.DoesNotExist:
+            return Response(status=404)
+        serializer = SyllabusStatusVerificationSerializer(verification)
+        return Response(serializer.data)
+    
     def update(self,request,pk):
-        status=MonthlySubjectSyllabusStatus.objects.get(pk=pk)
-        serializer=MonthlySubjectSyllabusStatus(status,data=request.data)
+        status=SyllabusStatusVerification.objects.get(pk=pk)
+        serializer=SyllabusStatusVerification(status,data=request.data)
         if serializer.is_valid():
             serializer.save()
             return Response(serializer.data,status=201)
         return Response(serializer.errors,status=400)
     
     def delete(self,request,pk):
-        status=MonthlySubjectSyllabusStatus.objects.get(pk=pk)
+        status=SyllabusStatusVerification.objects.get(pk=pk)
         status.delete()
         return Response(status=204)
    
