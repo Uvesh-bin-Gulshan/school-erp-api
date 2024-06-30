@@ -44,7 +44,7 @@ INSTALLED_APPS = [
     'admission.apps.AdmissionConfig',
     'students.apps.StudentsConfig',
     'academic.apps.AcademicAppConfig',
-     'import_export',
+    'import_export',
     
 
 ]
@@ -282,5 +282,3 @@ JAZZMIN_SETTINGS = {
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 AUTH_USER_MODEL='userauth.User'
-
-

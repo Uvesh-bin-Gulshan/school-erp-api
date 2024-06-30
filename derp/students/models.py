@@ -1,5 +1,6 @@
 from django.db import models
 import uuid
+from academic.models import *
 
 def shortuuid():
    return str(uuid.uuid4().hex)[:6]

@@ -5,18 +5,18 @@ from .models import Department,Course,AnnuallySubjectSyllabusStatus,Subject,Mont
 class DepartmentSerializer(serializers.ModelSerializer):
     class Meta:
         model= Department
-        fields=['department_id','department_code','name']
+        fields=['department_id','name']
         
 
 class CourseSerializer(serializers.ModelSerializer):
     class Meta:
         model= Department
-        fields=['course_id','course_code','name','department_id','effective_date']
+        fields=['course_id','name','department_id','effective_date']
 
 class SubjectSerializer(serializers.ModelSerializer):
     class Meta:
         model= Department
-        fields=['subject_id','subject_code','name','syllabus_count','description','course_id']
+        fields=['subject_id','name','syllabus_count','description','course_id']
 
 class AnnuallySubjectSyllabusStatusSerializer(serializers.ModelSerializer):
     class Meta:
