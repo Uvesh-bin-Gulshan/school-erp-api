@@ -22,9 +22,12 @@ const SubmitButton = ({
 
   return (
     <>
-      <Button  className={cn("bg-amber-400 hover:bg-amber-700",className)} onClick={handleClick} {...rest}>
+    <div className='p-2 '>
+
+      <Button  className={cn("bg-gradient-to-r from-cyan-900 via-cyan-800 to-cyan-700 hover:text-cyan-800   hover:bg-white",className)} onClick={handleClick} {...rest}>
         {text}
       </Button>
+    </div>
     </>
   );
 };

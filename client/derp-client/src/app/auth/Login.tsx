@@ -65,11 +65,11 @@ const Login = () => {
 <>
 
 <Form {...form} >
-      <form onSubmit={handleForm} className="text-left p-2 ">
+      <form onSubmit={handleForm} className="">
         <FormField  name="username" render={({ field }) => (
           <FormItem >
             <FormControl>
-            <FormInput {...field} id="username" label="User Name" type="text" />
+            <FormInput {...field} id="username" label="Username" type="text" />
 
             </FormControl>
         
@@ -79,15 +79,14 @@ const Login = () => {
        
         <FormField name="password" render={({ field }) => (
           <FormItem>
-            <FormLabel>Password</FormLabel>
             <FormControl>
-              <Input type="password" {...field} />
+            <FormInput {...field} id="password" label="Password" type="text" />
             </FormControl>
         
             <FormMessage />
           </FormItem>
         )} />
-      <SubmitButton className="w-full mt-4" text="Save"  />
+      <SubmitButton className="w-full" text="Save"  />
       </form>
     </Form>
 
