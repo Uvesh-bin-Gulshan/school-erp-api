@@ -5,30 +5,30 @@ from .models import Department,Course,AnnuallySubjectSyllabusStatus,Subject,Mont
 class DepartmentSerializer(serializers.ModelSerializer):
     class Meta:
         model= Department
-        fields=['department_id','department_code','name']
+        fields='__all__'
         
 
 class CourseSerializer(serializers.ModelSerializer):
     class Meta:
-        model= Department
-        fields=['course_id','course_code','name','department_id','effective_date']
+        model= Course   
+        fields='__all__'
 
 class SubjectSerializer(serializers.ModelSerializer):
     class Meta:
-        model= Department
-        fields=['subject_id','subject_code','name','syllabus_count','description','course_id']
+        model= Subject
+        fields='__all__'
 
 class AnnuallySubjectSyllabusStatusSerializer(serializers.ModelSerializer):
     class Meta:
-        model= Department
-        fields=['annual_status_id','subject_code','teacher','syllabus_status','yearly_summary']
+        model= AnnuallySubjectSyllabusStatus
+        fields='__all__'
 
 class MonthlySubjectSyllabusStatusSerializer(serializers.ModelSerializer):
     class Meta:
-        model= Department
-        fields=['month_status_id','annual_status','month','status','monthly_summary']
+        model= MonthlySubjectSyllabusStatus
+        fields='__all__'
 
 class SyllabusStatusVerificationSerializer(serializers.ModelSerializer):
     class Meta:
-        model= Department
-        fields=['status_verification_id','monthly_Syllabus_approval','feedback','is_approved','approved_date']
+        model= SyllabusStatusVerification
+        fields='__all__'

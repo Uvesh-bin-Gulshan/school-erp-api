@@ -46,8 +46,8 @@ INSTALLED_APPS = [
     'admission.apps.AdmissionConfig',
     'students.apps.StudentsConfig',
     'academic.apps.AcademicAppConfig',
-     'import_export',
-     'corsheaders',
+    'import_export',
+    
 
 ]
 IMPORT_EXPORT_FORMATS = [XLSX]
@@ -286,5 +286,3 @@ JAZZMIN_SETTINGS = {
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 AUTH_USER_MODEL='userauth.User'
-
-
