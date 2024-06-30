@@ -33,7 +33,7 @@ class DepartmentView(viewsets.ViewSet):
         return Response(status=204)
     
 # Subject View
-class SubjectView(viewsets.Viewset):
+class SubjectView(viewsets.ViewSet):
     def list(self,request):
         queryset=Subject.objects.all()
         serializer=SubjectSerializer(queryset,many=True)
@@ -60,7 +60,7 @@ class SubjectView(viewsets.Viewset):
         return Response(status=204)
     
 # Course View
-class CourseView(viewsets.Viewset):
+class CourseView(viewsets.ViewSet):
     def list(self,request):
         queryset=Course.objects.all()
         serializer=CourseSerializer(queryset,many=True)
@@ -87,7 +87,7 @@ class CourseView(viewsets.Viewset):
         return Response(status=204)
     
 # AnnuallySubjectSyllabusStatus View
-class AnnuallySubjectSyllabusStatusView(viewsets.Viewset):
+class AnnuallySubjectSyllabusStatusView(viewsets.ViewSet):
     def list(self,request):
         queryset=AnnuallySubjectSyllabusStatus.objects.all()
         serializer=AnnuallySubjectSyllabusStatusSerializer(queryset,many=True)
@@ -114,7 +114,7 @@ class AnnuallySubjectSyllabusStatusView(viewsets.Viewset):
         return Response(status=204)
     
 # MonthlySubjectSyllabusStatus View
-class MonthlySubjectSyllabusStatusView(viewsets.Viewset):
+class MonthlySubjectSyllabusStatusView(viewsets.ViewSet):
     def list(self,request):
         queryset=MonthlySubjectSyllabusStatus.objects.all()
         serializer=MonthlySubjectSyllabusStatusSerializer(queryset,many=True)
@@ -141,7 +141,7 @@ class MonthlySubjectSyllabusStatusView(viewsets.Viewset):
         return Response(status=204)
     
 # SyllabusStatusVerification View
-class SyllabusStatusVerification(viewsets.Viewset):
+class SyllabusStatusVerification(viewsets.ViewSet):
     def list(self,request):
         queryset=SyllabusStatusVerification.objects.all()
         serializer=SyllabusStatusVerificationSerializer(queryset,many=True)
