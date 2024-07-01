@@ -12,6 +12,12 @@ export const loginSchema=z.object({
 
 })
 
+export const departmentSchema=z.object({
 
+    name:z.string().min(3,{
+        message:"department name must be at least 3 characters"
+    }),
+   
 
+})
 

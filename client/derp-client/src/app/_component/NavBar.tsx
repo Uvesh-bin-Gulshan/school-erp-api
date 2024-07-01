@@ -5,9 +5,10 @@ const NavBar = () => {
   return (
 <>
 
-<div >
+<div className=''>
 <NavLink href='/'>Home</NavLink><br/>
-<NavLink href='../admin/admissions'>Admissions</NavLink>
+<NavLink href='../admin/admissions'>Admissions</NavLink><br/>
+<NavLink href='../department'>Department</NavLink>
 
 
 

@@ -24,6 +24,7 @@ import { useRouter } from 'next/navigation'
 import { FormInput } from '../_component/FormInput'
 import SelectComponent from '../_component/SelectComponent'
 import SubmitButton from '../_component/SubmitButton'
+import { LOGIN } from '@/lib/routePath'
 // import {page}  from '@/app/admin/page'
 const Login = () => {
   const form = useForm({
@@ -45,7 +46,7 @@ const Login = () => {
     const all_values = form.getValues()
     
     try {
-      const response=await submitForm(all_values);
+      const response=await submitForm(LOGIN,all_values);
       console.log(response?.success)
       if(response?.success){
 

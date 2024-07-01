@@ -17,6 +17,8 @@ import { Input } from '@/components/ui/input'
 import { Button } from '@/components/ui/button'
 import { loginSchema } from '@/lib/zodschema'
 import { submitForm, successtoastMessage, failedtoastMessage } from '@/lib/services'
+import { ADMISSION_LIST } from '@/lib/routePath'
+import { Plus } from 'lucide-react'
 
 const AddAdmissions = () => {
   const router = useRouter();
@@ -32,7 +34,7 @@ const AddAdmissions = () => {
     event.preventDefault();
     const all_values = form.getValues();
     try {
-      const response = await submitForm(all_values);
+      const response = await submitForm(ADMISSION_LIST,all_values);
       if (response?.success) {
         successtoastMessage("successfully created");
         router.push('../admin/admissions/');
@@ -47,8 +49,8 @@ const AddAdmissions = () => {
   return (
     <>
       <Dialog>
-        <DialogTrigger asChild>
-          <Button>New Admission</Button>
+        <DialogTrigger asChild >
+          <Button ><Plus /> Admission</Button>
         </DialogTrigger>
         <DialogContent>
           <DialogHeader>
