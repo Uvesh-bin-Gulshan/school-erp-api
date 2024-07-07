@@ -34,7 +34,7 @@ const AddAdmissions = () => {
     event.preventDefault();
     const all_values = form.getValues();
     try {
-      const response = await submitForm(ADMISSION_LIST,all_values);
+      const response = await submitForm(ADMISSION_LIST,all_values,'POST');
       if (response?.success) {
         successtoastMessage("successfully created");
         router.push('../admin/admissions/');

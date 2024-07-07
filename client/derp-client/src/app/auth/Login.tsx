@@ -43,24 +43,21 @@ const Login = () => {
   const handleForm = async (event: React.FormEvent) => {
     event.preventDefault();
     
-    const all_values = form.getValues()
+    const all_values = form.getValues();
     
     try {
-      const response=await submitForm(LOGIN,all_values);
-      console.log(response?.success)
-      if(response?.success){
-
-        successtoastMessage("successfully created")
-        router.push('../admin/admissions/')
-
-      }
-      else{
-        failedtoastMessage("Invalid credentials")
+      const response = await submitForm(LOGIN, all_values,'POST');
+      console.log(response?.success);
+      if (response?.success) {
+        successtoastMessage("Successfully logged in");
+        router.push('../admin/admissions/');
+      } else {
+        failedtoastMessage("Invalid credentials");
       }
     } catch (error) {
       console.error('Failed to login:', error);
     }
-  }
+  };
   
   return (
 <>

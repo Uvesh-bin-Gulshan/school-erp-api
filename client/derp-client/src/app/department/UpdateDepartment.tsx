@@ -21,6 +21,7 @@ import { FormInput } from '../_component/FormInput'
 import SubmitButton from '../_component/SubmitButton'
 import { CREATE_DEPARTMENT, UPDATE_DEPARTMENT } from '@/lib/routePath'
 import { Edit } from 'lucide-react'
+import { MdModeEdit } from 'react-icons/md'
 
 const UpdateDepartment = ({department}:{department:any}) => {
   const router = useRouter();
@@ -35,7 +36,7 @@ const UpdateDepartment = ({department}:{department:any}) => {
     event.preventDefault();
     const all_values = form.getValues();
     try {
-      const response = await submitForm(`${UPDATE_DEPARTMENT}/${department.department_id}/`,all_values);
+      const response = await submitForm(`${UPDATE_DEPARTMENT}/${department.department_id}/`,all_values,'PUT');
       if (response?.success) {
         successtoastMessage("successfully created");
       } else {
@@ -50,7 +51,7 @@ const UpdateDepartment = ({department}:{department:any}) => {
     <>
       <Dialog>
         <DialogTrigger asChild>
-          <Edit/>
+        <MdModeEdit />
         </DialogTrigger>
         <DialogContent>
           <DialogHeader>

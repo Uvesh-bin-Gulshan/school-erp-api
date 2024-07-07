@@ -1,11 +1,11 @@
 import { NextApiRequest, NextApiResponse } from 'next';
-import {ADMISSION_LIST, DEPARTMENT_LIST, LOGIN} from './routePath'
+import {ADMISSION_LIST, DEPARTMENT_LIST, LOGIN, RETRIEVE_DEPARTMENT} from './routePath'
 import toast from "react-hot-toast"
 
-export const submitForm = async (url:any,data:any) => {
+export const submitForm = async (url:any,data:any,method:string) => {
     try {
       const response = await fetch(url, {
-        method: 'POST',
+        method,
         headers: {
           'Content-Type': 'application/json',
         },
@@ -26,6 +26,18 @@ export const submitForm = async (url:any,data:any) => {
 
 
 
+  export const getDepartmentDetail=async(department_id:string)=>{
+    const response =await fetch(`${RETRIEVE_DEPARTMENT}${department_id}`)
+    console.log(response)
+    if(!response.ok){
+    
+      throw new Error("failed")
+    }
+    const data = await response.json();
+    console.log(data)
+    return data;
+    
+    }
 export const getAdmissionList=async()=>{
 const response =await fetch(ADMISSION_LIST)
 console.log(response)

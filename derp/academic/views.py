@@ -4,6 +4,7 @@ from .serializers import *
 from rest_framework import viewsets
 from rest_framework.response import Response
 from userauth.permissions import isPrincipal,isTeacher,isTechSupport
+from django.http import JsonResponse
 
 # Department View
 class DepartmentView(viewsets.ViewSet):
@@ -36,9 +37,13 @@ class DepartmentView(viewsets.ViewSet):
         return Response(serializer.errors,status=400)
     
     def delete(self,request,pk):
+
+     try:
         department=Department.objects.get(pk=pk)
         department.delete()
         return Response(status=204)
+     except Department.DoesNotExist:
+          return JsonResponse({"error": "Department not found"}, status=404)
     
 # Subject View
 class SubjectView(viewsets.ViewSet):
