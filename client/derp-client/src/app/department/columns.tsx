@@ -4,7 +4,8 @@ import { ArrowUpDown } from "lucide-react";
 import UpdateDepartment from "./UpdateDepartment";
 import { AiFillDelete } from "react-icons/ai";
 import DeleteButtom from "../_component/DeleteButtom";
-import { DELETE_DEPARTMENT } from "@/lib/routePath";
+import { DELETE_DEPARTMENT, RETRIEVE_DEPARTMENT } from "@/lib/routePath";
+import RetrieveDetail from "../_component/RetriveDetail";
 
 export type Department = {
   department_id:string;
@@ -58,6 +59,11 @@ export const columns: ColumnDef<Department>[] = [
       return (
         <div className="flex items-center  space-x-2">
           <UpdateDepartment department={department} />
+          <RetrieveDetail 
+                      id={department.department_id} 
+
+            endpoint={`${RETRIEVE_DEPARTMENT}`}
+            onSuccess={handleSuccess}/>
           <DeleteButtom 
             id={department.department_id} 
             endpoint={`${DELETE_DEPARTMENT}`}

@@ -1,6 +1,6 @@
 import React from 'react'
 import ViewAdmissions from './ViewDepartment'
-import { getAdmissionList, getDepartmentList } from '@/lib/services'
+import { getAdmissionList, getDepartmentDetail, getDepartmentList } from '@/lib/services'
 import AddAdmissions from './AddDepartment'
 import Sidebar from '@/app/_component/SideBar'
 import { BreadcrumbWithCustomSeparator } from '@/app/_component/BreadCrumb'
