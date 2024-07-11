@@ -10,32 +10,32 @@ urlpatterns = [
    path('department/update/<str:pk>/',DepartmentView.as_view({'put':'update'}),name='department-create'),
 
    # Subject APIs
-   path('Subject/list',SubjectView.as_view({'get':'list'}),name='Subject-list'),
-   path('Subject/create',SubjectView.as_view({'post':'create'}),name='Subject-create'),
-   path('Subject/retrieve/<str:pk>/',SubjectView.as_view({'get':'retrieve'}),name='Subject-retrieve'),
-   path('Subject/delete/<str:pk>/',SubjectView.as_view({'delete':'delete'}),name='Subject-delete'),
-   path('Subject/update/<str:pk>/',SubjectView.as_view({'put':'update'}),name='Subject-create'),
+   path('subject/list',SubjectView.as_view({'get':'list'}),name='Subject-list'),
+   path('subject/create',SubjectView.as_view({'post':'create'}),name='Subject-create'),
+   path('subject/retrieve/<str:pk>/',SubjectView.as_view({'get':'retrieve'}),name='Subject-retrieve'),
+   path('subject/delete/<str:pk>/',SubjectView.as_view({'delete':'delete'}),name='Subject-delete'),
+   path('subject/update/<str:pk>/',SubjectView.as_view({'put':'update'}),name='Subject-create'),
 
    # Course APIs
-   path('Course/list',CourseView.as_view({'get':'list'}),name='Course-list'),
-   path('Course/create',CourseView.as_view({'post':'create'}),name='Course-create'),
-   path('Course/retrieve/<str:pk>/',CourseView.as_view({'get':'retrieve'}),name='Course-retrieve'),
-   path('Course/delete/<str:pk>/',CourseView.as_view({'delete':'delete'}),name='Course-delete'),
-   path('Course/update/<str:pk>/',CourseView.as_view({'put':'update'}),name='Course-create'),
+   path('course/list',CourseView.as_view({'get':'list'}),name='Course-list'),
+   path('course/create',CourseView.as_view({'post':'create'}),name='Course-create'),
+   path('course/retrieve/<str:pk>/',CourseView.as_view({'get':'retrieve'}),name='Course-retrieve'),
+   path('course/delete/<str:pk>/',CourseView.as_view({'delete':'delete'}),name='Course-delete'),
+   path('course/update/<str:pk>/',CourseView.as_view({'put':'update'}),name='Course-create'),
 
    # AnnuallySubjectSyllabusStatus APIs
-   path('AnnuallySubjectSyllabusStatus/list',AnnuallySubjectSyllabusStatusView.as_view({'get':'list'}),name='AnnuallySubjectSyllabusStatus-list'),
-   path('AnnuallySubjectSyllabusStatus/create',AnnuallySubjectSyllabusStatusView.as_view({'post':'create'}),name='AnnuallySubjectSyllabusStatus-create'),
-   path('AnnuallySubjectSyllabusStatus/retrieve/<str:pk>/',AnnuallySubjectSyllabusStatusView.as_view({'get':'retrieve'}),name='AnnuallySubjectSyllabusStatus-retrieve'),
-   path('AnnuallySubjectSyllabusStatus/delete/<str:pk>/',AnnuallySubjectSyllabusStatusView.as_view({'delete':'delete'}),name='AnnuallySubjectSyllabusStatus-delete'),
-   path('AnnuallySubjectSyllabusStatus/update/<str:pk>/',AnnuallySubjectSyllabusStatusView.as_view({'put':'update'}),name='AnnuallySubjectSyllabusStatus-create'),
+   path('annuallySubjectSyllabusStatus/list',AnnuallySubjectSyllabusStatusView.as_view({'get':'list'}),name='AnnuallySubjectSyllabusStatus-list'),
+   path('annuallySubjectSyllabusStatus/create',AnnuallySubjectSyllabusStatusView.as_view({'post':'create'}),name='AnnuallySubjectSyllabusStatus-create'),
+   path('annuallySubjectSyllabusStatus/retrieve/<str:pk>/',AnnuallySubjectSyllabusStatusView.as_view({'get':'retrieve'}),name='AnnuallySubjectSyllabusStatus-retrieve'),
+   path('annuallySubjectSyllabusStatus/delete/<str:pk>/',AnnuallySubjectSyllabusStatusView.as_view({'delete':'delete'}),name='AnnuallySubjectSyllabusStatus-delete'),
+   path('annuallySubjectSyllabusStatus/update/<str:pk>/',AnnuallySubjectSyllabusStatusView.as_view({'put':'update'}),name='AnnuallySubjectSyllabusStatus-create'),
 
    # MonthlySubjectSyllabusStatus APIs
-   path('MonthlySubjectSyllabusStatus/list',MonthlySubjectSyllabusStatusView.as_view({'get':'list'}),name='MonthlySubjectSyllabusStatus-list'),
-   path('MonthlySubjectSyllabusStatus/create',MonthlySubjectSyllabusStatusView.as_view({'post':'create'}),name='MonthlySubjectSyllabusStatus-create'),
-   path('MonthlySubjectSyllabusStatus/retrieve/<str:pk>/',MonthlySubjectSyllabusStatusView.as_view({'get':'retrieve'}),name='MonthlySubjectSyllabusStatus-retrieve'),
-   path('MonthlySubjectSyllabusStatus/delete/<str:pk>/',MonthlySubjectSyllabusStatusView.as_view({'delete':'delete'}),name='MonthlySubjectSyllabusStatus-delete'),
-   path('MonthlySubjectSyllabusStatus/update/<str:pk>/',MonthlySubjectSyllabusStatusView.as_view({'put':'update'}),name='MonthlySubjectSyllabusStatus-create'),
+   path('monthlySubjectSyllabusStatus/list',MonthlySubjectSyllabusStatusView.as_view({'get':'list'}),name='MonthlySubjectSyllabusStatus-list'),
+   path('monthlySubjectSyllabusStatus/create',MonthlySubjectSyllabusStatusView.as_view({'post':'create'}),name='MonthlySubjectSyllabusStatus-create'),
+   path('monthlySubjectSyllabusStatus/retrieve/<str:pk>/',MonthlySubjectSyllabusStatusView.as_view({'get':'retrieve'}),name='MonthlySubjectSyllabusStatus-retrieve'),
+   path('monthlySubjectSyllabusStatus/delete/<str:pk>/',MonthlySubjectSyllabusStatusView.as_view({'delete':'delete'}),name='MonthlySubjectSyllabusStatus-delete'),
+   path('monthlySubjectSyllabusStatus/update/<str:pk>/',MonthlySubjectSyllabusStatusView.as_view({'put':'update'}),name='MonthlySubjectSyllabusStatus-create'),
 
    # SyllabusStatusVerification APIs
    path('verification/list',SyllabusStatusVerificationView.as_view({'get':'list'}),name='verification-list'),

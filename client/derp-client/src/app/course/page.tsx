@@ -1,18 +1,18 @@
 import React from 'react'
-import ViewAdmissions from './ViewDepartment'
-import { getAdmissionList, getDepartmentDetail, getDepartmentList } from '@/lib/services'
-import AddAdmissions from './AddDepartment'
+import ViewAdmissions from './ViewCourse'
+import { getAdmissionList, getCourseList, getDepartmentDetail, getDepartmentList } from '@/lib/services'
+import AddAdmissions from './AddCourse'
 import Sidebar from '@/app/_component/SideBar'
 import { BreadcrumbWithCustomSeparator } from '@/app/_component/BreadCrumb'
-import AddDepartment from './AddDepartment'
-import ViewDepartment from './ViewDepartment'
+import AddDepartment from './AddCourse'
+import ViewDepartment from './ViewCourse'
 const items = [
   { href: "/", label: "Home" },
   { href: "/components", label: "Components" },
   { label: "Admissions" },
 ];
 const Page =async () => {
-    const data= await getDepartmentList()
+    const data= await getCourseList()
     console.log(data)
   return (
 <>

@@ -15,11 +15,11 @@ const Sidebar = ({children}:SideBarProps) => {
      
   return (
 <>
-<div className='h-screen flex gap-5 bg-stone-100  '>
-<div className={`bg-stone-100 p-2 duration-300 relative ${open?'w-[20%] text-sm':'w-[5%] text-xs text-wrap '}`} >
+<div className='h-screen flex gap-5 bg-white   '>
+<div className={` p-2 duration-300 text-cyan-500 bg-gradient-to-r from-cyan-900 via-cyan-800 to-cyan-700 relative ${open?'w-[20%] text-sm':'w-[5%] text-xs text-wrap '}`} >
 <AlignJustify className="absolute right-0 rounded-full mr-0 " onClick={handleClick}/>
-<div className={`bg-stone-100 p-1 duration-300  ${open?'visible':'hidden'}`}>Matliwala Charitable Trust</div>
-<div className='mt-12 '>
+<div className={` p-1 duration-300  ${open?'visible':'hidden'}`}>Matliwala Charitable Trust</div>
+<div className='mt-12  '>
 
   <NavBar/>
 
@@ -27,7 +27,7 @@ const Sidebar = ({children}:SideBarProps) => {
 
 
 </div>
-<div className={`w-full`}>
+<div className={`w-full `}>
    {
     children
    }

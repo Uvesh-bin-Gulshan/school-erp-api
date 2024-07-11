@@ -1,5 +1,5 @@
 import { NextApiRequest, NextApiResponse } from 'next';
-import {ADMISSION_LIST, DEPARTMENT_LIST, LOGIN, RETRIEVE_DEPARTMENT} from './routePath'
+import {ADMISSION_LIST, COURSE_LIST, DEPARTMENT_LIST, LOGIN, RETRIEVE_DEPARTMENT} from './routePath'
 import toast from "react-hot-toast"
 
 export const submitForm = async (url:any,data:any,method:string) => {
@@ -50,6 +50,20 @@ console.log(data)
 return data;
 
 }
+export const getCourseList=async()=>{
+  const response =await fetch(COURSE_LIST)
+  console.log(response)
+  if(!response.ok){
+  
+    throw new Error("failed")
+  }
+  const data = await response.json();
+  console.log(data)
+  return data;
+  
+  }
+
+
 export const getDepartmentList=async()=>{
   const response =await fetch(DEPARTMENT_LIST)
   console.log(response)
