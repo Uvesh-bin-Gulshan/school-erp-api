@@ -24,6 +24,8 @@ const NavBar = () => {
 <NavLink href='../admin/admissions'>Admissions</NavLink><br/>
 <NavLink href='../admin/'>Student</NavLink><br/>
 <NavLink href='../course/'>Course</NavLink><br/>
+<NavLink href='../subject/'>subject</NavLink><br/>
+
 </>
 
 
