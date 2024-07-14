@@ -1,5 +1,6 @@
 from django.db import models
 import uuid
+from academic.models import Course, Department
 from students.models import Grade
 from django.db.models.signals import post_save
 from django.dispatch import receiver
@@ -64,19 +65,21 @@ class Admission(models.Model):
         ordering = ['id']
 
 class Student(models.Model):
-    admission = models.OneToOneField(Admission,on_delete=models.CASCADE)
-    class Meta:
-        ordering = ['id']
+         admission = models.OneToOneField(Admission,on_delete=models.CASCADE)
+        
+
+         class Meta:
+           ordering = ['id']
 
     
     
 @receiver(post_save, sender=Admission)
 def create_student(sender, instance, created, **kwargs):
     if created and instance.admission_status == 'approved':
-        Student.objects.create(admission=instance)
+        Student.objects.create(basic_detail=instance)
     elif not created and instance.admission_status != 'approved':
         try:
-            student = Student.objects.get(admission=instance)
+            student = Student.objects.get(basic_detail=instance)
             student.delete()
         except Student.DoesNotExist:
             pass

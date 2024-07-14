@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { ColumnDef } from "@tanstack/react-table";
 import { ArrowUpDown } from "lucide-react";
-import UpdateDepartment from "./UpdateDepartment";
+import UpdateDepartment from "./UpdateMonthlySyllabus";
 import { AiFillDelete } from "react-icons/ai";
 import DeleteButtom from "../_component/DeleteButtom";
 import { DELETE_DEPARTMENT, RETRIEVE_COURSE, RETRIEVE_DEPARTMENT } from "@/lib/routePath";
@@ -16,7 +16,7 @@ export type Course = {
 
 export const columns: ColumnDef<Course>[] = [
   {
-    accessorKey: "course_id",
+    accessorKey: "month",
     header: ({ column }) => {
 
       return (

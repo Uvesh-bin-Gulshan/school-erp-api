@@ -1,5 +1,5 @@
 import { NextApiRequest, NextApiResponse } from 'next';
-import {ADMISSION_LIST, COURSE_LIST, DEPARTMENT_LIST, LOGIN, RETRIEVE_DEPARTMENT, SUBJECT_LIST} from './routePath'
+import {ADMISSION_LIST, ANNUALLY_SYLLABUS_STATUS_LIST, COURSE_LIST, DEPARTMENT_LIST, LOGIN, MONTHLY_SYLLABUS_STATUS_LIST, RETRIEVE_DEPARTMENT, SUBJECT_LIST} from './routePath'
 import toast from "react-hot-toast"
 
 export const submitForm = async (url:any,data:any,method:string) => {
@@ -83,6 +83,35 @@ export const getCourseList=async()=>{
     
     }
 
+    
+  //get monthly status list
+export const getMonthlyStatusList=async()=>{
+  const response =await fetch(MONTHLY_SYLLABUS_STATUS_LIST)
+  console.log(response)
+  if(!response.ok){
+  
+    throw new Error("failed")
+  }
+  const data = await response.json();
+  console.log(data)
+  return data;
+  
+  }
+
+
+    //get annual status list
+export const getAnnualStatusList=async()=>{
+  const response =await fetch(ANNUALLY_SYLLABUS_STATUS_LIST)
+  console.log(response)
+  if(!response.ok){
+  
+    throw new Error("failed")
+  }
+  const data = await response.json();
+  console.log(data)
+  return data;
+  
+  }
 
   //get department list
 export const getDepartmentList=async()=>{
@@ -97,6 +126,9 @@ export const getDepartmentList=async()=>{
   return data;
   
   }
+
+
+
 
 //toaster
 export const  successtoastMessage=(message:string)=>{

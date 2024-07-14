@@ -25,6 +25,9 @@ const NavBar = () => {
 <NavLink href='../admin/'>Student</NavLink><br/>
 <NavLink href='../course/'>Course</NavLink><br/>
 <NavLink href='../subject/'>subject</NavLink><br/>
+<NavLink href='../monthly_syllabus_status/'>monthly_syllabus_status</NavLink><br/>
+<NavLink href='../annual_syllabus_status/'>annual_syllabus_status</NavLink><br/>
+
 
 </>
 

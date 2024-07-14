@@ -43,6 +43,6 @@ urlpatterns = [
    path('verification/retrieve/<str:pk>/',SyllabusStatusVerificationView.as_view({'get':'retrieve'}),name='verification-retrieve'),
    path('verification/delete/<str:pk>/',SyllabusStatusVerificationView.as_view({'delete':'delete'}),name='verification-delete'),
    path('verification/update/<str:pk>/',SyllabusStatusVerificationView.as_view({'put':'update'}),name='verification-create'),
-
+   
 ]
 
