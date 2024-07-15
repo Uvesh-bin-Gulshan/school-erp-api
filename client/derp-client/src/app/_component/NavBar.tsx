@@ -1,55 +1,92 @@
-import React, { useState } from 'react'
-import NavLink from './NavLink'
-import { MdOutlineSchool } from 'react-icons/md'
-
-const NavBar = () => {
-  const [isDropDownOpen,setDropDownOpen]=useState(false)
-  const handleDropDown=()=>{
-    setDropDownOpen(!isDropDownOpen)
-  }
-  return (
-<>
-
-<div className=''>
-<NavLink href='/'>Home</NavLink><br/>
-<div>
-  <div onClick={handleDropDown} className='pointer'>
-
-  <MdOutlineSchool />
-  </div>
- { isDropDownOpen &&(
-
-<>
-
-<NavLink href='../admin/admissions'>Admissions</NavLink><br/>
-<NavLink href='../admin/'>Student</NavLink><br/>
-<NavLink href='../course/'>Course</NavLink><br/>
-<NavLink href='../subject/'>subject</NavLink><br/>
-<NavLink href='../monthly_syllabus_status/'>monthly_syllabus_status</NavLink><br/>
-<NavLink href='../annual_syllabus_status/'>annual_syllabus_status</NavLink><br/>
-
-
-</>
-
-
- )
-
-  }
-
-  
-
-</div>
-<div>
-
-<NavLink href='../department'>Department</NavLink>
-</div>
-
-
-
-</div>
-</>
-
-)
+import React, { useState } from "react";
+import NavLink from "./NavLink";
+import { MdOutlineSchool, MdSupervisorAccount } from "react-icons/md";
+import { IoBookSharp } from "react-icons/io5";
+interface NavBarProps {
+  open: boolean;
 }
 
-export default NavBar
+const NavBar: React.FC<NavBarProps> = ({ open }) => {
+  const [openDropDown, setOpenDropDown] = useState("");
+
+  const handleDropDown = (key: any) => {
+    setOpenDropDown(openDropDown === key ? "" : key);
+  };
+
+  return (
+    <>
+      <div className="">
+        <div>
+        <div
+              onClick={() => handleDropDown("student")}
+              className="pointer text-center text-white mb-4"
+            >
+              <div className="flex justify-center text-2xl">
+              <MdSupervisorAccount />
+              </div>
+
+              <h6
+                className={` p-1 duration-300 bg-white  
+   p-1.5 justify-center flex rounded-full mt-2   ${
+     open ? "visible " : "hidden"
+   }`}
+              >
+                Academics
+              </h6>
+            {openDropDown === "student" && (
+              <>
+                <NavLink href="/">Home</NavLink>
+                <br />
+                <NavLink href="../admin/admissions">Admissions</NavLink>
+                <br />
+                <NavLink href="../admin/">Student</NavLink>
+                <br />
+              </>
+            )}
+            </div>
+          <div>
+
+            <div
+              onClick={() => handleDropDown("academic")}
+              className="pointer text-center text-white"
+            >
+              <div className="flex justify-center text-2xl">
+                <IoBookSharp />
+              </div>
+
+              <h6
+                className={` p-1 duration-300 bg-white  
+   p-1.5 justify-center flex rounded-full mt-2   ${
+     open ? "visible " : "hidden"
+   }`}
+              >
+                Academics
+              </h6>
+            </div>
+            {openDropDown === "academic" && (
+              <>
+                <NavLink href="../department">Department</NavLink>
+                <NavLink href="../course/">Course</NavLink>
+                <br />
+                <NavLink href="../subject/">Subject</NavLink>
+                <br />
+                <NavLink href="../monthly_syllabus_status/">
+                  Monthly Syllabus Status
+                </NavLink>
+                <br />
+                <NavLink href="../annual_syllabus_status/">
+                  Annual Syllabus Status
+                </NavLink>
+                <br />
+              </>
+            )}
+          </div>
+        </div>
+
+        <div></div>
+      </div>
+    </>
+  );
+};
+
+export default NavBar;

@@ -76,10 +76,10 @@ class Student(models.Model):
 @receiver(post_save, sender=Admission)
 def create_student(sender, instance, created, **kwargs):
     if created and instance.admission_status == 'approved':
-        Student.objects.create(basic_detail=instance)
+        Student.objects.create(admission=instance)
     elif not created and instance.admission_status != 'approved':
         try:
-            student = Student.objects.get(basic_detail=instance)
+            student = Student.objects.get(admission=instance)
             student.delete()
         except Student.DoesNotExist:
             pass
