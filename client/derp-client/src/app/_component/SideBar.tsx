@@ -10,7 +10,8 @@ import {
   StepForward,
 } from "lucide-react";
 import Image from "next/image";
-import { AiOutlineDoubleRight } from "react-icons/ai";
+import { AiOutlineBars, AiOutlineDoubleRight } from "react-icons/ai";
+import { FaBars } from "react-icons/fa";
 
 interface SideBarProps {
   children: React.ReactNode;
@@ -25,19 +26,20 @@ const Sidebar = ({ children }: SideBarProps) => {
     <>
       <div className="h-screen flex  bg-white   ">
         <div
-          className={` p-2 duration-300  text-cyan-500 
-  bg-gradient-to-r from-cyan-900 via-cyan-800 to-cyan-700 
-   text-center relative ${
+          className={` duration-300  text-cyan-500 
+  bg-gradient-to-r from-cyan-800 via-cyan-700 to-cyan-600 
+   text-center relative  ${
      open ? "w-[13%] text-sm " : "w-[5%] text-xs text-wrap "
    }`}
         >
           <div
-            className={` p-1 duration-300 bg-white  
-   p-1.5 justify-center flex rounded-full mt-2   ${
-     open ? "w-20 h-20 mx-[25%] " : "h-12 w-12"
+            className={`w-full p-2 h-12 bg-slate-100 
+    ${
+     open ? "" : ""
    }`}
           >
             <Image
+            
               src="/logo.png"
               width={150}
               height={150}
@@ -51,10 +53,10 @@ const Sidebar = ({ children }: SideBarProps) => {
         <div className={`w-full `}>
           <div
             onClick={handleClick}
-            className=" bg-cyan-700 text-2xl px-0.5 py-2 h-10 w-8 text-white rounded-r-lg my-4"
+            className="  text-xl px-0.5 py- h-8 w-8 text-black ml-12 rounded-r-lg my-4"
           >
-            <AiOutlineDoubleRight />
-          </div>
+<FaBars />
+</div>
 
           {children}
         </div>
