@@ -21,6 +21,7 @@ import { FormInput } from '../_component/FormInput'
 import SubmitButton from '../_component/SubmitButton'
 import { CREATE_DEPARTMENT } from '@/lib/routePath'
 import { Plus } from 'lucide-react'
+import CustomButton from '../_component/CustomButton'
 
 const AddDepartment = () => {
   const router = useRouter();
@@ -35,7 +36,7 @@ const AddDepartment = () => {
     event.preventDefault();
     const all_values = form.getValues();
     try {
-      const response = await submitForm(CREATE_DEPARTMENT,all_values);
+      const response = await submitForm(CREATE_DEPARTMENT,all_values,'POST');
       if (response?.success) {
         successtoastMessage("successfully created");
       } else {
@@ -49,8 +50,9 @@ const AddDepartment = () => {
   return (
     <>
       <Dialog>
-        <DialogTrigger asChild>
-          <Button><Plus />Department</Button>
+        <DialogTrigger  asChild>
+          {/* <Button><Plus />Department</Button> */}
+          <CustomButton text="Add"  icon={<Plus/>}/>
         </DialogTrigger>
         <DialogContent>
           <DialogHeader>

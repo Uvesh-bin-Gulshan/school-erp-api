@@ -24,7 +24,7 @@ export function BreadcrumbWithCustomSeparator({
   separator = <BreadcrumbSeparator />,
 }: BreadcrumbWithCustomSeparatorProps) {
   return (
-    <Breadcrumb className="mt-12 ml-12">
+    <Breadcrumb className="mt-12 ml-8">
       <BreadcrumbList>
         {items.map((item, index) => (
           <React.Fragment key={index}>

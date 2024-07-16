@@ -24,18 +24,18 @@ const Sidebar = ({ children }: SideBarProps) => {
 
   return (
     <>
-      <div className="h-screen flex  bg-white   ">
+      <div className="h-screen  flex  bg-white   ">
         <div
-          className={` duration-300  text-cyan-500 
+          className={` duration-300 h-screen text-cyan-500 
   bg-gradient-to-r from-cyan-800 via-cyan-700 to-cyan-600 
-   text-center relative  ${
+   text-center relative h-full  ${
      open ? "w-[13%] text-sm " : "w-[5%] text-xs text-wrap "
    }`}
         >
           <div
-            className={`w-full p-2 h-12 bg-slate-100 
+            className={`flex justify-center p-2 m-2 rounded-full   bg-slate-100 
     ${
-     open ? "" : ""
+     open ? "w-16 h-16" : "w-12 h-12"
    }`}
           >
             <Image
@@ -53,12 +53,16 @@ const Sidebar = ({ children }: SideBarProps) => {
         <div className={`w-full `}>
           <div
             onClick={handleClick}
-            className="  text-xl px-0.5 py- h-8 w-8 text-black ml-12 rounded-r-lg my-4"
+            className="  text-xl px-0.5 py- h-8 w-8 text-black ml-8  rounded-r-lg my-4"
           >
 <FaBars />
 </div>
 
           {children}
+        <div className="bg-cyan-50  bottom-0 fixed h-[5%] w-full">
+
+
+        </div>
         </div>
       </div>
     </>

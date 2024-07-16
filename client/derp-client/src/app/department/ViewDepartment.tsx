@@ -5,6 +5,7 @@ import { columns } from './columns'
 import { getAsset } from 'node:sea'
 import { ColumnFiltersState } from '@tanstack/react-table'
 import { Button } from '@/components/ui/button'
+import AddDepartment from './AddDepartment'
 
 const ViewDepartment = ({data}:{data:any}) => {
   const columnFilters: ColumnFiltersState = []
@@ -12,10 +13,13 @@ console.log(data)
 
   return (
 <>
-<div className="w-full">
+<div className="w-full relative ">
   
-<Button className=''>Import</Button>
-<Button className=''>Export</Button>
+<div className='absolute right-0 mt-2.5 '>
+
+<AddDepartment  />
+
+</div>
 
 <DataTable 
 
