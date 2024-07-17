@@ -4,6 +4,7 @@ import { MdOutlineSchool, MdSupervisorAccount } from "react-icons/md";
 import { IoBookSharp } from "react-icons/io5";
 import { ImBooks } from "react-icons/im";
 import { HiAcademicCap } from "react-icons/hi2";
+import UserProfile from "./UserProfile";
 interface NavBarProps {
   open: boolean;
 }
@@ -153,7 +154,10 @@ p-1.5 justify-center flex rounded-full mt-1  ${open ? "visible " : "hidden"}`}
           </div>
         </div>
 
-        <div></div>
+        <div className="bottom-0 fixed mr-1 my-2 ml-1.5 ">
+        <UserProfile/>
+
+        </div>
       </div>
     </>
   );

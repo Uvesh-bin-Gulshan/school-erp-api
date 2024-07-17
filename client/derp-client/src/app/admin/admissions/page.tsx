@@ -17,12 +17,11 @@ const Page =async () => {
 
 
 
-<Sidebar>
+<Sidebar breadcrumbs={items}>
 <div>
-<BreadcrumbWithCustomSeparator items={items} separator={<span> :: </span>} />
 </div>
 
-<div className='m-12 bg-white p-4 h-96'>
+<div className=' bg-white  h-96'>
   <AddAdmissions />
 
 <ViewAdmissions  data={data}/>

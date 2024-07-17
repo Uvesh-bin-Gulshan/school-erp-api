@@ -7,6 +7,8 @@ import { BreadcrumbWithCustomSeparator } from '@/app/_component/BreadCrumb'
 import AddDepartment from './AddDepartment'
 import ViewDepartment from './ViewDepartment'
 import { MdOutlineNavigateNext } from 'react-icons/md'
+import PageTitle from '../_component/PageTitle'
+import { title } from 'process'
 const items = [
   {  label: "Academics" },
   { href: "/department", label: "Department" },
@@ -19,14 +21,13 @@ const Page =async () => {
 
 
 
-<Sidebar >
+<Sidebar breadcrumbs={items}>
 <div className=''>
-<BreadcrumbWithCustomSeparator items={items} separator={<span>  <MdOutlineNavigateNext />
-  </span>} />
+
 </div>
 
-
-<div className='m-6 bg-   h-96 '>
+ 
+<div className='   h-96 '>
  
   <ViewDepartment  data={data}/>
 </div>

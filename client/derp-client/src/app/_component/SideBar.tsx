@@ -14,11 +14,16 @@ import { AiOutlineBars, AiOutlineDoubleRight } from "react-icons/ai";
 import { FaBars } from "react-icons/fa";
 import { Input } from "@/components/ui/input";
 import SubmitButton from "./SubmitButton";
+import UserProfile from "./UserProfile";
+import PageTitle from "./PageTitle";
+import { BreadcrumbWithCustomSeparator } from "./BreadCrumb";
 
 interface SideBarProps {
   children: React.ReactNode;
+  breadcrumbs:{href?:string;label:string}[]
+ 
 }
-const Sidebar = ({ children }: SideBarProps) => {
+const Sidebar = ({ children, breadcrumbs  }: SideBarProps) => {
   const [open, setOpen] = useState(false);
   const handleClick = () => {
     setOpen(!open);
@@ -35,7 +40,7 @@ const Sidebar = ({ children }: SideBarProps) => {
    }`}
         >
           <div
-            className={`flex justify-center p-2 m-2 rounded-full   bg-slate-100 
+            className={`flex justify-center p-2 mt-4 mx-2  rounded-full   bg-slate-100 
     ${open ? "w-16 h-16" : "w-12 h-12"}`}
           >
             <Image
@@ -49,18 +54,27 @@ const Sidebar = ({ children }: SideBarProps) => {
             <NavBar open={open} />
           </div>
         </div>
-        <div className={`w-full `}>
+        <div className={`w-full bg-gray-200 px-6 `}>
           <div
-            onClick={handleClick}
+            
             className="  flex  text-xl px-0.5 py-2
-             h-8 text-black ml-8 justify-between w-[88%]   rounded-r-lg my-4"
+             h-8 text-black ml-2 justify-between w-[100%] 
+               rounded-r-lg mt-6 "
           >
-            <div className="text-2xl">
+            <div onClick={handleClick} className="text-2xl ">
 
             <FaBars />
             </div>
-<div className="w-[50%] justify-between flex ">
-            <Input/>
+            <div className="mr-[47%]">
+            <BreadcrumbWithCustomSeparator  items={breadcrumbs} separator={<span> :: </span>} />
+
+            </div>
+
+<div className="w-[30%] justify-between mr-3 flex ">
+            <Input
+            
+            placeholder="search"
+            />
             <div>
               
             </div>
@@ -68,7 +82,7 @@ const Sidebar = ({ children }: SideBarProps) => {
           </div>
 
           {children}
-          <div className="bg-cyan-50  bottom-0 fixed h-[5%] w-full"></div>
+          <div className="bg-cyan-50  bottom-0 fixed h-[5%]  w-full"></div>
         </div>
       </div>
     </>

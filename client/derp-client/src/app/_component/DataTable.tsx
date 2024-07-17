@@ -76,9 +76,9 @@ export function DataTable<TData, TValue>({
 
   return (
     <>
-      <div className="flex items-center py-4 ml-2 space-x-4">
+      <div className="flex items-center py-4  space-x-4">
         <Select onValueChange={(value) => setSelectedColumn(value)}>
-          <SelectTrigger className="w-48">
+          <SelectTrigger className="w-48 ml-2">
             <SelectValue placeholder="Select a column" />
           </SelectTrigger>
           <SelectContent>
