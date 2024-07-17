@@ -12,6 +12,8 @@ import {
 import Image from "next/image";
 import { AiOutlineBars, AiOutlineDoubleRight } from "react-icons/ai";
 import { FaBars } from "react-icons/fa";
+import { Input } from "@/components/ui/input";
+import SubmitButton from "./SubmitButton";
 
 interface SideBarProps {
   children: React.ReactNode;
@@ -34,12 +36,9 @@ const Sidebar = ({ children }: SideBarProps) => {
         >
           <div
             className={`flex justify-center p-2 m-2 rounded-full   bg-slate-100 
-    ${
-     open ? "w-16 h-16" : "w-12 h-12"
-   }`}
+    ${open ? "w-16 h-16" : "w-12 h-12"}`}
           >
             <Image
-            
               src="/logo.png"
               width={150}
               height={150}
@@ -53,16 +52,23 @@ const Sidebar = ({ children }: SideBarProps) => {
         <div className={`w-full `}>
           <div
             onClick={handleClick}
-            className="  text-xl px-0.5 py- h-8 w-8 text-black ml-8  rounded-r-lg my-4"
+            className="  flex  text-xl px-0.5 py-2
+             h-8 text-black ml-8 justify-between w-[88%]   rounded-r-lg my-4"
           >
-<FaBars />
-</div>
+            <div className="text-2xl">
+
+            <FaBars />
+            </div>
+<div className="w-[50%] justify-between flex ">
+            <Input/>
+            <div>
+              
+            </div>
+  </div>
+          </div>
 
           {children}
-        <div className="bg-cyan-50  bottom-0 fixed h-[5%] w-full">
-
-
-        </div>
+          <div className="bg-cyan-50  bottom-0 fixed h-[5%] w-full"></div>
         </div>
       </div>
     </>
