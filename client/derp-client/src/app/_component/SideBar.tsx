@@ -54,19 +54,19 @@ const Sidebar = ({ children, breadcrumbs  }: SideBarProps) => {
             <NavBar open={open} />
           </div>
         </div>
-        <div className={`w-full bg-gray-200 px-6 `}>
+        <div className={`w-full bg-gray-200 px-6  `}>
           <div
             
             className="  flex  text-xl px-0.5 py-2
              h-8 text-black ml-2 justify-between w-[100%] 
-               rounded-r-lg mt-6 "
+               rounded-r-lg mt-6 mb-12"
           >
             <div onClick={handleClick} className="text-2xl ">
 
             <FaBars />
             </div>
             <div className="mr-[47%]">
-            <BreadcrumbWithCustomSeparator  items={breadcrumbs} separator={<span> :: </span>} />
+            <BreadcrumbWithCustomSeparator  items={breadcrumbs}  />
 
             </div>
 

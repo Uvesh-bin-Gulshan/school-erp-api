@@ -19,6 +19,7 @@ import { loginSchema } from '@/lib/zodschema'
 import { submitForm, successtoastMessage, failedtoastMessage } from '@/lib/services'
 import { ADMISSION_LIST } from '@/lib/routePath'
 import { Plus } from 'lucide-react'
+import CustomButton from '@/app/_component/CustomButton'
 
 const AddAdmissions = () => {
   const router = useRouter();
@@ -50,7 +51,7 @@ const AddAdmissions = () => {
     <>
       <Dialog>
         <DialogTrigger asChild >
-          <Button ><Plus /> Admission</Button>
+        <CustomButton text="Addmission"  icon={<Plus/>}/>
         </DialogTrigger>
         <DialogContent>
           <DialogHeader>

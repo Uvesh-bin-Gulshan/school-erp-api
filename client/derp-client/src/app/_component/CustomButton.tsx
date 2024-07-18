@@ -19,8 +19,8 @@ const CustomButton = ({ text,icon, className, ...rest }: CustomButtonProps) => {
           )}
           {...rest} 
         >
-          {text}
           {icon &&<span className="mr-2 ">{icon}</span>}
+          {text}
         </Button>
       </div>
     </>

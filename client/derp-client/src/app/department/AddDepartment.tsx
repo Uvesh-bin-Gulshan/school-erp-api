@@ -52,7 +52,7 @@ const AddDepartment = () => {
       <Dialog>
         <DialogTrigger  asChild>
           {/* <Button><Plus />Department</Button> */}
-          <CustomButton text="Add"  icon={<Plus/>}/>
+          <CustomButton text="Department"  icon={<Plus/>}/>
         </DialogTrigger>
         <DialogContent>
           <DialogHeader>

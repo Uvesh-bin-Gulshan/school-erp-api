@@ -7,7 +7,6 @@ import { BreadcrumbWithCustomSeparator } from '@/app/_component/BreadCrumb'
 const items = [
   { href: "/", label: "Home" },
   { href: "/components", label: "Components" },
-  { label: "Admissions" },
 ];
 const Page =async () => {
     const data= await getAdmissionList()
@@ -18,11 +17,9 @@ const Page =async () => {
 
 
 <Sidebar breadcrumbs={items}>
-<div>
-</div>
 
-<div className=' bg-white  h-96'>
-  <AddAdmissions />
+
+<div className='  h-96'>
 
 <ViewAdmissions  data={data}/>
 </div>
@@ -36,3 +33,4 @@ const Page =async () => {
 }
 
 export default Page
+

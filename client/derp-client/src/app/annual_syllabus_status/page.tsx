@@ -8,6 +8,7 @@ import AddDepartment from './AddAnnualSyllabus'
 import ViewDepartment from './ViewAnnualSyllabus'
 import AddSubject from './AddAnnualSyllabus'
 import ViewSubject from './ViewAnnualSyllabus'
+import { ChevronsRight } from 'lucide-react'
 const items = [
   { href: "/", label: "Home" },
   { href: "/components", label: "Components" },
@@ -23,7 +24,8 @@ const Page =async () => {
 
 <Sidebar >
 <div className=''>
-<BreadcrumbWithCustomSeparator items={items} separator={<span> :: </span>} />
+<BreadcrumbWithCustomSeparator items={items} separator={<span> <ChevronsRight/>
+  </span>} />
 </div>
 
 
