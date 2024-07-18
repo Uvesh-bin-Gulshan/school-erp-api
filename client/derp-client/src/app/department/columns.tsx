@@ -12,6 +12,9 @@ export type Department = {
   name: string;
  
 
+
+  
+
 };
 
 export const columns: ColumnDef<Department>[] = [
