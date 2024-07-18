@@ -12,9 +12,9 @@ const CustomButton = ({ text,icon, className, ...rest }: CustomButtonProps) => {
   return (
     <>
       <div className="p-2 ">
-        <Button
+        <Button 
           className={cn(
-            "w-56 bg-gradient-to-r  from-cyan-900 via-cyan-800 to-cyan-700 hover:text-cyan-800   hover:bg-white",
+            "w-56 bg-gradient-to-r from-cyan-900 via-cyan-800 to-cyan-700 hover:text-cyan-800  !hover:bg-white",
             className
           )}
           {...rest} 

@@ -17,8 +17,8 @@ export function FormInput({
 }:FormInputProps) {
   return (
     <div className="text-left w-full gap-4 px-2 my-4 ">
-      <Label  htmlFor={id}>{label}</Label>
-      <Input className="focus:" id={id} type={type}  {...rest}  />
+      <Label className="text-gray-600" htmlFor={id}>{label}</Label>
+      <Input className="mt-2" id={id} type={type}  {...rest}  />
     </div>
   )
 }

@@ -97,13 +97,13 @@ export function DataTable<TData, TValue>({
           disabled={!selectedColumn}
         />
       </div>
-      <div className="rounded-xl m-2">
+      <div className="  m-2">
         <Table>
-          <TableHeader className="bg-white text-sx">
+          <TableHeader className=" rounded-xl  text-sx">
             {table.getHeaderGroups().map((headerGroup) => (
-              <TableRow key={headerGroup.id}>
+              <TableRow className="rounded-xl " key={headerGroup.id}>
                 {headerGroup.headers.map((header) => (
-                  <TableHead key={header.id}>
+                  <TableHead className="" key={header.id}>
                     {header.isPlaceholder
                       ? null
                       : flexRender(

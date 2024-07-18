@@ -54,7 +54,7 @@ const Sidebar = ({ children, breadcrumbs  }: SideBarProps) => {
             <NavBar open={open} />
           </div>
         </div>
-        <div className={`w-full bg-gray-200 px-6  `}>
+        <div className={`w-full  px-6  `}>
           <div
             
             className="  flex  text-xl px-0.5 py-2
