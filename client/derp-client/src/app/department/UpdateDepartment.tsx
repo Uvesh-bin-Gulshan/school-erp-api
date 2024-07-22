@@ -50,7 +50,7 @@ const UpdateDepartment = ({department}:{department:any}) => {
   return (
     <>
       <Dialog>
-        <DialogTrigger asChild>
+        <DialogTrigger className='text-cyan-700 text-md ' asChild>
         <MdModeEdit />
         </DialogTrigger>
         <DialogContent>

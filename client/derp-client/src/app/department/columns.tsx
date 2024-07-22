@@ -63,11 +63,12 @@ export const columns: ColumnDef<Department>[] = [
         <div className="flex items-center  space-x-2">
           <UpdateDepartment department={department} />
           <RetrieveDetail 
-                      id={department.department_id} 
+                 item={'department'}     id={department.department_id} 
 
             endpoint={`${RETRIEVE_DEPARTMENT}`}
             onSuccess={handleSuccess}/>
           <DeleteButtom 
+            item={'department'}
             id={department.department_id} 
             endpoint={`${DELETE_DEPARTMENT}`}
             onSuccess={handleSuccess}

@@ -99,9 +99,9 @@ export function DataTable<TData, TValue>({
       </div>
       <div className="  m-2">
         <Table>
-          <TableHeader className=" rounded-xl  text-sx">
+          <TableHeader className=" rounded-xl bg-slate-100 text-sx">
             {table.getHeaderGroups().map((headerGroup) => (
-              <TableRow className="rounded-xl " key={headerGroup.id}>
+              <TableRow className="rounded-xl hover:bg-slate-100 " key={headerGroup.id}>
                 {headerGroup.headers.map((header) => (
                   <TableHead className="" key={header.id}>
                     {header.isPlaceholder
@@ -120,7 +120,7 @@ export function DataTable<TData, TValue>({
               table.getRowModel().rows.map((row) => (
                 <TableRow key={row.id} data-state={row.getIsSelected() && "selected"}>
                   {row.getVisibleCells().map((cell) => (
-                    <TableCell key={cell.id} className="border-b-2 bg-white border-cyan-800">
+                    <TableCell key={cell.id} className=" ">
                       {flexRender(cell.column.columnDef.cell, cell.getContext())}
                     </TableCell>
                   ))}
