@@ -76,9 +76,9 @@ export function DataTable<TData, TValue>({
 
   return (
     <>
-      <div className="flex items-center py-4  space-x-4">
+      <div className="flex items-center   py-4  space-x-4">
         <Select onValueChange={(value) => setSelectedColumn(value)}>
-          <SelectTrigger className="w-48 ml-2">
+          <SelectTrigger className="w-48 ml-2 bg-slate-200/50">
             <SelectValue placeholder="Select a column" />
           </SelectTrigger>
           <SelectContent>
@@ -93,7 +93,7 @@ export function DataTable<TData, TValue>({
           placeholder="Enter filter value"
           value={filterValue}
           onChange={(event) => setFilterValue(event.target.value)}
-          className="max-w-sm"
+          className="max-w-sm "
           disabled={!selectedColumn}
         />
       </div>

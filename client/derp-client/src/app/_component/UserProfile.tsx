@@ -38,7 +38,7 @@ const UserProfile = () => {
     <>
       <DropdownMenu>
         <DropdownMenuTrigger asChild>
-          <Button className="w-12 text-2xl focus:outline:none ring-none hover:bg-white hover:text-cyan-700 text-white bg-cyan-800 ">
+          <Button variant="profile" className="w-12 text-2xl focus:outline:none ring-none hover:bg-white hover:text-cyan-700 text-white bg-cyan-600 ">
             {" "}
             <IoSettingsSharp />
           </Button>
