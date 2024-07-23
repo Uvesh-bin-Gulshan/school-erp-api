@@ -71,7 +71,7 @@ class Student(models.Model):
          class Meta:
            ordering = ['id']
 
-    
+
     
 @receiver(post_save, sender=Admission)
 def create_student(sender, instance, created, **kwargs):

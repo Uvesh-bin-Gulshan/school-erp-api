@@ -76,7 +76,7 @@ export function DataTable<TData, TValue>({
 
   return (
     <>
-      <div className="flex items-center   py-4  space-x-4">
+      <div className="flex items-center   py-4 m-2 space-x-4">
         <Select onValueChange={(value) => setSelectedColumn(value)}>
           <SelectTrigger className="w-48 ml-2 bg-slate-200/50">
             <SelectValue placeholder="Select a column" />
@@ -97,7 +97,7 @@ export function DataTable<TData, TValue>({
           disabled={!selectedColumn}
         />
       </div>
-      <div className="  m-2">
+      <div className="  mx-4">
         <Table>
           <TableHeader className=" rounded-xl bg-slate-100 text-sx">
             {table.getHeaderGroups().map((headerGroup) => (

@@ -15,7 +15,7 @@ console.log(data)
 <>
 <div className="w-full relative ">
   
-<div className='absolute right-0 mt-2.5 '>
+<div className='absolute right-0 mr-4 mt-2.5 '>
 
 <AddDepartment  />
 

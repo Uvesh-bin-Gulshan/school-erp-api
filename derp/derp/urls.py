@@ -23,6 +23,7 @@ urlpatterns = [
     # path('admin_tools_stats/', include('admin_tools_stats.urls')),
     path('academic/',include('academic.urls',namespace='academic')),
     path('admission/',include('admission.urls',namespace='admission')),
+    path('library/',include('library.urls',namespace='library')),
 
     path('userauth/',include('userauth.urls',namespace='userauth')),
 
