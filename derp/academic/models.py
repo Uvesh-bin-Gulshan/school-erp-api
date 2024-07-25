@@ -1,3 +1,7 @@
+
+# Signals to handle update on create and delete
+from django.db.models.signals import post_save, post_delete
+from django.dispatch import receiver
 from typing import Any
 from django.db import models
 from .utils import generate_custom_id
@@ -70,8 +74,6 @@ class MonthlySubjectSyllabusStatus(models.Model):
         annual_status.update_yearly_status()
 
 
-    
-
 
 class SyllabusStatusVerification(models.Model):
     status_verification_id = models.CharField(default=shortuuid, max_length=6, editable=False, primary_key=True)
@@ -83,11 +85,6 @@ class SyllabusStatusVerification(models.Model):
 
 
 
-
-# Signals to handle update on create and delete
-from django.db.models.signals import post_save, post_delete
-from django.dispatch import receiver
-
 @receiver(post_save, sender=MonthlySubjectSyllabusStatus)
 def update_annual_status_on_save(sender, instance, **kwargs):
     instance.annual_status.update_yearly_status()
@@ -95,3 +92,10 @@ def update_annual_status_on_save(sender, instance, **kwargs):
 @receiver(post_delete, sender=MonthlySubjectSyllabusStatus)
 def update_annual_status_on_delete(sender, instance, **kwargs):
     instance.annual_status.update_yearly_status()
+
+class TimeTable(models.Model):
+        time_table_id = models.CharField(default=shortuuid, max_length=6, editable=False, primary_key=True)
+        subject = models.ForeignKey(Subject, on_delete=models.CASCADE, to_field='subject_id')
+        teacher = models.CharField(max_length=20)
+        time=models.TimeField()
+        effective_date = models.DateField()

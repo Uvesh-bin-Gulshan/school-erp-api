@@ -47,7 +47,7 @@ INSTALLED_APPS = [
     'students.apps.StudentsConfig',
     'academic.apps.AcademicAppConfig',
     'library.apps.LibraryConfig',
-
+    'examination.apps.ExaminationConfig',
     'import_export',
     
 
