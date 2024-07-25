@@ -1,8 +1,10 @@
 from django.db import models
 import uuid
+from academic.models import Course, Department
 from django.db.models.signals import post_save
 from django.dispatch import receiver
-from academic.models import *
+
+from django.dispatch import receiver
 
 def shortuuid():
    return str(uuid.uuid4().hex)[:6]
@@ -11,11 +13,13 @@ from django.db import models
 from django.db.models.signals import post_save
 from django.dispatch import receiver
 
-class PersonalDetails(models.Model):
-    personal_id = models.AutoField(primary_key=True)
+class Admission(models.Model):
+    
+
+    id=models.CharField(shortuuid,max_length=6,editable=False)
+    admission_id = models.CharField(primary_key=True, default=shortuuid, max_length=6)
     student_name = models.CharField(max_length=200)
     father_name = models.CharField(max_length=50)
-    guardian_name = models.CharField(max_length=50)
     date_of_birth = models.DateField()
     profile_image = models.ImageField(
     upload_to='admission_images/',
@@ -33,11 +37,6 @@ class PersonalDetails(models.Model):
     updated_at = models.DateField()
     date_of_admission = models.DateField()
 
-    def __str__(self):
-        return self.student_name
-
-class AcademicDetails(models.Model):
-    academic_id = models.CharField(primary_key=True, default=shortuuid, max_length=6)
     RESULT_STATUS = (
         ('pass', 'PASS'),
         ('fail', 'FAIL')
@@ -50,28 +49,45 @@ class AcademicDetails(models.Model):
     applied_for = models.ForeignKey(Course,max_length=100,on_delete=models.CASCADE)
     lc_given = models.BooleanField(default=False)
 
-    def __str__(self):
-        return self.applied_for
-
-class OtherDetails(models.Model):
-    other_id = models.CharField(primary_key=True, default=shortuuid, max_length=6)
     pay_fees = models.BooleanField(default=False) 
     fees_amount = models.DecimalField(max_digits=10, decimal_places=2, null=True, blank=True)
     required_donation = models.BooleanField(default=False)
 
-
-class AdmissionMaster(models.Model):
-    admission_id = models.CharField(primary_key=True, default=shortuuid, max_length=6)
     ADMISSION_STATUS = (
         ('approved', 'Approved'),
         ('pending', 'Pending'),
         ('left', 'Left'),
     )
     admission_status = models.CharField(choices=ADMISSION_STATUS, default='pending', max_length=50)  # Changed default value 
-    personal_details = models.ForeignKey(PersonalDetails, to_field='personal_id', on_delete=models.CASCADE, null=False, editable=False)
-    academic_details = models.ForeignKey(AcademicDetails, to_field='academic_id', on_delete=models.CASCADE, null=False, editable=False)
-    other_details = models.ForeignKey(OtherDetails, to_field='other_id', on_delete=models.CASCADE, null=False, editable=False)
+
+
+
+
+
 
     def __str__(self):
-        return self.admission_status
+        return self.student_name
+    
+    class Meta:
+        ordering = ['id']
+
+class Student(models.Model):
+         admission = models.OneToOneField(Admission,on_delete=models.CASCADE)
+        
+
+         class Meta:
+           ordering = ['id']
+
+    
+    
+@receiver(post_save, sender=Admission)
+def create_student(sender, instance, created, **kwargs):
+    if created and instance.admission_status == 'approved':
+        Student.objects.create(admission=instance)
+    elif not created and instance.admission_status != 'approved':
+        try:
+            student = Student.objects.get(admission=instance)
+            student.delete()
+        except Student.DoesNotExist:
+            pass
 
