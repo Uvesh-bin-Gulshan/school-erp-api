@@ -18,6 +18,7 @@ class ExamTimeTable(models.Model):
         time=models.TimeField()
 
 class Marksheet(models.Model):
+         marksheet_id = models.CharField(default=shortuuid, max_length=6, editable=False, primary_key=True)
          exam_detail=models.ForeignKey(ExamTimeTable, on_delete=models.CASCADE, to_field='subject_id')
          student=models.ForeignKey(Student, on_delete=models.CASCADE, to_field='subject_id')
          marks_obtained=models.PositiveIntegerField()
@@ -32,6 +33,7 @@ class Marksheet(models.Model):
                 super().save(*args,**kwargs)
 
 class ResultSheet(models.Model):
+    result_sheet_id = models.CharField(default=shortuuid, max_length=6, editable=False, primary_key=True)
     student=models.ForeignKey(Student, on_delete=models.CASCADE, to_field='subject_id')
     result_data=models.JSONField() 
     total_marks_obtained = models.PositiveIntegerField(default=0)

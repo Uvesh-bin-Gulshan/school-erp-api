@@ -1,63 +1,60 @@
 from django.db import models
 import uuid
 from academic.models import Course, Department
-from students.models import Grade
+from examination.models import Marksheet, ResultSheet
 from django.db.models.signals import post_save
-from django.dispatch import receiver
-
 from django.dispatch import receiver
 
 def shortuuid():
    return str(uuid.uuid4().hex)[:6]
 
-from django.db import models
-from django.db.models.signals import post_save
-from django.dispatch import receiver
+
 
 class Admission(models.Model):
-    RESULT_STATUS = (
-        ('pass', 'PASS'),
-        ('fail', 'FAIL')
-    )
 
-    ADMISSION_STATUS = (
-        ('approved', 'Approved'),
-        ('pending', 'Pending'),
-        ('left', 'Left'),
-        ('graduated', 'Graduated')
-    )
-
-    id = models.AutoField(primary_key=True)
-    admission_id=models.CharField(shortuuid,max_length=6,editable=False)
+    id=models.CharField(shortuuid,max_length=6,editable=False)
+    admission_id = models.CharField(primary_key=True, default=shortuuid, max_length=6)
     student_name = models.CharField(max_length=200)
-    guardian_name = models.CharField(max_length=40)
+    father_name = models.CharField(max_length=50)
+    date_of_birth = models.DateField()
     profile_image = models.ImageField(
     upload_to='admission_images/',
     default='admission_images/default_profile.png',
     blank=True,
     null=True,
-)   
-    applied_for = models.ForeignKey(Grade,max_length=100,on_delete=models.PROTECT)
-    date_of_birth = models.DateField()
+    ) 
     state = models.CharField(max_length=100)
     district = models.CharField(max_length=100)  # Changed from District to district
     locality = models.CharField(max_length=100)
     pincode = models.CharField(max_length=6)
     mobile_number = models.CharField(max_length=12)
-    addhar_number = models.CharField(max_length=12, unique=True)
-    previous_result_status = models.CharField(choices=RESULT_STATUS, default='pass', max_length=10)  # Changed default value
-    admission_status = models.CharField(choices=ADMISSION_STATUS, default='pending', max_length=50)  # Changed default value
-    previous_institution = models.CharField(max_length=200, null=False, blank=False)
-    previous_education = models.CharField(max_length=200, null=False, blank=False)
-    worldly_studies = models.CharField(max_length=200, null=False, blank=False)
-    lc_given = models.BooleanField(default=False)
-    donation = models.BooleanField(default=False)
-    donation_amount = models.DecimalField(max_digits=10, decimal_places=2, null=True, blank=True)
-    require_donation = models.BooleanField(default=False)
+    aadhar_number = models.CharField(max_length=12, unique=True)
     created_at = models.DateField()
     updated_at = models.DateField()
-    date_of_admission = models.DateField()  
+    date_of_admission = models.DateField()
 
+    RESULT_STATUS = (
+        ('pass', 'PASS'),
+        ('fail', 'FAIL')
+    )
+    previous_result_status = models.CharField(choices=RESULT_STATUS, default='pass', max_length=10)  # Changed default value
+    
+    previous_institution = models.CharField(max_length=200, null=False, blank=False)
+    previous_education = models.CharField(max_length=200, null=False, blank=False)
+    school_education = models.CharField(max_length=200, null=False, blank=False)
+    applied_for = models.CharField(max_length=200, null=False, blank=False)
+    lc_given = models.BooleanField(default=False)
+
+    pay_fees = models.BooleanField(default=False) 
+    fees_amount = models.DecimalField(max_digits=10, decimal_places=2, null=True, blank=True)
+    required_donation = models.BooleanField(default=False)
+
+    ADMISSION_STATUS = (
+        ('approved', 'Approved'),
+        ('pending', 'Pending'),
+        ('left', 'Left'),
+    )
+    admission_status = models.CharField(choices=ADMISSION_STATUS, default='pending', max_length=50)  # Changed default value 
     def __str__(self):
         return self.student_name
     
@@ -65,14 +62,24 @@ class Admission(models.Model):
         ordering = ['id']
 
 class Student(models.Model):
-         admission = models.OneToOneField(Admission,on_delete=models.CASCADE)
-        
 
-         class Meta:
-           ordering = ['id']
+    admission = models.OneToOneField(Admission,on_delete=models.CASCADE)
+
+    course = models.ForeignKey(Course, on_delete=models.CASCADE, null=False, blank=False, to_field='course_id')
+    department = models.ForeignKey(Department, on_delete=models.CASCADE, null=False, blank=False, to_field='department_id')
+    marksheet = models.ForeignKey(Marksheet, on_delete=models.CASCADE, null=False, blank=False, to_field='marksheet_id')
+    result_sheet = models.ForeignKey(ResultSheet, on_delete=models.CASCADE, null=False, blank=False, to_field='result_sheet_id')
+    STUDENT_STATUS = (
+        ('pursuing', 'Pursuing'),
+        ('completed', 'Completed'),
+        ('left', 'Left'),
+    )
+    student_status = models.CharField(choices=STUDENT_STATUS, default='pursuing', max_length=50)  # Changed default value 
+
+    def __str__(self):
+        return f"{self.student} - {self.student_status}"
 
 
-    
 @receiver(post_save, sender=Admission)
 def create_student(sender, instance, created, **kwargs):
     if created and instance.admission_status == 'approved':
@@ -83,3 +90,33 @@ def create_student(sender, instance, created, **kwargs):
             student.delete()
         except Student.DoesNotExist:
             pass
+
+
+
+class Alumini(models.Model):
+
+
+    alumini= models.OneToOneField(Student,on_delete=models.CASCADE)
+    ALUMINI_STATUS = (
+        ('maktab', 'Maktab'),
+        ('durluloom', 'Darul Uloom'),
+        ('other', 'Other'),
+    )
+    alumini = models.CharField(choices=ALUMINI_STATUS, default='other', max_length=50)  # Changed default value 
+
+    def __str__(self):
+        return f"{self.alumini_student} - {self.alumini_status}"
+    
+@receiver(post_save, sender=Student)
+def create_alumini(sender, instance, created, **kwargs):
+    if created and instance.student_status == 'completed':
+        Student.objects.create(admission=instance)
+    elif not created and instance.admission_status != 'completed':
+        try:
+            student = Student.objects.get(admission=instance)
+            student.delete()
+        except Student.DoesNotExist:
+            pass
+
+
+

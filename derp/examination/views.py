@@ -1,6 +1,8 @@
 from django.shortcuts import render,get_object_or_404
 from admission.models import Student
-from .models import *
+from .models import ExamType, ExamTimeTable, Marksheet, ResultSheet
+from .serializers import ExamTypeSerializer, ExamTimeTableSerializer, MarksheetSerializer, ResultSheetSerializer
+from rest_framework.response import Response
 from django.http import JsonResponse
 from django.db.models import Sum, F
 
@@ -56,3 +58,162 @@ def assign_rank():
         
 
 
+class ExamTypeView(viewsets.ViewSet):
+    def list(self, request):
+        queryset = ExamType.objects.all()
+        serializer = ExamTypeSerializer(queryset, many=True)
+        return Response(serializer.data)
+
+    def create(self, request):
+        serializer = ExamTypeSerializer(data=request.data)
+        if serializer.is_valid():
+            serializer.save()
+            return Response(serializer.data, status=201)
+        return Response(serializer.errors, status=400)
+
+    def retrieve(self, request, pk=None):
+        try:
+            exam_type = ExamType.objects.get(pk=pk)
+        except ExamType.DoesNotExist:
+            return Response(status=404)
+        serializer = ExamTypeSerializer(exam_type)
+        return Response(serializer.data)
+
+    def update(self, request, pk=None):
+        try:
+            exam_type = ExamType.objects.get(pk=pk)
+        except ExamType.DoesNotExist:
+            return Response(status=404)
+        serializer = ExamTypeSerializer(exam_type, data=request.data)
+        if serializer.is_valid():
+            serializer.save()
+            return Response(serializer.data, status=200)
+        return Response(serializer.errors, status=400)
+
+    def delete(self, request, pk=None):
+        try:
+            exam_type = ExamType.objects.get(pk=pk)
+        except ExamType.DoesNotExist:
+            return Response(status=404)
+        exam_type.delete()
+        return Response(status=204)
+
+class ExamTimeTableView(viewsets.ViewSet):
+    def list(self, request):
+        queryset = ExamTimeTable.objects.all()
+        serializer = ExamTimeTableSerializer(queryset, many=True)
+        return Response(serializer.data)
+
+    def create(self, request):
+        serializer = ExamTimeTableSerializer(data=request.data)
+        if serializer.is_valid():
+            serializer.save()
+            return Response(serializer.data, status=201)
+        return Response(serializer.errors, status=400)
+
+    def retrieve(self, request, pk=None):
+        try:
+            exam_time_table = ExamTimeTable.objects.get(pk=pk)
+        except ExamTimeTable.DoesNotExist:
+            return Response(status=404)
+        serializer = ExamTimeTableSerializer(exam_time_table)
+        return Response(serializer.data)
+
+    def update(self, request, pk=None):
+        try:
+            exam_time_table = ExamTimeTable.objects.get(pk=pk)
+        except ExamTimeTable.DoesNotExist:
+            return Response(status=404)
+        serializer = ExamTimeTableSerializer(exam_time_table, data=request.data)
+        if serializer.is_valid():
+            serializer.save()
+            return Response(serializer.data, status=200)
+        return Response(serializer.errors, status=400)
+
+    def delete(self, request, pk=None):
+        try:
+            exam_time_table = ExamTimeTable.objects.get(pk=pk)
+        except ExamTimeTable.DoesNotExist:
+            return Response(status=404)
+        exam_time_table.delete()
+        return Response(status=204)
+
+class MarksheetView(viewsets.ViewSet):
+    def list(self, request):
+        queryset = Marksheet.objects.all()
+        serializer = MarksheetSerializer(queryset, many=True)
+        return Response(serializer.data)
+
+    def create(self, request):
+        serializer = MarksheetSerializer(data=request.data)
+        if serializer.is_valid():
+            serializer.save()
+            return Response(serializer.data, status=201)
+        return Response(serializer.errors, status=400)
+
+    def retrieve(self, request, pk=None):
+        try:
+            marksheet = Marksheet.objects.get(pk=pk)
+        except Marksheet.DoesNotExist:
+            return Response(status=404)
+        serializer = MarksheetSerializer(marksheet)
+        return Response(serializer.data)
+
+    def update(self, request, pk=None):
+        try:
+            marksheet = Marksheet.objects.get(pk=pk)
+        except Marksheet.DoesNotExist:
+            return Response(status=404)
+        serializer = MarksheetSerializer(marksheet, data=request.data)
+        if serializer.is_valid():
+            serializer.save()
+            return Response(serializer.data, status=200)
+        return Response(serializer.errors, status=400)
+
+    def delete(self, request, pk=None):
+        try:
+            marksheet = Marksheet.objects.get(pk=pk)
+        except Marksheet.DoesNotExist:
+            return Response(status=404)
+        marksheet.delete()
+        return Response(status=204)
+
+class ResultSheetView(viewsets.ViewSet):
+    def list(self, request):
+        queryset = ResultSheet.objects.all()
+        serializer = ResultSheetSerializer(queryset, many=True)
+        return Response(serializer.data)
+
+    def create(self, request):
+        serializer = ResultSheetSerializer(data=request.data)
+        if serializer.is_valid():
+            serializer.save()
+            return Response(serializer.data, status=201)
+        return Response(serializer.errors, status=400)
+
+    def retrieve(self, request, pk=None):
+        try:
+            result_sheet = ResultSheet.objects.get(pk=pk)
+        except ResultSheet.DoesNotExist:
+            return Response(status=404)
+        serializer = ResultSheetSerializer(result_sheet)
+        return Response(serializer.data)
+
+    def update(self, request, pk=None):
+        try:
+            result_sheet = ResultSheet.objects.get(pk=pk)
+        except ResultSheet.DoesNotExist:
+            return Response(status=404)
+        serializer = ResultSheetSerializer(result_sheet, data=request.data)
+        if serializer.is_valid():
+            serializer.save()
+            return Response(serializer.data, status=200)
+        return Response(serializer.errors, status=400)
+
+    def delete(self, request, pk=None):
+        try:
+            result_sheet = ResultSheet.objects.get(pk=pk)
+        except ResultSheet.DoesNotExist:
+            return Response(status=404)
+        result_sheet.delete()
+        return Response(status=204)
