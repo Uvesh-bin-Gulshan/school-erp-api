@@ -99,3 +99,25 @@ class TimeTable(models.Model):
         teacher = models.CharField(max_length=20)
         time=models.TimeField()
         effective_date = models.DateField()
+
+        def __str__(self):
+            return f"{self.subject} - {self.teacher} at {self.time}"
+        
+        def is_holiday(self):
+            return self.effective_date.weekday() == 4
+        
+        def vacation_day(self):
+            return VacationPeriod.objects.filter(start_date_lte=self.effective_date,end_date__gte=self.effective_date)
+        
+
+
+class VacationPeriod(models.Model):
+        vacation_id = models.CharField(default=shortuuid, max_length=6, editable=False, primary_key=True)
+        name=models.CharField(max_length=100)
+        start_date=models.DateField()
+        end_date=models.DateField()
+        description=models.CharField(max_length=254,blank=True,null=True)
+
+        def __str__(self):
+            return f"Vacation from {self.start_date} to {self.end_date} for {self.name}"
+        

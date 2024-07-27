@@ -1,6 +1,6 @@
 from django.shortcuts import render
-from .models import *
-from .serializers import *
+from .models import Department, Subject, Course, AnnuallySubjectSyllabusStatus, MonthlySubjectSyllabusStatus, SyllabusStatusVerification, TimeTable
+from .serializers import DepartmentSerializer, SubjectSerializer, CourseSerializer, AnnuallySubjectSyllabusStatusSerializer, MonthlySubjectSyllabusStatusSerializer, SyllabusStatusVerificationSerializer, TimeTableSerializer
 from rest_framework import viewsets
 from rest_framework.response import Response
 from userauth.permissions import isPrincipal,isTeacher,isTechSupport
@@ -219,4 +219,46 @@ class SyllabusStatusVerificationView(viewsets.ViewSet):
         status=SyllabusStatusVerification.objects.get(pk=pk)
         status.delete()
         return Response(status=204)
+
+
+class TimeTableView(viewsets.ViewSet):
+    def list(self, request):
+        queryset = TimeTable.objects.all()
+        serializer = TimeTableSerializer(queryset, many=True)
+        return Response(serializer.data)
+
+    def retrieve(self, request, pk):
+        try:
+            timetable = TimeTable.objects.get(pk=pk)
+        except TimeTable.DoesNotExist:
+            return Response(status=status.HTTP_404_NOT_FOUND)
+        serializer = TimeTableSerializer(timetable)
+        return Response(serializer.data)
+
+    def create(self, request):
+        serializer = TimeTableSerializer(data=request.data)
+        if serializer.is_valid():
+            serializer.save()
+            return Response(serializer.data, status=status.HTTP_201_CREATED)
+        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+
+    def update(self, request, pk):
+        try:
+            timetable = TimeTable.objects.get(pk=pk)
+        except TimeTable.DoesNotExist:
+            return Response(status=status.HTTP_404_NOT_FOUND)
+        serializer = TimeTableSerializer(timetable, data=request.data)
+        if serializer.is_valid():
+            serializer.save()
+            return Response(serializer.data, status=status.HTTP_200_OK)
+        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+
+    def delete(self, request, pk):
+        try:
+            timetable = TimeTable.objects.get(pk=pk)
+        except TimeTable.DoesNotExist:
+            return Response(status=status.HTTP_404_NOT_FOUND)
+        timetable.delete()
+        return Response(status=status.HTTP_204_NO_CONTENT)
+
    

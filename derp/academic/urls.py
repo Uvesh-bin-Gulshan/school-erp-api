@@ -1,8 +1,8 @@
 from django.urls import path
-from .views import *
+from .views import DepartmentView, SubjectView, CourseView, AnnuallySubjectSyllabusStatusView, MonthlySubjectSyllabusStatusView, SyllabusStatusVerificationView, TimeTableView
 app_name='academic'
 urlpatterns = [
-   # Departtment APIs
+   # Department APIs
    path('department/list',DepartmentView.as_view({'get':'list'}),name='department-list'),
    path('department/create',DepartmentView.as_view({'post':'create'}),name='department-create'),
    path('department/retrieve/<str:pk>/',DepartmentView.as_view({'get':'retrieve'}),name='department-retrieve'),
@@ -44,5 +44,12 @@ urlpatterns = [
    path('verification/delete/<str:pk>/',SyllabusStatusVerificationView.as_view({'delete':'delete'}),name='verification-delete'),
    path('verification/update/<str:pk>/',SyllabusStatusVerificationView.as_view({'put':'update'}),name='verification-create'),
    
+   # TimeTable APIs
+   path('timetable/list/', TimeTableView.as_view({'get': 'list'}), name='timetable-list'),
+   path('timetable/create/', TimeTableView.as_view({'post': 'create'}), name='timetable-create'),
+   path('timetable/retrieve/<str:pk>/', TimeTableView.as_view({'get': 'retrieve'}), name='timetable-retrieve'),
+   path('timetable/update/<str:pk>/', TimeTableView.as_view({'put': 'update'}), name='timetable-update'),
+   path('timetable/delete/<str:pk>/', TimeTableView.as_view({'delete': 'delete'}), name='timetable-delete'),
+
 ]
 

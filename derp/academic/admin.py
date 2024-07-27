@@ -11,7 +11,4 @@ admin.site.register(MonthlySubjectSyllabusStatus)
 admin.site.register(SyllabusStatusVerification)
 
 
-class YourModelAdmin(ImportExportModelAdmin):
-    pass
-
 

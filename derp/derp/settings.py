@@ -48,6 +48,7 @@ INSTALLED_APPS = [
     'academic.apps.AcademicAppConfig',
     'library.apps.LibraryConfig',
     'examination.apps.ExaminationConfig',
+    'attendance.apps.AttendanceConfig',
     'import_export',
     
 

@@ -1,7 +1,7 @@
 from django.db import models
 import uuid
 from academic.models import Course, Department
-from examination.models import Marksheet, ResultSheet
+
 from django.db.models.signals import post_save
 from django.dispatch import receiver
 
@@ -62,13 +62,10 @@ class Admission(models.Model):
         ordering = ['id']
 
 class Student(models.Model):
-
+    student_id = models.CharField(default=shortuuid, max_length=6, editable=False, primary_key=True)
     admission = models.OneToOneField(Admission,on_delete=models.CASCADE)
-
     course = models.ForeignKey(Course, on_delete=models.CASCADE, null=False, blank=False, to_field='course_id')
     department = models.ForeignKey(Department, on_delete=models.CASCADE, null=False, blank=False, to_field='department_id')
-    marksheet = models.ForeignKey(Marksheet, on_delete=models.CASCADE, null=False, blank=False, to_field='marksheet_id')
-    result_sheet = models.ForeignKey(ResultSheet, on_delete=models.CASCADE, null=False, blank=False, to_field='result_sheet_id')
     STUDENT_STATUS = (
         ('pursuing', 'Pursuing'),
         ('completed', 'Completed'),
@@ -93,29 +90,28 @@ def create_student(sender, instance, created, **kwargs):
 
 
 
-class Alumini(models.Model):
+class Alumni(models.Model):
 
+    alumni_id = models.CharField(default=shortuuid, max_length=6, editable=False, primary_key=True)
 
-    alumini= models.OneToOneField(Student,on_delete=models.CASCADE)
-    ALUMINI_STATUS = (
-        ('maktab', 'Maktab'),
-        ('durluloom', 'Darul Uloom'),
-        ('other', 'Other'),
-    )
-    alumini = models.CharField(choices=ALUMINI_STATUS, default='other', max_length=50)  # Changed default value 
+    student= models.OneToOneField(Student,on_delete=models.CASCADE)
+
+    occupation = models.CharField(max_length=200) 
+    work_place=models.CharField(max_length=200) 
+    residence = models.TextField(max_length=200)
 
     def __str__(self):
-        return f"{self.alumini_student} - {self.alumini_status}"
+        return f"{self.alumni_student} - {self.alumni_status}"
     
-@receiver(post_save, sender=Student)
-def create_alumini(sender, instance, created, **kwargs):
+@receiver(post_save, sender=Alumni)
+def create_alumni(sender, instance, created, **kwargs):
     if created and instance.student_status == 'completed':
-        Student.objects.create(admission=instance)
-    elif not created and instance.admission_status != 'completed':
+        Alumni.objects.create(alumni=instance)
+    elif not created and instance.student_status != 'completed':
         try:
-            student = Student.objects.get(admission=instance)
-            student.delete()
-        except Student.DoesNotExist:
+            alumni_student = Alumni.objects.get(alumni=instance)
+            alumni_student.delete()
+        except Alumni.DoesNotExist:
             pass
 
 

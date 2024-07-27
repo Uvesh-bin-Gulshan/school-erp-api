@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from .models import Department,Course,AnnuallySubjectSyllabusStatus,Subject,MonthlySubjectSyllabusStatus,SyllabusStatusVerification
+from .models import Department,Course,AnnuallySubjectSyllabusStatus,Subject,MonthlySubjectSyllabusStatus,SyllabusStatusVerification, TimeTable
 
 
 class DepartmentSerializer(serializers.ModelSerializer):
@@ -31,4 +31,9 @@ class MonthlySubjectSyllabusStatusSerializer(serializers.ModelSerializer):
 class SyllabusStatusVerificationSerializer(serializers.ModelSerializer):
     class Meta:
         model= SyllabusStatusVerification
+        fields='__all__'
+
+class TimeTableSerializer(serializers.ModelSerializer):
+    class Meta:
+        model= TimeTable
         fields='__all__'

@@ -2,6 +2,8 @@ import uuid
 from django.db import models
 from academic.models import Subject
 from admission.models import Student
+from django.apps import apps
+
 
 def shortuuid():
     return str(uuid.uuid4().hex)[:6]
@@ -11,16 +13,25 @@ class ExamType(models.Model):
         effective_date = models.DateField()
 class ExamTimeTable(models.Model):
         exam_time_table_id = models.CharField(default=shortuuid, max_length=6, editable=False, primary_key=True)
-        exam_type=models.ForeignKey(ExamType, on_delete=models.CASCADE, to_field='subject_id')
-        subject = models.ForeignKey(Subject, on_delete=models.CASCADE, to_field='subject_id')
+        exam_type=models.ForeignKey(ExamType, on_delete=models.CASCADE,  )
+        subject = models.ForeignKey(Student, on_delete=models.CASCADE,  )
         total_marks=models.PositiveIntegerField()
         passing_marks=models.PositiveIntegerField()
         time=models.TimeField()
 
-class Marksheet(models.Model):
-         marksheet_id = models.CharField(default=shortuuid, max_length=6, editable=False, primary_key=True)
-         exam_detail=models.ForeignKey(ExamTimeTable, on_delete=models.CASCADE, to_field='subject_id')
-         student=models.ForeignKey(Student, on_delete=models.CASCADE, to_field='subject_id')
+
+class HallTicket(models.Model):
+    hall_ticket_number = models.CharField(default=shortuuid, max_length=6, editable=False, primary_key=True)
+    exam_time_table = models.ForeignKey(ExamTimeTable, on_delete=models.CASCADE)
+    student = models.ForeignKey(Student, on_delete=models.CASCADE)
+
+    def __str__(self):
+        return f'Hall Ticket {self.hall_ticket_number} for Exam {self.exam_time_table}'      
+
+class MarkSheet(models.Model):
+         mark_sheet_id = models.CharField(default=shortuuid, max_length=6, editable=False, primary_key=True)
+         exam_detail=models.ForeignKey(ExamTimeTable, on_delete=models.CASCADE,  )
+         student=models.ForeignKey(Student, on_delete=models.CASCADE,  )
          marks_obtained=models.PositiveIntegerField()
          result=models.CharField(max_length=20,editable=False)
 
@@ -34,7 +45,7 @@ class Marksheet(models.Model):
 
 class ResultSheet(models.Model):
     result_sheet_id = models.CharField(default=shortuuid, max_length=6, editable=False, primary_key=True)
-    student=models.ForeignKey(Student, on_delete=models.CASCADE, to_field='subject_id')
+    student=models.ForeignKey(Student, on_delete=models.CASCADE,  )
     result_data=models.JSONField() 
     total_marks_obtained = models.PositiveIntegerField(default=0)
     rank = models.PositiveIntegerField(default=0)

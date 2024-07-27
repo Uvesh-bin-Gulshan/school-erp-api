@@ -1,5 +1,5 @@
 from django.urls import path # type: ignore
-from .views import AdmissionView, StudentView
+from .views import AdmissionView, StudentView, AlumniView
 app_name='admission'
 urlpatterns = [
     # Admission urls
@@ -16,6 +16,12 @@ urlpatterns = [
     path('student/update/<str:pk>/', StudentView.as_view({'put': 'update'}), name='student-update'),
     path('student/delete/<str:pk>/', StudentView.as_view({'delete': 'delete'}), name='student-delete'),
 
+    # Alumni urls
+    path('alumni/list/', AlumniView.as_view({'get': 'list'}), name='alumni-list'),
+    path('alumni/create/', AlumniView.as_view({'post': 'create'}), name='alumni-create'),
+    path('alumni/retrieve/<str:pk>/', AlumniView.as_view({'get': 'retrieve'}), name='alumni-retrieve'),
+    path('alumni/update/<str:pk>/', AlumniView.as_view({'put': 'update'}), name='alumni-update'),
+    path('alumni/delete/<str:pk>/', AlumniView.as_view({'delete': 'delete'}), name='alumni-delete'),
 
 
 
