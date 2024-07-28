@@ -5,6 +5,7 @@ from rest_framework import viewsets
 from rest_framework import status
 from rest_framework.response import Response
 
+
 class AdmissionView(viewsets.ViewSet):
     def list(self, request):
         queryset = Admission.objects.all()
@@ -82,7 +83,6 @@ class StudentView(viewsets.ViewSet):
             return Response(status=status.HTTP_404_NOT_FOUND)
         student.delete()
         return Response(status=status.HTTP_204_NO_CONTENT)
-
 
 class AlumniView(viewsets.ViewSet):
     def list(self, request):

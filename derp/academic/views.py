@@ -1,7 +1,8 @@
 from django.shortcuts import render
-from .models import Department, Subject, Course, AnnuallySubjectSyllabusStatus, MonthlySubjectSyllabusStatus, SyllabusStatusVerification, TimeTable
-from .serializers import DepartmentSerializer, SubjectSerializer, CourseSerializer, AnnuallySubjectSyllabusStatusSerializer, MonthlySubjectSyllabusStatusSerializer, SyllabusStatusVerificationSerializer, TimeTableSerializer
+from .models import Department, Subject, Course, AnnuallySubjectSyllabusStatus, MonthlySubjectSyllabusStatus, SyllabusStatusVerification, TimeTable, VacationPeriod
+from .serializers import DepartmentSerializer, SubjectSerializer, CourseSerializer, AnnuallySubjectSyllabusStatusSerializer, MonthlySubjectSyllabusStatusSerializer, SyllabusStatusVerificationSerializer, TimeTableSerializer, VacationPeriodSerializer
 from rest_framework import viewsets
+from rest_framework import status
 from rest_framework.response import Response
 from userauth.permissions import isPrincipal,isTeacher,isTechSupport
 from django.http import JsonResponse
@@ -220,7 +221,7 @@ class SyllabusStatusVerificationView(viewsets.ViewSet):
         status.delete()
         return Response(status=204)
 
-
+# TimeTable View
 class TimeTableView(viewsets.ViewSet):
     def list(self, request):
         queryset = TimeTable.objects.all()
@@ -261,4 +262,44 @@ class TimeTableView(viewsets.ViewSet):
         timetable.delete()
         return Response(status=status.HTTP_204_NO_CONTENT)
 
+# Vacation View
+class VacationPeriodView(viewsets.ViewSet):
+    def list(self, request):
+        queryset = VacationPeriod.objects.all()
+        serializer = VacationPeriodSerializer(queryset, many=True)
+        return Response(serializer.data)
+
+    def retrieve(self, request, pk):
+        try:
+            vacation_period = VacationPeriod.objects.get(pk=pk)
+        except VacationPeriod.DoesNotExist:
+            return Response(status=status.HTTP_404_NOT_FOUND)
+        serializer = VacationPeriodSerializer(vacation_period)
+        return Response(serializer.data)
+
+    def create(self, request):
+        serializer = VacationPeriodSerializer(data=request.data)
+        if serializer.is_valid():
+            serializer.save()
+            return Response(serializer.data, status=status.HTTP_201_CREATED)
+        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+
+    def update(self, request, pk):
+        try:
+            vacation_period = VacationPeriod.objects.get(pk=pk)
+        except VacationPeriod.DoesNotExist:
+            return Response(status=status.HTTP_404_NOT_FOUND)
+        serializer = VacationPeriodSerializer(vacation_period, data=request.data)
+        if serializer.is_valid():
+            serializer.save()
+            return Response(serializer.data, status=status.HTTP_200_OK)
+        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+
+    def delete(self, request, pk):
+        try:
+            vacation_period = VacationPeriod.objects.get(pk=pk)
+        except VacationPeriod.DoesNotExist:
+            return Response(status=status.HTTP_404_NOT_FOUND)
+        vacation_period.delete()
+        return Response(status=status.HTTP_204_NO_CONTENT)
    

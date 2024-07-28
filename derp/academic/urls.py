@@ -1,5 +1,5 @@
 from django.urls import path
-from .views import DepartmentView, SubjectView, CourseView, AnnuallySubjectSyllabusStatusView, MonthlySubjectSyllabusStatusView, SyllabusStatusVerificationView, TimeTableView
+from .views import DepartmentView, SubjectView, CourseView, AnnuallySubjectSyllabusStatusView, MonthlySubjectSyllabusStatusView, SyllabusStatusVerificationView, TimeTableView, VacationPeriodView
 app_name='academic'
 urlpatterns = [
    # Department APIs
@@ -50,6 +50,14 @@ urlpatterns = [
    path('timetable/retrieve/<str:pk>/', TimeTableView.as_view({'get': 'retrieve'}), name='timetable-retrieve'),
    path('timetable/update/<str:pk>/', TimeTableView.as_view({'put': 'update'}), name='timetable-update'),
    path('timetable/delete/<str:pk>/', TimeTableView.as_view({'delete': 'delete'}), name='timetable-delete'),
+
+   #VacationPeriod APIs
+   path('vacationperiod/list/', VacationPeriodView.as_view({'get': 'list'}), name='vacationperiod-list'),
+   path('vacationperiod/create/', VacationPeriodView.as_view({'post': 'create'}), name='vacationperiod-create'),
+   path('vacationperiod/retrieve/<str:pk>/', VacationPeriodView.as_view({'get': 'retrieve'}), name='vacationperiod-retrieve'),
+   path('vacationperiod/update/<str:pk>/', VacationPeriodView.as_view({'put': 'update'}), name='vacationperiod-update'),
+   path('vacationperiod/delete/<str:pk>/', VacationPeriodView.as_view({'delete': 'delete'}), name='vacationperiod-delete'),
+
 
 ]
 
