@@ -40,6 +40,7 @@ class Subject(models.Model):
     syllabus_type=models.ForeignKey(SyllabusType,on_delete=models.CASCADE, to_field='type_id')
     description = models.TextField(max_length=200, null=True, blank=True)
     course = models.ForeignKey(Course, on_delete=models.CASCADE, null=False, blank=False, to_field='course_id')
+
 class AnnuallySubjectSyllabusStatus(models.Model):
     annual_status_id = models.CharField(default=shortuuid, max_length=6, editable=False, primary_key=True)
     subject = models.ForeignKey(Subject, on_delete=models.CASCADE, to_field='subject_id')
