@@ -10,13 +10,51 @@ class AdmissionDashboardView(APIViews):
         admission_applied_per_year=Admission.objects.values('created_at').annotate(count=Count('created_at')),
         admission_accepted_per_year=Admission.objects.values('created_at').annotate(count=Count('created_at')),
         admission_rejected_per_year=Admission.objects.values('created_at').annotate(count=Count('created_at')),
+        admission_filter_by_course=Admission.objects.values('created_at').annotate(count=Count('created_at')),
+        admission_filter_by_department=Admission.objects.values('created_at').annotate(count=Count('created_at')),
+        admission_filter_by_age=Admission.objects.values('created_at').annotate(count=Count('created_at')),
+        admission_filter_by_city=Admission.objects.values('created_at').annotate(count=Count('created_at')),
+        admission_filter_by_state=Admission.objects.values('created_at').annotate(count=Count('created_at')),
+        admission_filter_by_country=Admission.objects.values('created_at').annotate(count=Count('created_at')),
 
-        
+
+
         context={
         'total_admissions_applied':total_admissions_applied,
         'admission_applied_per_year':admission_applied_per_year,
         'admission_accepted_per_year':admission_applied_per_year,
         'admission_rejected_per_year':admission_applied_per_year,
+             
+                  }
+        return Response(context)
+    
+
+
+
+class StudentDashboardView(APIViews):
+    def get(self,request):
+        total_students_till_now=Admission.objects.count(),
+        students_per_year=Admission.objects.values('created_at').annotate(count=Count('created_at')),
+        students_left_per_year=Admission.objects.values('created_at').annotate(count=Count('created_at')),
+        students_filter_by_course=Admission.objects.values('created_at').annotate(count=Count('created_at')),
+        students_filter_by_department=Admission.objects.values('created_at').annotate(count=Count('created_at')),
+        students_filter_by_age=Admission.objects.values('created_at').annotate(count=Count('created_at')),
+        students_filter_by_city=Admission.objects.values('created_at').annotate(count=Count('created_at')),
+        students_filter_by_state=Admission.objects.values('created_at').annotate(count=Count('created_at')),
+        students_filter_by_country=Admission.objects.values('created_at').annotate(count=Count('created_at')),
+
+
+
+        context={
+        'total_students_till_now':total_students_till_now,
+        'students_per_year':students_per_year,
+        'students_left_per_year':students_left_per_year,
+        'students_filter_by_course':students_filter_by_course,
+        'students_filter_by_department':students_filter_by_department,
+        'students_filter_by_age':students_filter_by_age,
+        'students_filter_by_city':students_filter_by_city,
+        'students_filter_by_state':students_filter_by_state,
+        'students_filter_by_country':students_filter_by_country,
              
                   }
         return Response(context)
