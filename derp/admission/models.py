@@ -54,10 +54,13 @@ class Admission(models.Model):
         ('pending', 'Pending'),
         ('left', 'Left'),
     )
+    
     admission_status = models.CharField(choices=ADMISSION_STATUS, default='pending', max_length=50)  # Changed default value 
     def __str__(self):
         return self.student_name
     
+            
+
     class Meta:
         ordering = ['id']
 
