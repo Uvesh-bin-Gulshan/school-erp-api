@@ -3,61 +3,80 @@ from rest_framwork.response import Response
 from django.db.models import Count, F, ExpressionWrapper,fields
 from .models import Admission
 from django.db.models.functions import ExtractYear
-
-
-class AdmissionDashboardView(APIViews):
-    def get(self,request):
-        total_admissions_applied=Admission.objects.count(),
-        admission_applied_per_year=Admission.objects.annotate(year=ExtractYear('created_at')).values('year').annotate(count=Count('id')).order_by('year'),
-        admission_accepted_per_year=Admission.objects.annotate(year=ExtractYear('created_at')).values('year').annotate(count=Count('id')).order_by('year'),
-        admission_rejected_per_year=Admission.objects.annotate(year=ExtractYear('created_at')).values('year').annotate(count=Count('id')).order_by('year'),
-        admission_filter_by_course=Admission.objects.values('created_at').annotate(count=Count('created_at')),
-        admission_filter_by_department=Admission.objects.values('created_at').annotate(count=Count('created_at')),
-        admission_filter_by_age=Admission.objects.annotate(age=ExpressionWrapper(ExtractYear(F('create_at'))-ExtractYear(F('date_of_birth')),output_field==fields.IntegerField())).values('age').annotate(count=Count('id')).order_by('age'),
-        admission_filter_by_city=Admission.objects.values('created_at').annotate(count=Count('created_at')),
-        admission_filter_by_state=Admission.objects.values('created_at').annotate(count=Count('created_at')),
-        admission_filter_by_country=Admission.objects.values('created_at').annotate(count=Count('created_at')),
-
-
-
-        context={
-        'total_admissions_applied':total_admissions_applied,
-        'admission_applied_per_year':admission_applied_per_year,
-        'admission_accepted_per_year':admission_accepted_per_year,
-        'admission_rejected_per_year':admission_rejected_per_year,
-             
-                  }
+class AdmissionDashboardView(APIView):
+    def get(self, request):
+        context = {
+            'total_admissions_applied': self.get_total_admissions(),
+            'admission_applied_per_year': self.get_admissions_per_year(),
+            'admission_approved_per_year': self.get_admissions_per_year(status='approved'),
+            'admission_pending_per_year': self.get_admissions_per_year(status='pending'),
+            'admission_left_per_year': self.get_admissions_per_year(status='left'),
+            'admission_filter_by_course': self.get_admissions_grouped_by('applied_for'),
+            'admission_filter_by_department': self.get_admissions_grouped_by('previous_education'),
+            'admission_filter_by_age': self.get_admissions_grouped_by_age(),
+            'admission_filter_by_city': self.get_admissions_grouped_by('district'),
+            'admission_filter_by_state': self.get_admissions_grouped_by('state'),
+            'admission_filter_by_country': self.get_admissions_grouped_by('locality'),  # Assuming locality as country; adjust as needed
+            'age_per_course': self.get_admissions_grouped_by_age('applied_for'),
+            'age_per_department': self.get_admissions_grouped_by_age('previous_education'),
+        }
         return Response(context)
     
+    def get_total_admissions(self):
+        return Admission.objects.count()
+
+    def get_admissions_per_year(self, status=None):
+        queryset = Admission.objects
+        if status:
+            queryset = queryset.filter(admission_status=status)
+        return queryset.annotate(
+            year=ExtractYear('created_at')
+        ).values('year').annotate(count=Count('id')).order_by('year')
+
+    def get_admissions_grouped_by(self, field):
+        return Admission.objects.values(field).annotate(count=Count('id')).order_by(field)
+
+    def get_admissions_grouped_by_age(self, group_by=None):
+        queryset = Admission.objects.annotate(
+            age=ExpressionWrapper(
+                ExtractYear(F('created_at')) - ExtractYear(F('date_of_birth')),
+                output_field=fields.IntegerField()
+            )
+        )
+        if group_by:
+            return queryset.values(group_by, 'age').annotate(count=Count('id')).order_by(group_by, 'age')
+        return queryset.values('age').annotate(count=Count('id')).order_by('age')
 
 
-
-class StudentDashboardView(APIViews):
-    def get(self,request):
-        total_students_till_now=Admission.objects.count(),
-        students_per_year=Admission.objects.values('created_at').annotate(count=Count('created_at')),
-        students_left_per_year=Admission.objects.values('created_at').annotate(count=Count('created_at')),
-        students_filter_by_course=Admission.objects.values('created_at').annotate(count=Count('created_at')),
-        students_filter_by_department=Admission.objects.values('created_at').annotate(count=Count('created_at')),
-        students_filter_by_age=Admission.objects.values('created_at').annotate(count=Count('created_at')),
-        students_filter_by_city=Admission.objects.values('created_at').annotate(count=Count('created_at')),
-        students_filter_by_state=Admission.objects.values('created_at').annotate(count=Count('created_at')),
-        students_filter_by_country=Admission.objects.values('created_at').annotate(count=Count('created_at')),
-
-
-
-        context={
-        'total_students_till_now':total_students_till_now,
-        'students_per_year':students_per_year,
-        'students_left_per_year':students_left_per_year,
-        'students_filter_by_course':students_filter_by_course,
-        'students_filter_by_department':students_filter_by_department,
-        'students_filter_by_age':students_filter_by_age,
-        'students_filter_by_city':students_filter_by_city,
-        'students_filter_by_state':students_filter_by_state,
-        'students_filter_by_country':students_filter_by_country,
-             
-                  }
+class StudentDashboardView(APIView):
+    def get(self, request):
+        context = {
+            'total_students': self.get_total_students(),
+            'student_per_course': self.get_students_grouped_by('course__course_name'),  # Assuming course_name as field in Course model
+            'student_per_department': self.get_students_grouped_by('department__department_name'),  # Assuming department_name as field in Department model
+            'student_status_per_year': self.get_students_per_year(),
+            'student_status_distribution': self.get_students_grouped_by('student_status'),
+            'student_age_distribution': self.get_students_grouped_by_age(),
+            'student_per_city': self.get_students_grouped_by('admission__district'),  # Assuming district represents city
+            'student_per_state': self.get_students_grouped_by('admission__state'),
+            'student_per_country': self.get_students_grouped_by('admission__locality'),  # Assuming locality represents country
+        }
         return Response(context)
     
+    def get_total_students(self):
+        return Student.objects.count()
 
+    def get_students_grouped_by(self, field):
+        return Student.objects.values(field).annotate(count=Count('student_id')).order_by(field)
+
+    def get_students_per_year(self):
+        return Student.objects.annotate(
+            year=ExtractYear('admission__created_at')
+        ).values('year').annotate(count=Count('student_id')).order_by('year')
+
+    def get_students_grouped_by_age(self):
+        current_year = ExtractYear(F('admission__created_at'))
+        birth_year = ExtractYear(F('admission__date_of_birth'))
+        age = ExpressionWrapper(current_year - birth_year, output_field=fields.IntegerField())
+        
+        return Student.objects.annotate(age=age).values('age').annotate(count=Count('student_id')).order_by('age')
