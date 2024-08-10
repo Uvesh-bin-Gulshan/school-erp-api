@@ -122,3 +122,5 @@ class VacationPeriod(models.Model):
         def __str__(self):
             return f"Vacation from {self.start_date} to {self.end_date} for {self.name}"
         
+
+        
