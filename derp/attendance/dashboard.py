@@ -10,10 +10,7 @@ class AttendanceDashboardView(APIViews):
 
         context={
             'attendance_per_year': self.get_total_attendance_per_year(),
-          
-       
-
-        }
+       }
         return Response(context)
 
     def get_total_attendance_per_year(self,status=None):

@@ -1,7 +1,7 @@
 from rest_framework.views import APIViews
 from rest_framwork.response import Response
 from django.db.models import Count, F, ExpressionWrapper,fields
-from .models import Admission,Student
+from .models import Admission,Student,Alumni
 from django.db.models.functions import ExtractYear
 class AdmissionDashboardView(APIViews):
     def get(self, request):
@@ -80,3 +80,39 @@ class StudentDashboardView(APIViews):
         age = ExpressionWrapper(current_year - birth_year, output_field=fields.IntegerField())
         
         return Student.objects.annotate(age=age).values('age').annotate(count=Count('student_id')).order_by('age')
+    
+
+
+class AlumniDashboard(APIViews):
+     def get_alumni_data(self):
+        total_alumni = Alumni.objects.count()
+
+        queryset = (
+            Alumni.objects
+            .select_related('student__course__department')
+            .annotate(
+                city=F('residence__city'),
+                state=F('residence__state'),
+                country=F('residence__country'),
+                occupation=F('occupation'),
+                course_name=F('student__course__name'),
+                department_name=F('student__course__department__name'),
+                alumni_count=Count('alumni_id'),
+                alumni_percentage=ExpressionWrapper(
+                    F('alumni_count') * 100.0 / total_alumni,
+                    output_field=fields.FloatField()
+                )
+            )
+            .values(
+                'city',
+                'state',
+                'country',
+                'occupation',
+                'course_name',
+                'department_name',
+                'alumni_count',
+                'alumni_percentage'
+            )
+            .order_by('city', 'state', 'country', 'occupation', 'course_name')
+        )
+        return list(queryset)
