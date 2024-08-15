@@ -1,97 +1,113 @@
 "use client"
 
-import React from 'react'
-import { useForm } from 'react-hook-form'
+import React, { useState } from 'react'
+import { useForm, FormProvider } from 'react-hook-form'
 import { zodResolver } from '@hookform/resolvers/zod'
 import { useRouter } from 'next/navigation'
 import {
   Dialog,
   DialogContent,
-  DialogDescription,
   DialogHeader,
   DialogTitle,
   DialogTrigger,
 } from "@/components/ui/dialog"
-import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from '@/components/ui/form'
-import { Input } from '@/components/ui/input'
 import { Button } from '@/components/ui/button'
 import { loginSchema } from '@/lib/zodschema'
 import { submitForm, successtoastMessage, failedtoastMessage } from '@/lib/services'
-import { ADMISSION_LIST } from '@/lib/routePath'
+import { ADMISSION_LIST, CREATE_ADMISSION } from '@/lib/routePath'
 import { Plus } from 'lucide-react'
 import CustomButton from '@/app/_component/CustomButton'
 
+
+import PersonalInformation from './steps/PersonalInformation'
+import AddressInformation from './steps/AddressInformation '
+import ContactInformation from './steps/ContactInformation'
+import PreviousEducation from './steps/PreviousEducation'
+import ApplicationDetails from './steps/ApplicationDetails'
+import { MdNavigateNext } from 'react-icons/md'
+import SubmitButton from '@/app/_component/SubmitButton'
+
 const AddAdmissions = () => {
   const router = useRouter();
-  const form = useForm({
+  const [step, setStep] = useState(1);
+
+  const methods = useForm({
     resolver: zodResolver(loginSchema),
     defaultValues: {
-      username: "",
-      password: "",
+      student_name: "",
+      father_name: "",
+      date_of_birth: "",
+      profile_image: null,
+      state: "",
+      district: "",
+      locality: "",
+      pincode: "",
+      mobile_number: "",
+      aadhar_number: "",
+      previous_institution: "",
+      previous_education: "",
+      school_education: "",
+      previous_result_status: "pass",
+      applied_for: "",
+      lc_given: false,
+      pay_fees: false,
+      fees_amount: "",
+      required_donation: false,
+      admission_status: "pending",
     },
   });
 
-  const handleForm = async (event: React.FormEvent) => {
-    event.preventDefault();
-    const all_values = form.getValues();
+  const onNextStep = () => {
+    setStep(step + 1);
+  };
+
+  const onPreviousStep = () => {
+    setStep(step - 1);
+  };
+
+  const handleForm = async (data:any) => {
     try {
-      const response = await submitForm(ADMISSION_LIST,all_values,'POST');
+      const response = await submitForm(CREATE_ADMISSION, data, 'POST');
       if (response?.success) {
-        successtoastMessage("successfully created");
+        console.log(response)
+        successtoastMessage("Admission successfully created");
         router.push('../admin/admissions/');
       } else {
-        failedtoastMessage("Invalid credentials");
+        failedtoastMessage("Failed to create admission");
       }
     } catch (error) {
-      console.error('Failed to login:', error);
+      console.error('Failed to submit form:', error);
     }
   };
 
   return (
-    <>
-      <Dialog>
-        <DialogTrigger asChild >
-        <CustomButton text="Addmission"  icon={<Plus/>}/>
-        </DialogTrigger>
-        <DialogContent>
-          <DialogHeader>
-            <DialogTitle>Add new admission</DialogTitle>
-            <DialogDescription>
-              Add all required details
-            </DialogDescription>
-          </DialogHeader>
-          <Form {...form}>
-            <form onSubmit={handleForm} className="text-left p-2">
-              <FormField
-                name="username"
-                render={({ field }) => (
-                  <FormItem>
-                    <FormLabel>User Name</FormLabel>
-                    <FormControl>
-                      <Input {...field} id="username" type="text" />
-                    </FormControl>
-                    <FormMessage />
-                  </FormItem>
-                )}
-              />
-              <FormField
-                name="password"
-                render={({ field }) => (
-                  <FormItem>
-                    <FormLabel>Password</FormLabel>
-                    <FormControl>
-                      <Input {...field} type="password" />
-                    </FormControl>
-                    <FormMessage />
-                  </FormItem>
-                )}
-              />
-              <Button className="w-full mt-4" type="submit">Save</Button>
-            </form>
-          </Form>
-        </DialogContent>
-      </Dialog>
-    </>
+    <Dialog>
+      <DialogTrigger asChild>
+        <CustomButton text="Add Admission" icon={<Plus />} />
+      </DialogTrigger>
+      <DialogContent>
+        <DialogHeader>
+          <DialogTitle>Add New Admission</DialogTitle>
+        </DialogHeader>
+
+        <FormProvider {...methods}>
+          <form onSubmit={methods.handleSubmit(handleForm)} className="space-y-6">
+            {step === 1 && <PersonalInformation />}
+            {step === 2 && <AddressInformation />}
+            {step === 3 && <ContactInformation />}
+            {step === 4 && <PreviousEducation />}
+            {step === 5 && <ApplicationDetails />}
+
+            <div className="flex p-4 justify-between">
+              {step > 1 && <CustomButton  text="Back" icon={<MdNavigateNext />} onClick={onPreviousStep} type="button" />}
+              {step < 5 && <CustomButton  text="Next" icon={<MdNavigateNext />
+} onClick={onNextStep} className="bg-green-300" type="button" />}
+              {step === 5 &&<SubmitButton  text="Submit"  type="submit" />}
+            </div>
+          </form>
+        </FormProvider>
+      </DialogContent>
+    </Dialog>
   );
 }
 

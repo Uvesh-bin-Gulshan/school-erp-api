@@ -4,7 +4,7 @@ app_name='admission'
 urlpatterns = [
     # Admission urls
     path('admission/list/', AdmissionView.as_view({'get': 'list'}), name='admission-list'),
-    path('admission/create/', AdmissionView.as_view({'post': 'create'}), name='admission-create'),
+    path('create/', AdmissionView.as_view({'post': 'create'}), name='admission-create'),
     path('admission/retrieve/<str:pk>/', AdmissionView.as_view({'get': 'retrieve'}), name='admission-retrieve'),
     path('admission/update/<str:pk>/', AdmissionView.as_view({'put': 'update'}), name='admission-update'),
     path('admission/delete/<str:pk>/', AdmissionView.as_view({'delete': 'delete'}), name='admission-delete'),

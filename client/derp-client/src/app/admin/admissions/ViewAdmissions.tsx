@@ -13,7 +13,7 @@ const ViewAdmissions = ({data}:{data:any}) => {
     <>
     <div className="w-full relative ">
       
-    <div className='absolute right-0 mt-2.5 '>
+    <div className='absolute right-4 mt-2.5 '>
     
     <AddAdmissions  />
     
