@@ -1,5 +1,9 @@
 # from django.contrib import admin
-# from .models import Admission,Student
+from django.contrib import admin
+from .models import *
+
+
+admin.site.register(Admission)
 # from import_export import resources,fields
 # from import_export.admin import ImportExportModelAdmin
 # from django.utils.html import format_html

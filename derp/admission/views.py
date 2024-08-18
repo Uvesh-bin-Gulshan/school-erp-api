@@ -38,9 +38,10 @@ class AdmissionView(viewsets.ViewSet):
             return Response(serializer.data, status=status.HTTP_200_OK)
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
-    def delete(self, request, pk):
+    def destroy(self, request, pk):
         try:
             admission = Admission.objects.get(pk=pk)
+            admission.delete()
         except Admission.DoesNotExist:
             return Response(status=status.HTTP_404_NOT_FOUND)
 

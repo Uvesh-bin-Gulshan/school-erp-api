@@ -3,8 +3,15 @@ import { useFormContext } from 'react-hook-form'
 import { FormField, FormItem, FormLabel, FormControl, FormMessage } from '@/components/ui/form'
 import { Input } from '@/components/ui/input'
 import { Checkbox } from '@/components/ui/checkbox'
-import { Select, SelectContent, SelectItem } from '@/components/ui/select'
-
+import {
+  Select,
+  SelectContent,
+  SelectGroup,
+  SelectItem,
+  SelectLabel,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select"
 const ApplicationDetails = () => {
   const { control } = useFormContext();
 
@@ -85,14 +92,23 @@ const ApplicationDetails = () => {
           <FormItem>
             <FormLabel>Admission Status</FormLabel>
             <FormControl>
+
               <Select {...field}>
-                <SelectContent>
-
-
+              <SelectTrigger className="w-[180px]">
+        <SelectValue placeholder="Select previous Result" />
+      </SelectTrigger>
+              <SelectContent>
+        <SelectGroup>
+          <SelectLabel>Pass or Fail</SelectLabel>
+          
+         
+             
                 <SelectItem value="approved">Approved</SelectItem>
                 <SelectItem value="pending">Pending</SelectItem>
                 <SelectItem value="left">Left</SelectItem>
-                </SelectContent>
+        </SelectGroup>
+      </SelectContent>
+                
               </Select>
             </FormControl>
             <FormMessage />

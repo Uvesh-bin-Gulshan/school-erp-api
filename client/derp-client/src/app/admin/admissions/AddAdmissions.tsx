@@ -12,7 +12,7 @@ import {
   DialogTrigger,
 } from "@/components/ui/dialog"
 import { Button } from '@/components/ui/button'
-import { loginSchema } from '@/lib/zodschema'
+import { admissionSchema, loginSchema } from '@/lib/zodschema'
 import { submitForm, successtoastMessage, failedtoastMessage } from '@/lib/services'
 import { ADMISSION_LIST, CREATE_ADMISSION } from '@/lib/routePath'
 import { Plus } from 'lucide-react'
@@ -32,7 +32,7 @@ const AddAdmissions = () => {
   const [step, setStep] = useState(1);
 
   const methods = useForm({
-    resolver: zodResolver(loginSchema),
+    resolver: zodResolver(admissionSchema),
     defaultValues: {
       student_name: "",
       father_name: "",

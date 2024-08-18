@@ -4,7 +4,7 @@ const BASE_HOST='http://127.0.0.1:8000/';
 export const LOGIN=`${BASE_HOST}userauth/login/`;
 //admission
 export const ADMISSION_LIST=`${BASE_HOST}admission/admission/list`
-export const CREATE_ADMISSION=`${BASE_HOST}admission/create`
+export const CREATE_ADMISSION=`${BASE_HOST}admission/create/`
 
 
 //department
@@ -31,7 +31,7 @@ export const CREATE_MONTHLY_SYLLABUS_STATUS=`${BASE_HOST}academic/monthlySubject
 export const UPDATE_MONTHLY_SYLLABUS_STATUS=`${BASE_HOST}academic/monthlySubjectSyllabusStatus/update`
 export const RETRIEVE_MONTHLY_SYLLABUS_STATUS=`${BASE_HOST}academi/monthlySubjectSyllabusStatus/retrieve`
 export const DELETE_MONTHLY_SYLLABUS_STATUS=`${BASE_HOST}academic/monthlySubjectSyllabusStatus/delete`
-//annualySyllabusStatus 
+//annuallySyllabusStatus 
 export const ANNUALLY_SYLLABUS_STATUS_LIST=`${BASE_HOST}academic/annuallySubjectSyllabusStatus/list`
 export const CREATE_ANNUALLY_SYLLABUS_STATUS=`${BASE_HOST}academic/annuallySubjectSyllabusStatus/create`
 export const UPDATE_ANNUALLY_SYLLABUS_STATUS=`${BASE_HOST}academic/annuallySubjectSyllabusStatus/update`

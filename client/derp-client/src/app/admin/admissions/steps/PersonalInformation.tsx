@@ -47,19 +47,26 @@ const PersonalInformation = () => {
           </FormItem>
         )}
       />
-      <FormField
-        name="profile_image"
-        control={control}
-        render={({ field }) => (
-          <FormItem>
-            <FormLabel>Profile Image</FormLabel>
-            <FormControl>
-              <Input type="file" {...field} />
-            </FormControl>
-            <FormMessage />
-          </FormItem>
-        )}
-      />
+    <FormField
+  name="profile_image"
+  control={control}
+  render={({ field }) => (
+    <FormItem>
+      <FormLabel>Profile Image</FormLabel>
+      <FormControl>
+        <Input
+          type="file"
+          onChange={(e) => field.onChange(e.target.files?.[0])} // Manually set the file input
+          onBlur={field.onBlur}
+          // Remove the value field to avoid the error
+        />
+      </FormControl>
+      <FormMessage />
+    </FormItem>
+  )}
+/>
+
+      
     </>
   )
 }

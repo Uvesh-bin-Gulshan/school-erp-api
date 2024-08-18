@@ -2,8 +2,16 @@ import React from 'react'
 import { useFormContext } from 'react-hook-form'
 import { FormField, FormItem, FormLabel, FormControl, FormMessage } from '@/components/ui/form'
 import { Input } from '@/components/ui/input'
-import { Select, SelectItem } from '@/components/ui/select'
-import { SelectContent } from '@radix-ui/react-select'
+ 
+import {
+  Select,
+  SelectContent,
+  SelectGroup,
+  SelectItem,
+  SelectLabel,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select"
 
 const PreviousEducation = () => {
   const { control } = useFormContext();
@@ -59,14 +67,24 @@ const PreviousEducation = () => {
           <FormItem>
             <FormLabel>Previous Result Status</FormLabel>
             <FormControl>
-              <Select {...field}>
-
-
-              <SelectContent >
+            <Select {...field}>
+            <SelectTrigger className="w-[180px]">
+        <SelectValue placeholder="Select previous Result" />
+      </SelectTrigger>
+      <SelectContent>
+        <SelectGroup>
+          <SelectLabel>Pass or Fail</SelectLabel>
+          
+         
                 <SelectItem value="pass">Pass</SelectItem>
                 <SelectItem value="fail">Fail</SelectItem>
-              </SelectContent>
-              </Select>
+        </SelectGroup>
+      </SelectContent>
+    </Select>
+            
+
+
+          
             </FormControl>
             <FormMessage />
           </FormItem>
