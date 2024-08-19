@@ -338,14 +338,6 @@
         "documentation": {}
     },
     {
-        "label": "ImportExportModelAdmin",
-        "importPath": "import_export.admin",
-        "description": "import_export.admin",
-        "isExtraImport": true,
-        "detail": "import_export.admin",
-        "documentation": {}
-    },
-    {
         "label": "AppConfig",
         "importPath": "django.apps",
         "description": "django.apps",
@@ -1324,46 +1316,6 @@
         "documentation": {}
     },
     {
-        "label": "resources",
-        "importPath": "import_export",
-        "description": "import_export",
-        "isExtraImport": true,
-        "detail": "import_export",
-        "documentation": {}
-    },
-    {
-        "label": "fields",
-        "importPath": "import_export",
-        "description": "import_export",
-        "isExtraImport": true,
-        "detail": "import_export",
-        "documentation": {}
-    },
-    {
-        "label": "resources",
-        "importPath": "import_export",
-        "description": "import_export",
-        "isExtraImport": true,
-        "detail": "import_export",
-        "documentation": {}
-    },
-    {
-        "label": "fields",
-        "importPath": "import_export",
-        "description": "import_export",
-        "isExtraImport": true,
-        "detail": "import_export",
-        "documentation": {}
-    },
-    {
-        "label": "format_html",
-        "importPath": "django.utils.html",
-        "description": "django.utils.html",
-        "isExtraImport": true,
-        "detail": "django.utils.html",
-        "documentation": {}
-    },
-    {
         "label": "attendance.models",
         "kind": 6,
         "isExtraImport": true,
@@ -1511,6 +1463,22 @@
         "importPath": "students.models",
         "description": "students.models",
         "detail": "students.models",
+        "documentation": {}
+    },
+    {
+        "label": "resources",
+        "importPath": "import_export",
+        "description": "import_export",
+        "isExtraImport": true,
+        "detail": "import_export",
+        "documentation": {}
+    },
+    {
+        "label": "fields",
+        "importPath": "import_export",
+        "description": "import_export",
+        "isExtraImport": true,
+        "detail": "import_export",
         "documentation": {}
     },
     {
@@ -1944,42 +1912,6 @@
         "description": "derp.admission.migrations.0001_initial",
         "peekOfCode": "class Migration(migrations.Migration):\n    initial = True\n    dependencies = [\n        ('academic', '0001_initial'),\n    ]\n    operations = [\n        migrations.CreateModel(\n            name='Admission',\n            fields=[\n                ('id', models.CharField(editable=False, max_length=6, verbose_name=admission.models.shortuuid)),",
         "detail": "derp.admission.migrations.0001_initial",
-        "documentation": {}
-    },
-    {
-        "label": "AdmissionResource",
-        "kind": 6,
-        "importPath": "derp.admission.admin",
-        "description": "derp.admission.admin",
-        "peekOfCode": "class AdmissionResource(resources.ModelResource):\n    class Meta:\n        model = Admission\n        fields = ['id', 'student_name', 'profile_image','applied_for', 'date_of_birth', 'state', 'district', 'locality', 'pincode', 'mobile_number', ' aadhar_number', 'previous_result_status', 'admission_status', 'previous_institution', 'previous_education', 'worldly_studies', 'lc_given', 'donation', 'donation_amount', 'created_at', 'updated_at']\n# Register your models here.\n@admin.register(Admission)\nclass AdmissionAdmin(ImportExportModelAdmin):\n    resource_class = AdmissionResource\n    list_display = ['id', 'student_name', 'guardian_name', 'profile', 'applied_for', 'date_of_birth', 'state', 'district', 'locality', 'pincode', 'mobile_number', ' aadhar_number', 'previous_result_status', 'admission_status', 'previous_institution', 'previous_education', 'worldly_studies', 'lc_given', 'donation', 'donation_amount', 'created_at', 'updated_at']\n    list_display_links = ['student_name']",
-        "detail": "derp.admission.admin",
-        "documentation": {}
-    },
-    {
-        "label": "AdmissionAdmin",
-        "kind": 6,
-        "importPath": "derp.admission.admin",
-        "description": "derp.admission.admin",
-        "peekOfCode": "class AdmissionAdmin(ImportExportModelAdmin):\n    resource_class = AdmissionResource\n    list_display = ['id', 'student_name', 'guardian_name', 'profile', 'applied_for', 'date_of_birth', 'state', 'district', 'locality', 'pincode', 'mobile_number', ' aadhar_number', 'previous_result_status', 'admission_status', 'previous_institution', 'previous_education', 'worldly_studies', 'lc_given', 'donation', 'donation_amount', 'created_at', 'updated_at']\n    list_display_links = ['student_name']\n    list_filter = ('applied_for','state', 'district', 'locality', 'pincode','previous_result_status', 'admission_status', 'previous_institution', 'previous_education', 'worldly_studies', 'lc_given', 'donation')  # Corrected filter fields\n    search_fields =  ('student_name',)  \n    def get_queryset(self, request):\n        queryset = super().get_queryset(request)\n        self.total_count = queryset.count()\n        return queryset",
-        "detail": "derp.admission.admin",
-        "documentation": {}
-    },
-    {
-        "label": "StudentResource",
-        "kind": 6,
-        "importPath": "derp.admission.admin",
-        "description": "derp.admission.admin",
-        "peekOfCode": "class StudentResource(resources.ModelResource):\n    profile_image = fields.Field(column_name='admission__profile_image')\n    applied_for = fields.Field(column_name='admission__applied_for')\n    date_of_birth = fields.Field(column_name='admission__date_of_birth')\n    state = fields.Field(column_name='admission__state')\n    district = fields.Field(column_name='admission__district')\n    locality = fields.Field(column_name='admission__locality')\n    pincode = fields.Field(column_name='admission__pincode')\n    mobile_number = fields.Field(column_name='admission__mobile_number')\n    aadhar_number = fields.Field(column_name='admission__aadhar_number')",
-        "detail": "derp.admission.admin",
-        "documentation": {}
-    },
-    {
-        "label": "StudentAdmin",
-        "kind": 6,
-        "importPath": "derp.admission.admin",
-        "description": "derp.admission.admin",
-        "peekOfCode": "class StudentAdmin(ImportExportModelAdmin):\n    resource_class = AdmissionResource\n    list_display = ('id', 'student_name','profile', 'guardian_name', 'applied_for')\n     # Add filters based on admission status if needed\n    def profile(self, obj):\n        return format_html('<img src=\"{}\" style=\"width:60px; height:60px; border-radius:50%;\"/>'.format(obj.admission.profile_image.url))\n    # search_fields = ('student_name', 'guardian_name', 'admission_id')  # Add search fields for easy lookup\n    list_display_links = ['student_name']\n    search_fields = ('student_name', 'guardian_name', 'admission__student_name', 'admission__guardian_name', 'admission__applied_for')  # Add search fields for easy lookup\n    list_filter = ('admission__applied_for','admission__state', 'admission__district', 'admission__locality', 'admission__pincode','admission__previous_result_status', 'admission__admission_status', 'admission__previous_institution', 'admission__previous_education', 'admission__worldly_studies', 'admission__lc_given', 'admission__donation')  # Corrected filter fields",
-        "detail": "derp.admission.admin",
         "documentation": {}
     },
     {
