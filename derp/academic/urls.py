@@ -1,5 +1,6 @@
 from django.urls import path
 from .views import DepartmentView, SubjectView, CourseView, AnnuallySubjectSyllabusStatusView, MonthlySubjectSyllabusStatusView, SyllabusStatusVerificationView, TimeTableView, VacationPeriodView
+from .dashboard import AcademicDashboardView
 app_name='academic'
 urlpatterns = [
    # Department APIs
@@ -58,6 +59,7 @@ urlpatterns = [
    path('vacationperiod/update/<str:pk>/', VacationPeriodView.as_view({'put': 'update'}), name='vacationperiod-update'),
    path('vacationperiod/delete/<str:pk>/', VacationPeriodView.as_view({'delete': 'delete'}), name='vacationperiod-delete'),
 
+    # Dashboard APIs
+    path('academic-dashboard/', AcademicDashboardView.as_view(), name='academic-dashboard'),
 
 ]
-

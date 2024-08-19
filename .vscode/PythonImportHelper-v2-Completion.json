@@ -1,0 +1,3137 @@
+[
+    {
+        "label": "academic.models",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "academic.models",
+        "description": "academic.models",
+        "detail": "academic.models",
+        "documentation": {}
+    },
+    {
+        "label": "Course",
+        "importPath": "academic.models",
+        "description": "academic.models",
+        "isExtraImport": true,
+        "detail": "academic.models",
+        "documentation": {}
+    },
+    {
+        "label": "Department",
+        "importPath": "academic.models",
+        "description": "academic.models",
+        "isExtraImport": true,
+        "detail": "academic.models",
+        "documentation": {}
+    },
+    {
+        "label": "TimeTable",
+        "importPath": "academic.models",
+        "description": "academic.models",
+        "isExtraImport": true,
+        "detail": "academic.models",
+        "documentation": {}
+    },
+    {
+        "label": "Subject",
+        "importPath": "academic.models",
+        "description": "academic.models",
+        "isExtraImport": true,
+        "detail": "academic.models",
+        "documentation": {}
+    },
+    {
+        "label": "*",
+        "importPath": "academic.models",
+        "description": "academic.models",
+        "isExtraImport": true,
+        "detail": "academic.models",
+        "documentation": {}
+    },
+    {
+        "label": "django.db.models.deletion",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "django.db.models.deletion",
+        "description": "django.db.models.deletion",
+        "detail": "django.db.models.deletion",
+        "documentation": {}
+    },
+    {
+        "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "admin",
+        "importPath": "django.contrib",
+        "description": "django.contrib",
+        "isExtraImport": true,
+        "detail": "django.contrib",
+        "documentation": {}
+    },
+    {
+        "label": "admin",
+        "importPath": "django.contrib",
+        "description": "django.contrib",
+        "isExtraImport": true,
+        "detail": "django.contrib",
+        "documentation": {}
+    },
+    {
+        "label": "admin",
+        "importPath": "django.contrib",
+        "description": "django.contrib",
+        "isExtraImport": true,
+        "detail": "django.contrib",
+        "documentation": {}
+    },
+    {
+        "label": "admin",
+        "importPath": "django.contrib",
+        "description": "django.contrib",
+        "isExtraImport": true,
+        "detail": "django.contrib",
+        "documentation": {}
+    },
+    {
+        "label": "admin",
+        "importPath": "django.contrib",
+        "description": "django.contrib",
+        "isExtraImport": true,
+        "detail": "django.contrib",
+        "documentation": {}
+    },
+    {
+        "label": "admin",
+        "importPath": "django.contrib",
+        "description": "django.contrib",
+        "isExtraImport": true,
+        "detail": "django.contrib",
+        "documentation": {}
+    },
+    {
+        "label": "admin",
+        "importPath": "django.contrib",
+        "description": "django.contrib",
+        "isExtraImport": true,
+        "detail": "django.contrib",
+        "documentation": {}
+    },
+    {
+        "label": "admin",
+        "importPath": "django.contrib",
+        "description": "django.contrib",
+        "isExtraImport": true,
+        "detail": "django.contrib",
+        "documentation": {}
+    },
+    {
+        "label": "admin",
+        "importPath": "django.contrib",
+        "description": "django.contrib",
+        "isExtraImport": true,
+        "detail": "django.contrib",
+        "documentation": {}
+    },
+    {
+        "label": "admin",
+        "importPath": "django.contrib",
+        "description": "django.contrib",
+        "isExtraImport": true,
+        "detail": "django.contrib",
+        "documentation": {}
+    },
+    {
+        "label": "ImportExportModelAdmin",
+        "importPath": "import_export.admin",
+        "description": "import_export.admin",
+        "isExtraImport": true,
+        "detail": "import_export.admin",
+        "documentation": {}
+    },
+    {
+        "label": "ImportExportModelAdmin",
+        "importPath": "import_export.admin",
+        "description": "import_export.admin",
+        "isExtraImport": true,
+        "detail": "import_export.admin",
+        "documentation": {}
+    },
+    {
+        "label": "ImportExportModelAdmin",
+        "importPath": "import_export.admin",
+        "description": "import_export.admin",
+        "isExtraImport": true,
+        "detail": "import_export.admin",
+        "documentation": {}
+    },
+    {
+        "label": "AppConfig",
+        "importPath": "django.apps",
+        "description": "django.apps",
+        "isExtraImport": true,
+        "detail": "django.apps",
+        "documentation": {}
+    },
+    {
+        "label": "AppConfig",
+        "importPath": "django.apps",
+        "description": "django.apps",
+        "isExtraImport": true,
+        "detail": "django.apps",
+        "documentation": {}
+    },
+    {
+        "label": "AppConfig",
+        "importPath": "django.apps",
+        "description": "django.apps",
+        "isExtraImport": true,
+        "detail": "django.apps",
+        "documentation": {}
+    },
+    {
+        "label": "AppConfig",
+        "importPath": "django.apps",
+        "description": "django.apps",
+        "isExtraImport": true,
+        "detail": "django.apps",
+        "documentation": {}
+    },
+    {
+        "label": "AppConfig",
+        "importPath": "django.apps",
+        "description": "django.apps",
+        "isExtraImport": true,
+        "detail": "django.apps",
+        "documentation": {}
+    },
+    {
+        "label": "apps",
+        "importPath": "django.apps",
+        "description": "django.apps",
+        "isExtraImport": true,
+        "detail": "django.apps",
+        "documentation": {}
+    },
+    {
+        "label": "AppConfig",
+        "importPath": "django.apps",
+        "description": "django.apps",
+        "isExtraImport": true,
+        "detail": "django.apps",
+        "documentation": {}
+    },
+    {
+        "label": "AppConfig",
+        "importPath": "django.apps",
+        "description": "django.apps",
+        "isExtraImport": true,
+        "detail": "django.apps",
+        "documentation": {}
+    },
+    {
+        "label": "AppConfig",
+        "importPath": "django.apps",
+        "description": "django.apps",
+        "isExtraImport": true,
+        "detail": "django.apps",
+        "documentation": {}
+    },
+    {
+        "label": "AppConfig",
+        "importPath": "django.apps",
+        "description": "django.apps",
+        "isExtraImport": true,
+        "detail": "django.apps",
+        "documentation": {}
+    },
+    {
+        "label": "APIView",
+        "importPath": "rest_framework.views",
+        "description": "rest_framework.views",
+        "isExtraImport": true,
+        "detail": "rest_framework.views",
+        "documentation": {}
+    },
+    {
+        "label": "APIView",
+        "importPath": "rest_framework.views",
+        "description": "rest_framework.views",
+        "isExtraImport": true,
+        "detail": "rest_framework.views",
+        "documentation": {}
+    },
+    {
+        "label": "APIViews",
+        "importPath": "rest_framework.views",
+        "description": "rest_framework.views",
+        "isExtraImport": true,
+        "detail": "rest_framework.views",
+        "documentation": {}
+    },
+    {
+        "label": "APIView",
+        "importPath": "rest_framework.views",
+        "description": "rest_framework.views",
+        "isExtraImport": true,
+        "detail": "rest_framework.views",
+        "documentation": {}
+    },
+    {
+        "label": "APIView",
+        "importPath": "rest_framework.views",
+        "description": "rest_framework.views",
+        "isExtraImport": true,
+        "detail": "rest_framework.views",
+        "documentation": {}
+    },
+    {
+        "label": "APIView",
+        "importPath": "rest_framework.views",
+        "description": "rest_framework.views",
+        "isExtraImport": true,
+        "detail": "rest_framework.views",
+        "documentation": {}
+    },
+    {
+        "label": "APIView",
+        "importPath": "rest_framework.views",
+        "description": "rest_framework.views",
+        "isExtraImport": true,
+        "detail": "rest_framework.views",
+        "documentation": {}
+    },
+    {
+        "label": "Response",
+        "importPath": "rest_framework.response",
+        "description": "rest_framework.response",
+        "isExtraImport": true,
+        "detail": "rest_framework.response",
+        "documentation": {}
+    },
+    {
+        "label": "Response",
+        "importPath": "rest_framework.response",
+        "description": "rest_framework.response",
+        "isExtraImport": true,
+        "detail": "rest_framework.response",
+        "documentation": {}
+    },
+    {
+        "label": "Response",
+        "importPath": "rest_framework.response",
+        "description": "rest_framework.response",
+        "isExtraImport": true,
+        "detail": "rest_framework.response",
+        "documentation": {}
+    },
+    {
+        "label": "Response",
+        "importPath": "rest_framework.response",
+        "description": "rest_framework.response",
+        "isExtraImport": true,
+        "detail": "rest_framework.response",
+        "documentation": {}
+    },
+    {
+        "label": "Response",
+        "importPath": "rest_framework.response",
+        "description": "rest_framework.response",
+        "isExtraImport": true,
+        "detail": "rest_framework.response",
+        "documentation": {}
+    },
+    {
+        "label": "Response",
+        "importPath": "rest_framework.response",
+        "description": "rest_framework.response",
+        "isExtraImport": true,
+        "detail": "rest_framework.response",
+        "documentation": {}
+    },
+    {
+        "label": "Response",
+        "importPath": "rest_framework.response",
+        "description": "rest_framework.response",
+        "isExtraImport": true,
+        "detail": "rest_framework.response",
+        "documentation": {}
+    },
+    {
+        "label": "Response",
+        "importPath": "rest_framework.response",
+        "description": "rest_framework.response",
+        "isExtraImport": true,
+        "detail": "rest_framework.response",
+        "documentation": {}
+    },
+    {
+        "label": "Response",
+        "importPath": "rest_framework.response",
+        "description": "rest_framework.response",
+        "isExtraImport": true,
+        "detail": "rest_framework.response",
+        "documentation": {}
+    },
+    {
+        "label": "Response",
+        "importPath": "rest_framework.response",
+        "description": "rest_framework.response",
+        "isExtraImport": true,
+        "detail": "rest_framework.response",
+        "documentation": {}
+    },
+    {
+        "label": "Count",
+        "importPath": "django.db.models",
+        "description": "django.db.models",
+        "isExtraImport": true,
+        "detail": "django.db.models",
+        "documentation": {}
+    },
+    {
+        "label": "F",
+        "importPath": "django.db.models",
+        "description": "django.db.models",
+        "isExtraImport": true,
+        "detail": "django.db.models",
+        "documentation": {}
+    },
+    {
+        "label": "ExpressionWrapper",
+        "importPath": "django.db.models",
+        "description": "django.db.models",
+        "isExtraImport": true,
+        "detail": "django.db.models",
+        "documentation": {}
+    },
+    {
+        "label": "fields",
+        "importPath": "django.db.models",
+        "description": "django.db.models",
+        "isExtraImport": true,
+        "detail": "django.db.models",
+        "documentation": {}
+    },
+    {
+        "label": "Sum",
+        "importPath": "django.db.models",
+        "description": "django.db.models",
+        "isExtraImport": true,
+        "detail": "django.db.models",
+        "documentation": {}
+    },
+    {
+        "label": "Count",
+        "importPath": "django.db.models",
+        "description": "django.db.models",
+        "isExtraImport": true,
+        "detail": "django.db.models",
+        "documentation": {}
+    },
+    {
+        "label": "F",
+        "importPath": "django.db.models",
+        "description": "django.db.models",
+        "isExtraImport": true,
+        "detail": "django.db.models",
+        "documentation": {}
+    },
+    {
+        "label": "ExpressionWrapper",
+        "importPath": "django.db.models",
+        "description": "django.db.models",
+        "isExtraImport": true,
+        "detail": "django.db.models",
+        "documentation": {}
+    },
+    {
+        "label": "fields",
+        "importPath": "django.db.models",
+        "description": "django.db.models",
+        "isExtraImport": true,
+        "detail": "django.db.models",
+        "documentation": {}
+    },
+    {
+        "label": "Count",
+        "importPath": "django.db.models",
+        "description": "django.db.models",
+        "isExtraImport": true,
+        "detail": "django.db.models",
+        "documentation": {}
+    },
+    {
+        "label": "F",
+        "importPath": "django.db.models",
+        "description": "django.db.models",
+        "isExtraImport": true,
+        "detail": "django.db.models",
+        "documentation": {}
+    },
+    {
+        "label": "ExpressionWrapper",
+        "importPath": "django.db.models",
+        "description": "django.db.models",
+        "isExtraImport": true,
+        "detail": "django.db.models",
+        "documentation": {}
+    },
+    {
+        "label": "fields",
+        "importPath": "django.db.models",
+        "description": "django.db.models",
+        "isExtraImport": true,
+        "detail": "django.db.models",
+        "documentation": {}
+    },
+    {
+        "label": "Count",
+        "importPath": "django.db.models",
+        "description": "django.db.models",
+        "isExtraImport": true,
+        "detail": "django.db.models",
+        "documentation": {}
+    },
+    {
+        "label": "F",
+        "importPath": "django.db.models",
+        "description": "django.db.models",
+        "isExtraImport": true,
+        "detail": "django.db.models",
+        "documentation": {}
+    },
+    {
+        "label": "Sum",
+        "importPath": "django.db.models",
+        "description": "django.db.models",
+        "isExtraImport": true,
+        "detail": "django.db.models",
+        "documentation": {}
+    },
+    {
+        "label": "Case",
+        "importPath": "django.db.models",
+        "description": "django.db.models",
+        "isExtraImport": true,
+        "detail": "django.db.models",
+        "documentation": {}
+    },
+    {
+        "label": "When",
+        "importPath": "django.db.models",
+        "description": "django.db.models",
+        "isExtraImport": true,
+        "detail": "django.db.models",
+        "documentation": {}
+    },
+    {
+        "label": "Value",
+        "importPath": "django.db.models",
+        "description": "django.db.models",
+        "isExtraImport": true,
+        "detail": "django.db.models",
+        "documentation": {}
+    },
+    {
+        "label": "ExpressionWrapper",
+        "importPath": "django.db.models",
+        "description": "django.db.models",
+        "isExtraImport": true,
+        "detail": "django.db.models",
+        "documentation": {}
+    },
+    {
+        "label": "fields",
+        "importPath": "django.db.models",
+        "description": "django.db.models",
+        "isExtraImport": true,
+        "detail": "django.db.models",
+        "documentation": {}
+    },
+    {
+        "label": "Sum",
+        "importPath": "django.db.models",
+        "description": "django.db.models",
+        "isExtraImport": true,
+        "detail": "django.db.models",
+        "documentation": {}
+    },
+    {
+        "label": "F",
+        "importPath": "django.db.models",
+        "description": "django.db.models",
+        "isExtraImport": true,
+        "detail": "django.db.models",
+        "documentation": {}
+    },
+    {
+        "label": "Count",
+        "importPath": "django.db.models",
+        "description": "django.db.models",
+        "isExtraImport": true,
+        "detail": "django.db.models",
+        "documentation": {}
+    },
+    {
+        "label": "F",
+        "importPath": "django.db.models",
+        "description": "django.db.models",
+        "isExtraImport": true,
+        "detail": "django.db.models",
+        "documentation": {}
+    },
+    {
+        "label": "ExpressionWrapper",
+        "importPath": "django.db.models",
+        "description": "django.db.models",
+        "isExtraImport": true,
+        "detail": "django.db.models",
+        "documentation": {}
+    },
+    {
+        "label": "fields",
+        "importPath": "django.db.models",
+        "description": "django.db.models",
+        "isExtraImport": true,
+        "detail": "django.db.models",
+        "documentation": {}
+    },
+    {
+        "label": "Coalesce",
+        "importPath": "django.db.models.functions",
+        "description": "django.db.models.functions",
+        "isExtraImport": true,
+        "detail": "django.db.models.functions",
+        "documentation": {}
+    },
+    {
+        "label": "ExtractYear",
+        "importPath": "django.db.models.functions",
+        "description": "django.db.models.functions",
+        "isExtraImport": true,
+        "detail": "django.db.models.functions",
+        "documentation": {}
+    },
+    {
+        "label": "ExtractMonth",
+        "importPath": "django.db.models.functions",
+        "description": "django.db.models.functions",
+        "isExtraImport": true,
+        "detail": "django.db.models.functions",
+        "documentation": {}
+    },
+    {
+        "label": "ExtractWeek",
+        "importPath": "django.db.models.functions",
+        "description": "django.db.models.functions",
+        "isExtraImport": true,
+        "detail": "django.db.models.functions",
+        "documentation": {}
+    },
+    {
+        "label": "ExtractDay",
+        "importPath": "django.db.models.functions",
+        "description": "django.db.models.functions",
+        "isExtraImport": true,
+        "detail": "django.db.models.functions",
+        "documentation": {}
+    },
+    {
+        "label": "ExtractYear",
+        "importPath": "django.db.models.functions",
+        "description": "django.db.models.functions",
+        "isExtraImport": true,
+        "detail": "django.db.models.functions",
+        "documentation": {}
+    },
+    {
+        "label": "ExtractYear",
+        "importPath": "django.db.models.functions",
+        "description": "django.db.models.functions",
+        "isExtraImport": true,
+        "detail": "django.db.models.functions",
+        "documentation": {}
+    },
+    {
+        "label": "ExtractMonth",
+        "importPath": "django.db.models.functions",
+        "description": "django.db.models.functions",
+        "isExtraImport": true,
+        "detail": "django.db.models.functions",
+        "documentation": {}
+    },
+    {
+        "label": "ExtractWeek",
+        "importPath": "django.db.models.functions",
+        "description": "django.db.models.functions",
+        "isExtraImport": true,
+        "detail": "django.db.models.functions",
+        "documentation": {}
+    },
+    {
+        "label": "ExtractDay",
+        "importPath": "django.db.models.functions",
+        "description": "django.db.models.functions",
+        "isExtraImport": true,
+        "detail": "django.db.models.functions",
+        "documentation": {}
+    },
+    {
+        "label": "ExtractYear",
+        "importPath": "django.db.models.functions",
+        "description": "django.db.models.functions",
+        "isExtraImport": true,
+        "detail": "django.db.models.functions",
+        "documentation": {}
+    },
+    {
+        "label": "post_save",
+        "importPath": "django.db.models.signals",
+        "description": "django.db.models.signals",
+        "isExtraImport": true,
+        "detail": "django.db.models.signals",
+        "documentation": {}
+    },
+    {
+        "label": "post_delete",
+        "importPath": "django.db.models.signals",
+        "description": "django.db.models.signals",
+        "isExtraImport": true,
+        "detail": "django.db.models.signals",
+        "documentation": {}
+    },
+    {
+        "label": "post_save",
+        "importPath": "django.db.models.signals",
+        "description": "django.db.models.signals",
+        "isExtraImport": true,
+        "detail": "django.db.models.signals",
+        "documentation": {}
+    },
+    {
+        "label": "receiver",
+        "importPath": "django.dispatch",
+        "description": "django.dispatch",
+        "isExtraImport": true,
+        "detail": "django.dispatch",
+        "documentation": {}
+    },
+    {
+        "label": "receiver",
+        "importPath": "django.dispatch",
+        "description": "django.dispatch",
+        "isExtraImport": true,
+        "detail": "django.dispatch",
+        "documentation": {}
+    },
+    {
+        "label": "Any",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "uuid",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "uuid",
+        "description": "uuid",
+        "detail": "uuid",
+        "documentation": {}
+    },
+    {
+        "label": "serializers",
+        "importPath": "rest_framework",
+        "description": "rest_framework",
+        "isExtraImport": true,
+        "detail": "rest_framework",
+        "documentation": {}
+    },
+    {
+        "label": "viewsets",
+        "importPath": "rest_framework",
+        "description": "rest_framework",
+        "isExtraImport": true,
+        "detail": "rest_framework",
+        "documentation": {}
+    },
+    {
+        "label": "status",
+        "importPath": "rest_framework",
+        "description": "rest_framework",
+        "isExtraImport": true,
+        "detail": "rest_framework",
+        "documentation": {}
+    },
+    {
+        "label": "serializers",
+        "importPath": "rest_framework",
+        "description": "rest_framework",
+        "isExtraImport": true,
+        "detail": "rest_framework",
+        "documentation": {}
+    },
+    {
+        "label": "viewsets",
+        "importPath": "rest_framework",
+        "description": "rest_framework",
+        "isExtraImport": true,
+        "detail": "rest_framework",
+        "documentation": {}
+    },
+    {
+        "label": "status",
+        "importPath": "rest_framework",
+        "description": "rest_framework",
+        "isExtraImport": true,
+        "detail": "rest_framework",
+        "documentation": {}
+    },
+    {
+        "label": "serializers",
+        "importPath": "rest_framework",
+        "description": "rest_framework",
+        "isExtraImport": true,
+        "detail": "rest_framework",
+        "documentation": {}
+    },
+    {
+        "label": "viewsets",
+        "importPath": "rest_framework",
+        "description": "rest_framework",
+        "isExtraImport": true,
+        "detail": "rest_framework",
+        "documentation": {}
+    },
+    {
+        "label": "status",
+        "importPath": "rest_framework",
+        "description": "rest_framework",
+        "isExtraImport": true,
+        "detail": "rest_framework",
+        "documentation": {}
+    },
+    {
+        "label": "serializers",
+        "importPath": "rest_framework",
+        "description": "rest_framework",
+        "isExtraImport": true,
+        "detail": "rest_framework",
+        "documentation": {}
+    },
+    {
+        "label": "serializers",
+        "importPath": "rest_framework",
+        "description": "rest_framework",
+        "isExtraImport": true,
+        "detail": "rest_framework",
+        "documentation": {}
+    },
+    {
+        "label": "viewsets",
+        "importPath": "rest_framework",
+        "description": "rest_framework",
+        "isExtraImport": true,
+        "detail": "rest_framework",
+        "documentation": {}
+    },
+    {
+        "label": "TestCase",
+        "importPath": "django.test",
+        "description": "django.test",
+        "isExtraImport": true,
+        "detail": "django.test",
+        "documentation": {}
+    },
+    {
+        "label": "TestCase",
+        "importPath": "django.test",
+        "description": "django.test",
+        "isExtraImport": true,
+        "detail": "django.test",
+        "documentation": {}
+    },
+    {
+        "label": "TestCase",
+        "importPath": "django.test",
+        "description": "django.test",
+        "isExtraImport": true,
+        "detail": "django.test",
+        "documentation": {}
+    },
+    {
+        "label": "TestCase",
+        "importPath": "django.test",
+        "description": "django.test",
+        "isExtraImport": true,
+        "detail": "django.test",
+        "documentation": {}
+    },
+    {
+        "label": "TestCase",
+        "importPath": "django.test",
+        "description": "django.test",
+        "isExtraImport": true,
+        "detail": "django.test",
+        "documentation": {}
+    },
+    {
+        "label": "TestCase",
+        "importPath": "django.test",
+        "description": "django.test",
+        "isExtraImport": true,
+        "detail": "django.test",
+        "documentation": {}
+    },
+    {
+        "label": "TestCase",
+        "importPath": "django.test",
+        "description": "django.test",
+        "isExtraImport": true,
+        "detail": "django.test",
+        "documentation": {}
+    },
+    {
+        "label": "TestCase",
+        "importPath": "django.test",
+        "description": "django.test",
+        "isExtraImport": true,
+        "detail": "django.test",
+        "documentation": {}
+    },
+    {
+        "label": "TestCase",
+        "importPath": "django.test",
+        "description": "django.test",
+        "isExtraImport": true,
+        "detail": "django.test",
+        "documentation": {}
+    },
+    {
+        "label": "path",
+        "importPath": "django.urls",
+        "description": "django.urls",
+        "isExtraImport": true,
+        "detail": "django.urls",
+        "documentation": {}
+    },
+    {
+        "label": "path",
+        "importPath": "django.urls",
+        "description": "django.urls",
+        "isExtraImport": true,
+        "detail": "django.urls",
+        "documentation": {}
+    },
+    {
+        "label": "path",
+        "importPath": "django.urls",
+        "description": "django.urls",
+        "isExtraImport": true,
+        "detail": "django.urls",
+        "documentation": {}
+    },
+    {
+        "label": "path",
+        "importPath": "django.urls",
+        "description": "django.urls",
+        "isExtraImport": true,
+        "detail": "django.urls",
+        "documentation": {}
+    },
+    {
+        "label": "include",
+        "importPath": "django.urls",
+        "description": "django.urls",
+        "isExtraImport": true,
+        "detail": "django.urls",
+        "documentation": {}
+    },
+    {
+        "label": "path",
+        "importPath": "django.urls",
+        "description": "django.urls",
+        "isExtraImport": true,
+        "detail": "django.urls",
+        "documentation": {}
+    },
+    {
+        "label": "path",
+        "importPath": "django.urls",
+        "description": "django.urls",
+        "isExtraImport": true,
+        "detail": "django.urls",
+        "documentation": {}
+    },
+    {
+        "label": "path",
+        "importPath": "django.urls",
+        "description": "django.urls",
+        "isExtraImport": true,
+        "detail": "django.urls",
+        "documentation": {}
+    },
+    {
+        "label": "render",
+        "importPath": "django.shortcuts",
+        "description": "django.shortcuts",
+        "isExtraImport": true,
+        "detail": "django.shortcuts",
+        "documentation": {}
+    },
+    {
+        "label": "render",
+        "importPath": "django.shortcuts",
+        "description": "django.shortcuts",
+        "isExtraImport": true,
+        "detail": "django.shortcuts",
+        "documentation": {}
+    },
+    {
+        "label": "render",
+        "importPath": "django.shortcuts",
+        "description": "django.shortcuts",
+        "isExtraImport": true,
+        "detail": "django.shortcuts",
+        "documentation": {}
+    },
+    {
+        "label": "render",
+        "importPath": "django.shortcuts",
+        "description": "django.shortcuts",
+        "isExtraImport": true,
+        "detail": "django.shortcuts",
+        "documentation": {}
+    },
+    {
+        "label": "render",
+        "importPath": "django.shortcuts",
+        "description": "django.shortcuts",
+        "isExtraImport": true,
+        "detail": "django.shortcuts",
+        "documentation": {}
+    },
+    {
+        "label": "get_object_or_404",
+        "importPath": "django.shortcuts",
+        "description": "django.shortcuts",
+        "isExtraImport": true,
+        "detail": "django.shortcuts",
+        "documentation": {}
+    },
+    {
+        "label": "get_object_or_404",
+        "importPath": "django.shortcuts",
+        "description": "django.shortcuts",
+        "isExtraImport": true,
+        "detail": "django.shortcuts",
+        "documentation": {}
+    },
+    {
+        "label": "render",
+        "importPath": "django.shortcuts",
+        "description": "django.shortcuts",
+        "isExtraImport": true,
+        "detail": "django.shortcuts",
+        "documentation": {}
+    },
+    {
+        "label": "render",
+        "importPath": "django.shortcuts",
+        "description": "django.shortcuts",
+        "isExtraImport": true,
+        "detail": "django.shortcuts",
+        "documentation": {}
+    },
+    {
+        "label": "render",
+        "importPath": "django.shortcuts",
+        "description": "django.shortcuts",
+        "isExtraImport": true,
+        "detail": "django.shortcuts",
+        "documentation": {}
+    },
+    {
+        "label": "isPrincipal",
+        "importPath": "userauth.permissions",
+        "description": "userauth.permissions",
+        "isExtraImport": true,
+        "detail": "userauth.permissions",
+        "documentation": {}
+    },
+    {
+        "label": "isTeacher",
+        "importPath": "userauth.permissions",
+        "description": "userauth.permissions",
+        "isExtraImport": true,
+        "detail": "userauth.permissions",
+        "documentation": {}
+    },
+    {
+        "label": "isTechSupport",
+        "importPath": "userauth.permissions",
+        "description": "userauth.permissions",
+        "isExtraImport": true,
+        "detail": "userauth.permissions",
+        "documentation": {}
+    },
+    {
+        "label": "JsonResponse",
+        "importPath": "django.http",
+        "description": "django.http",
+        "isExtraImport": true,
+        "detail": "django.http",
+        "documentation": {}
+    },
+    {
+        "label": "JsonResponse",
+        "importPath": "django.http",
+        "description": "django.http",
+        "isExtraImport": true,
+        "detail": "django.http",
+        "documentation": {}
+    },
+    {
+        "label": "HttpResponse",
+        "importPath": "django.http",
+        "description": "django.http",
+        "isExtraImport": true,
+        "detail": "django.http",
+        "documentation": {}
+    },
+    {
+        "label": "admission.models",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "admission.models",
+        "description": "admission.models",
+        "detail": "admission.models",
+        "documentation": {}
+    },
+    {
+        "label": "Student",
+        "importPath": "admission.models",
+        "description": "admission.models",
+        "isExtraImport": true,
+        "detail": "admission.models",
+        "documentation": {}
+    },
+    {
+        "label": "Student",
+        "importPath": "admission.models",
+        "description": "admission.models",
+        "isExtraImport": true,
+        "detail": "admission.models",
+        "documentation": {}
+    },
+    {
+        "label": "Student",
+        "importPath": "admission.models",
+        "description": "admission.models",
+        "isExtraImport": true,
+        "detail": "admission.models",
+        "documentation": {}
+    },
+    {
+        "label": "Student",
+        "importPath": "admission.models",
+        "description": "admission.models",
+        "isExtraImport": true,
+        "detail": "admission.models",
+        "documentation": {}
+    },
+    {
+        "label": "resources",
+        "importPath": "import_export",
+        "description": "import_export",
+        "isExtraImport": true,
+        "detail": "import_export",
+        "documentation": {}
+    },
+    {
+        "label": "fields",
+        "importPath": "import_export",
+        "description": "import_export",
+        "isExtraImport": true,
+        "detail": "import_export",
+        "documentation": {}
+    },
+    {
+        "label": "resources",
+        "importPath": "import_export",
+        "description": "import_export",
+        "isExtraImport": true,
+        "detail": "import_export",
+        "documentation": {}
+    },
+    {
+        "label": "fields",
+        "importPath": "import_export",
+        "description": "import_export",
+        "isExtraImport": true,
+        "detail": "import_export",
+        "documentation": {}
+    },
+    {
+        "label": "format_html",
+        "importPath": "django.utils.html",
+        "description": "django.utils.html",
+        "isExtraImport": true,
+        "detail": "django.utils.html",
+        "documentation": {}
+    },
+    {
+        "label": "attendance.models",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "attendance.models",
+        "description": "attendance.models",
+        "detail": "attendance.models",
+        "documentation": {}
+    },
+    {
+        "label": "Response",
+        "importPath": "rest_framwork.response",
+        "description": "rest_framwork.response",
+        "isExtraImport": true,
+        "detail": "rest_framwork.response",
+        "documentation": {}
+    },
+    {
+        "label": "os",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "os",
+        "description": "os",
+        "detail": "os",
+        "documentation": {}
+    },
+    {
+        "label": "get_asgi_application",
+        "importPath": "django.core.asgi",
+        "description": "django.core.asgi",
+        "isExtraImport": true,
+        "detail": "django.core.asgi",
+        "documentation": {}
+    },
+    {
+        "label": "XLSX",
+        "importPath": "import_export.formats.base_formats",
+        "description": "import_export.formats.base_formats",
+        "isExtraImport": true,
+        "detail": "import_export.formats.base_formats",
+        "documentation": {}
+    },
+    {
+        "label": "Path",
+        "importPath": "pathlib",
+        "description": "pathlib",
+        "isExtraImport": true,
+        "detail": "pathlib",
+        "documentation": {}
+    },
+    {
+        "label": "settings",
+        "importPath": "django.conf",
+        "description": "django.conf",
+        "isExtraImport": true,
+        "detail": "django.conf",
+        "documentation": {}
+    },
+    {
+        "label": "static",
+        "importPath": "django.conf.urls.static",
+        "description": "django.conf.urls.static",
+        "isExtraImport": true,
+        "detail": "django.conf.urls.static",
+        "documentation": {}
+    },
+    {
+        "label": "get_wsgi_application",
+        "importPath": "django.core.wsgi",
+        "description": "django.core.wsgi",
+        "isExtraImport": true,
+        "detail": "django.core.wsgi",
+        "documentation": {}
+    },
+    {
+        "label": "examination.models",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "examination.models",
+        "description": "examination.models",
+        "detail": "examination.models",
+        "documentation": {}
+    },
+    {
+        "label": "library.models",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "library.models",
+        "description": "library.models",
+        "detail": "library.models",
+        "documentation": {}
+    },
+    {
+        "label": "BytesIO",
+        "importPath": "io",
+        "description": "io",
+        "isExtraImport": true,
+        "detail": "io",
+        "documentation": {}
+    },
+    {
+        "label": "BytesIO",
+        "importPath": "io",
+        "description": "io",
+        "isExtraImport": true,
+        "detail": "io",
+        "documentation": {}
+    },
+    {
+        "label": "File",
+        "importPath": "django.core.files",
+        "description": "django.core.files",
+        "isExtraImport": true,
+        "detail": "django.core.files",
+        "documentation": {}
+    },
+    {
+        "label": "GenericForeignKey",
+        "importPath": "django.contrib.contenttypes.fields",
+        "description": "django.contrib.contenttypes.fields",
+        "isExtraImport": true,
+        "detail": "django.contrib.contenttypes.fields",
+        "documentation": {}
+    },
+    {
+        "label": "ContentType",
+        "importPath": "django.contrib.contenttypes.models",
+        "description": "django.contrib.contenttypes.models",
+        "isExtraImport": true,
+        "detail": "django.contrib.contenttypes.models",
+        "documentation": {}
+    },
+    {
+        "label": "qrcode",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "qrcode",
+        "description": "qrcode",
+        "detail": "qrcode",
+        "documentation": {}
+    },
+    {
+        "label": "students.models",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "students.models",
+        "description": "students.models",
+        "detail": "students.models",
+        "documentation": {}
+    },
+    {
+        "label": "django.contrib.auth.models",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "django.contrib.auth.models",
+        "description": "django.contrib.auth.models",
+        "detail": "django.contrib.auth.models",
+        "documentation": {}
+    },
+    {
+        "label": "AbstractUser",
+        "importPath": "django.contrib.auth.models",
+        "description": "django.contrib.auth.models",
+        "isExtraImport": true,
+        "detail": "django.contrib.auth.models",
+        "documentation": {}
+    },
+    {
+        "label": "User",
+        "importPath": "django.contrib.auth.models",
+        "description": "django.contrib.auth.models",
+        "isExtraImport": true,
+        "detail": "django.contrib.auth.models",
+        "documentation": {}
+    },
+    {
+        "label": "django.contrib.auth.validators",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "django.contrib.auth.validators",
+        "description": "django.contrib.auth.validators",
+        "detail": "django.contrib.auth.validators",
+        "documentation": {}
+    },
+    {
+        "label": "django.utils.timezone",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "django.utils.timezone",
+        "description": "django.utils.timezone",
+        "detail": "django.utils.timezone",
+        "documentation": {}
+    },
+    {
+        "label": "UserAdmin",
+        "importPath": "django.contrib.auth.admin",
+        "description": "django.contrib.auth.admin",
+        "isExtraImport": true,
+        "detail": "django.contrib.auth.admin",
+        "documentation": {}
+    },
+    {
+        "label": "BasePermission",
+        "importPath": "rest_framework.permissions",
+        "description": "rest_framework.permissions",
+        "isExtraImport": true,
+        "detail": "rest_framework.permissions",
+        "documentation": {}
+    },
+    {
+        "label": "AllowAny",
+        "importPath": "rest_framework.permissions",
+        "description": "rest_framework.permissions",
+        "isExtraImport": true,
+        "detail": "rest_framework.permissions",
+        "documentation": {}
+    },
+    {
+        "label": "IsAuthenticated",
+        "importPath": "rest_framework.permissions",
+        "description": "rest_framework.permissions",
+        "isExtraImport": true,
+        "detail": "rest_framework.permissions",
+        "documentation": {}
+    },
+    {
+        "label": "authenticate",
+        "importPath": "django.contrib.auth",
+        "description": "django.contrib.auth",
+        "isExtraImport": true,
+        "detail": "django.contrib.auth",
+        "documentation": {}
+    },
+    {
+        "label": "Token",
+        "importPath": "rest_framework.authtoken.models",
+        "description": "rest_framework.authtoken.models",
+        "isExtraImport": true,
+        "detail": "rest_framework.authtoken.models",
+        "documentation": {}
+    },
+    {
+        "label": "sys",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "sys",
+        "description": "sys",
+        "detail": "sys",
+        "documentation": {}
+    },
+    {
+        "label": "Migration",
+        "kind": 6,
+        "importPath": "derp.academic.migrations.0001_initial",
+        "description": "derp.academic.migrations.0001_initial",
+        "peekOfCode": "class Migration(migrations.Migration):\n    initial = True\n    dependencies = [\n    ]\n    operations = [\n        migrations.CreateModel(\n            name='AnnuallySubjectSyllabusStatus',\n            fields=[\n                ('annual_status_id', models.CharField(default=academic.models.shortuuid, editable=False, max_length=6, primary_key=True, serialize=False)),\n                ('teacher', models.CharField(max_length=20)),",
+        "detail": "derp.academic.migrations.0001_initial",
+        "documentation": {}
+    },
+    {
+        "label": "AcademicAppConfig",
+        "kind": 6,
+        "importPath": "derp.academic.apps",
+        "description": "derp.academic.apps",
+        "peekOfCode": "class AcademicAppConfig(AppConfig):\n    default_auto_field = 'django.db.models.BigAutoField'\n    name = 'academic'",
+        "detail": "derp.academic.apps",
+        "documentation": {}
+    },
+    {
+        "label": "AcademicDashboardView",
+        "kind": 6,
+        "importPath": "derp.academic.dashboard",
+        "description": "derp.academic.dashboard",
+        "peekOfCode": "class AcademicDashboardView(APIView):\n    def get(self,request):\n        context={\n            'subject_completed_count_per_year': self.get_subject_completed_count_per_year(),\n       }\n        return Response(context)\n    def get_subject_completed_count_per_year(self,status=None):\n        queryset=(AnnuallySubjectSyllabusStatus.objects.select_related('subject__syllabus_count', 'subject__course__department').annotate(\n            total_syllabus_count=F('subject__syllabus_count'),\n             completed_syllabus_count=Coalesce(Sum",
+        "detail": "derp.academic.dashboard",
+        "documentation": {}
+    },
+    {
+        "label": "Department",
+        "kind": 6,
+        "importPath": "derp.academic.models",
+        "description": "derp.academic.models",
+        "peekOfCode": "class Department(models.Model):\n    department_id = models.CharField(primary_key=True, default=shortuuid, max_length=6, editable=False)\n    name = models.CharField(max_length=70)\nclass Course(models.Model):\n    course_id = models.CharField(primary_key=True, default=shortuuid, max_length=6, editable=False)\n    name = models.CharField(max_length=70)\n    department = models.ForeignKey(Department, on_delete=models.CASCADE, null=False, blank=False, to_field='department_id')\n    effective_date = models.DateField()\nclass SyllabusType(models.Model):\n    type_id = models.CharField(default=shortuuid, max_length=6, editable=False, primary_key=True)",
+        "detail": "derp.academic.models",
+        "documentation": {}
+    },
+    {
+        "label": "Course",
+        "kind": 6,
+        "importPath": "derp.academic.models",
+        "description": "derp.academic.models",
+        "peekOfCode": "class Course(models.Model):\n    course_id = models.CharField(primary_key=True, default=shortuuid, max_length=6, editable=False)\n    name = models.CharField(max_length=70)\n    department = models.ForeignKey(Department, on_delete=models.CASCADE, null=False, blank=False, to_field='department_id')\n    effective_date = models.DateField()\nclass SyllabusType(models.Model):\n    type_id = models.CharField(default=shortuuid, max_length=6, editable=False, primary_key=True)\n    name=models.CharField(max_length=50)\nclass Subject(models.Model):\n    subject_id = models.CharField(primary_key=True, default=shortuuid, max_length=6, editable=False)",
+        "detail": "derp.academic.models",
+        "documentation": {}
+    },
+    {
+        "label": "SyllabusType",
+        "kind": 6,
+        "importPath": "derp.academic.models",
+        "description": "derp.academic.models",
+        "peekOfCode": "class SyllabusType(models.Model):\n    type_id = models.CharField(default=shortuuid, max_length=6, editable=False, primary_key=True)\n    name=models.CharField(max_length=50)\nclass Subject(models.Model):\n    subject_id = models.CharField(primary_key=True, default=shortuuid, max_length=6, editable=False)\n    name = models.CharField(max_length=70)\n    syllabus_count = models.IntegerField(default=0)\n    syllabus_type=models.ForeignKey(SyllabusType,on_delete=models.CASCADE, to_field='type_id')\n    description = models.TextField(max_length=200, null=True, blank=True)\n    course = models.ForeignKey(Course, on_delete=models.CASCADE, null=False, blank=False, to_field='course_id')",
+        "detail": "derp.academic.models",
+        "documentation": {}
+    },
+    {
+        "label": "Subject",
+        "kind": 6,
+        "importPath": "derp.academic.models",
+        "description": "derp.academic.models",
+        "peekOfCode": "class Subject(models.Model):\n    subject_id = models.CharField(primary_key=True, default=shortuuid, max_length=6, editable=False)\n    name = models.CharField(max_length=70)\n    syllabus_count = models.IntegerField(default=0)\n    syllabus_type=models.ForeignKey(SyllabusType,on_delete=models.CASCADE, to_field='type_id')\n    description = models.TextField(max_length=200, null=True, blank=True)\n    course = models.ForeignKey(Course, on_delete=models.CASCADE, null=False, blank=False, to_field='course_id')\nclass AnnuallySubjectSyllabusStatus(models.Model):\n    annual_status_id = models.CharField(default=shortuuid, max_length=6, editable=False, primary_key=True)\n    subject = models.ForeignKey(Subject, on_delete=models.CASCADE, to_field='subject_id')",
+        "detail": "derp.academic.models",
+        "documentation": {}
+    },
+    {
+        "label": "AnnuallySubjectSyllabusStatus",
+        "kind": 6,
+        "importPath": "derp.academic.models",
+        "description": "derp.academic.models",
+        "peekOfCode": "class AnnuallySubjectSyllabusStatus(models.Model):\n    annual_status_id = models.CharField(default=shortuuid, max_length=6, editable=False, primary_key=True)\n    subject = models.ForeignKey(Subject, on_delete=models.CASCADE, to_field='subject_id')\n    teacher = models.CharField(max_length=20)\n    yearly_status = models.IntegerField()\n    yearly_summary = models.CharField(max_length=300)\n    def update_yearly_status(self):\n        monthly_statuses=self.monthly_statuses.all()\n        self.yearly_status = sum(monthly_status.count for monthly_status in monthly_statuses)\n        self.save()",
+        "detail": "derp.academic.models",
+        "documentation": {}
+    },
+    {
+        "label": "MonthlySubjectSyllabusStatus",
+        "kind": 6,
+        "importPath": "derp.academic.models",
+        "description": "derp.academic.models",
+        "peekOfCode": "class MonthlySubjectSyllabusStatus(models.Model):\n    month_status_id = models.CharField(default=shortuuid, max_length=6, editable=False, primary_key=True)\n    month = models.DateField()\n    annual_status = models.ForeignKey(AnnuallySubjectSyllabusStatus, on_delete=models.CASCADE, to_field='annual_status_id',related_name='monthly_statuses')\n    target_type = models.ForeignKey(SyllabusType, on_delete=models.CASCADE, to_field='type_id')  # Added foreign key to SyllabusType\n    count=models.IntegerField(default=0)\n    monthly_summary = models.CharField(max_length=300)\n    def save(self,*args,**kwargs):\n        super().save(*args,**kwargs)\n        self.annual_status.update_yearly_status()",
+        "detail": "derp.academic.models",
+        "documentation": {}
+    },
+    {
+        "label": "SyllabusStatusVerification",
+        "kind": 6,
+        "importPath": "derp.academic.models",
+        "description": "derp.academic.models",
+        "peekOfCode": "class SyllabusStatusVerification(models.Model):\n    status_verification_id = models.CharField(default=shortuuid, max_length=6, editable=False, primary_key=True)\n    monthly_syllabus_approval = models.ForeignKey(MonthlySubjectSyllabusStatus, on_delete=models.CASCADE, to_field='month_status_id')\n    feedback = models.TextField(max_length=300, null=True, blank=True)\n    is_approved = models.BooleanField(default=False)\n    approved_date = models.DateTimeField()\n@receiver(post_save, sender=MonthlySubjectSyllabusStatus)\ndef update_annual_status_on_save(sender, instance, **kwargs):\n    instance.annual_status.update_yearly_status()\n@receiver(post_delete, sender=MonthlySubjectSyllabusStatus)",
+        "detail": "derp.academic.models",
+        "documentation": {}
+    },
+    {
+        "label": "TimeTable",
+        "kind": 6,
+        "importPath": "derp.academic.models",
+        "description": "derp.academic.models",
+        "peekOfCode": "class TimeTable(models.Model):\n        time_table_id = models.CharField(default=shortuuid, max_length=6, editable=False, primary_key=True)\n        subject = models.ForeignKey(Subject, on_delete=models.CASCADE, to_field='subject_id')\n        teacher = models.CharField(max_length=20)\n        time=models.TimeField()\n        effective_date = models.DateField()\n        def __str__(self):\n            return f\"{self.subject} - {self.teacher} at {self.time}\"\n        def is_holiday(self):\n            return self.effective_date.weekday() == 4",
+        "detail": "derp.academic.models",
+        "documentation": {}
+    },
+    {
+        "label": "VacationPeriod",
+        "kind": 6,
+        "importPath": "derp.academic.models",
+        "description": "derp.academic.models",
+        "peekOfCode": "class VacationPeriod(models.Model):\n        vacation_id = models.CharField(default=shortuuid, max_length=6, editable=False, primary_key=True)\n        name=models.CharField(max_length=100)\n        start_date=models.DateField()\n        end_date=models.DateField()\n        description=models.CharField(max_length=254,blank=True,null=True)\n        def __str__(self):\n            return f\"Vacation from {self.start_date} to {self.end_date} for {self.name}\"",
+        "detail": "derp.academic.models",
+        "documentation": {}
+    },
+    {
+        "label": "shortuuid",
+        "kind": 2,
+        "importPath": "derp.academic.models",
+        "description": "derp.academic.models",
+        "peekOfCode": "def shortuuid():\n    return str(uuid.uuid4().hex)[:6]\ndef course_custom_id():\n    return generate_custom_id(Course, prefix='course')\ndef subject_custom_id():\n    return generate_custom_id(Subject, prefix='sub')\ndef department_custom_id():\n    return generate_custom_id(Department, prefix='dept')\nclass Department(models.Model):\n    department_id = models.CharField(primary_key=True, default=shortuuid, max_length=6, editable=False)",
+        "detail": "derp.academic.models",
+        "documentation": {}
+    },
+    {
+        "label": "course_custom_id",
+        "kind": 2,
+        "importPath": "derp.academic.models",
+        "description": "derp.academic.models",
+        "peekOfCode": "def course_custom_id():\n    return generate_custom_id(Course, prefix='course')\ndef subject_custom_id():\n    return generate_custom_id(Subject, prefix='sub')\ndef department_custom_id():\n    return generate_custom_id(Department, prefix='dept')\nclass Department(models.Model):\n    department_id = models.CharField(primary_key=True, default=shortuuid, max_length=6, editable=False)\n    name = models.CharField(max_length=70)\nclass Course(models.Model):",
+        "detail": "derp.academic.models",
+        "documentation": {}
+    },
+    {
+        "label": "subject_custom_id",
+        "kind": 2,
+        "importPath": "derp.academic.models",
+        "description": "derp.academic.models",
+        "peekOfCode": "def subject_custom_id():\n    return generate_custom_id(Subject, prefix='sub')\ndef department_custom_id():\n    return generate_custom_id(Department, prefix='dept')\nclass Department(models.Model):\n    department_id = models.CharField(primary_key=True, default=shortuuid, max_length=6, editable=False)\n    name = models.CharField(max_length=70)\nclass Course(models.Model):\n    course_id = models.CharField(primary_key=True, default=shortuuid, max_length=6, editable=False)\n    name = models.CharField(max_length=70)",
+        "detail": "derp.academic.models",
+        "documentation": {}
+    },
+    {
+        "label": "department_custom_id",
+        "kind": 2,
+        "importPath": "derp.academic.models",
+        "description": "derp.academic.models",
+        "peekOfCode": "def department_custom_id():\n    return generate_custom_id(Department, prefix='dept')\nclass Department(models.Model):\n    department_id = models.CharField(primary_key=True, default=shortuuid, max_length=6, editable=False)\n    name = models.CharField(max_length=70)\nclass Course(models.Model):\n    course_id = models.CharField(primary_key=True, default=shortuuid, max_length=6, editable=False)\n    name = models.CharField(max_length=70)\n    department = models.ForeignKey(Department, on_delete=models.CASCADE, null=False, blank=False, to_field='department_id')\n    effective_date = models.DateField()",
+        "detail": "derp.academic.models",
+        "documentation": {}
+    },
+    {
+        "label": "update_annual_status_on_save",
+        "kind": 2,
+        "importPath": "derp.academic.models",
+        "description": "derp.academic.models",
+        "peekOfCode": "def update_annual_status_on_save(sender, instance, **kwargs):\n    instance.annual_status.update_yearly_status()\n@receiver(post_delete, sender=MonthlySubjectSyllabusStatus)\ndef update_annual_status_on_delete(sender, instance, **kwargs):\n    instance.annual_status.update_yearly_status()\nclass TimeTable(models.Model):\n        time_table_id = models.CharField(default=shortuuid, max_length=6, editable=False, primary_key=True)\n        subject = models.ForeignKey(Subject, on_delete=models.CASCADE, to_field='subject_id')\n        teacher = models.CharField(max_length=20)\n        time=models.TimeField()",
+        "detail": "derp.academic.models",
+        "documentation": {}
+    },
+    {
+        "label": "update_annual_status_on_delete",
+        "kind": 2,
+        "importPath": "derp.academic.models",
+        "description": "derp.academic.models",
+        "peekOfCode": "def update_annual_status_on_delete(sender, instance, **kwargs):\n    instance.annual_status.update_yearly_status()\nclass TimeTable(models.Model):\n        time_table_id = models.CharField(default=shortuuid, max_length=6, editable=False, primary_key=True)\n        subject = models.ForeignKey(Subject, on_delete=models.CASCADE, to_field='subject_id')\n        teacher = models.CharField(max_length=20)\n        time=models.TimeField()\n        effective_date = models.DateField()\n        def __str__(self):\n            return f\"{self.subject} - {self.teacher} at {self.time}\"",
+        "detail": "derp.academic.models",
+        "documentation": {}
+    },
+    {
+        "label": "DepartmentSerializer",
+        "kind": 6,
+        "importPath": "derp.academic.serializers",
+        "description": "derp.academic.serializers",
+        "peekOfCode": "class DepartmentSerializer(serializers.ModelSerializer):\n    class Meta:\n        model= Department\n        fields='__all__'\nclass CourseSerializer(serializers.ModelSerializer):\n    class Meta:\n        model= Course   \n        fields='__all__'\nclass SubjectSerializer(serializers.ModelSerializer):\n    class Meta:",
+        "detail": "derp.academic.serializers",
+        "documentation": {}
+    },
+    {
+        "label": "CourseSerializer",
+        "kind": 6,
+        "importPath": "derp.academic.serializers",
+        "description": "derp.academic.serializers",
+        "peekOfCode": "class CourseSerializer(serializers.ModelSerializer):\n    class Meta:\n        model= Course   \n        fields='__all__'\nclass SubjectSerializer(serializers.ModelSerializer):\n    class Meta:\n        model= Subject\n        fields='__all__'\nclass AnnuallySubjectSyllabusStatusSerializer(serializers.ModelSerializer):\n    class Meta:",
+        "detail": "derp.academic.serializers",
+        "documentation": {}
+    },
+    {
+        "label": "SubjectSerializer",
+        "kind": 6,
+        "importPath": "derp.academic.serializers",
+        "description": "derp.academic.serializers",
+        "peekOfCode": "class SubjectSerializer(serializers.ModelSerializer):\n    class Meta:\n        model= Subject\n        fields='__all__'\nclass AnnuallySubjectSyllabusStatusSerializer(serializers.ModelSerializer):\n    class Meta:\n        model= AnnuallySubjectSyllabusStatus\n        fields='__all__'\nclass MonthlySubjectSyllabusStatusSerializer(serializers.ModelSerializer):\n    class Meta:",
+        "detail": "derp.academic.serializers",
+        "documentation": {}
+    },
+    {
+        "label": "AnnuallySubjectSyllabusStatusSerializer",
+        "kind": 6,
+        "importPath": "derp.academic.serializers",
+        "description": "derp.academic.serializers",
+        "peekOfCode": "class AnnuallySubjectSyllabusStatusSerializer(serializers.ModelSerializer):\n    class Meta:\n        model= AnnuallySubjectSyllabusStatus\n        fields='__all__'\nclass MonthlySubjectSyllabusStatusSerializer(serializers.ModelSerializer):\n    class Meta:\n        model= MonthlySubjectSyllabusStatus\n        fields='__all__'\nclass SyllabusStatusVerificationSerializer(serializers.ModelSerializer):\n    class Meta:",
+        "detail": "derp.academic.serializers",
+        "documentation": {}
+    },
+    {
+        "label": "MonthlySubjectSyllabusStatusSerializer",
+        "kind": 6,
+        "importPath": "derp.academic.serializers",
+        "description": "derp.academic.serializers",
+        "peekOfCode": "class MonthlySubjectSyllabusStatusSerializer(serializers.ModelSerializer):\n    class Meta:\n        model= MonthlySubjectSyllabusStatus\n        fields='__all__'\nclass SyllabusStatusVerificationSerializer(serializers.ModelSerializer):\n    class Meta:\n        model= SyllabusStatusVerification\n        fields='__all__'\nclass TimeTableSerializer(serializers.ModelSerializer):\n    class Meta:",
+        "detail": "derp.academic.serializers",
+        "documentation": {}
+    },
+    {
+        "label": "SyllabusStatusVerificationSerializer",
+        "kind": 6,
+        "importPath": "derp.academic.serializers",
+        "description": "derp.academic.serializers",
+        "peekOfCode": "class SyllabusStatusVerificationSerializer(serializers.ModelSerializer):\n    class Meta:\n        model= SyllabusStatusVerification\n        fields='__all__'\nclass TimeTableSerializer(serializers.ModelSerializer):\n    class Meta:\n        model= TimeTable\n        fields='__all__'\nclass VacationPeriodSerializer(serializers.ModelSerializer):\n    class Meta:",
+        "detail": "derp.academic.serializers",
+        "documentation": {}
+    },
+    {
+        "label": "TimeTableSerializer",
+        "kind": 6,
+        "importPath": "derp.academic.serializers",
+        "description": "derp.academic.serializers",
+        "peekOfCode": "class TimeTableSerializer(serializers.ModelSerializer):\n    class Meta:\n        model= TimeTable\n        fields='__all__'\nclass VacationPeriodSerializer(serializers.ModelSerializer):\n    class Meta:\n        model= VacationPeriod\n        fields='__all__'",
+        "detail": "derp.academic.serializers",
+        "documentation": {}
+    },
+    {
+        "label": "VacationPeriodSerializer",
+        "kind": 6,
+        "importPath": "derp.academic.serializers",
+        "description": "derp.academic.serializers",
+        "peekOfCode": "class VacationPeriodSerializer(serializers.ModelSerializer):\n    class Meta:\n        model= VacationPeriod\n        fields='__all__'",
+        "detail": "derp.academic.serializers",
+        "documentation": {}
+    },
+    {
+        "label": "urlpatterns",
+        "kind": 5,
+        "importPath": "derp.academic.urls",
+        "description": "derp.academic.urls",
+        "peekOfCode": "urlpatterns = [\n   # Department APIs\n   path('department/list',DepartmentView.as_view({'get':'list'}),name='department-list'),\n   path('department/create',DepartmentView.as_view({'post':'create'}),name='department-create'),\n   path('department/retrieve/<str:pk>/',DepartmentView.as_view({'get':'retrieve'}),name='department-retrieve'),\n   path('department/delete/<str:pk>/',DepartmentView.as_view({'delete':'delete'}),name='department-delete'),\n   path('department/update/<str:pk>/',DepartmentView.as_view({'put':'update'}),name='department-create'),\n   # Subject APIs\n   path('subject/list',SubjectView.as_view({'get':'list'}),name='Subject-list'),\n   path('subject/create',SubjectView.as_view({'post':'create'}),name='Subject-create'),",
+        "detail": "derp.academic.urls",
+        "documentation": {}
+    },
+    {
+        "label": "generate_custom_id",
+        "kind": 2,
+        "importPath": "derp.academic.utils",
+        "description": "derp.academic.utils",
+        "peekOfCode": "def generate_custom_id(model, prefix='PREFIX'):\n    last_record = model.objects.order_by('-pk').first()\n    if last_record and last_record.pk.isdigit():\n        last_id = int(last_record.pk)\n        new_id = last_id + 1\n        con_id = str(new_id).zfill(2)  # Ensure the ID has leading zeros for fixed length\n    else:\n        new_id = 1\n        con_id = str(new_id).zfill(2)\n    return f'{prefix}-{con_id}'",
+        "detail": "derp.academic.utils",
+        "documentation": {}
+    },
+    {
+        "label": "DepartmentView",
+        "kind": 6,
+        "importPath": "derp.academic.views",
+        "description": "derp.academic.views",
+        "peekOfCode": "class DepartmentView(viewsets.ViewSet):\n    def list(self,request):\n        queryset=Department.objects.all()\n        serializer=DepartmentSerializer(queryset,many=True)\n        return Response(serializer.data)\n    def create(self,request):\n        serializer=DepartmentSerializer(data=request.data)\n        if serializer.is_valid():\n            serializer.save()\n            return Response(serializer.data,status=201)",
+        "detail": "derp.academic.views",
+        "documentation": {}
+    },
+    {
+        "label": "SubjectView",
+        "kind": 6,
+        "importPath": "derp.academic.views",
+        "description": "derp.academic.views",
+        "peekOfCode": "class SubjectView(viewsets.ViewSet):\n    def list(self,request):\n        queryset=Subject.objects.all()\n        serializer=SubjectSerializer(queryset,many=True)\n        return Response(serializer.data)\n    def create(self,request):\n        serializer=SubjectSerializer(data=request.data)\n        if serializer.is_valid():\n            serializer.save()\n            return Response(serializer.data,status=201)",
+        "detail": "derp.academic.views",
+        "documentation": {}
+    },
+    {
+        "label": "CourseView",
+        "kind": 6,
+        "importPath": "derp.academic.views",
+        "description": "derp.academic.views",
+        "peekOfCode": "class CourseView(viewsets.ViewSet):\n    def list(self,request):\n        queryset=Course.objects.all()\n        serializer=CourseSerializer(queryset,many=True)\n        return Response(serializer.data)\n    def create(self,request):\n        serializer=CourseSerializer(data=request.data)\n        if serializer.is_valid():\n            serializer.save()\n            return Response(serializer.data,status=201)",
+        "detail": "derp.academic.views",
+        "documentation": {}
+    },
+    {
+        "label": "AnnuallySubjectSyllabusStatusView",
+        "kind": 6,
+        "importPath": "derp.academic.views",
+        "description": "derp.academic.views",
+        "peekOfCode": "class AnnuallySubjectSyllabusStatusView(viewsets.ViewSet):\n    def list(self,request):\n        queryset=AnnuallySubjectSyllabusStatus.objects.all()\n        serializer=AnnuallySubjectSyllabusStatusSerializer(queryset,many=True)\n        return Response(serializer.data)\n    def create(self,request):\n        serializer=AnnuallySubjectSyllabusStatusSerializer(data=request.data)\n        if serializer.is_valid():\n            serializer.save()\n            return Response(serializer.data,status=201)",
+        "detail": "derp.academic.views",
+        "documentation": {}
+    },
+    {
+        "label": "MonthlySubjectSyllabusStatusView",
+        "kind": 6,
+        "importPath": "derp.academic.views",
+        "description": "derp.academic.views",
+        "peekOfCode": "class MonthlySubjectSyllabusStatusView(viewsets.ViewSet):\n    def list(self,request):\n        queryset=MonthlySubjectSyllabusStatus.objects.all()\n        serializer=MonthlySubjectSyllabusStatusSerializer(queryset,many=True)\n        return Response(serializer.data)\n    def create(self,request):\n        serializer=MonthlySubjectSyllabusStatusSerializer(data=request.data)\n        if serializer.is_valid():\n            serializer.save()\n            return Response(serializer.data,status=201)",
+        "detail": "derp.academic.views",
+        "documentation": {}
+    },
+    {
+        "label": "SyllabusStatusVerificationView",
+        "kind": 6,
+        "importPath": "derp.academic.views",
+        "description": "derp.academic.views",
+        "peekOfCode": "class SyllabusStatusVerificationView(viewsets.ViewSet):\n    def list(self,request):\n        queryset=SyllabusStatusVerification.objects.all()\n        serializer=SyllabusStatusVerificationSerializer(queryset,many=True)\n        return Response(serializer.data)\n    def create(self,request):\n        serializer=SyllabusStatusVerificationSerializer(data=request.data)\n        if serializer.is_valid():\n            serializer.save()\n            return Response(serializer.data,status=201)",
+        "detail": "derp.academic.views",
+        "documentation": {}
+    },
+    {
+        "label": "TimeTableView",
+        "kind": 6,
+        "importPath": "derp.academic.views",
+        "description": "derp.academic.views",
+        "peekOfCode": "class TimeTableView(viewsets.ViewSet):\n    def list(self, request):\n        queryset = TimeTable.objects.all()\n        serializer = TimeTableSerializer(queryset, many=True)\n        return Response(serializer.data)\n    def retrieve(self, request, pk):\n        try:\n            timetable = TimeTable.objects.get(pk=pk)\n        except TimeTable.DoesNotExist:\n            return Response(status=status.HTTP_404_NOT_FOUND)",
+        "detail": "derp.academic.views",
+        "documentation": {}
+    },
+    {
+        "label": "VacationPeriodView",
+        "kind": 6,
+        "importPath": "derp.academic.views",
+        "description": "derp.academic.views",
+        "peekOfCode": "class VacationPeriodView(viewsets.ViewSet):\n    def list(self, request):\n        queryset = VacationPeriod.objects.all()\n        serializer = VacationPeriodSerializer(queryset, many=True)\n        return Response(serializer.data)\n    def retrieve(self, request, pk):\n        try:\n            vacation_period = VacationPeriod.objects.get(pk=pk)\n        except VacationPeriod.DoesNotExist:\n            return Response(status=status.HTTP_404_NOT_FOUND)",
+        "detail": "derp.academic.views",
+        "documentation": {}
+    },
+    {
+        "label": "Migration",
+        "kind": 6,
+        "importPath": "derp.admission.migrations.0001_initial",
+        "description": "derp.admission.migrations.0001_initial",
+        "peekOfCode": "class Migration(migrations.Migration):\n    initial = True\n    dependencies = [\n        ('academic', '0001_initial'),\n    ]\n    operations = [\n        migrations.CreateModel(\n            name='Admission',\n            fields=[\n                ('id', models.CharField(editable=False, max_length=6, verbose_name=admission.models.shortuuid)),",
+        "detail": "derp.admission.migrations.0001_initial",
+        "documentation": {}
+    },
+    {
+        "label": "AdmissionResource",
+        "kind": 6,
+        "importPath": "derp.admission.admin",
+        "description": "derp.admission.admin",
+        "peekOfCode": "class AdmissionResource(resources.ModelResource):\n    class Meta:\n        model = Admission\n        fields = ['id', 'student_name', 'profile_image','applied_for', 'date_of_birth', 'state', 'district', 'locality', 'pincode', 'mobile_number', ' aadhar_number', 'previous_result_status', 'admission_status', 'previous_institution', 'previous_education', 'worldly_studies', 'lc_given', 'donation', 'donation_amount', 'created_at', 'updated_at']\n# Register your models here.\n@admin.register(Admission)\nclass AdmissionAdmin(ImportExportModelAdmin):\n    resource_class = AdmissionResource\n    list_display = ['id', 'student_name', 'guardian_name', 'profile', 'applied_for', 'date_of_birth', 'state', 'district', 'locality', 'pincode', 'mobile_number', ' aadhar_number', 'previous_result_status', 'admission_status', 'previous_institution', 'previous_education', 'worldly_studies', 'lc_given', 'donation', 'donation_amount', 'created_at', 'updated_at']\n    list_display_links = ['student_name']",
+        "detail": "derp.admission.admin",
+        "documentation": {}
+    },
+    {
+        "label": "AdmissionAdmin",
+        "kind": 6,
+        "importPath": "derp.admission.admin",
+        "description": "derp.admission.admin",
+        "peekOfCode": "class AdmissionAdmin(ImportExportModelAdmin):\n    resource_class = AdmissionResource\n    list_display = ['id', 'student_name', 'guardian_name', 'profile', 'applied_for', 'date_of_birth', 'state', 'district', 'locality', 'pincode', 'mobile_number', ' aadhar_number', 'previous_result_status', 'admission_status', 'previous_institution', 'previous_education', 'worldly_studies', 'lc_given', 'donation', 'donation_amount', 'created_at', 'updated_at']\n    list_display_links = ['student_name']\n    list_filter = ('applied_for','state', 'district', 'locality', 'pincode','previous_result_status', 'admission_status', 'previous_institution', 'previous_education', 'worldly_studies', 'lc_given', 'donation')  # Corrected filter fields\n    search_fields =  ('student_name',)  \n    def get_queryset(self, request):\n        queryset = super().get_queryset(request)\n        self.total_count = queryset.count()\n        return queryset",
+        "detail": "derp.admission.admin",
+        "documentation": {}
+    },
+    {
+        "label": "StudentResource",
+        "kind": 6,
+        "importPath": "derp.admission.admin",
+        "description": "derp.admission.admin",
+        "peekOfCode": "class StudentResource(resources.ModelResource):\n    profile_image = fields.Field(column_name='admission__profile_image')\n    applied_for = fields.Field(column_name='admission__applied_for')\n    date_of_birth = fields.Field(column_name='admission__date_of_birth')\n    state = fields.Field(column_name='admission__state')\n    district = fields.Field(column_name='admission__district')\n    locality = fields.Field(column_name='admission__locality')\n    pincode = fields.Field(column_name='admission__pincode')\n    mobile_number = fields.Field(column_name='admission__mobile_number')\n    aadhar_number = fields.Field(column_name='admission__aadhar_number')",
+        "detail": "derp.admission.admin",
+        "documentation": {}
+    },
+    {
+        "label": "StudentAdmin",
+        "kind": 6,
+        "importPath": "derp.admission.admin",
+        "description": "derp.admission.admin",
+        "peekOfCode": "class StudentAdmin(ImportExportModelAdmin):\n    resource_class = AdmissionResource\n    list_display = ('id', 'student_name','profile', 'guardian_name', 'applied_for')\n     # Add filters based on admission status if needed\n    def profile(self, obj):\n        return format_html('<img src=\"{}\" style=\"width:60px; height:60px; border-radius:50%;\"/>'.format(obj.admission.profile_image.url))\n    # search_fields = ('student_name', 'guardian_name', 'admission_id')  # Add search fields for easy lookup\n    list_display_links = ['student_name']\n    search_fields = ('student_name', 'guardian_name', 'admission__student_name', 'admission__guardian_name', 'admission__applied_for')  # Add search fields for easy lookup\n    list_filter = ('admission__applied_for','admission__state', 'admission__district', 'admission__locality', 'admission__pincode','admission__previous_result_status', 'admission__admission_status', 'admission__previous_institution', 'admission__previous_education', 'admission__worldly_studies', 'admission__lc_given', 'admission__donation')  # Corrected filter fields",
+        "detail": "derp.admission.admin",
+        "documentation": {}
+    },
+    {
+        "label": "AdmissionConfig",
+        "kind": 6,
+        "importPath": "derp.admission.apps",
+        "description": "derp.admission.apps",
+        "peekOfCode": "class AdmissionConfig(AppConfig):\n    default_auto_field = 'django.db.models.BigAutoField'\n    name = 'admission'",
+        "detail": "derp.admission.apps",
+        "documentation": {}
+    },
+    {
+        "label": "AdmissionDashboardView",
+        "kind": 6,
+        "importPath": "derp.admission.dashboard",
+        "description": "derp.admission.dashboard",
+        "peekOfCode": "class AdmissionDashboardView(APIView):\n    def get(self, request):\n        context = {\n            'total_admissions_applied': self.get_total_admissions(),\n            'admission_applied_per_year': self.get_admissions_per_year(),\n            'admission_approved_per_year': self.get_admissions_per_year(status='approved'),\n            'admission_pending_per_year': self.get_admissions_per_year(status='pending'),\n            'admission_left_per_year': self.get_admissions_per_year(status='left'),\n            'admission_filter_by_course': self.get_admissions_grouped_by('applied_for'),\n            'admission_filter_by_department': self.get_admissions_grouped_by('previous_education'),",
+        "detail": "derp.admission.dashboard",
+        "documentation": {}
+    },
+    {
+        "label": "StudentDashboardView",
+        "kind": 6,
+        "importPath": "derp.admission.dashboard",
+        "description": "derp.admission.dashboard",
+        "peekOfCode": "class StudentDashboardView(APIView):\n    def get(self, request):\n        context = {\n            'total_students': self.get_total_students(),\n            'student_per_course': self.get_students_grouped_by('course__course_name'),  # Assuming course_name as field in Course model\n            'student_per_department': self.get_students_grouped_by('department__department_name'),  # Assuming department_name as field in Department model\n            'student_status_per_year': self.get_students_per_year(),\n            'student_status_distribution': self.get_students_grouped_by('student_status'),\n            'student_age_distribution': self.get_students_grouped_by_age(),\n            'student_per_city': self.get_students_grouped_by('admission__district'),  # Assuming district represents city",
+        "detail": "derp.admission.dashboard",
+        "documentation": {}
+    },
+    {
+        "label": "AlumniDashboardView",
+        "kind": 6,
+        "importPath": "derp.admission.dashboard",
+        "description": "derp.admission.dashboard",
+        "peekOfCode": "class AlumniDashboardView(APIView):\n     def get_alumni_data(self):\n        total_alumni = Alumni.objects.count()\n        queryset = (\n            Alumni.objects\n            .select_related('student__course__department')\n            .annotate(\n                city=F('residence__city'),\n                state=F('residence__state'),\n                country=F('residence__country'),",
+        "detail": "derp.admission.dashboard",
+        "documentation": {}
+    },
+    {
+        "label": "Admission",
+        "kind": 6,
+        "importPath": "derp.admission.models",
+        "description": "derp.admission.models",
+        "peekOfCode": "class Admission(models.Model):\n    id=models.CharField(shortuuid,max_length=6,editable=False)\n    admission_id = models.CharField(primary_key=True, default=shortuuid, max_length=6)\n    student_name = models.CharField(max_length=200)\n    father_name = models.CharField(max_length=50)\n    date_of_birth = models.DateField()\n    profile_image = models.ImageField(\n    upload_to='admission_images/',\n    default='admission_images/default_profile.png',\n    blank=True,",
+        "detail": "derp.admission.models",
+        "documentation": {}
+    },
+    {
+        "label": "Student",
+        "kind": 6,
+        "importPath": "derp.admission.models",
+        "description": "derp.admission.models",
+        "peekOfCode": "class Student(models.Model):\n    student_id = models.CharField(default=shortuuid, max_length=6, editable=False, primary_key=True)\n    admission = models.OneToOneField(Admission,on_delete=models.CASCADE)\n    course = models.ForeignKey(Course, on_delete=models.CASCADE, null=False, blank=False, to_field='course_id')\n    department = models.ForeignKey(Department, on_delete=models.CASCADE, null=False, blank=False, to_field='department_id')\n    STUDENT_STATUS = (\n        ('pursuing', 'Pursuing'),\n        ('completed', 'Completed'),\n        ('left', 'Left'),\n    )",
+        "detail": "derp.admission.models",
+        "documentation": {}
+    },
+    {
+        "label": "Alumni",
+        "kind": 6,
+        "importPath": "derp.admission.models",
+        "description": "derp.admission.models",
+        "peekOfCode": "class Alumni(models.Model):\n    alumni_id = models.CharField(default=shortuuid, max_length=6, editable=False, primary_key=True)\n    student= models.OneToOneField(Student,on_delete=models.CASCADE)\n    occupation = models.CharField(max_length=200) \n    work_place=models.CharField(max_length=200) \n    residence = models.TextField(max_length=200)\n    def __str__(self):\n        return f\"{self.alumni_student} - {self.alumni_status}\"\n@receiver(post_save, sender=Alumni)\ndef create_alumni(sender, instance, created, **kwargs):",
+        "detail": "derp.admission.models",
+        "documentation": {}
+    },
+    {
+        "label": "shortuuid",
+        "kind": 2,
+        "importPath": "derp.admission.models",
+        "description": "derp.admission.models",
+        "peekOfCode": "def shortuuid():\n   return str(uuid.uuid4().hex)[:6]\nclass Admission(models.Model):\n    id=models.CharField(shortuuid,max_length=6,editable=False)\n    admission_id = models.CharField(primary_key=True, default=shortuuid, max_length=6)\n    student_name = models.CharField(max_length=200)\n    father_name = models.CharField(max_length=50)\n    date_of_birth = models.DateField()\n    profile_image = models.ImageField(\n    upload_to='admission_images/',",
+        "detail": "derp.admission.models",
+        "documentation": {}
+    },
+    {
+        "label": "create_student",
+        "kind": 2,
+        "importPath": "derp.admission.models",
+        "description": "derp.admission.models",
+        "peekOfCode": "def create_student(sender, instance, created, **kwargs):\n    if created and instance.admission_status == 'approved':\n        Student.objects.create(admission=instance)\n    elif not created and instance.admission_status != 'approved':\n        try:\n            student = Student.objects.get(admission=instance)\n            student.delete()\n        except Student.DoesNotExist:\n            pass\nclass Alumni(models.Model):",
+        "detail": "derp.admission.models",
+        "documentation": {}
+    },
+    {
+        "label": "create_alumni",
+        "kind": 2,
+        "importPath": "derp.admission.models",
+        "description": "derp.admission.models",
+        "peekOfCode": "def create_alumni(sender, instance, created, **kwargs):\n    if created and instance.student_status == 'completed':\n        Alumni.objects.create(alumni=instance)\n    elif not created and instance.student_status != 'completed':\n        try:\n            alumni_student = Alumni.objects.get(alumni=instance)\n            alumni_student.delete()\n        except Alumni.DoesNotExist:\n            pass",
+        "detail": "derp.admission.models",
+        "documentation": {}
+    },
+    {
+        "label": "AdmissionSerializer",
+        "kind": 6,
+        "importPath": "derp.admission.serializers",
+        "description": "derp.admission.serializers",
+        "peekOfCode": "class AdmissionSerializer(serializers.ModelSerializer):\n    class Meta:\n        model= Admission\n        fields='__all__'\nclass StudentSerializer(serializers.ModelSerializer):\n    class Meta:\n        model= Student\n        fields='__all__'\nclass AlumniSerializer(serializers.ModelSerializer):\n    class Meta:",
+        "detail": "derp.admission.serializers",
+        "documentation": {}
+    },
+    {
+        "label": "StudentSerializer",
+        "kind": 6,
+        "importPath": "derp.admission.serializers",
+        "description": "derp.admission.serializers",
+        "peekOfCode": "class StudentSerializer(serializers.ModelSerializer):\n    class Meta:\n        model= Student\n        fields='__all__'\nclass AlumniSerializer(serializers.ModelSerializer):\n    class Meta:\n        model= Alumni\n        fields='__all__'",
+        "detail": "derp.admission.serializers",
+        "documentation": {}
+    },
+    {
+        "label": "AlumniSerializer",
+        "kind": 6,
+        "importPath": "derp.admission.serializers",
+        "description": "derp.admission.serializers",
+        "peekOfCode": "class AlumniSerializer(serializers.ModelSerializer):\n    class Meta:\n        model= Alumni\n        fields='__all__'",
+        "detail": "derp.admission.serializers",
+        "documentation": {}
+    },
+    {
+        "label": "urlpatterns",
+        "kind": 5,
+        "importPath": "derp.admission.urls",
+        "description": "derp.admission.urls",
+        "peekOfCode": "urlpatterns = [\n    # Admission urls\n    path('list/', AdmissionView.as_view({'get': 'list'}), name='admission-list'),\n    path('create/', AdmissionView.as_view({'post': 'create'}), name='admission-create'),\n    path('retrieve/<str:pk>/', AdmissionView.as_view({'get': 'retrieve'}), name='admission-retrieve'),\n    path('update/<str:pk>/', AdmissionView.as_view({'put': 'update'}), name='admission-update'),\n    path('delete/<str:pk>/', AdmissionView.as_view({'delete': 'delete'}), name='admission-delete'),\n    # Student urls\n    path('student/list/', StudentView.as_view({'get': 'list'}), name='student-list'),\n    path('student/create/', StudentView.as_view({'post': 'create'}), name='student-create'),",
+        "detail": "derp.admission.urls",
+        "documentation": {}
+    },
+    {
+        "label": "AdmissionView",
+        "kind": 6,
+        "importPath": "derp.admission.views",
+        "description": "derp.admission.views",
+        "peekOfCode": "class AdmissionView(viewsets.ViewSet):\n    def list(self, request):\n        queryset = Admission.objects.all()\n        serializer = AdmissionSerializer(queryset, many=True)\n        return Response(serializer.data)\n    def retrieve(self, request, pk):\n        try:\n            admission = Admission.objects.get(pk=pk)\n        except Admission.DoesNotExist:\n            return Response(status=status.HTTP_404_NOT_FOUND)",
+        "detail": "derp.admission.views",
+        "documentation": {}
+    },
+    {
+        "label": "StudentView",
+        "kind": 6,
+        "importPath": "derp.admission.views",
+        "description": "derp.admission.views",
+        "peekOfCode": "class StudentView(viewsets.ViewSet):\n    def list(self, request):\n        queryset = Student.objects.all()\n        serializer = StudentSerializer(queryset, many=True)\n        return Response(serializer.data)\n    def retrieve(self, request, pk):\n        try:\n            student = Student.objects.get(pk=pk)\n        except Student.DoesNotExist:\n            return Response(status=status.HTTP_404_NOT_FOUND)",
+        "detail": "derp.admission.views",
+        "documentation": {}
+    },
+    {
+        "label": "AlumniView",
+        "kind": 6,
+        "importPath": "derp.admission.views",
+        "description": "derp.admission.views",
+        "peekOfCode": "class AlumniView(viewsets.ViewSet):\n    def list(self, request):\n        queryset = Alumni.objects.all()\n        serializer = AlumniSerializer(queryset, many=True)\n        return Response(serializer.data)\n    def retrieve(self, request, pk):\n        try:\n            alumni = Alumni.objects.get(pk=pk)\n        except Alumni.DoesNotExist:\n            return Response(status=status.HTTP_404_NOT_FOUND)",
+        "detail": "derp.admission.views",
+        "documentation": {}
+    },
+    {
+        "label": "AlumniConfig",
+        "kind": 6,
+        "importPath": "derp.alumni.apps",
+        "description": "derp.alumni.apps",
+        "peekOfCode": "class AlumniConfig(AppConfig):\n    default_auto_field = 'django.db.models.BigAutoField'\n    name = 'alumni'",
+        "detail": "derp.alumni.apps",
+        "documentation": {}
+    },
+    {
+        "label": "Migration",
+        "kind": 6,
+        "importPath": "derp.attendance.migrations.0001_initial",
+        "description": "derp.attendance.migrations.0001_initial",
+        "peekOfCode": "class Migration(migrations.Migration):\n    initial = True\n    dependencies = [\n        ('academic', '0001_initial'),\n        ('admission', '0001_initial'),\n    ]\n    operations = [\n        migrations.CreateModel(\n            name='FingerRecord',\n            fields=[",
+        "detail": "derp.attendance.migrations.0001_initial",
+        "documentation": {}
+    },
+    {
+        "label": "AttendanceConfig",
+        "kind": 6,
+        "importPath": "derp.attendance.apps",
+        "description": "derp.attendance.apps",
+        "peekOfCode": "class AttendanceConfig(AppConfig):\n    default_auto_field = 'django.db.models.BigAutoField'\n    name = 'attendance'",
+        "detail": "derp.attendance.apps",
+        "documentation": {}
+    },
+    {
+        "label": "AttendanceDashboardView",
+        "kind": 6,
+        "importPath": "derp.attendance.dashboard",
+        "description": "derp.attendance.dashboard",
+        "peekOfCode": "class AttendanceDashboardView(APIViews):\n    def get(self,request):\n        context={\n            'attendance_per_year': self.get_total_attendance_per_year(),\n       }\n        return Response(context)\n    def get_total_attendance_per_year(self,status=None):\n            queryset=Attendance.objects()\n            if status:\n                queryset = queryset.filter(status=status)",
+        "detail": "derp.attendance.dashboard",
+        "documentation": {}
+    },
+    {
+        "label": "Attendance",
+        "kind": 6,
+        "importPath": "derp.attendance.models",
+        "description": "derp.attendance.models",
+        "peekOfCode": "class Attendance(models.Model):\n    attendance_id=models.CharField(default=shortuuid,max_length=6,editable=False,primary_key=True)\n    time_table=models.ForeignKey(TimeTable,on_delete=models.CASCADE)\n    student=models.ForeignKey(Student,on_delete=models.CASCADE)\n    date=models.DateField()\n    time=models.TimeField(auto_now=True)\n    status=models.BooleanField(default=False)\n    class Meta:\n        unique_together = ('time_table', 'student', 'date')\n    def __str__(self):",
+        "detail": "derp.attendance.models",
+        "documentation": {}
+    },
+    {
+        "label": "FingerRecord",
+        "kind": 6,
+        "importPath": "derp.attendance.models",
+        "description": "derp.attendance.models",
+        "peekOfCode": "class FingerRecord(models.Model):\n    record_id=models.CharField(default=shortuuid,max_length=6,editable=False,primary_key=True)\n    student=models.ForeignKey(Student,on_delete=models.CASCADE)\n    fingerprint_data=models.BinaryField()\n    def __str__(self):\n        return f\"Fingerprint for {self.student}\"",
+        "detail": "derp.attendance.models",
+        "documentation": {}
+    },
+    {
+        "label": "shortuuid",
+        "kind": 2,
+        "importPath": "derp.attendance.models",
+        "description": "derp.attendance.models",
+        "peekOfCode": "def shortuuid():\n    return str(uuid.uuid4().hex)[:6]\nclass Attendance(models.Model):\n    attendance_id=models.CharField(default=shortuuid,max_length=6,editable=False,primary_key=True)\n    time_table=models.ForeignKey(TimeTable,on_delete=models.CASCADE)\n    student=models.ForeignKey(Student,on_delete=models.CASCADE)\n    date=models.DateField()\n    time=models.TimeField(auto_now=True)\n    status=models.BooleanField(default=False)\n    class Meta:",
+        "detail": "derp.attendance.models",
+        "documentation": {}
+    },
+    {
+        "label": "AttendanceSerializer",
+        "kind": 6,
+        "importPath": "derp.attendance.serializers",
+        "description": "derp.attendance.serializers",
+        "peekOfCode": "class AttendanceSerializer(serializers.ModelSerializer):\n    class Meta:\n        model = Attendance\n        fields = '__all__'\nclass FingerRecordSerializer(serializers.ModelSerializer):\n    class Meta:\n        model = FingerRecord\n        fields = '__all__'",
+        "detail": "derp.attendance.serializers",
+        "documentation": {}
+    },
+    {
+        "label": "FingerRecordSerializer",
+        "kind": 6,
+        "importPath": "derp.attendance.serializers",
+        "description": "derp.attendance.serializers",
+        "peekOfCode": "class FingerRecordSerializer(serializers.ModelSerializer):\n    class Meta:\n        model = FingerRecord\n        fields = '__all__'",
+        "detail": "derp.attendance.serializers",
+        "documentation": {}
+    },
+    {
+        "label": "urlpatterns",
+        "kind": 5,
+        "importPath": "derp.attendance.urls",
+        "description": "derp.attendance.urls",
+        "peekOfCode": "urlpatterns = [\n    # Attendance urls\n    path('attendance/list/', AttendanceView.as_view({'get': 'list'}), name='attendance-list'),\n    path('attendance/create/', AttendanceView.as_view({'post': 'create'}), name='attendance-create'),\n    path('attendance/retrieve/<str:pk>/', AttendanceView.as_view({'get': 'retrieve'}), name='attendance-retrieve'),\n    path('attendance/update/<str:pk>/', AttendanceView.as_view({'put': 'update'}), name='attendance-update'),\n    path('attendance/delete/<str:pk>/', AttendanceView.as_view({'delete': 'delete'}), name='attendance-delete'),\n    # Finger Record urls\n    path('fingerrecord/list/', FingerRecordView.as_view({'get': 'list'}), name='fingerrecord-list'),\n    path('fingerrecord/create/', FingerRecordView.as_view({'post': 'create'}), name='fingerrecord-create'),",
+        "detail": "derp.attendance.urls",
+        "documentation": {}
+    },
+    {
+        "label": "AttendanceView",
+        "kind": 6,
+        "importPath": "derp.attendance.views",
+        "description": "derp.attendance.views",
+        "peekOfCode": "class AttendanceView(viewsets.ViewSet):\n    def list(self, request):\n        queryset = Attendance.objects.all()\n        serializer = AttendanceSerializer(queryset, many=True)\n        return Response(serializer.data)\n    def retrieve(self, request, pk):\n        try:\n            attendance = Attendance.objects.get(pk=pk)\n        except Attendance.DoesNotExist:\n            return Response(status=status.HTTP_404_NOT_FOUND)",
+        "detail": "derp.attendance.views",
+        "documentation": {}
+    },
+    {
+        "label": "FingerRecordView",
+        "kind": 6,
+        "importPath": "derp.attendance.views",
+        "description": "derp.attendance.views",
+        "peekOfCode": "class FingerRecordView(viewsets.ViewSet):\n    def list(self, request):\n        queryset = FingerRecord.objects.all()\n        serializer = FingerRecordSerializer(queryset, many=True)\n        return Response(serializer.data)\n    def retrieve(self, request, pk):\n        try:\n            finger_record = FingerRecord.objects.get(pk=pk)\n        except FingerRecord.DoesNotExist:\n            return Response(status=status.HTTP_404_NOT_FOUND)",
+        "detail": "derp.attendance.views",
+        "documentation": {}
+    },
+    {
+        "label": "application",
+        "kind": 5,
+        "importPath": "derp.derp.asgi",
+        "description": "derp.derp.asgi",
+        "peekOfCode": "application = get_asgi_application()",
+        "detail": "derp.derp.asgi",
+        "documentation": {}
+    },
+    {
+        "label": "BASE_DIR",
+        "kind": 5,
+        "importPath": "derp.derp.settings",
+        "description": "derp.derp.settings",
+        "peekOfCode": "BASE_DIR = Path(__file__).resolve().parent.parent\n# Quick-start development settings - unsuitable for production\n# See https://docs.djangoproject.com/en/5.0/howto/deployment/checklist/\n# SECURITY WARNING: keep the secret key used in production secret!\nSECRET_KEY = 'django-insecure-2a&y+-x=o$cf--*v1ru+4j&4#8uhcktd@6x$utr03=2#eue=gx'\n# SECURITY WARNING: don't run with debug turned on in production!\nDEBUG = True\nALLOWED_HOSTS = []\n# Application definition\nINSTALLED_APPS = [",
+        "detail": "derp.derp.settings",
+        "documentation": {}
+    },
+    {
+        "label": "SECRET_KEY",
+        "kind": 5,
+        "importPath": "derp.derp.settings",
+        "description": "derp.derp.settings",
+        "peekOfCode": "SECRET_KEY = 'django-insecure-2a&y+-x=o$cf--*v1ru+4j&4#8uhcktd@6x$utr03=2#eue=gx'\n# SECURITY WARNING: don't run with debug turned on in production!\nDEBUG = True\nALLOWED_HOSTS = []\n# Application definition\nINSTALLED_APPS = [\n    'jazzmin',\n    'django.contrib.admin',\n    'django.contrib.auth',\n    'django.contrib.contenttypes',",
+        "detail": "derp.derp.settings",
+        "documentation": {}
+    },
+    {
+        "label": "DEBUG",
+        "kind": 5,
+        "importPath": "derp.derp.settings",
+        "description": "derp.derp.settings",
+        "peekOfCode": "DEBUG = True\nALLOWED_HOSTS = []\n# Application definition\nINSTALLED_APPS = [\n    'jazzmin',\n    'django.contrib.admin',\n    'django.contrib.auth',\n    'django.contrib.contenttypes',\n    'django.contrib.sessions',\n    'django.contrib.messages',",
+        "detail": "derp.derp.settings",
+        "documentation": {}
+    },
+    {
+        "label": "ALLOWED_HOSTS",
+        "kind": 5,
+        "importPath": "derp.derp.settings",
+        "description": "derp.derp.settings",
+        "peekOfCode": "ALLOWED_HOSTS = []\n# Application definition\nINSTALLED_APPS = [\n    'jazzmin',\n    'django.contrib.admin',\n    'django.contrib.auth',\n    'django.contrib.contenttypes',\n    'django.contrib.sessions',\n    'django.contrib.messages',\n    'django.contrib.staticfiles',",
+        "detail": "derp.derp.settings",
+        "documentation": {}
+    },
+    {
+        "label": "INSTALLED_APPS",
+        "kind": 5,
+        "importPath": "derp.derp.settings",
+        "description": "derp.derp.settings",
+        "peekOfCode": "INSTALLED_APPS = [\n    'jazzmin',\n    'django.contrib.admin',\n    'django.contrib.auth',\n    'django.contrib.contenttypes',\n    'django.contrib.sessions',\n    'django.contrib.messages',\n    'django.contrib.staticfiles',\n    'rest_framework',\n    'rest_framework.authtoken',",
+        "detail": "derp.derp.settings",
+        "documentation": {}
+    },
+    {
+        "label": "IMPORT_EXPORT_FORMATS",
+        "kind": 5,
+        "importPath": "derp.derp.settings",
+        "description": "derp.derp.settings",
+        "peekOfCode": "IMPORT_EXPORT_FORMATS = [XLSX]\nADMIN_CHARTS_NVD3_JS_PATH = 'bow/nvd3/build/nv.d3.js'\nADMIN_CHARTS_NVD3_CSS_PATH = 'bow/nvd3/build/nv.d3.css'\nADMIN_CHARTS_D3_JS_PATH = 'bow/d3/d3.js'\nMIDDLEWARE = [\n    'corsheaders.middleware.CorsMiddleware',\n    'django.middleware.security.SecurityMiddleware',\n    'django.contrib.sessions.middleware.SessionMiddleware',\n    'django.middleware.common.CommonMiddleware',\n    'django.middleware.csrf.CsrfViewMiddleware',",
+        "detail": "derp.derp.settings",
+        "documentation": {}
+    },
+    {
+        "label": "ADMIN_CHARTS_NVD3_JS_PATH",
+        "kind": 5,
+        "importPath": "derp.derp.settings",
+        "description": "derp.derp.settings",
+        "peekOfCode": "ADMIN_CHARTS_NVD3_JS_PATH = 'bow/nvd3/build/nv.d3.js'\nADMIN_CHARTS_NVD3_CSS_PATH = 'bow/nvd3/build/nv.d3.css'\nADMIN_CHARTS_D3_JS_PATH = 'bow/d3/d3.js'\nMIDDLEWARE = [\n    'corsheaders.middleware.CorsMiddleware',\n    'django.middleware.security.SecurityMiddleware',\n    'django.contrib.sessions.middleware.SessionMiddleware',\n    'django.middleware.common.CommonMiddleware',\n    'django.middleware.csrf.CsrfViewMiddleware',\n    'django.contrib.auth.middleware.AuthenticationMiddleware',",
+        "detail": "derp.derp.settings",
+        "documentation": {}
+    },
+    {
+        "label": "ADMIN_CHARTS_NVD3_CSS_PATH",
+        "kind": 5,
+        "importPath": "derp.derp.settings",
+        "description": "derp.derp.settings",
+        "peekOfCode": "ADMIN_CHARTS_NVD3_CSS_PATH = 'bow/nvd3/build/nv.d3.css'\nADMIN_CHARTS_D3_JS_PATH = 'bow/d3/d3.js'\nMIDDLEWARE = [\n    'corsheaders.middleware.CorsMiddleware',\n    'django.middleware.security.SecurityMiddleware',\n    'django.contrib.sessions.middleware.SessionMiddleware',\n    'django.middleware.common.CommonMiddleware',\n    'django.middleware.csrf.CsrfViewMiddleware',\n    'django.contrib.auth.middleware.AuthenticationMiddleware',\n    'django.contrib.messages.middleware.MessageMiddleware',",
+        "detail": "derp.derp.settings",
+        "documentation": {}
+    },
+    {
+        "label": "ADMIN_CHARTS_D3_JS_PATH",
+        "kind": 5,
+        "importPath": "derp.derp.settings",
+        "description": "derp.derp.settings",
+        "peekOfCode": "ADMIN_CHARTS_D3_JS_PATH = 'bow/d3/d3.js'\nMIDDLEWARE = [\n    'corsheaders.middleware.CorsMiddleware',\n    'django.middleware.security.SecurityMiddleware',\n    'django.contrib.sessions.middleware.SessionMiddleware',\n    'django.middleware.common.CommonMiddleware',\n    'django.middleware.csrf.CsrfViewMiddleware',\n    'django.contrib.auth.middleware.AuthenticationMiddleware',\n    'django.contrib.messages.middleware.MessageMiddleware',\n    'django.middleware.clickjacking.XFrameOptionsMiddleware',",
+        "detail": "derp.derp.settings",
+        "documentation": {}
+    },
+    {
+        "label": "MIDDLEWARE",
+        "kind": 5,
+        "importPath": "derp.derp.settings",
+        "description": "derp.derp.settings",
+        "peekOfCode": "MIDDLEWARE = [\n    'corsheaders.middleware.CorsMiddleware',\n    'django.middleware.security.SecurityMiddleware',\n    'django.contrib.sessions.middleware.SessionMiddleware',\n    'django.middleware.common.CommonMiddleware',\n    'django.middleware.csrf.CsrfViewMiddleware',\n    'django.contrib.auth.middleware.AuthenticationMiddleware',\n    'django.contrib.messages.middleware.MessageMiddleware',\n    'django.middleware.clickjacking.XFrameOptionsMiddleware',\n]",
+        "detail": "derp.derp.settings",
+        "documentation": {}
+    },
+    {
+        "label": "ROOT_URLCONF",
+        "kind": 5,
+        "importPath": "derp.derp.settings",
+        "description": "derp.derp.settings",
+        "peekOfCode": "ROOT_URLCONF = 'derp.urls'\nCORS_ALLOW_ALL_ORIGINS = True\nTEMPLATES = [\n    {\n        'BACKEND': 'django.template.backends.django.DjangoTemplates',\n        'DIRS': [],\n        'APP_DIRS': True,\n        'OPTIONS': {\n            'context_processors': [\n                'django.template.context_processors.debug',",
+        "detail": "derp.derp.settings",
+        "documentation": {}
+    },
+    {
+        "label": "CORS_ALLOW_ALL_ORIGINS",
+        "kind": 5,
+        "importPath": "derp.derp.settings",
+        "description": "derp.derp.settings",
+        "peekOfCode": "CORS_ALLOW_ALL_ORIGINS = True\nTEMPLATES = [\n    {\n        'BACKEND': 'django.template.backends.django.DjangoTemplates',\n        'DIRS': [],\n        'APP_DIRS': True,\n        'OPTIONS': {\n            'context_processors': [\n                'django.template.context_processors.debug',\n                'django.template.context_processors.request',",
+        "detail": "derp.derp.settings",
+        "documentation": {}
+    },
+    {
+        "label": "TEMPLATES",
+        "kind": 5,
+        "importPath": "derp.derp.settings",
+        "description": "derp.derp.settings",
+        "peekOfCode": "TEMPLATES = [\n    {\n        'BACKEND': 'django.template.backends.django.DjangoTemplates',\n        'DIRS': [],\n        'APP_DIRS': True,\n        'OPTIONS': {\n            'context_processors': [\n                'django.template.context_processors.debug',\n                'django.template.context_processors.request',\n                'django.contrib.auth.context_processors.auth',",
+        "detail": "derp.derp.settings",
+        "documentation": {}
+    },
+    {
+        "label": "WSGI_APPLICATION",
+        "kind": 5,
+        "importPath": "derp.derp.settings",
+        "description": "derp.derp.settings",
+        "peekOfCode": "WSGI_APPLICATION = 'derp.wsgi.application'\n# Database\n# https://docs.djangoproject.com/en/5.0/ref/settings/#databases\nDATABASES = {\n    'default': {\n        'ENGINE': 'django.db.backends.sqlite3',\n        'NAME': BASE_DIR / 'db.sqlite3',\n    }\n}\n# Password validation",
+        "detail": "derp.derp.settings",
+        "documentation": {}
+    },
+    {
+        "label": "DATABASES",
+        "kind": 5,
+        "importPath": "derp.derp.settings",
+        "description": "derp.derp.settings",
+        "peekOfCode": "DATABASES = {\n    'default': {\n        'ENGINE': 'django.db.backends.sqlite3',\n        'NAME': BASE_DIR / 'db.sqlite3',\n    }\n}\n# Password validation\n# https://docs.djangoproject.com/en/5.0/ref/settings/#auth-password-validators\nAUTH_PASSWORD_VALIDATORS = [\n    {",
+        "detail": "derp.derp.settings",
+        "documentation": {}
+    },
+    {
+        "label": "AUTH_PASSWORD_VALIDATORS",
+        "kind": 5,
+        "importPath": "derp.derp.settings",
+        "description": "derp.derp.settings",
+        "peekOfCode": "AUTH_PASSWORD_VALIDATORS = [\n    {\n        'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',\n    },\n    {\n        'NAME': 'django.contrib.auth.password_validation.MinimumLengthValidator',\n    },\n    {\n        'NAME': 'django.contrib.auth.password_validation.CommonPasswordValidator',\n    },",
+        "detail": "derp.derp.settings",
+        "documentation": {}
+    },
+    {
+        "label": "LANGUAGE_CODE",
+        "kind": 5,
+        "importPath": "derp.derp.settings",
+        "description": "derp.derp.settings",
+        "peekOfCode": "LANGUAGE_CODE = 'en-us'\nTIME_ZONE = 'UTC'\nUSE_I18N = True\nUSE_TZ = True\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/5.0/howto/static-files/\nimport os\nMEDIA_URL = '/media/'\nMEDIA_ROOT = os.path.join(BASE_DIR, 'media')\nSTATIC_URL = 'static/'",
+        "detail": "derp.derp.settings",
+        "documentation": {}
+    },
+    {
+        "label": "TIME_ZONE",
+        "kind": 5,
+        "importPath": "derp.derp.settings",
+        "description": "derp.derp.settings",
+        "peekOfCode": "TIME_ZONE = 'UTC'\nUSE_I18N = True\nUSE_TZ = True\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/5.0/howto/static-files/\nimport os\nMEDIA_URL = '/media/'\nMEDIA_ROOT = os.path.join(BASE_DIR, 'media')\nSTATIC_URL = 'static/'\nSTATIC_ROOT='darul-uloom-erp\\derp\\static'",
+        "detail": "derp.derp.settings",
+        "documentation": {}
+    },
+    {
+        "label": "USE_I18N",
+        "kind": 5,
+        "importPath": "derp.derp.settings",
+        "description": "derp.derp.settings",
+        "peekOfCode": "USE_I18N = True\nUSE_TZ = True\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/5.0/howto/static-files/\nimport os\nMEDIA_URL = '/media/'\nMEDIA_ROOT = os.path.join(BASE_DIR, 'media')\nSTATIC_URL = 'static/'\nSTATIC_ROOT='darul-uloom-erp\\derp\\static'\n# Default primary key field type",
+        "detail": "derp.derp.settings",
+        "documentation": {}
+    },
+    {
+        "label": "USE_TZ",
+        "kind": 5,
+        "importPath": "derp.derp.settings",
+        "description": "derp.derp.settings",
+        "peekOfCode": "USE_TZ = True\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/5.0/howto/static-files/\nimport os\nMEDIA_URL = '/media/'\nMEDIA_ROOT = os.path.join(BASE_DIR, 'media')\nSTATIC_URL = 'static/'\nSTATIC_ROOT='darul-uloom-erp\\derp\\static'\n# Default primary key field type\n# https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field",
+        "detail": "derp.derp.settings",
+        "documentation": {}
+    },
+    {
+        "label": "MEDIA_URL",
+        "kind": 5,
+        "importPath": "derp.derp.settings",
+        "description": "derp.derp.settings",
+        "peekOfCode": "MEDIA_URL = '/media/'\nMEDIA_ROOT = os.path.join(BASE_DIR, 'media')\nSTATIC_URL = 'static/'\nSTATIC_ROOT='darul-uloom-erp\\derp\\static'\n# Default primary key field type\n# https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field\nJAZZMIN_SETTINGS = {\n    # title of the window (Will default to current_admin_site.site_title if absent or None)\n    \"site_title\": \"Darul Uloom Matliwala Admin\",\n    # Title on the login screen (19 chars max) (defaults to current_admin_site.site_header if absent or None)",
+        "detail": "derp.derp.settings",
+        "documentation": {}
+    },
+    {
+        "label": "MEDIA_ROOT",
+        "kind": 5,
+        "importPath": "derp.derp.settings",
+        "description": "derp.derp.settings",
+        "peekOfCode": "MEDIA_ROOT = os.path.join(BASE_DIR, 'media')\nSTATIC_URL = 'static/'\nSTATIC_ROOT='darul-uloom-erp\\derp\\static'\n# Default primary key field type\n# https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field\nJAZZMIN_SETTINGS = {\n    # title of the window (Will default to current_admin_site.site_title if absent or None)\n    \"site_title\": \"Darul Uloom Matliwala Admin\",\n    # Title on the login screen (19 chars max) (defaults to current_admin_site.site_header if absent or None)\n    \"site_header\": \"Darul-Uloom-Matliwala\",",
+        "detail": "derp.derp.settings",
+        "documentation": {}
+    },
+    {
+        "label": "STATIC_URL",
+        "kind": 5,
+        "importPath": "derp.derp.settings",
+        "description": "derp.derp.settings",
+        "peekOfCode": "STATIC_URL = 'static/'\nSTATIC_ROOT='darul-uloom-erp\\derp\\static'\n# Default primary key field type\n# https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field\nJAZZMIN_SETTINGS = {\n    # title of the window (Will default to current_admin_site.site_title if absent or None)\n    \"site_title\": \"Darul Uloom Matliwala Admin\",\n    # Title on the login screen (19 chars max) (defaults to current_admin_site.site_header if absent or None)\n    \"site_header\": \"Darul-Uloom-Matliwala\",\n    # Title on the brand (19 chars max) (defaults to current_admin_site.site_header if absent or None)",
+        "detail": "derp.derp.settings",
+        "documentation": {}
+    },
+    {
+        "label": "JAZZMIN_SETTINGS",
+        "kind": 5,
+        "importPath": "derp.derp.settings",
+        "description": "derp.derp.settings",
+        "peekOfCode": "JAZZMIN_SETTINGS = {\n    # title of the window (Will default to current_admin_site.site_title if absent or None)\n    \"site_title\": \"Darul Uloom Matliwala Admin\",\n    # Title on the login screen (19 chars max) (defaults to current_admin_site.site_header if absent or None)\n    \"site_header\": \"Darul-Uloom-Matliwala\",\n    # Title on the brand (19 chars max) (defaults to current_admin_site.site_header if absent or None)\n    \"site_brand\": \"Matliwala\",\n    # Logo to use for your site, must be present in static files, used for brand on top left\n    # \"site_logo\": \"books/img/logo.png\",\n    # Logo to use for your site, must be present in static files, used for login form logo (defaults to site_logo)",
+        "detail": "derp.derp.settings",
+        "documentation": {}
+    },
+    {
+        "label": "DEFAULT_AUTO_FIELD",
+        "kind": 5,
+        "importPath": "derp.derp.settings",
+        "description": "derp.derp.settings",
+        "peekOfCode": "DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'\nAUTH_USER_MODEL='userauth.User'",
+        "detail": "derp.derp.settings",
+        "documentation": {}
+    },
+    {
+        "label": "urlpatterns",
+        "kind": 5,
+        "importPath": "derp.derp.urls",
+        "description": "derp.derp.urls",
+        "peekOfCode": "urlpatterns = [\n    path('admin/', admin.site.urls),\n    # path('admin_tools_stats/', include('admin_tools_stats.urls')),\n    path('academic/',include('academic.urls',namespace='academic')),\n    path('admission/',include('admission.urls',namespace='admission')),\n    path('library/',include('library.urls',namespace='library')),\n    path('userauth/',include('userauth.urls',namespace='userauth')),\n]\nif settings.DEBUG:\n    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)",
+        "detail": "derp.derp.urls",
+        "documentation": {}
+    },
+    {
+        "label": "application",
+        "kind": 5,
+        "importPath": "derp.derp.wsgi",
+        "description": "derp.derp.wsgi",
+        "peekOfCode": "application = get_wsgi_application()",
+        "detail": "derp.derp.wsgi",
+        "documentation": {}
+    },
+    {
+        "label": "Migration",
+        "kind": 6,
+        "importPath": "derp.examination.migrations.0001_initial",
+        "description": "derp.examination.migrations.0001_initial",
+        "peekOfCode": "class Migration(migrations.Migration):\n    initial = True\n    dependencies = [\n        ('admission', '0001_initial'),\n    ]\n    operations = [\n        migrations.CreateModel(\n            name='ExamType',\n            fields=[\n                ('exam_type_id', models.CharField(default=examination.models.shortuuid, editable=False, max_length=6, primary_key=True, serialize=False)),",
+        "detail": "derp.examination.migrations.0001_initial",
+        "documentation": {}
+    },
+    {
+        "label": "ExaminationConfig",
+        "kind": 6,
+        "importPath": "derp.examination.apps",
+        "description": "derp.examination.apps",
+        "peekOfCode": "class ExaminationConfig(AppConfig):\n    default_auto_field = 'django.db.models.BigAutoField'\n    name = 'examination'",
+        "detail": "derp.examination.apps",
+        "documentation": {}
+    },
+    {
+        "label": "ResultDashboardView",
+        "kind": 6,
+        "importPath": "derp.examination.dashboard",
+        "description": "derp.examination.dashboard",
+        "peekOfCode": "class ResultDashboardView(APIView):\n    def get(self, request):\n        context = {\n            'result_per_year': self.get_result_per_year(),\n        }\n        return Response(context)\n    def get_result_per_year(self):\n        queryset = (\n            MarkSheet.objects\n            .select_related('exam_detail__subject__course', 'exam_detail__subject__course__department')",
+        "detail": "derp.examination.dashboard",
+        "documentation": {}
+    },
+    {
+        "label": "ExamType",
+        "kind": 6,
+        "importPath": "derp.examination.models",
+        "description": "derp.examination.models",
+        "peekOfCode": "class ExamType(models.Model):\n        exam_type_id = models.CharField(default=shortuuid, max_length=6, editable=False, primary_key=True)\n        name = models.CharField(max_length=20)\n        effective_date = models.DateField()\nclass ExamTimeTable(models.Model):\n        exam_time_table_id = models.CharField(default=shortuuid, max_length=6, editable=False, primary_key=True)\n        exam_type=models.ForeignKey(ExamType, on_delete=models.CASCADE,  )\n        subject = models.ForeignKey(Student, on_delete=models.CASCADE,  )\n        total_marks=models.PositiveIntegerField()\n        passing_marks=models.PositiveIntegerField()",
+        "detail": "derp.examination.models",
+        "documentation": {}
+    },
+    {
+        "label": "ExamTimeTable",
+        "kind": 6,
+        "importPath": "derp.examination.models",
+        "description": "derp.examination.models",
+        "peekOfCode": "class ExamTimeTable(models.Model):\n        exam_time_table_id = models.CharField(default=shortuuid, max_length=6, editable=False, primary_key=True)\n        exam_type=models.ForeignKey(ExamType, on_delete=models.CASCADE,  )\n        subject = models.ForeignKey(Student, on_delete=models.CASCADE,  )\n        total_marks=models.PositiveIntegerField()\n        passing_marks=models.PositiveIntegerField()\n        time=models.TimeField()\nclass HallTicket(models.Model):\n    hall_ticket_number = models.CharField(default=shortuuid, max_length=6, editable=False, primary_key=True)\n    exam_time_table = models.ForeignKey(ExamTimeTable, on_delete=models.CASCADE)",
+        "detail": "derp.examination.models",
+        "documentation": {}
+    },
+    {
+        "label": "HallTicket",
+        "kind": 6,
+        "importPath": "derp.examination.models",
+        "description": "derp.examination.models",
+        "peekOfCode": "class HallTicket(models.Model):\n    hall_ticket_number = models.CharField(default=shortuuid, max_length=6, editable=False, primary_key=True)\n    exam_time_table = models.ForeignKey(ExamTimeTable, on_delete=models.CASCADE)\n    student = models.ForeignKey(Student, on_delete=models.CASCADE)\n    def __str__(self):\n        return f'Hall Ticket {self.hall_ticket_number} for Exam {self.exam_time_table}'      \nclass MarkSheet(models.Model):\n         mark_sheet_id = models.CharField(default=shortuuid, max_length=6, editable=False, primary_key=True)\n         exam_detail=models.ForeignKey(ExamTimeTable, on_delete=models.CASCADE,  )\n         student=models.ForeignKey(Student, on_delete=models.CASCADE,  )",
+        "detail": "derp.examination.models",
+        "documentation": {}
+    },
+    {
+        "label": "MarkSheet",
+        "kind": 6,
+        "importPath": "derp.examination.models",
+        "description": "derp.examination.models",
+        "peekOfCode": "class MarkSheet(models.Model):\n         mark_sheet_id = models.CharField(default=shortuuid, max_length=6, editable=False, primary_key=True)\n         exam_detail=models.ForeignKey(ExamTimeTable, on_delete=models.CASCADE,  )\n         student=models.ForeignKey(Student, on_delete=models.CASCADE,  )\n         marks_obtained=models.PositiveIntegerField()\n         result=models.CharField(max_length=20,editable=False)\n         def save(self,*args,**kwargs):\n                if self.marks_obtained>=self.exam_detail.passing_marks:\n                       self.result='Pass'\n                else:",
+        "detail": "derp.examination.models",
+        "documentation": {}
+    },
+    {
+        "label": "ResultSheet",
+        "kind": 6,
+        "importPath": "derp.examination.models",
+        "description": "derp.examination.models",
+        "peekOfCode": "class ResultSheet(models.Model):\n    result_sheet_id = models.CharField(default=shortuuid, max_length=6, editable=False, primary_key=True)\n    student=models.ForeignKey(Student, on_delete=models.CASCADE,  )\n    result_data=models.JSONField() \n    total_marks_obtained = models.PositiveIntegerField(default=0)\n    rank = models.PositiveIntegerField(default=0)\n    created_at = models.DateTimeField(auto_now_add=True)\n    updated_at = models.DateTimeField(auto_now=True)",
+        "detail": "derp.examination.models",
+        "documentation": {}
+    },
+    {
+        "label": "shortuuid",
+        "kind": 2,
+        "importPath": "derp.examination.models",
+        "description": "derp.examination.models",
+        "peekOfCode": "def shortuuid():\n    return str(uuid.uuid4().hex)[:6]\nclass ExamType(models.Model):\n        exam_type_id = models.CharField(default=shortuuid, max_length=6, editable=False, primary_key=True)\n        name = models.CharField(max_length=20)\n        effective_date = models.DateField()\nclass ExamTimeTable(models.Model):\n        exam_time_table_id = models.CharField(default=shortuuid, max_length=6, editable=False, primary_key=True)\n        exam_type=models.ForeignKey(ExamType, on_delete=models.CASCADE,  )\n        subject = models.ForeignKey(Student, on_delete=models.CASCADE,  )",
+        "detail": "derp.examination.models",
+        "documentation": {}
+    },
+    {
+        "label": "ExamTypeSerializer",
+        "kind": 6,
+        "importPath": "derp.examination.serializer",
+        "description": "derp.examination.serializer",
+        "peekOfCode": "class ExamTypeSerializer(serializers.ModelSerializer):\n    class Meta:\n        model = ExamType\n        fields = '__all__'\nclass ExamTimeTableSerializer(serializers.ModelSerializer):\n    class Meta:\n        model = ExamTimeTable\n        fields = '__all__'\nclass MarksheetSerializer(serializers.ModelSerializer):\n    class Meta:",
+        "detail": "derp.examination.serializer",
+        "documentation": {}
+    },
+    {
+        "label": "ExamTimeTableSerializer",
+        "kind": 6,
+        "importPath": "derp.examination.serializer",
+        "description": "derp.examination.serializer",
+        "peekOfCode": "class ExamTimeTableSerializer(serializers.ModelSerializer):\n    class Meta:\n        model = ExamTimeTable\n        fields = '__all__'\nclass MarksheetSerializer(serializers.ModelSerializer):\n    class Meta:\n        model = Marksheet\n        fields = '__all__'\nclass ResultSheetSerializer(serializers.ModelSerializer):\n    class Meta:",
+        "detail": "derp.examination.serializer",
+        "documentation": {}
+    },
+    {
+        "label": "MarksheetSerializer",
+        "kind": 6,
+        "importPath": "derp.examination.serializer",
+        "description": "derp.examination.serializer",
+        "peekOfCode": "class MarksheetSerializer(serializers.ModelSerializer):\n    class Meta:\n        model = Marksheet\n        fields = '__all__'\nclass ResultSheetSerializer(serializers.ModelSerializer):\n    class Meta:\n        model = ResultSheet\n        fields = '__all__'",
+        "detail": "derp.examination.serializer",
+        "documentation": {}
+    },
+    {
+        "label": "ResultSheetSerializer",
+        "kind": 6,
+        "importPath": "derp.examination.serializer",
+        "description": "derp.examination.serializer",
+        "peekOfCode": "class ResultSheetSerializer(serializers.ModelSerializer):\n    class Meta:\n        model = ResultSheet\n        fields = '__all__'",
+        "detail": "derp.examination.serializer",
+        "documentation": {}
+    },
+    {
+        "label": "urlpatterns",
+        "kind": 5,
+        "importPath": "derp.examination.urls",
+        "description": "derp.examination.urls",
+        "peekOfCode": "urlpatterns = [\n    # ExamType APIs\n    path('examtype/list/', ExamTypeView.as_view({'get': 'list'}), name='examtype-list'),\n    path('examtype/create/', ExamTypeView.as_view({'post': 'create'}), name='examtype-create'),\n    path('examtype/retrieve/<str:pk>/', ExamTypeView.as_view({'get': 'retrieve'}), name='examtype-retrieve'),\n    path('examtype/update/<str:pk>/', ExamTypeView.as_view({'put': 'update'}), name='examtype-update'),\n    path('examtype/delete/<str:pk>/', ExamTypeView.as_view({'delete': 'delete'}), name='examtype-delete'),\n    # ExamTimeTable APIs\n    path('examtimetable/list/', ExamTimeTableView.as_view({'get': 'list'}), name='examtimetable-list'),\n    path('examtimetable/create/', ExamTimeTableView.as_view({'post': 'create'}), name='examtimetable-create'),",
+        "detail": "derp.examination.urls",
+        "documentation": {}
+    },
+    {
+        "label": "ExamTypeView",
+        "kind": 6,
+        "importPath": "derp.examination.views",
+        "description": "derp.examination.views",
+        "peekOfCode": "class ExamTypeView(viewsets.ViewSet):\n    def list(self, request):\n        queryset = ExamType.objects.all()\n        serializer = ExamTypeSerializer(queryset, many=True)\n        return Response(serializer.data)\n    def create(self, request):\n        serializer = ExamTypeSerializer(data=request.data)\n        if serializer.is_valid():\n            serializer.save()\n            return Response(serializer.data, status=201)",
+        "detail": "derp.examination.views",
+        "documentation": {}
+    },
+    {
+        "label": "ExamTimeTableView",
+        "kind": 6,
+        "importPath": "derp.examination.views",
+        "description": "derp.examination.views",
+        "peekOfCode": "class ExamTimeTableView(viewsets.ViewSet):\n    def list(self, request):\n        queryset = ExamTimeTable.objects.all()\n        serializer = ExamTimeTableSerializer(queryset, many=True)\n        return Response(serializer.data)\n    def create(self, request):\n        serializer = ExamTimeTableSerializer(data=request.data)\n        if serializer.is_valid():\n            serializer.save()\n            return Response(serializer.data, status=201)",
+        "detail": "derp.examination.views",
+        "documentation": {}
+    },
+    {
+        "label": "MarksheetView",
+        "kind": 6,
+        "importPath": "derp.examination.views",
+        "description": "derp.examination.views",
+        "peekOfCode": "class MarksheetView(viewsets.ViewSet):\n    def list(self, request):\n        queryset = Marksheet.objects.all()\n        serializer = MarksheetSerializer(queryset, many=True)\n        return Response(serializer.data)\n    def create(self, request):\n        serializer = MarksheetSerializer(data=request.data)\n        if serializer.is_valid():\n            serializer.save()\n            return Response(serializer.data, status=201)",
+        "detail": "derp.examination.views",
+        "documentation": {}
+    },
+    {
+        "label": "ResultSheetView",
+        "kind": 6,
+        "importPath": "derp.examination.views",
+        "description": "derp.examination.views",
+        "peekOfCode": "class ResultSheetView(viewsets.ViewSet):\n    def list(self, request):\n        queryset = ResultSheet.objects.all()\n        serializer = ResultSheetSerializer(queryset, many=True)\n        return Response(serializer.data)\n    def create(self, request):\n        serializer = ResultSheetSerializer(data=request.data)\n        if serializer.is_valid():\n            serializer.save()\n            return Response(serializer.data, status=201)",
+        "detail": "derp.examination.views",
+        "documentation": {}
+    },
+    {
+        "label": "generate_result_sheet",
+        "kind": 2,
+        "importPath": "derp.examination.views",
+        "description": "derp.examination.views",
+        "peekOfCode": "def generate_result_sheet(student_id):\n    student=get_object_or_404(Student,student_id=student_id)\n    marksheets=Marksheet.objects.filter(student=student)\n    result_sheet={\n        'student_id':student.student_id,\n        'student_name':student.name,\n        'exams':[]\n    }\n    total_marks_obtained=0\n    for marksheet in marksheets:",
+        "detail": "derp.examination.views",
+        "documentation": {}
+    },
+    {
+        "label": "result_sheet_view",
+        "kind": 2,
+        "importPath": "derp.examination.views",
+        "description": "derp.examination.views",
+        "peekOfCode": "def result_sheet_view(request,student_id):\n    result_sheet=generate_result_sheet(student_id)\n    return JsonResponse(result_sheet)\ndef assign_rank():\n    result_sheets=ResultSheet.objects.all().order_by('-total_marks')\n    for rank,result_sheet in enumerate(result_sheets,start=1):\n        result_sheet.rank=rank\n        result_sheet.save\nclass ExamTypeView(viewsets.ViewSet):\n    def list(self, request):",
+        "detail": "derp.examination.views",
+        "documentation": {}
+    },
+    {
+        "label": "assign_rank",
+        "kind": 2,
+        "importPath": "derp.examination.views",
+        "description": "derp.examination.views",
+        "peekOfCode": "def assign_rank():\n    result_sheets=ResultSheet.objects.all().order_by('-total_marks')\n    for rank,result_sheet in enumerate(result_sheets,start=1):\n        result_sheet.rank=rank\n        result_sheet.save\nclass ExamTypeView(viewsets.ViewSet):\n    def list(self, request):\n        queryset = ExamType.objects.all()\n        serializer = ExamTypeSerializer(queryset, many=True)\n        return Response(serializer.data)",
+        "detail": "derp.examination.views",
+        "documentation": {}
+    },
+    {
+        "label": "Migration",
+        "kind": 6,
+        "importPath": "derp.library.migrations.0001_initial",
+        "description": "derp.library.migrations.0001_initial",
+        "peekOfCode": "class Migration(migrations.Migration):\n    initial = True\n    dependencies = [\n        ('contenttypes', '0002_remove_content_type_name'),\n    ]\n    operations = [\n        migrations.CreateModel(\n            name='Author',\n            fields=[\n                ('Author_id', models.CharField(default=library.models.shortuuid, editable=False, max_length=6, primary_key=True, serialize=False)),",
+        "detail": "derp.library.migrations.0001_initial",
+        "documentation": {}
+    },
+    {
+        "label": "LibraryConfig",
+        "kind": 6,
+        "importPath": "derp.library.apps",
+        "description": "derp.library.apps",
+        "peekOfCode": "class LibraryConfig(AppConfig):\n    default_auto_field = 'django.db.models.BigAutoField'\n    name = 'library'",
+        "detail": "derp.library.apps",
+        "documentation": {}
+    },
+    {
+        "label": "LibraryDashboardView",
+        "kind": 6,
+        "importPath": "derp.library.dashboard",
+        "description": "derp.library.dashboard",
+        "peekOfCode": "class LibraryDashboardView(APIView):\n    def get(self, request):\n        context = {\n            'author_data': self.get_author_data(),\n            'book_data': self.get_book_data(),\n            'category_data': self.get_category_data(),\n            'total_books': self.get_total_books(),\n            'checkout_data': self.get_checkout_data(),\n        }\n        return Response(context)",
+        "detail": "derp.library.dashboard",
+        "documentation": {}
+    },
+    {
+        "label": "Author",
+        "kind": 6,
+        "importPath": "derp.library.models",
+        "description": "derp.library.models",
+        "peekOfCode": "class Author(models.Model):\n    Author_id = models.CharField(primary_key=True, default=shortuuid, max_length=6, editable=False)\n    first_name=models.CharField(max_length=100)\n    last_name=models.CharField(max_length=100)\n    short_bio=models.TextField(max_length=300)\n    date_of_birth=models.DateField(null=True,blank=True)\n    date_of_death=models.DateField(null=True,blank=True)\n    def __str__(self):\n        return f\"{self.first_name} {self.last_name}\"\nclass Category(models.Model):",
+        "detail": "derp.library.models",
+        "documentation": {}
+    },
+    {
+        "label": "Category",
+        "kind": 6,
+        "importPath": "derp.library.models",
+        "description": "derp.library.models",
+        "peekOfCode": "class Category(models.Model):\n    name = models.CharField(max_length=200, help_text=\"Enter a book category (e.g. Hadith)\")\n    def __str__(self):\n        return self.name\nclass Book(models.Model):\n    title=models.CharField(max_length=200)\n    author=models.ForeignKey(Author,on_delete=models.SET_NULL,null=True)\n    summary = models.TextField(max_length=1000, help_text=\"Enter a brief description of the book\")\n    isbn =models.CharField('ISBN',max_length=13,unique=True)\n    category = models.ManyToManyField(Category, help_text=\"Select a genre for this book\")",
+        "detail": "derp.library.models",
+        "documentation": {}
+    },
+    {
+        "label": "Book",
+        "kind": 6,
+        "importPath": "derp.library.models",
+        "description": "derp.library.models",
+        "peekOfCode": "class Book(models.Model):\n    title=models.CharField(max_length=200)\n    author=models.ForeignKey(Author,on_delete=models.SET_NULL,null=True)\n    summary = models.TextField(max_length=1000, help_text=\"Enter a brief description of the book\")\n    isbn =models.CharField('ISBN',max_length=13,unique=True)\n    category = models.ManyToManyField(Category, help_text=\"Select a genre for this book\")\n    def __str__(self):\n        return self.title\nclass Checkout(models.Model):\n    book = models.ForeignKey(Book, on_delete=models.CASCADE)",
+        "detail": "derp.library.models",
+        "documentation": {}
+    },
+    {
+        "label": "Checkout",
+        "kind": 6,
+        "importPath": "derp.library.models",
+        "description": "derp.library.models",
+        "peekOfCode": "class Checkout(models.Model):\n    book = models.ForeignKey(Book, on_delete=models.CASCADE)\n    content_type = models.ForeignKey(ContentType, on_delete=models.CASCADE)\n    object_id = models.PositiveIntegerField()\n    member = GenericForeignKey('content_type', 'object_id')\n    due_date = models.DateField()\n    checkout_date = models.DateField(auto_now_add=True)\n    returned = models.BooleanField(default=False)\n    def __str__(self):\n        return f\"{self.book.title} checked out by {self.member}\"",
+        "detail": "derp.library.models",
+        "documentation": {}
+    },
+    {
+        "label": "shortuuid",
+        "kind": 2,
+        "importPath": "derp.library.models",
+        "description": "derp.library.models",
+        "peekOfCode": "def shortuuid():\n    return str(uuid.uuid4().hex)[:6]\nclass Author(models.Model):\n    Author_id = models.CharField(primary_key=True, default=shortuuid, max_length=6, editable=False)\n    first_name=models.CharField(max_length=100)\n    last_name=models.CharField(max_length=100)\n    short_bio=models.TextField(max_length=300)\n    date_of_birth=models.DateField(null=True,blank=True)\n    date_of_death=models.DateField(null=True,blank=True)\n    def __str__(self):",
+        "detail": "derp.library.models",
+        "documentation": {}
+    },
+    {
+        "label": "AuthorSerializer",
+        "kind": 6,
+        "importPath": "derp.library.serializers",
+        "description": "derp.library.serializers",
+        "peekOfCode": "class AuthorSerializer(serializers.ModelSerializer):\n    class Meta:\n        model = Author\n        fields = '__all__'\nclass CategorySerializer(serializers.ModelSerializer):\n    class Meta:\n        model = Category\n        fields = '__all__'\nclass BookSerializer(serializers.ModelSerializer):\n    author = AuthorSerializer()",
+        "detail": "derp.library.serializers",
+        "documentation": {}
+    },
+    {
+        "label": "CategorySerializer",
+        "kind": 6,
+        "importPath": "derp.library.serializers",
+        "description": "derp.library.serializers",
+        "peekOfCode": "class CategorySerializer(serializers.ModelSerializer):\n    class Meta:\n        model = Category\n        fields = '__all__'\nclass BookSerializer(serializers.ModelSerializer):\n    author = AuthorSerializer()\n    category = CategorySerializer(many=True)\n    class Meta:\n        model = Book\n        fields = '__all__'",
+        "detail": "derp.library.serializers",
+        "documentation": {}
+    },
+    {
+        "label": "BookSerializer",
+        "kind": 6,
+        "importPath": "derp.library.serializers",
+        "description": "derp.library.serializers",
+        "peekOfCode": "class BookSerializer(serializers.ModelSerializer):\n    author = AuthorSerializer()\n    category = CategorySerializer(many=True)\n    class Meta:\n        model = Book\n        fields = '__all__'\nclass CheckoutSerializer(serializers.ModelSerializer):\n    class Meta:\n        model = Checkout\n        fields = '__all__'",
+        "detail": "derp.library.serializers",
+        "documentation": {}
+    },
+    {
+        "label": "CheckoutSerializer",
+        "kind": 6,
+        "importPath": "derp.library.serializers",
+        "description": "derp.library.serializers",
+        "peekOfCode": "class CheckoutSerializer(serializers.ModelSerializer):\n    class Meta:\n        model = Checkout\n        fields = '__all__'",
+        "detail": "derp.library.serializers",
+        "documentation": {}
+    },
+    {
+        "label": "urlpatterns",
+        "kind": 5,
+        "importPath": "derp.library.urls",
+        "description": "derp.library.urls",
+        "peekOfCode": "urlpatterns = [\n   # Library APIs\n   # path('/list',DepartmentView.as_view({'get':'list'}),name='department-list'),\n   # path('/create',DepartmentView.as_view({'post':'create'}),name='department-create'),\n   # path('/retrieve/<str:pk>/',DepartmentView.as_view({'get':'retrieve'}),name='department-retrieve'),\n   # path('/delete/<str:pk>/',DepartmentView.as_view({'delete':'delete'}),name='department-delete'),\n   # path('/update/<str:pk>/',DepartmentView.as_view({'put':'update'}),name='department-create'),\n   # Author APIs\n    path('author/list/', AuthorView.as_view({'get': 'list'}), name='author-list'),\n    path('author/create/', AuthorView.as_view({'post': 'create'}), name='author-create'),",
+        "detail": "derp.library.urls",
+        "documentation": {}
+    },
+    {
+        "label": "GenerateQRcode",
+        "kind": 6,
+        "importPath": "derp.library.views",
+        "description": "derp.library.views",
+        "peekOfCode": "class GenerateQRcode(APIView):\n      def generate_qr_code(request, isbn):\n        book = get_object_or_404(Book, isbn=isbn)\n        qr = qrcode.QRCode(\n            version=1,\n            error_correction=qrcode.constants.ERROR_CORRECT_L,\n            box_size=10,\n            border=4,\n        )\n        qr.add_data(f'http://127.0.0.1:8000/admin/library/book/{book.isbn}')",
+        "detail": "derp.library.views",
+        "documentation": {}
+    },
+    {
+        "label": "AuthorView",
+        "kind": 6,
+        "importPath": "derp.library.views",
+        "description": "derp.library.views",
+        "peekOfCode": "class AuthorView(viewsets.ViewSet):\n    def list(self, request):\n        queryset = Author.objects.all()\n        serializer = AuthorSerializer(queryset, many=True)\n        return Response(serializer.data)\n    def create(self, request):\n        serializer = AuthorSerializer(data=request.data)\n        if serializer.is_valid():\n            serializer.save()\n            return Response(serializer.data, status=201)",
+        "detail": "derp.library.views",
+        "documentation": {}
+    },
+    {
+        "label": "CategoryView",
+        "kind": 6,
+        "importPath": "derp.library.views",
+        "description": "derp.library.views",
+        "peekOfCode": "class CategoryView(viewsets.ViewSet):\n    def list(self, request):\n        queryset = Category.objects.all()\n        serializer = CategorySerializer(queryset, many=True)\n        return Response(serializer.data)\n    def create(self, request):\n        serializer = CategorySerializer(data=request.data)\n        if serializer.is_valid():\n            serializer.save()\n            return Response(serializer.data, status=201)",
+        "detail": "derp.library.views",
+        "documentation": {}
+    },
+    {
+        "label": "BookView",
+        "kind": 6,
+        "importPath": "derp.library.views",
+        "description": "derp.library.views",
+        "peekOfCode": "class BookView(viewsets.ViewSet):\n    def list(self, request):\n        queryset = Book.objects.all()\n        serializer = BookSerializer(queryset, many=True)\n        return Response(serializer.data)\n    def create(self, request):\n        serializer = BookSerializer(data=request.data)\n        if serializer.is_valid():\n            serializer.save()\n            return Response(serializer.data, status=201)",
+        "detail": "derp.library.views",
+        "documentation": {}
+    },
+    {
+        "label": "CheckoutView",
+        "kind": 6,
+        "importPath": "derp.library.views",
+        "description": "derp.library.views",
+        "peekOfCode": "class CheckoutView(viewsets.ViewSet):\n    def list(self, request):\n        queryset = Checkout.objects.all()\n        serializer = CheckoutSerializer(queryset, many=True)\n        return Response(serializer.data)\n    def create(self, request):\n        serializer = CheckoutSerializer(data=request.data)\n        if serializer.is_valid():\n            serializer.save()\n            return Response(serializer.data, status=201)",
+        "detail": "derp.library.views",
+        "documentation": {}
+    },
+    {
+        "label": "Migration",
+        "kind": 6,
+        "importPath": "derp.students.migrations.0001_initial",
+        "description": "derp.students.migrations.0001_initial",
+        "peekOfCode": "class Migration(migrations.Migration):\n    initial = True\n    dependencies = [\n    ]\n    operations = [\n        migrations.CreateModel(\n            name='Grade',\n            fields=[\n                ('id', models.AutoField(primary_key=True, serialize=False)),\n                ('grade_id', models.CharField(editable=False, max_length=6, verbose_name=students.models.shortuuid)),",
+        "detail": "derp.students.migrations.0001_initial",
+        "documentation": {}
+    },
+    {
+        "label": "TeacherResource",
+        "kind": 6,
+        "importPath": "derp.students.admin",
+        "description": "derp.students.admin",
+        "peekOfCode": "class TeacherResource(resources.ModelResource):\n    class Meta:\n        model = TeacherProfile\n        fields =['teacher_id', 'name', 'address', 'graduated_from', 'subject', 'grade_incharge', 'academic_details', 'joining_date', 'id']\nclass TeacherProfileAdmin(ImportExportModelAdmin):\n    resource_class = TeacherResource\n    list_display = ['teacher_id', 'name', 'address', 'graduated_from', 'subject', 'grade_incharge', 'academic_details', 'joining_date', 'id']\n    list_filter=('graduated_from','subject','grade_incharge')\n    search_fields=('name',)\n    list_display_links=['name']",
+        "detail": "derp.students.admin",
+        "documentation": {}
+    },
+    {
+        "label": "TeacherProfileAdmin",
+        "kind": 6,
+        "importPath": "derp.students.admin",
+        "description": "derp.students.admin",
+        "peekOfCode": "class TeacherProfileAdmin(ImportExportModelAdmin):\n    resource_class = TeacherResource\n    list_display = ['teacher_id', 'name', 'address', 'graduated_from', 'subject', 'grade_incharge', 'academic_details', 'joining_date', 'id']\n    list_filter=('graduated_from','subject','grade_incharge')\n    search_fields=('name',)\n    list_display_links=['name']\nclass GradeAdmin(admin.ModelAdmin):\n    list_display = ['grade_id','name' ,'id']\n    list_display_links=['name']\nadmin.site.register(TeacherProfile, TeacherProfileAdmin)",
+        "detail": "derp.students.admin",
+        "documentation": {}
+    },
+    {
+        "label": "GradeAdmin",
+        "kind": 6,
+        "importPath": "derp.students.admin",
+        "description": "derp.students.admin",
+        "peekOfCode": "class GradeAdmin(admin.ModelAdmin):\n    list_display = ['grade_id','name' ,'id']\n    list_display_links=['name']\nadmin.site.register(TeacherProfile, TeacherProfileAdmin)\nadmin.site.register(Grade, GradeAdmin)",
+        "detail": "derp.students.admin",
+        "documentation": {}
+    },
+    {
+        "label": "StudentsConfig",
+        "kind": 6,
+        "importPath": "derp.students.apps",
+        "description": "derp.students.apps",
+        "peekOfCode": "class StudentsConfig(AppConfig):\n    default_auto_field = 'django.db.models.BigAutoField'\n    name = 'students'\n    verbose_name='Teachers/Grades'",
+        "detail": "derp.students.apps",
+        "documentation": {}
+    },
+    {
+        "label": "bind",
+        "kind": 5,
+        "importPath": "derp.students.gunicorn.conf",
+        "description": "derp.students.gunicorn.conf",
+        "peekOfCode": "bind = '0.0.0.0:8000'\nworkers = 3\nuser = 'www-data'\ngroup = 'www-data'\n#accesslog = '/path/to/your/project/logs/access.log'\n#errorlog = '/path/to/your/project/logs/error.log'\ncapture_output = True\nenable_stdio_inheritance = True",
+        "detail": "derp.students.gunicorn.conf",
+        "documentation": {}
+    },
+    {
+        "label": "workers",
+        "kind": 5,
+        "importPath": "derp.students.gunicorn.conf",
+        "description": "derp.students.gunicorn.conf",
+        "peekOfCode": "workers = 3\nuser = 'www-data'\ngroup = 'www-data'\n#accesslog = '/path/to/your/project/logs/access.log'\n#errorlog = '/path/to/your/project/logs/error.log'\ncapture_output = True\nenable_stdio_inheritance = True",
+        "detail": "derp.students.gunicorn.conf",
+        "documentation": {}
+    },
+    {
+        "label": "user",
+        "kind": 5,
+        "importPath": "derp.students.gunicorn.conf",
+        "description": "derp.students.gunicorn.conf",
+        "peekOfCode": "user = 'www-data'\ngroup = 'www-data'\n#accesslog = '/path/to/your/project/logs/access.log'\n#errorlog = '/path/to/your/project/logs/error.log'\ncapture_output = True\nenable_stdio_inheritance = True",
+        "detail": "derp.students.gunicorn.conf",
+        "documentation": {}
+    },
+    {
+        "label": "group",
+        "kind": 5,
+        "importPath": "derp.students.gunicorn.conf",
+        "description": "derp.students.gunicorn.conf",
+        "peekOfCode": "group = 'www-data'\n#accesslog = '/path/to/your/project/logs/access.log'\n#errorlog = '/path/to/your/project/logs/error.log'\ncapture_output = True\nenable_stdio_inheritance = True",
+        "detail": "derp.students.gunicorn.conf",
+        "documentation": {}
+    },
+    {
+        "label": "#accesslog",
+        "kind": 5,
+        "importPath": "derp.students.gunicorn.conf",
+        "description": "derp.students.gunicorn.conf",
+        "peekOfCode": "#accesslog = '/path/to/your/project/logs/access.log'\n#errorlog = '/path/to/your/project/logs/error.log'\ncapture_output = True\nenable_stdio_inheritance = True",
+        "detail": "derp.students.gunicorn.conf",
+        "documentation": {}
+    },
+    {
+        "label": "#errorlog",
+        "kind": 5,
+        "importPath": "derp.students.gunicorn.conf",
+        "description": "derp.students.gunicorn.conf",
+        "peekOfCode": "#errorlog = '/path/to/your/project/logs/error.log'\ncapture_output = True\nenable_stdio_inheritance = True",
+        "detail": "derp.students.gunicorn.conf",
+        "documentation": {}
+    },
+    {
+        "label": "capture_output",
+        "kind": 5,
+        "importPath": "derp.students.gunicorn.conf",
+        "description": "derp.students.gunicorn.conf",
+        "peekOfCode": "capture_output = True\nenable_stdio_inheritance = True",
+        "detail": "derp.students.gunicorn.conf",
+        "documentation": {}
+    },
+    {
+        "label": "enable_stdio_inheritance",
+        "kind": 5,
+        "importPath": "derp.students.gunicorn.conf",
+        "description": "derp.students.gunicorn.conf",
+        "peekOfCode": "enable_stdio_inheritance = True",
+        "detail": "derp.students.gunicorn.conf",
+        "documentation": {}
+    },
+    {
+        "label": "StudentProfile",
+        "kind": 6,
+        "importPath": "derp.students.models",
+        "description": "derp.students.models",
+        "peekOfCode": "class StudentProfile(models.Model):\n    id = models.AutoField(unique=True,primary_key=True)\n    student_id=models.CharField(shortuuid,max_length=6,editable=False)\n    name = models.CharField(max_length=200)\n    class_name = models.CharField(max_length=100)\n    date_of_birth = models.DateField()\n    address = models.TextField()\n    adhar_no = models.CharField(max_length=12, unique=True)\n    date_of_admission = models.CharField(max_length=20)\n    photo = models.ImageField(upload_to='profile_photos', null=True, blank=True)",
+        "detail": "derp.students.models",
+        "documentation": {}
+    },
+    {
+        "label": "StudentDetail",
+        "kind": 6,
+        "importPath": "derp.students.models",
+        "description": "derp.students.models",
+        "peekOfCode": "class StudentDetail(models.Model):\n    id = models.AutoField(unique=True,primary_key=True)\n    student_detail_id=models.CharField(shortuuid,max_length=6)\nclass TeacherProfile(models.Model):\n    id = models.AutoField(primary_key=True)\n    teacher_id=models.CharField(shortuuid,max_length=6,editable=False)\n    name = models.CharField(max_length=100)\n    address = models.TextField()\n    graduated_from = models.CharField(max_length=200)\n    subject = models.CharField(max_length=100)",
+        "detail": "derp.students.models",
+        "documentation": {}
+    },
+    {
+        "label": "TeacherProfile",
+        "kind": 6,
+        "importPath": "derp.students.models",
+        "description": "derp.students.models",
+        "peekOfCode": "class TeacherProfile(models.Model):\n    id = models.AutoField(primary_key=True)\n    teacher_id=models.CharField(shortuuid,max_length=6,editable=False)\n    name = models.CharField(max_length=100)\n    address = models.TextField()\n    graduated_from = models.CharField(max_length=200)\n    subject = models.CharField(max_length=100)\n    grade_incharge = models.ForeignKey('Grade',on_delete=models.PROTECT,null=True,blank=True)\n    academic_details = models.TextField()\n    joining_date = models.DateField()",
+        "detail": "derp.students.models",
+        "documentation": {}
+    },
+    {
+        "label": "Grade",
+        "kind": 6,
+        "importPath": "derp.students.models",
+        "description": "derp.students.models",
+        "peekOfCode": "class Grade(models.Model):\n    id=models.AutoField(primary_key=True)\n    grade_id=models.CharField(shortuuid,max_length=6,editable=False)\n    name=models.CharField(max_length=25)\n    def __str__(self):\n        return self.name",
+        "detail": "derp.students.models",
+        "documentation": {}
+    },
+    {
+        "label": "shortuuid",
+        "kind": 2,
+        "importPath": "derp.students.models",
+        "description": "derp.students.models",
+        "peekOfCode": "def shortuuid():\n   return str(uuid.uuid4().hex)[:6]\nclass StudentProfile(models.Model):\n    id = models.AutoField(unique=True,primary_key=True)\n    student_id=models.CharField(shortuuid,max_length=6,editable=False)\n    name = models.CharField(max_length=200)\n    class_name = models.CharField(max_length=100)\n    date_of_birth = models.DateField()\n    address = models.TextField()\n    adhar_no = models.CharField(max_length=12, unique=True)",
+        "detail": "derp.students.models",
+        "documentation": {}
+    },
+    {
+        "label": "TeachersConfig",
+        "kind": 6,
+        "importPath": "derp.teachers.apps",
+        "description": "derp.teachers.apps",
+        "peekOfCode": "class TeachersConfig(AppConfig):\n    default_auto_field = 'django.db.models.BigAutoField'\n    name = 'teachers'",
+        "detail": "derp.teachers.apps",
+        "documentation": {}
+    },
+    {
+        "label": "Migration",
+        "kind": 6,
+        "importPath": "derp.userauth.migrations.0001_initial",
+        "description": "derp.userauth.migrations.0001_initial",
+        "peekOfCode": "class Migration(migrations.Migration):\n    initial = True\n    dependencies = [\n        ('auth', '0012_alter_user_first_name_max_length'),\n    ]\n    operations = [\n        migrations.CreateModel(\n            name='Permission',\n            fields=[\n                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),",
+        "detail": "derp.userauth.migrations.0001_initial",
+        "documentation": {}
+    },
+    {
+        "label": "UserauthAppConfig",
+        "kind": 6,
+        "importPath": "derp.userauth.apps",
+        "description": "derp.userauth.apps",
+        "peekOfCode": "class UserauthAppConfig(AppConfig):\n    default_auto_field = 'django.db.models.BigAutoField'\n    name = 'userauth'",
+        "detail": "derp.userauth.apps",
+        "documentation": {}
+    },
+    {
+        "label": "User",
+        "kind": 6,
+        "importPath": "derp.userauth.models",
+        "description": "derp.userauth.models",
+        "peekOfCode": "class User(AbstractUser):\n    roles=models.ManyToManyField('Role',blank=False)\nclass Role(models.Model):\n    name=models.CharField(max_length=30,unique=True)\n    permission=models.ForeignKey('Permission',blank=False,on_delete=models.PROTECT)\n    def __str__(self):\n        return self.name\nclass Permission(models.Model):\n    name=models.CharField(max_length=100,unique=True)\n    description=models.TextField(blank=True)",
+        "detail": "derp.userauth.models",
+        "documentation": {}
+    },
+    {
+        "label": "Role",
+        "kind": 6,
+        "importPath": "derp.userauth.models",
+        "description": "derp.userauth.models",
+        "peekOfCode": "class Role(models.Model):\n    name=models.CharField(max_length=30,unique=True)\n    permission=models.ForeignKey('Permission',blank=False,on_delete=models.PROTECT)\n    def __str__(self):\n        return self.name\nclass Permission(models.Model):\n    name=models.CharField(max_length=100,unique=True)\n    description=models.TextField(blank=True)\n    def __str__(self):\n        return self.name",
+        "detail": "derp.userauth.models",
+        "documentation": {}
+    },
+    {
+        "label": "Permission",
+        "kind": 6,
+        "importPath": "derp.userauth.models",
+        "description": "derp.userauth.models",
+        "peekOfCode": "class Permission(models.Model):\n    name=models.CharField(max_length=100,unique=True)\n    description=models.TextField(blank=True)\n    def __str__(self):\n        return self.name",
+        "detail": "derp.userauth.models",
+        "documentation": {}
+    },
+    {
+        "label": "isPrincipal",
+        "kind": 6,
+        "importPath": "derp.userauth.permissions",
+        "description": "derp.userauth.permissions",
+        "peekOfCode": "class isPrincipal(BasePermission):\n   def has_permission(self, request, view):\n      user=request.user\n      return user.User.roles.filter(name='Principal').exists()\nclass isTeacher(BasePermission):\n   def has_permission(self, request, view):\n      user=request.user\n      return user.User.roles.filter(name='Teacher').exists()\nclass isLibrarian(BasePermission):\n   def has_permission(self, request, view):",
+        "detail": "derp.userauth.permissions",
+        "documentation": {}
+    },
+    {
+        "label": "isTeacher",
+        "kind": 6,
+        "importPath": "derp.userauth.permissions",
+        "description": "derp.userauth.permissions",
+        "peekOfCode": "class isTeacher(BasePermission):\n   def has_permission(self, request, view):\n      user=request.user\n      return user.User.roles.filter(name='Teacher').exists()\nclass isLibrarian(BasePermission):\n   def has_permission(self, request, view):\n      user=request.user\n      return user.User.roles.filter(name='Librarian').exists()\nclass isTechSupport(BasePermission):\n   def has_permission(self, request, view):",
+        "detail": "derp.userauth.permissions",
+        "documentation": {}
+    },
+    {
+        "label": "isLibrarian",
+        "kind": 6,
+        "importPath": "derp.userauth.permissions",
+        "description": "derp.userauth.permissions",
+        "peekOfCode": "class isLibrarian(BasePermission):\n   def has_permission(self, request, view):\n      user=request.user\n      return user.User.roles.filter(name='Librarian').exists()\nclass isTechSupport(BasePermission):\n   def has_permission(self, request, view):\n      user=request.user\n      return user.User.roles.filter(name='TechSupport').exists()",
+        "detail": "derp.userauth.permissions",
+        "documentation": {}
+    },
+    {
+        "label": "isTechSupport",
+        "kind": 6,
+        "importPath": "derp.userauth.permissions",
+        "description": "derp.userauth.permissions",
+        "peekOfCode": "class isTechSupport(BasePermission):\n   def has_permission(self, request, view):\n      user=request.user\n      return user.User.roles.filter(name='TechSupport').exists()",
+        "detail": "derp.userauth.permissions",
+        "documentation": {}
+    },
+    {
+        "label": "urlpatterns",
+        "kind": 5,
+        "importPath": "derp.userauth.urls",
+        "description": "derp.userauth.urls",
+        "peekOfCode": "urlpatterns = [\n   path('login/',LoginView.as_view(),name='login')\n]",
+        "detail": "derp.userauth.urls",
+        "documentation": {}
+    },
+    {
+        "label": "LoginView",
+        "kind": 6,
+        "importPath": "derp.userauth.views",
+        "description": "derp.userauth.views",
+        "peekOfCode": "class LoginView(APIView):\n    permission_classes=[AllowAny]\n    def post(self,request):\n       print(request.data,\"data\")\n       username=request.data.get('username')\n       password=request.data.get('password')\n       user=authenticate(request,username=username,password=password)\n       if user is not None:\n           token, _ =Token.objects.get_or_create(user=user)\n           user_roles=[role.name for role in user.roles.all()]",
+        "detail": "derp.userauth.views",
+        "documentation": {}
+    },
+    {
+        "label": "LogoutView",
+        "kind": 6,
+        "importPath": "derp.userauth.views",
+        "description": "derp.userauth.views",
+        "peekOfCode": "class LogoutView(APIView):\n    permission_classes=[IsAuthenticated]\n    def post(self,request):\n        token=Token.objects.get(user=request.user)\n        token.delete()\n        response= Response({'message':'Logout successfull'})\n        response.delete_cookie('auth_token')\n        return response",
+        "detail": "derp.userauth.views",
+        "documentation": {}
+    },
+    {
+        "label": "main",
+        "kind": 2,
+        "importPath": "derp.manage",
+        "description": "derp.manage",
+        "peekOfCode": "def main():\n    \"\"\"Run administrative tasks.\"\"\"\n    os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'derp.settings')\n    try:\n        from django.core.management import execute_from_command_line\n    except ImportError as exc:\n        raise ImportError(\n            \"Couldn't import Django. Are you sure it's installed and \"\n            \"available on your PYTHONPATH environment variable? Did you \"\n            \"forget to activate a virtual environment?\"",
+        "detail": "derp.manage",
+        "documentation": {}
+    }
+]

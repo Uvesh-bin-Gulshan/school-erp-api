@@ -1,9 +1,9 @@
-from rest_framework.views import APIViews
-from rest_framwork.response import Response
+from rest_framework.views import APIView
+from rest_framework.response import Response
 from django.db.models import Count, F, ExpressionWrapper,fields
 from .models import Admission,Student,Alumni
 from django.db.models.functions import ExtractYear
-class AdmissionDashboardView(APIViews):
+class AdmissionDashboardView(APIView):
     def get(self, request):
         context = {
             'total_admissions_applied': self.get_total_admissions(),
@@ -48,7 +48,7 @@ class AdmissionDashboardView(APIViews):
         return queryset.values('age').annotate(count=Count('id')).order_by('age')
 
 
-class StudentDashboardView(APIViews):
+class StudentDashboardView(APIView):
     def get(self, request):
         context = {
             'total_students': self.get_total_students(),
@@ -83,7 +83,7 @@ class StudentDashboardView(APIViews):
     
 
 
-class AlumniDashboard(APIViews):
+class AlumniDashboardView(APIView):
      def get_alumni_data(self):
         total_alumni = Alumni.objects.count()
 

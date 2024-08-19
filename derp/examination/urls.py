@@ -1,5 +1,6 @@
 from django.urls import path # type: ignore
-from .views import ExamTypeView, ExamTimeTableView, MarksheetView, ResultSheetView
+from .views import ExamTypeView, ExamTimeTableView, MarksheetView, ResultSheetView.
+from .dashboard import ResultDashboardView
 
 urlpatterns = [
     # ExamType APIs
@@ -29,4 +30,7 @@ urlpatterns = [
     path('resultsheet/retrieve/<str:pk>/', ResultSheetView.as_view({'get': 'retrieve'}), name='resultsheet-retrieve'),
     path('resultsheet/update/<str:pk>/', ResultSheetView.as_view({'put': 'update'}), name='resultsheet-update'),
     path('resultsheet/delete/<str:pk>/', ResultSheetView.as_view({'delete': 'delete'}), name='resultsheet-delete'),
+
+    # Result Dashboard API
+    path('result-dashboard/', ResultDashboardView.as_view(), name='result-dashboard'),
 ]

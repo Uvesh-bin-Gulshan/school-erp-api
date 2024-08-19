@@ -1,5 +1,6 @@
 from django.urls import path
 from .views import AttendanceView, FingerRecordView
+from .dashboard import AttendanceDashboardView
 
 app_name='attendance'
 
@@ -17,4 +18,7 @@ urlpatterns = [
     path('fingerrecord/retrieve/<str:pk>/', FingerRecordView.as_view({'get': 'retrieve'}), name='fingerrecord-retrieve'),
     path('fingerrecord/update/<str:pk>/', FingerRecordView.as_view({'put': 'update'}), name='fingerrecord-update'),
     path('fingerrecord/delete/<str:pk>/', FingerRecordView.as_view({'delete': 'delete'}), name='fingerrecord-delete'),
+
+    # Attendance Dashboard API
+    path('attendance-dashboard/', AttendanceDashboardView.as_view(), name='attendance-dashboard'),
 ]

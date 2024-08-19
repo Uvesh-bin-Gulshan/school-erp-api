@@ -2,16 +2,12 @@ import qrcode
 from io import BytesIO
 from django.http import HttpResponse
 from django.shortcuts import get_object_or_404
-from .models import Book 
-from django.shortcuts import render
 from rest_framework.views import APIView
 from rest_framework.response import Response
-from .models import *
-from .serializers import *
 from rest_framework import viewsets
 
-from .models import Author,Category,Book
-from .serializers import AuthorSerializer,CategorySerializer, BookSerializer
+from .models import Author,Category,Book, Checkout
+from .serializers import AuthorSerializer,CategorySerializer, BookSerializer, CheckoutSerializer
 
 # Create your views here.
 class GenerateQRcode(APIView):

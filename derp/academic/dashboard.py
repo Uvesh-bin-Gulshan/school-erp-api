@@ -1,11 +1,11 @@
-from rest_framework.views import APIViews
-from rest_framwork.response import Response
+from rest_framework.views import APIView
+from rest_framework.response import Response
 from django.db.models import Count, F, ExpressionWrapper,fields,Sum
 from .models import AnnuallySubjectSyllabusStatus
 from django.db.models.functions import Coalesce, ExtractYear, ExtractMonth, ExtractWeek, ExtractDay
 
 
-class AcademicDashboardView(APIViews):
+class AcademicDashboardView(APIView):
     def get(self,request):
 
         context={

@@ -1,5 +1,6 @@
 from django.urls import path
-from .views import *
+from .views import AuthorView, CategoryView, BookView, CheckoutView
+from .dashboard import LibraryDashboardView
 app_name='library'
 urlpatterns = [
    # Library APIs
@@ -37,6 +38,9 @@ urlpatterns = [
     path('checkout/retrieve/<str:pk>/', CheckoutView.as_view({'get': 'retrieve'}), name='checkout-retrieve'),
     path('checkout/delete/<str:pk>/', CheckoutView.as_view({'delete': 'delete'}), name='checkout-delete'),
     path('checkout/update/<str:pk>/', CheckoutView.as_view({'put': 'update'}), name='checkout-update'),
+
+    # Library Dashboard API
+    path('library-dashboard/', LibraryDashboardView.as_view(), name='library-dashboard'),
 
 
 ]

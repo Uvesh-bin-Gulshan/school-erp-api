@@ -57,7 +57,7 @@ class Admission(models.Model):
     
     admission_status = models.CharField(choices=ADMISSION_STATUS, default='pending', max_length=50)  # Changed default value 
     def __str__(self):
-        return self.student_name
+        return f"{self.student_name}-{self.admission_id}"
     
             
 
