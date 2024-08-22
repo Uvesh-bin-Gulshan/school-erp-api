@@ -60,6 +60,6 @@ urlpatterns = [
    path('vacationperiod/delete/<str:pk>/', VacationPeriodView.as_view({'delete': 'delete'}), name='vacationperiod-delete'),
 
     # Dashboard APIs
-    path('academic-dashboard/', AcademicDashboardView.as_view(), name='academic-dashboard'),
+    path('academic-dashboard/', AcademicDashboardView.as_view(), name='academic-dashboard'),  # Done Alhamdulillah
 
 ]

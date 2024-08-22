@@ -20,5 +20,5 @@ urlpatterns = [
     path('fingerrecord/delete/<str:pk>/', FingerRecordView.as_view({'delete': 'delete'}), name='fingerrecord-delete'),
 
     # Attendance Dashboard API
-    path('attendance-dashboard/', AttendanceDashboardView.as_view(), name='attendance-dashboard'),
+    path('attendance-dashboard/', AttendanceDashboardView.as_view(), name='attendance-dashboard'), # no record can be inserted
 ]

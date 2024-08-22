@@ -52,14 +52,14 @@ class StudentDashboardView(APIView):
     def get(self, request):
         context = {
             'total_students': self.get_total_students(),
-            'student_per_course': self.get_students_grouped_by('course__course_name'),  # Assuming course_name as field in Course model
-            'student_per_department': self.get_students_grouped_by('department__department_name'),  # Assuming department_name as field in Department model
+            'student_per_course': self.get_students_grouped_by('course__name'), 
+            'student_per_department': self.get_students_grouped_by('department__name'), 
             'student_status_per_year': self.get_students_per_year(),
             'student_status_distribution': self.get_students_grouped_by('student_status'),
             'student_age_distribution': self.get_students_grouped_by_age(),
-            'student_per_city': self.get_students_grouped_by('admission__district'),  # Assuming district represents city
+            'student_per_city': self.get_students_grouped_by('admission__district'),  
             'student_per_state': self.get_students_grouped_by('admission__state'),
-            'student_per_country': self.get_students_grouped_by('admission__locality'),  # Assuming locality represents country
+            'student_per_country': self.get_students_grouped_by('admission__locality'),  
         }
         return Response(context)
     

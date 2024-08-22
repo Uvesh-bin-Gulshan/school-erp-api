@@ -24,6 +24,8 @@ urlpatterns = [
     path('academic/',include('academic.urls',namespace='academic')),
     path('admission/',include('admission.urls',namespace='admission')),
     path('library/',include('library.urls',namespace='library')),
+    path('attendance/',include('attendance.urls',namespace='attendance')),
+    path('examination/', include('examination.urls', namespace='examination')),
 
     path('userauth/',include('userauth.urls',namespace='userauth')),
 

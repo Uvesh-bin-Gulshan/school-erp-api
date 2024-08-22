@@ -1,9 +1,8 @@
 import React from 'react'
-import ViewAdmissions from './ViewAdmissions'
 import { getAdmissionList } from '@/lib/services'
-import AddAdmissions from './AddAdmissions'
 import Sidebar from '@/app/_component/SideBar'
 import { BreadcrumbWithCustomSeparator } from '@/app/_component/BreadCrumb'
+import ViewAdmissions from './ViewAdmissions';
 const items = [
   { href: "/", label: "Home" },
   { href: "/components", label: "Components" },

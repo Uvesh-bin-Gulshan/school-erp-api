@@ -25,9 +25,10 @@ urlpatterns = [
     path('alumni/delete/<str:pk>/', AlumniView.as_view({'delete': 'delete'}), name='alumni-delete'),
 
     # Dashboard APIs
-    path('admission-dashboard/', AdmissionDashboardView.as_view(), name='admission-dashboard'),
-    path('student-dashboard/', StudentDashboardView.as_view(), name='student-dashboard'),
-    path('alumni-dashboard/', AlumniDashboardView.as_view(), name='alumni-dashboard'),
+    path('admission-dashboard/', AdmissionDashboardView.as_view(), name='admission-dashboard'), # Done Alhamdulillah
+    path('student-dashboard/', StudentDashboardView.as_view(), name='student-dashboard'), # Done Alhamdulillah
+    path('alumni-dashboard/', AlumniDashboardView.as_view(), name='alumni-dashboard'), # pending
+
 
 
 

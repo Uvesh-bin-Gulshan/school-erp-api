@@ -40,7 +40,7 @@ const NavBar: React.FC<NavBarProps> = ({ open }) => {
               <>
                 <NavLink href="/">Home</NavLink>
                 <br />
-                <NavLink href="../admin/admissions">Admissions</NavLink>
+                <NavLink href="../admissions/page.tsx">Admissions</NavLink>
                 <br />
                 <NavLink href="../admin/">Student</NavLink>
                 <br />

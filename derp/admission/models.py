@@ -77,7 +77,7 @@ class Student(models.Model):
     student_status = models.CharField(choices=STUDENT_STATUS, default='pursuing', max_length=50)  # Changed default value 
 
     def __str__(self):
-        return f"{self.student} - {self.student_status}"
+        return f"{self.student_id} - {self.student_status}"
 
 
 @receiver(post_save, sender=Admission)

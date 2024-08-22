@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { ArrowUpDown } from "lucide-react";
 import { HeaderContext } from "@tanstack/react-table";
-import { Admission } from "../admin/admissions/columns";
+import { Admission } from "../admissions/columns";
 
 type HeaderButtonProps = {
   column: HeaderContext<Admission, unknown>["column"];

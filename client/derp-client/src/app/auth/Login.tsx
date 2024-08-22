@@ -50,7 +50,7 @@ const Login = () => {
       console.log(response?.success);
       if (response?.success) {
         successtoastMessage("Successfully logged in");
-        router.push('../admin/admissions/');
+        router.push('../admissions');
       } else {
         failedtoastMessage("Invalid credentials");
       }

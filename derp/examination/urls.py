@@ -1,6 +1,7 @@
 from django.urls import path # type: ignore
-from .views import ExamTypeView, ExamTimeTableView, MarksheetView, ResultSheetView.
+from .views import ExamTypeView, ExamTimeTableView, MarksheetView, ResultSheetView
 from .dashboard import ResultDashboardView
+app_name='examination'
 
 urlpatterns = [
     # ExamType APIs

@@ -1,11 +1,11 @@
-from rest_framework.views import APIViews
-from rest_framwork.response import Response
+from rest_framework.views import APIView
+from rest_framework.response import Response
 from django.db.models import Count, F, ExpressionWrapper,fields
 from .models import Attendance
 from django.db.models.functions import ExtractYear, ExtractMonth, ExtractWeek, ExtractDay
 
 
-class AttendanceDashboardView(APIViews):
+class AttendanceDashboardView(APIView):
     def get(self,request):
 
         context={

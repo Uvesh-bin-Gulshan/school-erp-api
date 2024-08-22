@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import *
+from .models import Subject, SyllabusType, Department, Course, AnnuallySubjectSyllabusStatus, MonthlySubjectSyllabusStatus, SyllabusStatusVerification
 from import_export.admin import ImportExportModelAdmin
 
 admin.site.register(Subject)
