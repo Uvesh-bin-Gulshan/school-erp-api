@@ -3,9 +3,7 @@ import { ColumnDef } from "@tanstack/react-table";
 import { ArrowUpDown } from "lucide-react";
 import UpdateDepartment from "./UpdateDepartment";
 import { AiFillDelete } from "react-icons/ai";
-import DeleteButtom from "../_component/DeleteButtom";
 import { DELETE_DEPARTMENT, RETRIEVE_DEPARTMENT } from "@/lib/routePath";
-import RetrieveDetail from "../_component/RetriveDetail";
 
 export type Department = {
   department_id:string;

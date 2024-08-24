@@ -16,19 +16,21 @@ import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from '
 import { Input } from '@/components/ui/input'
 import { Button } from '@/components/ui/button'
 import { departmentSchema, loginSchema } from '@/lib/zodschema'
-import { submitForm, successtoastMessage, failedtoastMessage } from '@/lib/services'
-import { FormInput } from '../_component/FormInput'
-import SubmitButton from '../_component/SubmitButton'
-import { CREATE_DEPARTMENT, UPDATE_DEPARTMENT } from '@/lib/routePath'
-import { Edit } from 'lucide-react'
-import { MdModeEdit } from 'react-icons/md'
+import CustomButton from '@/app/_component/CustomButton'
+import { FormInput } from '@/app/_component/FormInput'
+import { failedToastMessage, successToastMessage } from '@/lib/services'
+import { submitForm } from '@/lib/helper'
+import { CREATE_DEPARTMENT } from '@/lib/routePath'
+import SubmitButton from '@/app/_component/SubmitButton'
+import { Plus } from 'lucide-react'
 
-const UpdateDepartment = ({department}:{department:any}) => {
+
+const AddDepartment = () => {
   const router = useRouter();
   const form = useForm({
     resolver: zodResolver(departmentSchema),
     defaultValues: {
-    name:department.name,
+    name:"",
 
   }})
 
@@ -36,11 +38,11 @@ const UpdateDepartment = ({department}:{department:any}) => {
     event.preventDefault();
     const all_values = form.getValues();
     try {
-      const response = await submitForm(`${UPDATE_DEPARTMENT}/${department.department_id}/`,all_values,'PUT');
+      const response = await submitForm(CREATE_DEPARTMENT,all_values,'POST');
       if (response?.success) {
-        successtoastMessage("successfully created");
+        successToastMessage("successfully created");
       } else {
-        failedtoastMessage("Invalid");
+        failedToastMessage("Invalid");
       }
     } catch (error) {
       console.error('Failed to Create Department:', error);
@@ -50,14 +52,15 @@ const UpdateDepartment = ({department}:{department:any}) => {
   return (
     <>
       <Dialog>
-        <DialogTrigger className='text-cyan-700 text-md ' asChild>
-        <MdModeEdit />
+        <DialogTrigger  asChild>
+          {/* <Button><Plus />Department</Button> */}
+          <CustomButton text="Department"  icon={<Plus/>}/>
         </DialogTrigger>
         <DialogContent>
           <DialogHeader>
-            <DialogTitle>Update department</DialogTitle>
+            <DialogTitle>Add new department</DialogTitle>
             <DialogDescription>
-              Update details
+              Add all required details
             </DialogDescription>
           </DialogHeader>
          
@@ -84,4 +87,4 @@ const UpdateDepartment = ({department}:{department:any}) => {
   );
 }
 
-export default UpdateDepartment;
+export default AddDepartment;
