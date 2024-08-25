@@ -1,15 +1,24 @@
 "use server";
 import { NextApiRequest, NextApiResponse } from 'next';
-import {ADMISSION_LIST, ANNUALLY_SYLLABUS_STATUS_LIST, COURSE_LIST, DEPARTMENT_LIST, LOGIN, MONTHLY_SYLLABUS_STATUS_LIST, RETRIEVE_DEPARTMENT, SUBJECT_LIST} from './routePath'
+import {ADMISSION_DASHBOARD, ADMISSION_LIST, ANNUALLY_SYLLABUS_STATUS_LIST, COURSE_LIST, DEPARTMENT_LIST, LOGIN, MONTHLY_SYLLABUS_STATUS_LIST, RETRIEVE_DEPARTMENT, SUBJECT_LIST} from './routePath'
 import toast from "react-hot-toast"
 import { fetchData } from './helper';
+import { exportToExcel } from './import_export';
+
+
 export const getDepartmentDetail = async (department_id: string) => {
   return fetchData(`${RETRIEVE_DEPARTMENT}${department_id}`);
 };
 
+export const getAdmissionDashboard = async () => {
+  return fetchData(ADMISSION_DASHBOARD);
+};
+
 export const getAdmissionList = async () => {
   return fetchData(ADMISSION_LIST);
+
 };
+
 
 export const getCourseList = async () => {
   return fetchData(COURSE_LIST);
@@ -39,3 +48,5 @@ export const successToastMessage = (message: string) => {
 export const failedToastMessage = (message: string) => {
   toast.error(message);
 };
+
+

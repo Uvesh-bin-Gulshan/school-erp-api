@@ -1,5 +1,5 @@
 from django.urls import path # type: ignore
-from .views import AdmissionView, StudentView, AlumniView
+from .views import AdmissionImportView, AdmissionView, StudentView, AlumniView
 from .dashboard import AdmissionDashboardView, StudentDashboardView, AlumniDashboardView
 app_name='admission'
 urlpatterns = [
@@ -28,6 +28,7 @@ urlpatterns = [
     path('admission-dashboard/', AdmissionDashboardView.as_view(), name='admission-dashboard'), # Done Alhamdulillah
     path('student-dashboard/', StudentDashboardView.as_view(), name='student-dashboard'), # Done Alhamdulillah
     path('alumni-dashboard/', AlumniDashboardView.as_view(), name='alumni-dashboard'), # pending
+    path('import-admission/', AdmissionImportView.as_view(), name='import-admission'),
 
 
 

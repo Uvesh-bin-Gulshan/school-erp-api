@@ -22,7 +22,7 @@ interface SideBarProps {
   children: React.ReactNode;
   breadcrumbs: { href?: string; label: string }[];
 }
-const Sidebar = ({ children, breadcrumbs }: SideBarProps) => {
+const SideBar = ({ children, breadcrumbs }: SideBarProps) => {
   const [open, setOpen] = useState(false);
   const handleClick = () => {
     setOpen(!open);
@@ -75,10 +75,14 @@ const Sidebar = ({ children, breadcrumbs }: SideBarProps) => {
 
           {children}
           <div className="  w-full bg-slate-200 
-           p-2 mt-1 text-sm text-slate-600 lowercase 
-           text-left fixed  bottom-0 fixed h-[6%]  w-full">
-            <span className="">copyright@-institute managemnet</span>
-            <div className=" ml-4">Matliwala Charitable Trust</div>
+           p-4 mt-1 text-sm text-slate-600 lowercase 
+           text-left fixed  bottom-0 fixed h-[7%]  w-full">
+            <div className="flex">
+
+
+            <span className="capitalize">copyright@2024-institute managemnet</span>
+            <div className=" capitalize ml-4">Matliwala Charitable Trust</div>
+            </div>
           </div>
         </div>
       </div>
@@ -86,4 +90,6 @@ const Sidebar = ({ children, breadcrumbs }: SideBarProps) => {
   );
 };
 
-export default Sidebar;
+export default SideBar;
+
+

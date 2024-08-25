@@ -16,10 +16,12 @@ import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from '
 import { Input } from '@/components/ui/input'
 import { Button } from '@/components/ui/button'
 import { departmentSchema, loginSchema } from '@/lib/zodschema'
-import { submitForm, successtoastMessage, failedtoastMessage } from '@/lib/services'
-import { FormInput } from '../_component/FormInput'
-import SubmitButton from '../_component/SubmitButton'
+import SubmitButton from '../../_component/SubmitButton'
 import { CREATE_COURSE, CREATE_DEPARTMENT } from '@/lib/routePath'
+
+import { submitForm } from '@/lib/helper'
+import { failedToastMessage, successToastMessage } from '@/lib/services'
+import { FormInput } from '@/app/_component/FormInput'
 import { Plus } from 'lucide-react'
 
 const AddCourse = () => {
@@ -37,9 +39,9 @@ const AddCourse = () => {
     try {
       const response = await submitForm(CREATE_COURSE,all_values,'POST');
       if (response?.success) {
-        successtoastMessage("successfully created");
+        successToastMessage("successfully created");
       } else {
-        failedtoastMessage("Invalid");
+        failedToastMessage("Invalid");
       }
     } catch (error) {
       console.error('Failed to Create Department:', error);

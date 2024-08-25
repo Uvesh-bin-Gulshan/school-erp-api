@@ -2,10 +2,11 @@ import React from 'react'
 import ViewAdmissions from './ViewCourse'
 import { getAdmissionList, getCourseList, getDepartmentDetail, getDepartmentList } from '@/lib/services'
 import AddAdmissions from './AddCourse'
-import Sidebar from '@/app/_component/SideBar'
 import { BreadcrumbWithCustomSeparator } from '@/app/_component/BreadCrumb'
 import AddDepartment from './AddCourse'
 import ViewDepartment from './ViewCourse'
+import SideBar from '@/app/_component/SideBar'
+
 const items = [
   { href: "/", label: "Home" },
   { href: "/components", label: "Components" },
@@ -19,7 +20,7 @@ const Page =async () => {
 
 
 
-<Sidebar >
+<SideBar breadcrumbs={items}>
 <div className=''>
 <BreadcrumbWithCustomSeparator items={items} separator={<span> :: </span>} />
 </div>
@@ -29,7 +30,7 @@ const Page =async () => {
   <AddDepartment />
   <ViewDepartment  data={data}/>
 </div>
-</Sidebar>
+</SideBar>
 
 </>
   )

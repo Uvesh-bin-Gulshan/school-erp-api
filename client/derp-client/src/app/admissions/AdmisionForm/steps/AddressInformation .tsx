@@ -8,7 +8,10 @@ const AddressInformation = () => {
 
   return (
     <>
-      <h1 className='text-lg  text-cyan-700 font-semibold '>Address Information</h1>
+      <h1 className='text-lg mx-24 my-3 text-cyan-700 font-semibold '>
+      Address Information</h1>
+    
+      <div className='grid grid-cols-2 mx-24 gap-4'>
       <FormField
         name="state"
         control={control}
@@ -61,6 +64,7 @@ const AddressInformation = () => {
           </FormItem>
         )}
       />
+      </div>
     </>
   )
 }

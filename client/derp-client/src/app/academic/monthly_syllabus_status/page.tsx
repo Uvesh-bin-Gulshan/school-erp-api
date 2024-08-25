@@ -21,7 +21,7 @@ const Page =async () => {
 
 
 
-<Sidebar >
+<Sidebar breadcrumbs={items}>
 <div className=''>
 <BreadcrumbWithCustomSeparator items={items} separator={<span> :: </span>} />
 </div>

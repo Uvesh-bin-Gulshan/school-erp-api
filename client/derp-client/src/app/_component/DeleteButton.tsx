@@ -17,12 +17,12 @@ interface DeleteButtonprops {
   id: string;
   endpoint: string;
   onSuccess:()=> void;
-  item: string;
+  item?: string;
 }
 
 
 
-const DeleteButtom:React.FC<DeleteButtonprops> = ({id,endpoint,onSuccess,item}) => {
+const DeleteButton:React.FC<DeleteButtonprops> = ({id,endpoint,onSuccess,item}) => {
 const handleDelete=async()=>{
   try{
     const response =await fetch(`${endpoint}/${id}`,{
@@ -80,4 +80,4 @@ const handleDelete=async()=>{
 )
 }
 
-export default DeleteButtom
+export default DeleteButton

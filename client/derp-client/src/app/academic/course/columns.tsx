@@ -3,9 +3,10 @@ import { ColumnDef } from "@tanstack/react-table";
 import { ArrowUpDown } from "lucide-react";
 import UpdateDepartment from "./UpdateDepartment";
 import { AiFillDelete } from "react-icons/ai";
-import DeleteButtom from "../_component/DeleteButtom";
-import { DELETE_DEPARTMENT, RETRIEVE_COURSE, RETRIEVE_DEPARTMENT } from "@/lib/routePath";
-import RetrieveDetail from "../_component/RetriveDetail";
+import { DELETE_DEPARTMENT, RETRIEVE_COURSE } from "@/lib/routePath";
+import DeleteButton from "@/app/_component/DeleteButton";
+import RetrieveDetail from "@/app/_component/RetriveDetail";
+
 
 export type Course = {
   course_id:string;
@@ -59,12 +60,8 @@ export const columns: ColumnDef<Course>[] = [
       return (
         <div className="flex items-center  space-x-2">
           {/* <UpdateDepartment course={department} /> */}
-          <RetrieveDetail 
-                      id={course.course_id} 
-
-            endpoint={`${RETRIEVE_COURSE}`}
-            onSuccess={handleSuccess}/>
-          <DeleteButtom 
+          {/* <RetrieveDetail id={course.course_id} endpoint={`${RETRIEVE_COURSE}`} onSuccess={handleSuccess}/> */}
+          <DeleteButton
             id={course.course_id} 
             endpoint={`${DELETE_DEPARTMENT}`}
             onSuccess={handleSuccess}

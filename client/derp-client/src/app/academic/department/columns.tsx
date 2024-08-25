@@ -4,6 +4,8 @@ import { ArrowUpDown } from "lucide-react";
 import UpdateDepartment from "./UpdateDepartment";
 import { AiFillDelete } from "react-icons/ai";
 import { DELETE_DEPARTMENT, RETRIEVE_DEPARTMENT } from "@/lib/routePath";
+import RetrieveDetail from "@/app/_component/RetriveDetail";
+import DeleteButtom from "@/app/_component/DeleteButton";
 
 export type Department = {
   department_id:string;

@@ -20,7 +20,10 @@ const PreviousEducation = () => {
     <>
         <h1 className='text-lg  text-cyan-700 font-semibold '>
         Previous Education</h1>
-    
+          <div className='grid grid-cols-2 mx-24 gap-4'>
+   
+
+
       <FormField
         name="previous_institution"
         control={control}
@@ -33,7 +36,7 @@ const PreviousEducation = () => {
             <FormMessage />
           </FormItem>
         )}
-      />
+        />
       <FormField
         name="previous_education"
         control={control}
@@ -46,7 +49,7 @@ const PreviousEducation = () => {
             <FormMessage />
           </FormItem>
         )}
-      />
+        />
       <FormField
         name="school_education"
         control={control}
@@ -59,7 +62,7 @@ const PreviousEducation = () => {
             <FormMessage />
           </FormItem>
         )}
-      />
+        />
       <FormField
         name="previous_result_status"
         control={control}
@@ -89,7 +92,8 @@ const PreviousEducation = () => {
             <FormMessage />
           </FormItem>
         )}
-      />
+        />
+        </div>
     </>
   )
 }

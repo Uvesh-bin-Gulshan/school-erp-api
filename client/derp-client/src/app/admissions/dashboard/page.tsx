@@ -2,16 +2,14 @@ import React from 'react'
 import { getAdmissionDashboard, getAdmissionList } from '@/lib/services'
 import Sidebar from '@/app/_component/SideBar'
 import { BreadcrumbWithCustomSeparator } from '@/app/_component/BreadCrumb'
-import ViewAdmissions from './ViewAdmissions';
+import AdmissionDashboard from './AdmissionDashboard ';
 const items = [
   { href: "/", label: "Home" },
   { href: "/components", label: "Components" },
 ];
 const Page =async () => {
-    const data= await getAdmissionList()
-    const dashboard=await getAdmissionDashboard()
-    console.log(dashboard)
-    console.log(data)
+    const dashboard_data=await getAdmissionDashboard()
+    console.log(dashboard_data)
   return (
 <>
 
@@ -21,8 +19,8 @@ const Page =async () => {
 
 
 <div className='  h-96'>
+<AdmissionDashboard  dashboard_data={dashboard_data}/>
 
-<ViewAdmissions  data={data}/>
 </div>
 
 </Sidebar>
