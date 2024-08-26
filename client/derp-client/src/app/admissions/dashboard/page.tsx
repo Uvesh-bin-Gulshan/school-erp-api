@@ -9,7 +9,7 @@ const items = [
 ];
 const Page =async () => {
     const dashboard_data=await getAdmissionDashboard()
-    console.log(dashboard_data)
+        console.log(dashboard_data)
   return (
 <>
 
@@ -19,7 +19,7 @@ const Page =async () => {
 
 
 <div className='  h-96'>
-<AdmissionDashboard  dashboard_data={dashboard_data}/>
+<AdmissionDashboard dashboard_data={dashboard_data} />
 
 </div>
 

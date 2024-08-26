@@ -16,9 +16,6 @@ import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from '
 import { Input } from '@/components/ui/input'
 import { Button } from '@/components/ui/button'
 import { syllabusSchema } from '@/lib/zodschema'
-import { submitForm, successtoastMessage, failedtoastMessage } from '@/lib/services'
-import { FormInput } from '../_component/FormInput'
-import SubmitButton from '../_component/SubmitButton'
 import { CREATE_SYLLABUS } from '@/lib/routePath'
 import { Plus } from 'lucide-react'
 
@@ -38,9 +35,9 @@ const AddSyllabus = () => {
     try {
       const response = await submitForm(CREATE_SYLLABUS, all_values, 'POST');
       if (response?.success) {
-        successtoastMessage("Syllabus successfully created");
+        successToastMessage("Syllabus successfully created");
       } else {
-        failedtoastMessage("Failed to create syllabus");
+        failedToastMessage("Failed to create syllabus");
       }
     } catch (error) {
       console.error('Failed to Create Syllabus:', error);

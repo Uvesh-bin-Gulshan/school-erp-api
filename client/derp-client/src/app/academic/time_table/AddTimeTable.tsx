@@ -1,0 +1,114 @@
+"use client"
+
+import React from 'react'
+import { useForm } from 'react-hook-form'
+import { zodResolver } from '@hookform/resolvers/zod'
+import { useRouter } from 'next/navigation'
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+} from "@/components/ui/dialog"
+import { Form, FormControl, FormField, FormItem, FormMessage } from '@/components/ui/form'
+import { Input } from '@/components/ui/input'
+import { Button } from '@/components/ui/button'
+import { timeTableSchema } from '@/lib/zodschema'
+import { submitForm, successToastMessage, failedToastMessage } from '@/lib/services'
+import { FormInput } from '../_component/FormInput'
+import SubmitButton from '../_component/SubmitButton'
+import { CREATE_TIME_TABLE } from '@/lib/routePath'
+import { Plus } from 'lucide-react'
+
+const AddTimeTable = () => {
+  const router = useRouter();
+  const form = useForm({
+    resolver: zodResolver(timeTableSchema),
+    defaultValues: {
+      subject: "",
+      teacher: "",
+      time: "",
+      effective_date: "",
+    }
+  })
+
+  const handleForm = async (event: React.FormEvent) => {
+    event.preventDefault();
+    const all_values = form.getValues();
+    try {
+      const response = await submitForm(CREATE_TIME_TABLE, all_values, 'POST');
+      if (response?.success) {
+        successToastMessage("Successfully created");
+      } else {
+        failedToastMessage("Invalid");
+      }
+    } catch (error) {
+      console.error('Failed to create TimeTable:', error);
+    }
+  };
+
+  return (
+    <>
+      <Dialog>
+        <DialogTrigger asChild>
+          <Button><Plus />TimeTable</Button>
+        </DialogTrigger>
+        <DialogContent>
+          <DialogHeader>
+            <DialogTitle>Add new TimeTable</DialogTitle>
+            <DialogDescription>
+              Add all required details
+            </DialogDescription>
+          </DialogHeader>
+
+          <Form {...form} >
+            <form onSubmit={handleForm} className="">
+              <FormField name="subject" render={({ field }) => (
+                <FormItem>
+                  <FormControl>
+                    <FormInput {...field} id="subject" label="Subject" type="text" />
+                  </FormControl>
+                  <FormMessage />
+                </FormItem>
+              )} />
+
+              <FormField name="teacher" render={({ field }) => (
+                <FormItem>
+                  <FormControl>
+                    <FormInput {...field} id="teacher" label="Teacher" type="text" />
+                  </FormControl>
+                  <FormMessage />
+                </FormItem>
+              )} />
+
+              <FormField name="time" render={({ field }) => (
+                <FormItem>
+                  <FormControl>
+                    <FormInput {...field} id="time" label="Time" type="time" />
+                  </FormControl>
+                  <FormMessage />
+                </FormItem>
+              )} />
+
+              <FormField name="effective_date" render={({ field }) => (
+                <FormItem>
+                  <FormControl>
+                    <FormInput {...field} id="effective_date" label="Effective Date" type="date" />
+                  </FormControl>
+                  <FormMessage />
+                </FormItem>
+              )} />
+
+              <SubmitButton className="w-full" text="Submit" />
+            </form>
+          </Form>
+        </DialogContent>
+      </Dialog>
+    </>
+  );
+}
+
+export default AddTimeTable;
+

@@ -4,34 +4,38 @@ import { ArrowUpDown } from "lucide-react";
 import UpdateSyllabusStatus from "./UpdateSyllabusStatus";
 import { AiFillDelete } from "react-icons/ai";
 import { DELETE_SYLLABUS_STATUS_VERIFICATION, RETRIEVE_SYLLABUS_STATUS_VERIFICATION } from "@/lib/routePath";
-import RetrieveDetail from "../../_component/RetriveDetail";
+import RetrieveDetail from "@/app/_component/RetriveDetail";
 import DeleteButton from "@/app/_component/DeleteButton";
 
-
 export type SyllabusStatus = {
-  id: string;
-  month: string;
-  status: string;
+  status_verification_id: string;
+  monthly_syllabus_approval: string;
+  feedback: string;
+  is_approved: boolean;
+  approved_date: string;
 };
 
 export const columns: ColumnDef<SyllabusStatus>[] = [
   {
-    accessorKey: "month",
-    header: ({ column }) => (
-      <div className="">
-        <span>Month</span>
-        <Button
-          variant="ghost"
-          onClick={() => column.toggleSorting(column.getIsSorted() === "asc")}
-        >
-          <ArrowUpDown className="ml-0.5 h-4 w-4" />
-        </Button>
-      </div>
-    ),
+    accessorKey: "status_verification_id",
+    header: "Verification ID",
   },
   {
-    accessorKey: "status",
-    header: "Status",
+    accessorKey: "monthly_syllabus_approval",
+    header: "Monthly Syllabus Approval",
+  },
+  {
+    accessorKey: "feedback",
+    header: "Feedback",
+  },
+  {
+    accessorKey: "is_approved",
+    header: "Approved",
+    cell: ({ row }) => (row.original.is_approved ? "Yes" : "No"),
+  },
+  {
+    accessorKey: "approved_date",
+    header: "Approved Date",
   },
   {
     accessorKey: "action",
@@ -40,13 +44,22 @@ export const columns: ColumnDef<SyllabusStatus>[] = [
       const syllabusStatus = row.original;
 
       const handleSuccess = () => {
-        console.log("Syllabus status deleted, refresh the table or state");
+        console.log("Syllabus status verification deleted, refresh the table or state");
       };
 
       return (
         <div className="flex items-center space-x-2">
-          {/* <RetrieveDetail id={syllabusStatus.id} endpoint={RETRIEVE_SYLLABUS_STATUS_VERIFICATION} onSuccess={handleSuccess} /> */}
-          <DeleteButton id={syllabusStatus.id} endpoint={DELETE_SYLLABUS_STATUS_VERIFICATION} onSuccess={handleSuccess} item={""} />
+          {/* <RetrieveDetail 
+            id={syllabusStatus.status_verification_id} 
+            endpoint={`${RETRIEVE_SYLLABUS_STATUS_VERIFICATION}`}
+            onSuccess={handleSuccess}
+          /> */}
+          <DeleteButton
+            id={syllabusStatus.status_verification_id} 
+            endpoint={`${DELETE_SYLLABUS_STATUS_VERIFICATION}`}
+            onSuccess={handleSuccess}
+          />
+          <UpdateSyllabusStatus syllabusStatus={syllabusStatus} />
         </div>
       );
     },

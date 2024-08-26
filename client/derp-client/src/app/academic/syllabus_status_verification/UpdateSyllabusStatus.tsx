@@ -15,21 +15,22 @@ import {
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from '@/components/ui/form'
 import { Input } from '@/components/ui/input'
 import { Button } from '@/components/ui/button'
-
-import { FormInput } from '../../_component/FormInput'
-import SubmitButton from '../../_component/SubmitButton'
+import { syllabusStatusSchema } from '@/lib/zodschema'
+import { UPDATE_SYLLABUS_STATUS_VERIFICATION } from '@/lib/routePath'
 import { MdModeEdit } from 'react-icons/md'
 import { failedToastMessage, successToastMessage } from '@/lib/services'
 import { submitForm } from '@/lib/helper'
-import { syllabusStatusSchema } from '@/lib/zodschema'
+import { FormInput } from '@/app/_component/FormInput'
+import SubmitButton from '@/app/_component/SubmitButton'
 
 const UpdateSyllabusStatus = ({ syllabusStatus }: { syllabusStatus: any }) => {
   const router = useRouter();
   const form = useForm({
     resolver: zodResolver(syllabusStatusSchema),
     defaultValues: {
-      status: syllabusStatus.status,
-      remarks: syllabusStatus.remarks,
+      feedback: syllabusStatus.feedback,
+      is_approved: syllabusStatus.is_approved,
+      approved_date: syllabusStatus.approved_date,
     }
   })
 
@@ -37,14 +38,14 @@ const UpdateSyllabusStatus = ({ syllabusStatus }: { syllabusStatus: any }) => {
     event.preventDefault();
     const all_values = form.getValues();
     try {
-      const response = await submitForm(`${UpdateSyllabusStatus}/${syllabusStatus.id}/`, all_values, 'PUT');
+      const response = await submitForm(`${UPDATE_SYLLABUS_STATUS_VERIFICATION}/${syllabusStatus.status_verification_id}/`, all_values, 'PUT');
       if (response?.success) {
-        successToastMessage("Syllabus status successfully updated");
+        successToastMessage("Successfully updated");
       } else {
-        failedToastMessage("Failed to update syllabus status");
+        failedToastMessage("Invalid");
       }
     } catch (error) {
-      console.error('Failed to Update Syllabus Status:', error);
+      console.error('Failed to update Syllabus Status Verification:', error);
     }
   };
 
@@ -56,32 +57,30 @@ const UpdateSyllabusStatus = ({ syllabusStatus }: { syllabusStatus: any }) => {
         </DialogTrigger>
         <DialogContent>
           <DialogHeader>
-            <DialogTitle>Update Syllabus Status</DialogTitle>
+            <DialogTitle>Update Syllabus Status Verification</DialogTitle>
             <DialogDescription>
               Update the details
             </DialogDescription>
           </DialogHeader>
-         
+
           <Form {...form} >
             <form onSubmit={handleForm} className="">
-              <FormField name="status" render={({ field }) => (
+              <FormField name="feedback" render={({ field }) => (
                 <FormItem>
                   <FormControl>
-                    <FormInput {...field} id="status" label="Status" type="text" />
+                    <FormInput {...field} id="feedback" label="Feedback" type="text" />
                   </FormControl>
                   <FormMessage />
                 </FormItem>
               )} />
-
-              <FormField name="remarks" render={({ field }) => (
+              <FormField name="approved_date" render={({ field }) => (
                 <FormItem>
                   <FormControl>
-                    <FormInput {...field} id="remarks" label="Remarks" type="text" />
+                    <FormInput {...field} id="approved_date" label="Approved Date" type="datetime-local" />
                   </FormControl>
                   <FormMessage />
                 </FormItem>
               )} />
-
               <SubmitButton className="w-full" text="Submit" />
             </form>
           </Form>

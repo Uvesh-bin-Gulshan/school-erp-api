@@ -1,11 +1,11 @@
 "use client"
 
-import React from 'react'
 import { DataTable } from '@/app/_component/DataTable'
+import React from 'react'
 import { columns } from './columns'
 import { ColumnFiltersState } from '@tanstack/react-table'
 
-const ViewSyllabus = ({ data }: { data: any }) => {
+const ViewSyllabusType = ({ data }: { data: any }) => {
   const columnFilters: ColumnFiltersState = []
 
   return (
@@ -19,4 +19,4 @@ const ViewSyllabus = ({ data }: { data: any }) => {
   )
 }
 
-export default ViewSyllabus;
+export default ViewSyllabusType

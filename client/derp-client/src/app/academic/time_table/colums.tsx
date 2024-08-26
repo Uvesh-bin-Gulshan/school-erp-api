@@ -1,20 +1,23 @@
 import { Button } from "@/components/ui/button";
 import { ColumnDef } from "@tanstack/react-table";
 import { ArrowUpDown } from "lucide-react";
-import UpdateSyllabusType from "./UpdateSyllabusType";
+import UpdateTimeTable from "./UpdateTimeTable";
 import { AiFillDelete } from "react-icons/ai";
-import DeleteButton from "../_component/DeleteButton";
-import { DELETE_SYLLABUS_TYPE, RETRIEVE_SYLLABUS_TYPE } from "@/lib/routePath";
+import DeleteButtom from "../_component/DeleteButtom";
+import { DELETE_TIME_TABLE, RETRIEVE_TIME_TABLE } from "@/lib/routePath";
 import RetrieveDetail from "../_component/RetriveDetail";
 
-export type SyllabusType = {
-  type_id: string;
-  name: string;
+export type TimeTable = {
+  time_table_id: string;
+  subject: string;
+  teacher: string;
+  time: string;
+  effective_date: string;
 };
 
-export const columns: ColumnDef<SyllabusType>[] = [
+export const columns: ColumnDef<TimeTable>[] = [
   {
-    accessorKey: "type_id",
+    accessorKey: "time_table_id",
     header: ({ column }) => (
       <div className="flex items-center">
         <span>ID</span>
@@ -28,29 +31,41 @@ export const columns: ColumnDef<SyllabusType>[] = [
     ),
   },
   {
-    accessorKey: "name",
-    header: "Syllabus Type Name",
+    accessorKey: "subject",
+    header: "Subject",
+  },
+  {
+    accessorKey: "teacher",
+    header: "Teacher",
+  },
+  {
+    accessorKey: "time",
+    header: "Time",
+  },
+  {
+    accessorKey: "effective_date",
+    header: "Effective Date",
   },
   {
     accessorKey: "action",
     header: "Action",
     cell: ({ row }) => {
-      const syllabusType = row.original;
+      const timeTable = row.original;
 
       const handleSuccess = () => {
-        console.log("Syllabus Type deleted, refresh the table or state");
+        console.log("TimeTable deleted, refresh the table or state");
       };
 
       return (
         <div className="flex items-center space-x-2">
           <RetrieveDetail 
-            id={syllabusType.type_id} 
-            endpoint={`${RETRIEVE_SYLLABUS_TYPE}`}
+            id={timeTable.time_table_id} 
+            endpoint={`${RETRIEVE_TIME_TABLE}`}
             onSuccess={handleSuccess}
           />
           <DeleteButtom 
-            id={syllabusType.type_id} 
-            endpoint={`${DELETE_SYLLABUS_TYPE}`}
+            id={timeTable.time_table_id} 
+            endpoint={`${DELETE_TIME_TABLE}`}
             onSuccess={handleSuccess}
           />
         </div>

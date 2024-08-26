@@ -3,7 +3,6 @@
 import React from 'react'
 import { useForm } from 'react-hook-form'
 import { zodResolver } from '@hookform/resolvers/zod'
-import { useRouter } from 'next/navigation'
 import {
   Dialog,
   DialogContent,
@@ -12,23 +11,21 @@ import {
   DialogTitle,
   DialogTrigger,
 } from "@/components/ui/dialog"
-import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from '@/components/ui/form'
+import { Form, FormControl, FormField, FormItem, FormMessage } from '@/components/ui/form'
 import { Input } from '@/components/ui/input'
 import { Button } from '@/components/ui/button'
-import { syllabusSchema } from '@/lib/zodschema'
+import { syllabusTypeSchema } from '@/lib/zodschema'
 import { submitForm, successtoastMessage, failedtoastMessage } from '@/lib/services'
 import { FormInput } from '../_component/FormInput'
 import SubmitButton from '../_component/SubmitButton'
-import { UPDATE_SYLLABUS } from '@/lib/routePath'
+import { UPDATE_SYLLABUS_TYPE } from '@/lib/routePath'
 import { MdModeEdit } from 'react-icons/md'
 
-const UpdateSyllabus = ({ syllabus }: { syllabus: any }) => {
-  const router = useRouter();
+const UpdateSyllabusType = ({ syllabusType }: { syllabusType: any }) => {
   const form = useForm({
-    resolver: zodResolver(syllabusSchema),
+    resolver: zodResolver(syllabusTypeSchema),
     defaultValues: {
-      title: syllabus.title,
-      description: syllabus.description,
+      name: syllabusType.name,
     }
   })
 
@@ -36,14 +33,14 @@ const UpdateSyllabus = ({ syllabus }: { syllabus: any }) => {
     event.preventDefault();
     const all_values = form.getValues();
     try {
-      const response = await submitForm(`${UPDATE_SYLLABUS}/${syllabus.syllabus_id}/`, all_values, 'PUT');
+      const response = await submitForm(`${UPDATE_SYLLABUS_TYPE}/${syllabusType.type_id}/`, all_values, 'PUT');
       if (response?.success) {
-        successtoastMessage("Syllabus successfully updated");
+        successtoastMessage("Successfully updated");
       } else {
-        failedtoastMessage("Failed to update syllabus");
+        failedtoastMessage("Update failed");
       }
     } catch (error) {
-      console.error('Failed to Update Syllabus:', error);
+      console.error('Failed to update Syllabus Type:', error);
     }
   };
 
@@ -55,33 +52,24 @@ const UpdateSyllabus = ({ syllabus }: { syllabus: any }) => {
         </DialogTrigger>
         <DialogContent>
           <DialogHeader>
-            <DialogTitle>Update Syllabus</DialogTitle>
+            <DialogTitle>Update Syllabus Type</DialogTitle>
             <DialogDescription>
-              Update the details
+              Update the Syllabus Type details below
             </DialogDescription>
           </DialogHeader>
-         
+
           <Form {...form} >
             <form onSubmit={handleForm} className="">
-              <FormField name="title" render={({ field }) => (
+              <FormField name="name" render={({ field }) => (
                 <FormItem>
                   <FormControl>
-                    <FormInput {...field} id="title" label="Title" type="text" />
+                    <FormInput {...field} id="name" label="Syllabus Type Name" type="text" />
                   </FormControl>
                   <FormMessage />
                 </FormItem>
               )} />
 
-              <FormField name="description" render={({ field }) => (
-                <FormItem>
-                  <FormControl>
-                    <FormInput {...field} id="description" label="Description" type="text" />
-                  </FormControl>
-                  <FormMessage />
-                </FormItem>
-              )} />
-
-              <SubmitButton className="w-full" text="Submit" />
+              <SubmitButton className="w-full" text="Update" />
             </form>
           </Form>
         </DialogContent>
@@ -90,4 +78,4 @@ const UpdateSyllabus = ({ syllabus }: { syllabus: any }) => {
   );
 }
 
-export default UpdateSyllabus;
+export default UpdateSyllabusType;

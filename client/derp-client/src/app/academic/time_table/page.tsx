@@ -1,18 +1,18 @@
 import React from 'react'
-import ViewSyllabusType from './ViewSyllabusType'
-import { getSyllabusTypeList } from '@/lib/services'
-import AddSyllabusType from './AddSyllabusType'
+import ViewTimeTable from './ViewTimeTable'
+import { getTimeTableList } from '@/lib/services'
+import AddTimeTable from './AddTimeTable'
 import Sidebar from '@/app/_component/SideBar'
 import { BreadcrumbWithCustomSeparator } from '@/app/_component/BreadCrumb'
 
 const items = [
   { href: "/", label: "Home" },
   { href: "/components", label: "Components" },
-  { label: "Syllabus Types" },
+  { label: "TimeTables" },
 ];
 
 const Page = async () => {
-  const data = await getSyllabusTypeList()
+  const data = await getTimeTableList()
   console.log(data)
   
   return (
@@ -23,8 +23,8 @@ const Page = async () => {
         </div>
 
         <div className='m-12 bg-white p-4 h-96'>
-          <AddSyllabusType />
-          <ViewSyllabusType data={data} />
+          <AddTimeTable />
+          <ViewTimeTable data={data} />
         </div>
       </Sidebar>
     </>
@@ -32,3 +32,4 @@ const Page = async () => {
 }
 
 export default Page
+    
