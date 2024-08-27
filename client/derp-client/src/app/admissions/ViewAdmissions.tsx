@@ -19,18 +19,16 @@ const ViewAdmissions = ({data}:{data:any}) => {
     <>
     <div className="w-full relative ">
       
-    <div className='absolute right-4 mt-2.5 gap-4'>
-    <Link  className="mr-2"   href="../admissions/dashboard">     
-       <CustomButton text="Dashboard" icon={<LayoutDashboard />} />
-    </Link>
+    <div className='absolute right-4 mt-4 gap-4'>
+    
     <Link  className="mr-2"   href="../admissions/ImportAdmission">     
-       <CustomButton text="Import" icon={<FileUp />} />
+       <CustomButton className="w-36" text="Import" icon={<FileUp />} />
     </Link>
       {/* <ImportAdmission /> */}
-    <CustomButton text="Export" className="mr-2" onClick={exportAdmissions} icon={<FileDown />}/>
+    <CustomButton className="w-36 mr-2" text="Export"  onClick={exportAdmissions} icon={<FileDown />}/>
 
     <Link href="../admissions/AdmisionForm">     
-       <CustomButton text="Add Admission" icon={<Plus />} />
+       <CustomButton className="w-36 mr-1" text="Admission" icon={<Plus />} />
     </Link>
     
     </div>

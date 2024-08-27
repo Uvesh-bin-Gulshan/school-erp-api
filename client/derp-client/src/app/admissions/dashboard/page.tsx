@@ -8,8 +8,8 @@ const items = [
   { href: "/components", label: "Components" },
 ];
 const Page =async () => {
-    const dashboard_data=await getAdmissionDashboard()
-        console.log(dashboard_data)
+    const dashboardData=await getAdmissionDashboard()
+        console.log(dashboardData)
   return (
 <>
 
@@ -19,7 +19,7 @@ const Page =async () => {
 
 
 <div className='  h-96'>
-<AdmissionDashboard dashboard_data={dashboard_data} />
+<AdmissionDashboard dashboardData={dashboardData} />
 
 </div>
 
