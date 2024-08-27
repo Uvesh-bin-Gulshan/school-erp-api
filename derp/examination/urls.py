@@ -1,5 +1,5 @@
 from django.urls import path # type: ignore
-from .views import ExamTypeView, ExamTimeTableView, MarksheetView, ResultSheetView
+from .views import ExamTypeView, ExamTimeTableView, MarkSheetView, ResultSheetView
 from .dashboard import ResultDashboardView
 app_name='examination'
 
@@ -19,11 +19,11 @@ urlpatterns = [
     path('examtimetable/delete/<str:pk>/', ExamTimeTableView.as_view({'delete': 'delete'}), name='examtimetable-delete'),
 
     # Marksheet APIs
-    path('marksheet/list/', MarksheetView.as_view({'get': 'list'}), name='marksheet-list'),
-    path('marksheet/create/', MarksheetView.as_view({'post': 'create'}), name='marksheet-create'),
-    path('marksheet/retrieve/<str:pk>/', MarksheetView.as_view({'get': 'retrieve'}), name='marksheet-retrieve'),
-    path('marksheet/update/<str:pk>/', MarksheetView.as_view({'put': 'update'}), name='marksheet-update'),
-    path('marksheet/delete/<str:pk>/', MarksheetView.as_view({'delete': 'delete'}), name='marksheet-delete'),
+    path('marksheet/list/', MarkSheetView.as_view({'get': 'list'}), name='marksheet-list'),
+    path('marksheet/create/', MarkSheetView.as_view({'post': 'create'}), name='marksheet-create'),
+    path('marksheet/retrieve/<str:pk>/', MarkSheetView.as_view({'get': 'retrieve'}), name='marksheet-retrieve'),
+    path('marksheet/update/<str:pk>/', MarkSheetView.as_view({'put': 'update'}), name='marksheet-update'),
+    path('marksheet/delete/<str:pk>/', MarkSheetView.as_view({'delete': 'delete'}), name='marksheet-delete'),
 
     # ResultSheet APIs
     path('resultsheet/list/', ResultSheetView.as_view({'get': 'list'}), name='resultsheet-list'),

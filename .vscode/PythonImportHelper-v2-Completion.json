@@ -338,6 +338,14 @@
         "documentation": {}
     },
     {
+        "label": "ImportExportModelAdmin",
+        "importPath": "import_export.admin",
+        "description": "import_export.admin",
+        "isExtraImport": true,
+        "detail": "import_export.admin",
+        "documentation": {}
+    },
+    {
         "label": "AppConfig",
         "importPath": "django.apps",
         "description": "django.apps",
@@ -434,14 +442,6 @@
         "documentation": {}
     },
     {
-        "label": "APIViews",
-        "importPath": "rest_framework.views",
-        "description": "rest_framework.views",
-        "isExtraImport": true,
-        "detail": "rest_framework.views",
-        "documentation": {}
-    },
-    {
         "label": "APIView",
         "importPath": "rest_framework.views",
         "description": "rest_framework.views",
@@ -471,6 +471,22 @@
         "description": "rest_framework.views",
         "isExtraImport": true,
         "detail": "rest_framework.views",
+        "documentation": {}
+    },
+    {
+        "label": "APIView",
+        "importPath": "rest_framework.views",
+        "description": "rest_framework.views",
+        "isExtraImport": true,
+        "detail": "rest_framework.views",
+        "documentation": {}
+    },
+    {
+        "label": "Response",
+        "importPath": "rest_framework.response",
+        "description": "rest_framework.response",
+        "isExtraImport": true,
+        "detail": "rest_framework.response",
         "documentation": {}
     },
     {
@@ -995,6 +1011,14 @@
         "documentation": {}
     },
     {
+        "label": "viewsets",
+        "importPath": "rest_framework",
+        "description": "rest_framework",
+        "isExtraImport": true,
+        "detail": "rest_framework",
+        "documentation": {}
+    },
+    {
         "label": "serializers",
         "importPath": "rest_framework",
         "description": "rest_framework",
@@ -1316,6 +1340,46 @@
         "documentation": {}
     },
     {
+        "label": "resources",
+        "importPath": "import_export",
+        "description": "import_export",
+        "isExtraImport": true,
+        "detail": "import_export",
+        "documentation": {}
+    },
+    {
+        "label": "fields",
+        "importPath": "import_export",
+        "description": "import_export",
+        "isExtraImport": true,
+        "detail": "import_export",
+        "documentation": {}
+    },
+    {
+        "label": "resources",
+        "importPath": "import_export",
+        "description": "import_export",
+        "isExtraImport": true,
+        "detail": "import_export",
+        "documentation": {}
+    },
+    {
+        "label": "fields",
+        "importPath": "import_export",
+        "description": "import_export",
+        "isExtraImport": true,
+        "detail": "import_export",
+        "documentation": {}
+    },
+    {
+        "label": "format_html",
+        "importPath": "django.utils.html",
+        "description": "django.utils.html",
+        "isExtraImport": true,
+        "detail": "django.utils.html",
+        "documentation": {}
+    },
+    {
         "label": "attendance.models",
         "kind": 6,
         "isExtraImport": true,
@@ -1325,11 +1389,19 @@
         "documentation": {}
     },
     {
-        "label": "Response",
-        "importPath": "rest_framwork.response",
-        "description": "rest_framwork.response",
+        "label": "Attendance",
+        "importPath": "attendance.models",
+        "description": "attendance.models",
         "isExtraImport": true,
-        "detail": "rest_framwork.response",
+        "detail": "attendance.models",
+        "documentation": {}
+    },
+    {
+        "label": "FingerRecord",
+        "importPath": "attendance.models",
+        "description": "attendance.models",
+        "isExtraImport": true,
+        "detail": "attendance.models",
         "documentation": {}
     },
     {
@@ -1463,22 +1535,6 @@
         "importPath": "students.models",
         "description": "students.models",
         "detail": "students.models",
-        "documentation": {}
-    },
-    {
-        "label": "resources",
-        "importPath": "import_export",
-        "description": "import_export",
-        "isExtraImport": true,
-        "detail": "import_export",
-        "documentation": {}
-    },
-    {
-        "label": "fields",
-        "importPath": "import_export",
-        "description": "import_export",
-        "isExtraImport": true,
-        "detail": "import_export",
         "documentation": {}
     },
     {
@@ -1915,6 +1971,33 @@
         "documentation": {}
     },
     {
+        "label": "AdmissionResource",
+        "kind": 6,
+        "importPath": "derp.admission.admin",
+        "description": "derp.admission.admin",
+        "peekOfCode": "class AdmissionResource(resources.ModelResource):\n    class Meta:\n        model = Admission\n        fields = [\n            'id', 'student_name', 'profile_image', 'applied_for', 'date_of_birth', \n            'state', 'district', 'locality', 'pincode', 'mobile_number', \n            'aadhar_number', 'previous_result_status', 'admission_status', \n            'previous_institution', 'previous_education', 'school_education', \n            'lc_given', 'pay_fees', 'fees_amount', 'required_donation', \n            'created_at', 'updated_at'",
+        "detail": "derp.admission.admin",
+        "documentation": {}
+    },
+    {
+        "label": "AdmissionAdmin",
+        "kind": 6,
+        "importPath": "derp.admission.admin",
+        "description": "derp.admission.admin",
+        "peekOfCode": "class AdmissionAdmin(ImportExportModelAdmin):\n    resource_class = AdmissionResource\n    list_display = [\n        'id', 'student_name', 'father_name', 'profile', 'applied_for', \n        'date_of_birth', 'state', 'district', 'locality', 'pincode', \n        'mobile_number', 'aadhar_number', 'previous_result_status', \n        'admission_status', 'previous_institution', 'previous_education', \n        'school_education', 'lc_given', 'pay_fees', 'fees_amount', \n        'required_donation', 'created_at', 'updated_at'\n    ]",
+        "detail": "derp.admission.admin",
+        "documentation": {}
+    },
+    {
+        "label": "StudentAdmin",
+        "kind": 6,
+        "importPath": "derp.admission.admin",
+        "description": "derp.admission.admin",
+        "peekOfCode": "class StudentAdmin(ImportExportModelAdmin):\n    list_display = ('get_student_name', 'profile', 'get_father_name', 'get_applied_for')\n    list_display_links = ['get_student_name']\n    search_fields = ('admission__student_name', 'admission__father_name')\n    list_filter = [\n        'admission__applied_for', 'admission__state', 'admission__district', \n        'admission__locality', 'admission__pincode', 'admission__previous_result_status', \n        'admission__admission_status', 'admission__previous_institution', \n        'admission__previous_education', 'admission__school_education', \n        'admission__lc_given', 'admission__pay_fees', 'admission__required_donation'",
+        "detail": "derp.admission.admin",
+        "documentation": {}
+    },
+    {
         "label": "AdmissionConfig",
         "kind": 6,
         "importPath": "derp.admission.apps",
@@ -1937,7 +2020,7 @@
         "kind": 6,
         "importPath": "derp.admission.dashboard",
         "description": "derp.admission.dashboard",
-        "peekOfCode": "class StudentDashboardView(APIView):\n    def get(self, request):\n        context = {\n            'total_students': self.get_total_students(),\n            'student_per_course': self.get_students_grouped_by('course__course_name'),  # Assuming course_name as field in Course model\n            'student_per_department': self.get_students_grouped_by('department__department_name'),  # Assuming department_name as field in Department model\n            'student_status_per_year': self.get_students_per_year(),\n            'student_status_distribution': self.get_students_grouped_by('student_status'),\n            'student_age_distribution': self.get_students_grouped_by_age(),\n            'student_per_city': self.get_students_grouped_by('admission__district'),  # Assuming district represents city",
+        "peekOfCode": "class StudentDashboardView(APIView):\n    def get(self, request):\n        context = {\n            'total_students': self.get_total_students(),\n            'student_per_course': self.get_students_grouped_by('course__name'), \n            'student_per_department': self.get_students_grouped_by('department__name'), \n            'student_status_per_year': self.get_students_per_year(),\n            'student_status_distribution': self.get_students_grouped_by('student_status'),\n            'student_age_distribution': self.get_students_grouped_by_age(),\n            'student_per_city': self.get_students_grouped_by('admission__district'),  ",
         "detail": "derp.admission.dashboard",
         "documentation": {}
     },
@@ -2099,7 +2182,7 @@
         "kind": 6,
         "importPath": "derp.attendance.dashboard",
         "description": "derp.attendance.dashboard",
-        "peekOfCode": "class AttendanceDashboardView(APIViews):\n    def get(self,request):\n        context={\n            'attendance_per_year': self.get_total_attendance_per_year(),\n       }\n        return Response(context)\n    def get_total_attendance_per_year(self,status=None):\n            queryset=Attendance.objects()\n            if status:\n                queryset = queryset.filter(status=status)",
+        "peekOfCode": "class AttendanceDashboardView(APIView):\n    def get(self,request):\n        context={\n            'attendance_per_year': self.get_total_attendance_per_year(),\n       }\n        return Response(context)\n    def get_total_attendance_per_year(self,status=None):\n            queryset=Attendance.objects()\n            if status:\n                queryset = queryset.filter(status=status)",
         "detail": "derp.attendance.dashboard",
         "documentation": {}
     },
@@ -2108,7 +2191,7 @@
         "kind": 6,
         "importPath": "derp.attendance.models",
         "description": "derp.attendance.models",
-        "peekOfCode": "class Attendance(models.Model):\n    attendance_id=models.CharField(default=shortuuid,max_length=6,editable=False,primary_key=True)\n    time_table=models.ForeignKey(TimeTable,on_delete=models.CASCADE)\n    student=models.ForeignKey(Student,on_delete=models.CASCADE)\n    date=models.DateField()\n    time=models.TimeField(auto_now=True)\n    status=models.BooleanField(default=False)\n    class Meta:\n        unique_together = ('time_table', 'student', 'date')\n    def __str__(self):",
+        "peekOfCode": "class Attendance(models.Model):\n    attendance_id=models.CharField(default=shortuuid, max_length=6,editable=False,primary_key=True)\n    time_table=models.ForeignKey(TimeTable,on_delete=models.CASCADE)\n    student=models.ForeignKey(Student,on_delete=models.CASCADE)\n    date=models.DateField()\n    time=models.TimeField(auto_now=True)\n    status=models.BooleanField(default=False)\n    class Meta:\n        unique_together = ('time_table', 'student', 'date')\n    def __str__(self):",
         "detail": "derp.attendance.models",
         "documentation": {}
     },
@@ -2126,7 +2209,7 @@
         "kind": 2,
         "importPath": "derp.attendance.models",
         "description": "derp.attendance.models",
-        "peekOfCode": "def shortuuid():\n    return str(uuid.uuid4().hex)[:6]\nclass Attendance(models.Model):\n    attendance_id=models.CharField(default=shortuuid,max_length=6,editable=False,primary_key=True)\n    time_table=models.ForeignKey(TimeTable,on_delete=models.CASCADE)\n    student=models.ForeignKey(Student,on_delete=models.CASCADE)\n    date=models.DateField()\n    time=models.TimeField(auto_now=True)\n    status=models.BooleanField(default=False)\n    class Meta:",
+        "peekOfCode": "def shortuuid():\n    return str(uuid.uuid4().hex)[:6]\nclass Attendance(models.Model):\n    attendance_id=models.CharField(default=shortuuid, max_length=6,editable=False,primary_key=True)\n    time_table=models.ForeignKey(TimeTable,on_delete=models.CASCADE)\n    student=models.ForeignKey(Student,on_delete=models.CASCADE)\n    date=models.DateField()\n    time=models.TimeField(auto_now=True)\n    status=models.BooleanField(default=False)\n    class Meta:",
         "detail": "derp.attendance.models",
         "documentation": {}
     },
@@ -2414,7 +2497,7 @@
         "kind": 5,
         "importPath": "derp.derp.urls",
         "description": "derp.derp.urls",
-        "peekOfCode": "urlpatterns = [\n    path('admin/', admin.site.urls),\n    # path('admin_tools_stats/', include('admin_tools_stats.urls')),\n    path('academic/',include('academic.urls',namespace='academic')),\n    path('admission/',include('admission.urls',namespace='admission')),\n    path('library/',include('library.urls',namespace='library')),\n    path('userauth/',include('userauth.urls',namespace='userauth')),\n]\nif settings.DEBUG:\n    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)",
+        "peekOfCode": "urlpatterns = [\n    path('admin/', admin.site.urls),\n    # path('admin_tools_stats/', include('admin_tools_stats.urls')),\n    path('academic/',include('academic.urls',namespace='academic')),\n    path('admission/',include('admission.urls',namespace='admission')),\n    path('library/',include('library.urls',namespace='library')),\n    path('attendance/',include('attendance.urls',namespace='attendance')),\n    path('examination/', include('examination.urls', namespace='examination')),\n    path('userauth/',include('userauth.urls',namespace='userauth')),\n]",
         "detail": "derp.derp.urls",
         "documentation": {}
     },
@@ -2511,37 +2594,37 @@
     {
         "label": "ExamTypeSerializer",
         "kind": 6,
-        "importPath": "derp.examination.serializer",
-        "description": "derp.examination.serializer",
-        "peekOfCode": "class ExamTypeSerializer(serializers.ModelSerializer):\n    class Meta:\n        model = ExamType\n        fields = '__all__'\nclass ExamTimeTableSerializer(serializers.ModelSerializer):\n    class Meta:\n        model = ExamTimeTable\n        fields = '__all__'\nclass MarksheetSerializer(serializers.ModelSerializer):\n    class Meta:",
-        "detail": "derp.examination.serializer",
+        "importPath": "derp.examination.serializers",
+        "description": "derp.examination.serializers",
+        "peekOfCode": "class ExamTypeSerializer(serializers.ModelSerializer):\n    class Meta:\n        model = ExamType\n        fields = '__all__'\nclass ExamTimeTableSerializer(serializers.ModelSerializer):\n    class Meta:\n        model = ExamTimeTable\n        fields = '__all__'\nclass MarkSheetSerializer(serializers.ModelSerializer):\n    class Meta:",
+        "detail": "derp.examination.serializers",
         "documentation": {}
     },
     {
         "label": "ExamTimeTableSerializer",
         "kind": 6,
-        "importPath": "derp.examination.serializer",
-        "description": "derp.examination.serializer",
-        "peekOfCode": "class ExamTimeTableSerializer(serializers.ModelSerializer):\n    class Meta:\n        model = ExamTimeTable\n        fields = '__all__'\nclass MarksheetSerializer(serializers.ModelSerializer):\n    class Meta:\n        model = Marksheet\n        fields = '__all__'\nclass ResultSheetSerializer(serializers.ModelSerializer):\n    class Meta:",
-        "detail": "derp.examination.serializer",
+        "importPath": "derp.examination.serializers",
+        "description": "derp.examination.serializers",
+        "peekOfCode": "class ExamTimeTableSerializer(serializers.ModelSerializer):\n    class Meta:\n        model = ExamTimeTable\n        fields = '__all__'\nclass MarkSheetSerializer(serializers.ModelSerializer):\n    class Meta:\n        model = MarkSheet\n        fields = '__all__'\nclass ResultSheetSerializer(serializers.ModelSerializer):\n    class Meta:",
+        "detail": "derp.examination.serializers",
         "documentation": {}
     },
     {
-        "label": "MarksheetSerializer",
+        "label": "MarkSheetSerializer",
         "kind": 6,
-        "importPath": "derp.examination.serializer",
-        "description": "derp.examination.serializer",
-        "peekOfCode": "class MarksheetSerializer(serializers.ModelSerializer):\n    class Meta:\n        model = Marksheet\n        fields = '__all__'\nclass ResultSheetSerializer(serializers.ModelSerializer):\n    class Meta:\n        model = ResultSheet\n        fields = '__all__'",
-        "detail": "derp.examination.serializer",
+        "importPath": "derp.examination.serializers",
+        "description": "derp.examination.serializers",
+        "peekOfCode": "class MarkSheetSerializer(serializers.ModelSerializer):\n    class Meta:\n        model = MarkSheet\n        fields = '__all__'\nclass ResultSheetSerializer(serializers.ModelSerializer):\n    class Meta:\n        model = ResultSheet\n        fields = '__all__'",
+        "detail": "derp.examination.serializers",
         "documentation": {}
     },
     {
         "label": "ResultSheetSerializer",
         "kind": 6,
-        "importPath": "derp.examination.serializer",
-        "description": "derp.examination.serializer",
+        "importPath": "derp.examination.serializers",
+        "description": "derp.examination.serializers",
         "peekOfCode": "class ResultSheetSerializer(serializers.ModelSerializer):\n    class Meta:\n        model = ResultSheet\n        fields = '__all__'",
-        "detail": "derp.examination.serializer",
+        "detail": "derp.examination.serializers",
         "documentation": {}
     },
     {
@@ -2572,11 +2655,11 @@
         "documentation": {}
     },
     {
-        "label": "MarksheetView",
+        "label": "MarkSheetView",
         "kind": 6,
         "importPath": "derp.examination.views",
         "description": "derp.examination.views",
-        "peekOfCode": "class MarksheetView(viewsets.ViewSet):\n    def list(self, request):\n        queryset = Marksheet.objects.all()\n        serializer = MarksheetSerializer(queryset, many=True)\n        return Response(serializer.data)\n    def create(self, request):\n        serializer = MarksheetSerializer(data=request.data)\n        if serializer.is_valid():\n            serializer.save()\n            return Response(serializer.data, status=201)",
+        "peekOfCode": "class MarkSheetView(viewsets.ViewSet):\n    def list(self, request):\n        queryset = MarkSheet.objects.all()\n        serializer = MarkSheetSerializer(queryset, many=True)\n        return Response(serializer.data)\n    def create(self, request):\n        serializer = MarkSheetSerializer(data=request.data)\n        if serializer.is_valid():\n            serializer.save()\n            return Response(serializer.data, status=201)",
         "detail": "derp.examination.views",
         "documentation": {}
     },
@@ -2594,7 +2677,7 @@
         "kind": 2,
         "importPath": "derp.examination.views",
         "description": "derp.examination.views",
-        "peekOfCode": "def generate_result_sheet(student_id):\n    student=get_object_or_404(Student,student_id=student_id)\n    marksheets=Marksheet.objects.filter(student=student)\n    result_sheet={\n        'student_id':student.student_id,\n        'student_name':student.name,\n        'exams':[]\n    }\n    total_marks_obtained=0\n    for marksheet in marksheets:",
+        "peekOfCode": "def generate_result_sheet(student_id):\n    student = get_object_or_404(Student, student_id=student_id)\n    marksheets = MarkSheet.objects.filter(student=student)\n    result_sheet = {\n        'student_id': student.student_id,\n        'student_name': student.name,\n        'exams': []\n    }\n    total_marks_obtained = 0\n    for marksheet in marksheets:",
         "detail": "derp.examination.views",
         "documentation": {}
     },
@@ -2603,7 +2686,7 @@
         "kind": 2,
         "importPath": "derp.examination.views",
         "description": "derp.examination.views",
-        "peekOfCode": "def result_sheet_view(request,student_id):\n    result_sheet=generate_result_sheet(student_id)\n    return JsonResponse(result_sheet)\ndef assign_rank():\n    result_sheets=ResultSheet.objects.all().order_by('-total_marks')\n    for rank,result_sheet in enumerate(result_sheets,start=1):\n        result_sheet.rank=rank\n        result_sheet.save\nclass ExamTypeView(viewsets.ViewSet):\n    def list(self, request):",
+        "peekOfCode": "def result_sheet_view(request, student_id):\n    result_sheet = generate_result_sheet(student_id)\n    return JsonResponse(result_sheet)\ndef assign_rank():\n    result_sheets = ResultSheet.objects.all().order_by('-total_marks_obtained')\n    for rank, result_sheet in enumerate(result_sheets, start=1):\n        result_sheet.rank = rank\n        result_sheet.save()\nclass ExamTypeView(viewsets.ViewSet):\n    def list(self, request):",
         "detail": "derp.examination.views",
         "documentation": {}
     },
@@ -2612,7 +2695,7 @@
         "kind": 2,
         "importPath": "derp.examination.views",
         "description": "derp.examination.views",
-        "peekOfCode": "def assign_rank():\n    result_sheets=ResultSheet.objects.all().order_by('-total_marks')\n    for rank,result_sheet in enumerate(result_sheets,start=1):\n        result_sheet.rank=rank\n        result_sheet.save\nclass ExamTypeView(viewsets.ViewSet):\n    def list(self, request):\n        queryset = ExamType.objects.all()\n        serializer = ExamTypeSerializer(queryset, many=True)\n        return Response(serializer.data)",
+        "peekOfCode": "def assign_rank():\n    result_sheets = ResultSheet.objects.all().order_by('-total_marks_obtained')\n    for rank, result_sheet in enumerate(result_sheets, start=1):\n        result_sheet.rank = rank\n        result_sheet.save()\nclass ExamTypeView(viewsets.ViewSet):\n    def list(self, request):\n        queryset = ExamType.objects.all()\n        serializer = ExamTypeSerializer(queryset, many=True)\n        return Response(serializer.data)",
         "detail": "derp.examination.views",
         "documentation": {}
     },
