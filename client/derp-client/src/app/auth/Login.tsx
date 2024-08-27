@@ -19,12 +19,13 @@ import { z } from 'zod'
 import {loginSchema} from '@/lib/zodschema'
 import toast from "react-hot-toast"
 import { redirect } from 'next/navigation'
-import { failedtoastMessage, submitForm, successtoastMessage } from '@/lib/services'
 import { useRouter } from 'next/navigation'
 import { FormInput } from '../_component/FormInput'
 import SelectComponent from '../_component/SelectComponent'
 import SubmitButton from '../_component/SubmitButton'
 import { LOGIN } from '@/lib/routePath'
+import { submitForm } from '@/lib/helper'
+import { failedToastMessage, successToastMessage } from '@/lib/services'
 // import {page}  from '@/app/admin/page'
 const Login = () => {
   const form = useForm({
@@ -49,10 +50,10 @@ const Login = () => {
       const response = await submitForm(LOGIN, all_values,'POST');
       console.log(response?.success);
       if (response?.success) {
-        successtoastMessage("Successfully logged in");
+        successToastMessage("Successfully logged in");
         router.push('../admissions');
       } else {
-        failedtoastMessage("Invalid credentials");
+        failedToastMessage("Invalid credentials");
       }
     } catch (error) {
       console.error('Failed to login:', error);

@@ -67,7 +67,7 @@ const NavBar: React.FC<NavBarProps> = ({ open }) => {
             </div>
             {openDropDown === "academic" && (
               <>
-                <NavLink href="../department">Department</NavLink>
+                <NavLink href="../academic/department/">Department</NavLink>
                 <NavLink href="../course/">Course</NavLink>
                 <br />
                 <NavLink href="../subject/">Subject</NavLink>

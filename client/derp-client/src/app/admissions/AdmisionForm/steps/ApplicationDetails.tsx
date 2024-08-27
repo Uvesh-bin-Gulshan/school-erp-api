@@ -19,7 +19,21 @@ const ApplicationDetails = () => {
     <>
           <h1 className='text-lg  text-cyan-700 font-semibold '>
             Application Details</h1>
+            <div className='grid grid-cols-2 mx-24 gap-4'>
 
+              <FormField
+                name="lc_given"
+                control={control}
+                render={({ field }) => (
+                  <FormItem>
+                    <FormLabel>LC Given</FormLabel>
+                    <FormControl>
+                      <Checkbox {...field} />
+                    </FormControl>
+                    <FormMessage />
+                  </FormItem>
+                )}
+              />
       <FormField
         name="applied_for"
         control={control}
@@ -28,19 +42,6 @@ const ApplicationDetails = () => {
             <FormLabel>Applied For</FormLabel>
             <FormControl>
               <Input {...field} type="text" />
-            </FormControl>
-            <FormMessage />
-          </FormItem>
-        )}
-      />
-      <FormField
-        name="lc_given"
-        control={control}
-        render={({ field }) => (
-          <FormItem>
-            <FormLabel>LC Given</FormLabel>
-            <FormControl>
-              <Checkbox {...field} />
             </FormControl>
             <FormMessage />
           </FormItem>
@@ -115,6 +116,7 @@ const ApplicationDetails = () => {
           </FormItem>
         )}
       />
+      </div>
     </>
   )
 }

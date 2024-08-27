@@ -1,9 +1,13 @@
 from django.shortcuts import render
+
+from helpers import BaseImportView
 from .models import Admission, Student, Alumni
 from .serializers import AdmissionSerializer, StudentSerializer, AlumniSerializer
 from rest_framework import viewsets
 from rest_framework import status
 from rest_framework.response import Response
+from .resource   import AdmissionResource
+from tablib import Dataset
 
 
 class AdmissionView(viewsets.ViewSet):
@@ -124,3 +128,7 @@ class AlumniView(viewsets.ViewSet):
             return Response(status=status.HTTP_404_NOT_FOUND)
         alumni.delete()
         return Response(status=status.HTTP_204_NO_CONTENT)
+    
+
+class AdmissionImportView(BaseImportView):
+    resource_class = AdmissionResource
