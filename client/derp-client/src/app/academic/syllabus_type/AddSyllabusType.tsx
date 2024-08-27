@@ -15,14 +15,18 @@ import {
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from '@/components/ui/form'
 import { Input } from '@/components/ui/input'
 import { Button } from '@/components/ui/button'
-import { syllabusSchema } from '@/lib/zodschema'
-import { CREATE_SYLLABUS } from '@/lib/routePath'
 import { Plus } from 'lucide-react'
+import { submitForm } from '@/lib/helper'
+import { failedToastMessage, successToastMessage } from '@/lib/client-helpers'
+import { FormInput } from '@/app/_component/FormInput'
+import SubmitButton from '@/app/_component/SubmitButton'
+import { SyllabusTypeSchema } from '@/lib/zodschema'
+import { CREATE_SYLLABUS_TYPE } from '@/lib/routePath'
 
 const AddSyllabus = () => {
   const router = useRouter();
   const form = useForm({
-    resolver: zodResolver(syllabusSchema),
+    resolver: zodResolver(SyllabusTypeSchema),
     defaultValues: {
       title: "",
       description: "",
@@ -33,7 +37,7 @@ const AddSyllabus = () => {
     event.preventDefault();
     const all_values = form.getValues();
     try {
-      const response = await submitForm(CREATE_SYLLABUS, all_values, 'POST');
+      const response = await submitForm(CREATE_SYLLABUS_TYPE, all_values, 'POST');
       if (response?.success) {
         successToastMessage("Syllabus successfully created");
       } else {

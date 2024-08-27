@@ -14,16 +14,18 @@ import {
 import { Form, FormControl, FormField, FormItem, FormMessage } from '@/components/ui/form'
 import { Input } from '@/components/ui/input'
 import { Button } from '@/components/ui/button'
-import { syllabusTypeSchema } from '@/lib/zodschema'
-import { submitForm, successtoastMessage, failedtoastMessage } from '@/lib/services'
-import { FormInput } from '../_component/FormInput'
-import SubmitButton from '../_component/SubmitButton'
+
 import { UPDATE_SYLLABUS_TYPE } from '@/lib/routePath'
 import { MdModeEdit } from 'react-icons/md'
+import { failedToastMessage, successToastMessage } from '@/lib/client-helpers'
+import { submitForm } from '@/lib/helper'
+import { FormInput } from '@/app/_component/FormInput'
+import SubmitButton from '@/app/_component/SubmitButton'
+import { SyllabusTypeSchema } from '@/lib/zodschema'
 
 const UpdateSyllabusType = ({ syllabusType }: { syllabusType: any }) => {
   const form = useForm({
-    resolver: zodResolver(syllabusTypeSchema),
+    resolver: zodResolver(SyllabusTypeSchema),
     defaultValues: {
       name: syllabusType.name,
     }
@@ -35,9 +37,9 @@ const UpdateSyllabusType = ({ syllabusType }: { syllabusType: any }) => {
     try {
       const response = await submitForm(`${UPDATE_SYLLABUS_TYPE}/${syllabusType.type_id}/`, all_values, 'PUT');
       if (response?.success) {
-        successtoastMessage("Successfully updated");
+        successToastMessage("Successfully updated");
       } else {
-        failedtoastMessage("Update failed");
+        failedToastMessage("Update failed");
       }
     } catch (error) {
       console.error('Failed to update Syllabus Type:', error);

@@ -57,3 +57,12 @@ export const syllabusStatusSchema = z.object({
   approved_date: z.string(), // DateTime should be in ISO 8601 format as a string
 });
 
+export const SyllabusTypeSchema = z.object({
+    type_id: z.string().max(6),
+    name: z.string().max(50),
+  });
+  
+  // Define a TypeScript type based on the schema
+  export type SyllabusType = z.infer<typeof SyllabusTypeSchema>;
+
+  

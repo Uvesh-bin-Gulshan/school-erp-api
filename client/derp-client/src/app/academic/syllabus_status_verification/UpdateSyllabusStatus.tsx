@@ -18,10 +18,10 @@ import { Button } from '@/components/ui/button'
 import { syllabusStatusSchema } from '@/lib/zodschema'
 import { UPDATE_SYLLABUS_STATUS_VERIFICATION } from '@/lib/routePath'
 import { MdModeEdit } from 'react-icons/md'
-import { failedToastMessage, successToastMessage } from '@/lib/services'
 import { submitForm } from '@/lib/helper'
 import { FormInput } from '@/app/_component/FormInput'
 import SubmitButton from '@/app/_component/SubmitButton'
+import { failedToastMessage, successToastMessage } from '@/lib/client-helpers'
 
 const UpdateSyllabusStatus = ({ syllabusStatus }: { syllabusStatus: any }) => {
   const router = useRouter();

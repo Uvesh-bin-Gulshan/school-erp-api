@@ -1,9 +1,10 @@
 import React from 'react'
 import ViewSyllabusType from './ViewSyllabusType'
-import { getSyllabusTypeList } from '@/lib/services'
 import AddSyllabusType from './AddSyllabusType'
 import Sidebar from '@/app/_component/SideBar'
 import { BreadcrumbWithCustomSeparator } from '@/app/_component/BreadCrumb'
+import SideBar from '@/app/_component/SideBar'
+import { getSyllabusTypeList } from '@/lib/services'
 
 const items = [
   { href: "/", label: "Home" },
@@ -17,7 +18,7 @@ const Page = async () => {
   
   return (
     <>
-      <Sidebar>
+      <SideBar breadcrumbs={items}>
         <div className=''>
           <BreadcrumbWithCustomSeparator items={items} separator={<span> :: </span>} />
         </div>
@@ -26,7 +27,7 @@ const Page = async () => {
           <AddSyllabusType />
           <ViewSyllabusType data={data} />
         </div>
-      </Sidebar>
+      </SideBar>
     </>
   )
 }

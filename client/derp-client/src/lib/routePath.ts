@@ -45,3 +45,11 @@ export const CREATE_SYLLABUS_STATUS_VERIFICATION=`${BASE_HOST}academic/verificat
 export const UPDATE_SYLLABUS_STATUS_VERIFICATION=`${BASE_HOST}academic/verification/update`
 export const RETRIEVE_SYLLABUS_STATUS_VERIFICATION=`${BASE_HOST}academic/verification/retrieve`
 export const DELETE_SYLLABUS_STATUS_VERIFICATION=`${BASE_HOST}academic/verification/delete`
+
+
+// Route paths for `SyllabusType`
+export const SYLLABUS_TYPE_LIST = `${BASE_HOST}syllabustype/list/`;
+export const CREATE_SYLLABUS_TYPE = `${BASE_HOST}syllabustype/create/`;
+export const RETRIEVE_SYLLABUS_TYPE = `${BASE_HOST}syllabustype/retrieve/`;
+export const UPDATE_SYLLABUS_TYPE = `${BASE_HOST}syllabustype/update/`;
+export const DELETE_SYLLABUS_TYPE = `${BASE_HOST}syllabustype/delete/`;
