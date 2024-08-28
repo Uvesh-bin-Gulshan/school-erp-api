@@ -47,9 +47,24 @@ export const RETRIEVE_SYLLABUS_STATUS_VERIFICATION=`${BASE_HOST}academic/verific
 export const DELETE_SYLLABUS_STATUS_VERIFICATION=`${BASE_HOST}academic/verification/delete`
 
 
-// Route paths for `SyllabusType`
+// SyllabusType
 export const SYLLABUS_TYPE_LIST = `${BASE_HOST}syllabustype/list/`;
 export const CREATE_SYLLABUS_TYPE = `${BASE_HOST}syllabustype/create/`;
 export const RETRIEVE_SYLLABUS_TYPE = `${BASE_HOST}syllabustype/retrieve/`;
 export const UPDATE_SYLLABUS_TYPE = `${BASE_HOST}syllabustype/update/`;
 export const DELETE_SYLLABUS_TYPE = `${BASE_HOST}syllabustype/delete/`;
+
+// Route paths for `TimeTable`
+export const TIMETABLE_LIST = `${BASE_HOST}timetable/list/`;
+export const CREATE_TIMETABLE = `${BASE_HOST}timetable/create/`;
+export const RETRIEVE_TIMETABLE = `${BASE_HOST}timetable/retrieve/`;
+export const UPDATE_TIMETABLE = `${BASE_HOST}timetable/update/`;
+export const DELETE_TIMETABLE = `${BASE_HOST}timetable/delete/`;
+
+// Vacation Period
+export const VACATION_PERIOD_LIST = `${BASE_HOST}vacationperiod/list`;
+export const CREATE_VACATION_PERIOD = `${BASE_HOST}vacationperiod/create`;
+export const RETRIEVE_VACATION_PERIOD = `${BASE_HOST}vacationperiod/retrieve`;
+export const UPDATE_VACATION_PERIOD = `${BASE_HOST}vacationperiod/update`;
+export const DELETE_VACATION_PERIOD = `${BASE_HOST}vacationperiod/delete`;
+

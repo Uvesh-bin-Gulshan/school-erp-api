@@ -3,9 +3,9 @@ import { ColumnDef } from "@tanstack/react-table";
 import { ArrowUpDown } from "lucide-react";
 import UpdateTimeTable from "./UpdateTimeTable";
 import { AiFillDelete } from "react-icons/ai";
-import DeleteButtom from "../_component/DeleteButtom";
-import { DELETE_TIME_TABLE, RETRIEVE_TIME_TABLE } from "@/lib/routePath";
-import RetrieveDetail from "../_component/RetriveDetail";
+import DeleteButton from "@/app/_component/DeleteButton";
+import RetrieveDetail from "@/app/_component/RetriveDetail";
+import { DELETE_TIMETABLE, RETRIEVE_TIMETABLE } from "@/lib/routePath";
 
 export type TimeTable = {
   time_table_id: string;
@@ -58,14 +58,14 @@ export const columns: ColumnDef<TimeTable>[] = [
 
       return (
         <div className="flex items-center space-x-2">
-          <RetrieveDetail 
+          {/* <RetrieveDetail 
             id={timeTable.time_table_id} 
-            endpoint={`${RETRIEVE_TIME_TABLE}`}
+            endpoint={`${RETRIEVE_TIMETABLE}`}
             onSuccess={handleSuccess}
-          />
-          <DeleteButtom 
+          /> */}
+          <DeleteButton
             id={timeTable.time_table_id} 
-            endpoint={`${DELETE_TIME_TABLE}`}
+            endpoint={`${DELETE_TIMETABLE}`}
             onSuccess={handleSuccess}
           />
         </div>

@@ -1,9 +1,9 @@
 import React from 'react'
 import ViewTimeTable from './ViewTimeTable'
-import { getTimeTableList } from '@/lib/services'
 import AddTimeTable from './AddTimeTable'
 import Sidebar from '@/app/_component/SideBar'
 import { BreadcrumbWithCustomSeparator } from '@/app/_component/BreadCrumb'
+import { getTimeTableList } from '@/lib/services'
 
 const items = [
   { href: "/", label: "Home" },
@@ -17,7 +17,7 @@ const Page = async () => {
   
   return (
     <>
-      <Sidebar>
+      <Sidebar  breadcrumbs={items}>
         <div className=''>
           <BreadcrumbWithCustomSeparator items={items} separator={<span> :: </span>} />
         </div>
