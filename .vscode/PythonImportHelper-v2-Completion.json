@@ -1,5 +1,30 @@
 [
     {
+        "label": "json",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "json",
+        "description": "json",
+        "detail": "json",
+        "documentation": {}
+    },
+    {
+        "label": "stringify",
+        "importPath": "flatted",
+        "description": "flatted",
+        "isExtraImport": true,
+        "detail": "flatted",
+        "documentation": {}
+    },
+    {
+        "label": "parse",
+        "importPath": "flatted",
+        "description": "flatted",
+        "isExtraImport": true,
+        "detail": "flatted",
+        "documentation": {}
+    },
+    {
         "label": "academic.models",
         "kind": 6,
         "isExtraImport": true,
@@ -338,6 +363,14 @@
         "documentation": {}
     },
     {
+        "label": "ImportExportModelAdmin",
+        "importPath": "import_export.admin",
+        "description": "import_export.admin",
+        "isExtraImport": true,
+        "detail": "import_export.admin",
+        "documentation": {}
+    },
+    {
         "label": "AppConfig",
         "importPath": "django.apps",
         "description": "django.apps",
@@ -434,14 +467,6 @@
         "documentation": {}
     },
     {
-        "label": "APIViews",
-        "importPath": "rest_framework.views",
-        "description": "rest_framework.views",
-        "isExtraImport": true,
-        "detail": "rest_framework.views",
-        "documentation": {}
-    },
-    {
         "label": "APIView",
         "importPath": "rest_framework.views",
         "description": "rest_framework.views",
@@ -471,6 +496,38 @@
         "description": "rest_framework.views",
         "isExtraImport": true,
         "detail": "rest_framework.views",
+        "documentation": {}
+    },
+    {
+        "label": "APIView",
+        "importPath": "rest_framework.views",
+        "description": "rest_framework.views",
+        "isExtraImport": true,
+        "detail": "rest_framework.views",
+        "documentation": {}
+    },
+    {
+        "label": "APIView",
+        "importPath": "rest_framework.views",
+        "description": "rest_framework.views",
+        "isExtraImport": true,
+        "detail": "rest_framework.views",
+        "documentation": {}
+    },
+    {
+        "label": "Response",
+        "importPath": "rest_framework.response",
+        "description": "rest_framework.response",
+        "isExtraImport": true,
+        "detail": "rest_framework.response",
+        "documentation": {}
+    },
+    {
+        "label": "Response",
+        "importPath": "rest_framework.response",
+        "description": "rest_framework.response",
+        "isExtraImport": true,
+        "detail": "rest_framework.response",
         "documentation": {}
     },
     {
@@ -995,6 +1052,14 @@
         "documentation": {}
     },
     {
+        "label": "viewsets",
+        "importPath": "rest_framework",
+        "description": "rest_framework",
+        "isExtraImport": true,
+        "detail": "rest_framework",
+        "documentation": {}
+    },
+    {
         "label": "serializers",
         "importPath": "rest_framework",
         "description": "rest_framework",
@@ -1004,6 +1069,14 @@
     },
     {
         "label": "viewsets",
+        "importPath": "rest_framework",
+        "description": "rest_framework",
+        "isExtraImport": true,
+        "detail": "rest_framework",
+        "documentation": {}
+    },
+    {
+        "label": "status",
         "importPath": "rest_framework",
         "description": "rest_framework",
         "isExtraImport": true,
@@ -1316,6 +1389,78 @@
         "documentation": {}
     },
     {
+        "label": "resources",
+        "importPath": "import_export",
+        "description": "import_export",
+        "isExtraImport": true,
+        "detail": "import_export",
+        "documentation": {}
+    },
+    {
+        "label": "fields",
+        "importPath": "import_export",
+        "description": "import_export",
+        "isExtraImport": true,
+        "detail": "import_export",
+        "documentation": {}
+    },
+    {
+        "label": "resources",
+        "importPath": "import_export",
+        "description": "import_export",
+        "isExtraImport": true,
+        "detail": "import_export",
+        "documentation": {}
+    },
+    {
+        "label": "resources",
+        "importPath": "import_export",
+        "description": "import_export",
+        "isExtraImport": true,
+        "detail": "import_export",
+        "documentation": {}
+    },
+    {
+        "label": "fields",
+        "importPath": "import_export",
+        "description": "import_export",
+        "isExtraImport": true,
+        "detail": "import_export",
+        "documentation": {}
+    },
+    {
+        "label": "format_html",
+        "importPath": "django.utils.html",
+        "description": "django.utils.html",
+        "isExtraImport": true,
+        "detail": "django.utils.html",
+        "documentation": {}
+    },
+    {
+        "label": "BaseImportView",
+        "importPath": "helpers",
+        "description": "helpers",
+        "isExtraImport": true,
+        "detail": "helpers",
+        "documentation": {}
+    },
+    {
+        "label": "Dataset",
+        "importPath": "tablib",
+        "description": "tablib",
+        "isExtraImport": true,
+        "detail": "tablib",
+        "documentation": {}
+    },
+    {
+        "label": "Dataset",
+        "importPath": "tablib",
+        "description": "tablib",
+        "isExtraImport": true,
+        "detail": "tablib",
+        "documentation": {}
+    },
+    {
         "label": "attendance.models",
         "kind": 6,
         "isExtraImport": true,
@@ -1325,11 +1470,19 @@
         "documentation": {}
     },
     {
-        "label": "Response",
-        "importPath": "rest_framwork.response",
-        "description": "rest_framwork.response",
+        "label": "Attendance",
+        "importPath": "attendance.models",
+        "description": "attendance.models",
         "isExtraImport": true,
-        "detail": "rest_framwork.response",
+        "detail": "attendance.models",
+        "documentation": {}
+    },
+    {
+        "label": "FingerRecord",
+        "importPath": "attendance.models",
+        "description": "attendance.models",
+        "isExtraImport": true,
+        "detail": "attendance.models",
         "documentation": {}
     },
     {
@@ -1466,22 +1619,6 @@
         "documentation": {}
     },
     {
-        "label": "resources",
-        "importPath": "import_export",
-        "description": "import_export",
-        "isExtraImport": true,
-        "detail": "import_export",
-        "documentation": {}
-    },
-    {
-        "label": "fields",
-        "importPath": "import_export",
-        "description": "import_export",
-        "isExtraImport": true,
-        "detail": "import_export",
-        "documentation": {}
-    },
-    {
         "label": "django.contrib.auth.models",
         "kind": 6,
         "isExtraImport": true,
@@ -1573,12 +1710,191 @@
         "documentation": {}
     },
     {
+        "label": "ModelResource",
+        "importPath": "import_export.resources",
+        "description": "import_export.resources",
+        "isExtraImport": true,
+        "detail": "import_export.resources",
+        "documentation": {}
+    },
+    {
         "label": "sys",
         "kind": 6,
         "isExtraImport": true,
         "importPath": "sys",
         "description": "sys",
         "detail": "sys",
+        "documentation": {}
+    },
+    {
+        "label": "_Known",
+        "kind": 6,
+        "importPath": "client.derp-client.node_modules.flatted.python.flatted",
+        "description": "client.derp-client.node_modules.flatted.python.flatted",
+        "peekOfCode": "class _Known:\n    def __init__(self):\n        self.key = []\n        self.value = []\nclass _String:\n    def __init__(self, value):\n        self.value = value\ndef _array_keys(value):\n    keys = []\n    i = 0",
+        "detail": "client.derp-client.node_modules.flatted.python.flatted",
+        "documentation": {}
+    },
+    {
+        "label": "_String",
+        "kind": 6,
+        "importPath": "client.derp-client.node_modules.flatted.python.flatted",
+        "description": "client.derp-client.node_modules.flatted.python.flatted",
+        "peekOfCode": "class _String:\n    def __init__(self, value):\n        self.value = value\ndef _array_keys(value):\n    keys = []\n    i = 0\n    for _ in value:\n        keys.append(i)\n        i += 1\n    return keys",
+        "detail": "client.derp-client.node_modules.flatted.python.flatted",
+        "documentation": {}
+    },
+    {
+        "label": "parse",
+        "kind": 2,
+        "importPath": "client.derp-client.node_modules.flatted.python.flatted",
+        "description": "client.derp-client.node_modules.flatted.python.flatted",
+        "peekOfCode": "def parse(value, *args, **kwargs):\n    json = _json.loads(value, *args, **kwargs)\n    wrapped = []\n    for value in json:\n        wrapped.append(_wrap(value))\n    input = []\n    for value in wrapped:\n        if isinstance(value, _String):\n            input.append(value.value)\n        else:",
+        "detail": "client.derp-client.node_modules.flatted.python.flatted",
+        "documentation": {}
+    },
+    {
+        "label": "stringify",
+        "kind": 2,
+        "importPath": "client.derp-client.node_modules.flatted.python.flatted",
+        "description": "client.derp-client.node_modules.flatted.python.flatted",
+        "peekOfCode": "def stringify(value, *args, **kwargs):\n    known = _Known()\n    input = []\n    output = []\n    i = int(_index(known, input, value))\n    while i < len(input):\n        output.append(_transform(known, input, input[i]))\n        i += 1\n    return _json.dumps(output, *args, **kwargs)",
+        "detail": "client.derp-client.node_modules.flatted.python.flatted",
+        "documentation": {}
+    },
+    {
+        "label": "stringify",
+        "kind": 2,
+        "importPath": "client.derp-client.node_modules.flatted.python.test",
+        "description": "client.derp-client.node_modules.flatted.python.test",
+        "peekOfCode": "def stringify(value):\n    return _stringify(value, separators=(',', ':'))\nassert stringify([None, None]) == '[[null,null]]'\na = []\no = {}\nassert stringify(a) == '[[]]'\nassert stringify(o) == '[{}]'\na.append(a)\no['o'] = o\nassert stringify(a) == '[[\"0\"]]'",
+        "detail": "client.derp-client.node_modules.flatted.python.test",
+        "documentation": {}
+    },
+    {
+        "label": "a",
+        "kind": 5,
+        "importPath": "client.derp-client.node_modules.flatted.python.test",
+        "description": "client.derp-client.node_modules.flatted.python.test",
+        "peekOfCode": "a = []\no = {}\nassert stringify(a) == '[[]]'\nassert stringify(o) == '[{}]'\na.append(a)\no['o'] = o\nassert stringify(a) == '[[\"0\"]]'\nassert stringify(o) == '[{\"o\":\"0\"}]'\nb = parse(stringify(a))\nassert isinstance(b, list) and b[0] == b",
+        "detail": "client.derp-client.node_modules.flatted.python.test",
+        "documentation": {}
+    },
+    {
+        "label": "o",
+        "kind": 5,
+        "importPath": "client.derp-client.node_modules.flatted.python.test",
+        "description": "client.derp-client.node_modules.flatted.python.test",
+        "peekOfCode": "o = {}\nassert stringify(a) == '[[]]'\nassert stringify(o) == '[{}]'\na.append(a)\no['o'] = o\nassert stringify(a) == '[[\"0\"]]'\nassert stringify(o) == '[{\"o\":\"0\"}]'\nb = parse(stringify(a))\nassert isinstance(b, list) and b[0] == b\na.append(1)",
+        "detail": "client.derp-client.node_modules.flatted.python.test",
+        "documentation": {}
+    },
+    {
+        "label": "o['o']",
+        "kind": 5,
+        "importPath": "client.derp-client.node_modules.flatted.python.test",
+        "description": "client.derp-client.node_modules.flatted.python.test",
+        "peekOfCode": "o['o'] = o\nassert stringify(a) == '[[\"0\"]]'\nassert stringify(o) == '[{\"o\":\"0\"}]'\nb = parse(stringify(a))\nassert isinstance(b, list) and b[0] == b\na.append(1)\na.append('two')\na.append(True)\no['one'] = 1\no['two'] = 'two'",
+        "detail": "client.derp-client.node_modules.flatted.python.test",
+        "documentation": {}
+    },
+    {
+        "label": "b",
+        "kind": 5,
+        "importPath": "client.derp-client.node_modules.flatted.python.test",
+        "description": "client.derp-client.node_modules.flatted.python.test",
+        "peekOfCode": "b = parse(stringify(a))\nassert isinstance(b, list) and b[0] == b\na.append(1)\na.append('two')\na.append(True)\no['one'] = 1\no['two'] = 'two'\no['three'] = True\nassert stringify(a) == '[[\"0\",1,\"1\",true],\"two\"]'\nassert stringify(o) == '[{\"o\":\"0\",\"one\":1,\"two\":\"1\",\"three\":true},\"two\"]'",
+        "detail": "client.derp-client.node_modules.flatted.python.test",
+        "documentation": {}
+    },
+    {
+        "label": "o['one']",
+        "kind": 5,
+        "importPath": "client.derp-client.node_modules.flatted.python.test",
+        "description": "client.derp-client.node_modules.flatted.python.test",
+        "peekOfCode": "o['one'] = 1\no['two'] = 'two'\no['three'] = True\nassert stringify(a) == '[[\"0\",1,\"1\",true],\"two\"]'\nassert stringify(o) == '[{\"o\":\"0\",\"one\":1,\"two\":\"1\",\"three\":true},\"two\"]'\na.append(o)\no['a'] = a\nassert stringify(a) == '[[\"0\",1,\"1\",true,\"2\"],\"two\",{\"o\":\"2\",\"one\":1,\"two\":\"1\",\"three\":true,\"a\":\"0\"}]'\nassert stringify(o) == '[{\"o\":\"0\",\"one\":1,\"two\":\"1\",\"three\":true,\"a\":\"2\"},\"two\",[\"2\",1,\"1\",true,\"0\"]]'\na.append({'test': 'OK'})",
+        "detail": "client.derp-client.node_modules.flatted.python.test",
+        "documentation": {}
+    },
+    {
+        "label": "o['two']",
+        "kind": 5,
+        "importPath": "client.derp-client.node_modules.flatted.python.test",
+        "description": "client.derp-client.node_modules.flatted.python.test",
+        "peekOfCode": "o['two'] = 'two'\no['three'] = True\nassert stringify(a) == '[[\"0\",1,\"1\",true],\"two\"]'\nassert stringify(o) == '[{\"o\":\"0\",\"one\":1,\"two\":\"1\",\"three\":true},\"two\"]'\na.append(o)\no['a'] = a\nassert stringify(a) == '[[\"0\",1,\"1\",true,\"2\"],\"two\",{\"o\":\"2\",\"one\":1,\"two\":\"1\",\"three\":true,\"a\":\"0\"}]'\nassert stringify(o) == '[{\"o\":\"0\",\"one\":1,\"two\":\"1\",\"three\":true,\"a\":\"2\"},\"two\",[\"2\",1,\"1\",true,\"0\"]]'\na.append({'test': 'OK'})\na.append([1, 2, 3])",
+        "detail": "client.derp-client.node_modules.flatted.python.test",
+        "documentation": {}
+    },
+    {
+        "label": "o['three']",
+        "kind": 5,
+        "importPath": "client.derp-client.node_modules.flatted.python.test",
+        "description": "client.derp-client.node_modules.flatted.python.test",
+        "peekOfCode": "o['three'] = True\nassert stringify(a) == '[[\"0\",1,\"1\",true],\"two\"]'\nassert stringify(o) == '[{\"o\":\"0\",\"one\":1,\"two\":\"1\",\"three\":true},\"two\"]'\na.append(o)\no['a'] = a\nassert stringify(a) == '[[\"0\",1,\"1\",true,\"2\"],\"two\",{\"o\":\"2\",\"one\":1,\"two\":\"1\",\"three\":true,\"a\":\"0\"}]'\nassert stringify(o) == '[{\"o\":\"0\",\"one\":1,\"two\":\"1\",\"three\":true,\"a\":\"2\"},\"two\",[\"2\",1,\"1\",true,\"0\"]]'\na.append({'test': 'OK'})\na.append([1, 2, 3])\no['test'] = {'test': 'OK'}",
+        "detail": "client.derp-client.node_modules.flatted.python.test",
+        "documentation": {}
+    },
+    {
+        "label": "o['a']",
+        "kind": 5,
+        "importPath": "client.derp-client.node_modules.flatted.python.test",
+        "description": "client.derp-client.node_modules.flatted.python.test",
+        "peekOfCode": "o['a'] = a\nassert stringify(a) == '[[\"0\",1,\"1\",true,\"2\"],\"two\",{\"o\":\"2\",\"one\":1,\"two\":\"1\",\"three\":true,\"a\":\"0\"}]'\nassert stringify(o) == '[{\"o\":\"0\",\"one\":1,\"two\":\"1\",\"three\":true,\"a\":\"2\"},\"two\",[\"2\",1,\"1\",true,\"0\"]]'\na.append({'test': 'OK'})\na.append([1, 2, 3])\no['test'] = {'test': 'OK'}\no['array'] = [1, 2, 3]\nassert stringify(a) == '[[\"0\",1,\"1\",true,\"2\",\"3\",\"4\"],\"two\",{\"o\":\"2\",\"one\":1,\"two\":\"1\",\"three\":true,\"a\":\"0\",\"test\":\"3\",\"array\":\"4\"},{\"test\":\"5\"},[1,2,3],\"OK\"]'\nassert stringify(o) == '[{\"o\":\"0\",\"one\":1,\"two\":\"1\",\"three\":true,\"a\":\"2\",\"test\":\"3\",\"array\":\"4\"},\"two\",[\"2\",1,\"1\",true,\"0\",\"3\",\"4\"],{\"test\":\"5\"},[1,2,3],\"OK\"]'\na2 = parse(stringify(a));",
+        "detail": "client.derp-client.node_modules.flatted.python.test",
+        "documentation": {}
+    },
+    {
+        "label": "o['test']",
+        "kind": 5,
+        "importPath": "client.derp-client.node_modules.flatted.python.test",
+        "description": "client.derp-client.node_modules.flatted.python.test",
+        "peekOfCode": "o['test'] = {'test': 'OK'}\no['array'] = [1, 2, 3]\nassert stringify(a) == '[[\"0\",1,\"1\",true,\"2\",\"3\",\"4\"],\"two\",{\"o\":\"2\",\"one\":1,\"two\":\"1\",\"three\":true,\"a\":\"0\",\"test\":\"3\",\"array\":\"4\"},{\"test\":\"5\"},[1,2,3],\"OK\"]'\nassert stringify(o) == '[{\"o\":\"0\",\"one\":1,\"two\":\"1\",\"three\":true,\"a\":\"2\",\"test\":\"3\",\"array\":\"4\"},\"two\",[\"2\",1,\"1\",true,\"0\",\"3\",\"4\"],{\"test\":\"5\"},[1,2,3],\"OK\"]'\na2 = parse(stringify(a));\no2 = parse(stringify(o));\nassert a2[0] == a2\nassert o2['o'] == o2\nassert a2[1] == 1 and a2[2] == 'two' and a2[3] == True and isinstance(a2[4], dict)\nassert a2[4] == a2[4]['o'] and a2 == a2[4]['o']['a']",
+        "detail": "client.derp-client.node_modules.flatted.python.test",
+        "documentation": {}
+    },
+    {
+        "label": "o['array']",
+        "kind": 5,
+        "importPath": "client.derp-client.node_modules.flatted.python.test",
+        "description": "client.derp-client.node_modules.flatted.python.test",
+        "peekOfCode": "o['array'] = [1, 2, 3]\nassert stringify(a) == '[[\"0\",1,\"1\",true,\"2\",\"3\",\"4\"],\"two\",{\"o\":\"2\",\"one\":1,\"two\":\"1\",\"three\":true,\"a\":\"0\",\"test\":\"3\",\"array\":\"4\"},{\"test\":\"5\"},[1,2,3],\"OK\"]'\nassert stringify(o) == '[{\"o\":\"0\",\"one\":1,\"two\":\"1\",\"three\":true,\"a\":\"2\",\"test\":\"3\",\"array\":\"4\"},\"two\",[\"2\",1,\"1\",true,\"0\",\"3\",\"4\"],{\"test\":\"5\"},[1,2,3],\"OK\"]'\na2 = parse(stringify(a));\no2 = parse(stringify(o));\nassert a2[0] == a2\nassert o2['o'] == o2\nassert a2[1] == 1 and a2[2] == 'two' and a2[3] == True and isinstance(a2[4], dict)\nassert a2[4] == a2[4]['o'] and a2 == a2[4]['o']['a']\nstr = parse('[{\"prop\":\"1\",\"a\":\"2\",\"b\":\"3\"},{\"value\":123},[\"4\",\"5\"],{\"e\":\"6\",\"t\":\"7\",\"p\":4},{},{\"b\":\"8\"},\"f\",{\"a\":\"9\"},[\"10\"],\"sup\",{\"a\":1,\"d\":2,\"c\":\"7\",\"z\":\"11\",\"h\":1},{\"g\":2,\"a\":\"7\",\"b\":\"12\",\"f\":6},{\"r\":4,\"u\":\"7\",\"c\":5}]')",
+        "detail": "client.derp-client.node_modules.flatted.python.test",
+        "documentation": {}
+    },
+    {
+        "label": "a2",
+        "kind": 5,
+        "importPath": "client.derp-client.node_modules.flatted.python.test",
+        "description": "client.derp-client.node_modules.flatted.python.test",
+        "peekOfCode": "a2 = parse(stringify(a));\no2 = parse(stringify(o));\nassert a2[0] == a2\nassert o2['o'] == o2\nassert a2[1] == 1 and a2[2] == 'two' and a2[3] == True and isinstance(a2[4], dict)\nassert a2[4] == a2[4]['o'] and a2 == a2[4]['o']['a']\nstr = parse('[{\"prop\":\"1\",\"a\":\"2\",\"b\":\"3\"},{\"value\":123},[\"4\",\"5\"],{\"e\":\"6\",\"t\":\"7\",\"p\":4},{},{\"b\":\"8\"},\"f\",{\"a\":\"9\"},[\"10\"],\"sup\",{\"a\":1,\"d\":2,\"c\":\"7\",\"z\":\"11\",\"h\":1},{\"g\":2,\"a\":\"7\",\"b\":\"12\",\"f\":6},{\"r\":4,\"u\":\"7\",\"c\":5}]')\nassert str['b']['t']['a'] == 'sup' and str['a'][1]['b'][0]['c'] == str['b']['t']\noo = parse('[{\"a\":\"1\",\"b\":\"0\",\"c\":\"2\"},{\"aa\":\"3\"},{\"ca\":\"4\",\"cb\":\"5\",\"cc\":\"6\",\"cd\":\"7\",\"ce\":\"8\",\"cf\":\"9\"},{\"aaa\":\"10\"},{\"caa\":\"4\"},{\"cba\":\"5\"},{\"cca\":\"2\"},{\"cda\":\"4\"},\"value2\",\"value3\",\"value1\"]');\nassert oo['a']['aa']['aaa'] == 'value1' and oo == oo['b'] and oo['c']['ca']['caa'] == oo['c']['ca']",
+        "detail": "client.derp-client.node_modules.flatted.python.test",
+        "documentation": {}
+    },
+    {
+        "label": "o2",
+        "kind": 5,
+        "importPath": "client.derp-client.node_modules.flatted.python.test",
+        "description": "client.derp-client.node_modules.flatted.python.test",
+        "peekOfCode": "o2 = parse(stringify(o));\nassert a2[0] == a2\nassert o2['o'] == o2\nassert a2[1] == 1 and a2[2] == 'two' and a2[3] == True and isinstance(a2[4], dict)\nassert a2[4] == a2[4]['o'] and a2 == a2[4]['o']['a']\nstr = parse('[{\"prop\":\"1\",\"a\":\"2\",\"b\":\"3\"},{\"value\":123},[\"4\",\"5\"],{\"e\":\"6\",\"t\":\"7\",\"p\":4},{},{\"b\":\"8\"},\"f\",{\"a\":\"9\"},[\"10\"],\"sup\",{\"a\":1,\"d\":2,\"c\":\"7\",\"z\":\"11\",\"h\":1},{\"g\":2,\"a\":\"7\",\"b\":\"12\",\"f\":6},{\"r\":4,\"u\":\"7\",\"c\":5}]')\nassert str['b']['t']['a'] == 'sup' and str['a'][1]['b'][0]['c'] == str['b']['t']\noo = parse('[{\"a\":\"1\",\"b\":\"0\",\"c\":\"2\"},{\"aa\":\"3\"},{\"ca\":\"4\",\"cb\":\"5\",\"cc\":\"6\",\"cd\":\"7\",\"ce\":\"8\",\"cf\":\"9\"},{\"aaa\":\"10\"},{\"caa\":\"4\"},{\"cba\":\"5\"},{\"cca\":\"2\"},{\"cda\":\"4\"},\"value2\",\"value3\",\"value1\"]');\nassert oo['a']['aa']['aaa'] == 'value1' and oo == oo['b'] and oo['c']['ca']['caa'] == oo['c']['ca']\nprint('OK')",
+        "detail": "client.derp-client.node_modules.flatted.python.test",
+        "documentation": {}
+    },
+    {
+        "label": "str",
+        "kind": 5,
+        "importPath": "client.derp-client.node_modules.flatted.python.test",
+        "description": "client.derp-client.node_modules.flatted.python.test",
+        "peekOfCode": "str = parse('[{\"prop\":\"1\",\"a\":\"2\",\"b\":\"3\"},{\"value\":123},[\"4\",\"5\"],{\"e\":\"6\",\"t\":\"7\",\"p\":4},{},{\"b\":\"8\"},\"f\",{\"a\":\"9\"},[\"10\"],\"sup\",{\"a\":1,\"d\":2,\"c\":\"7\",\"z\":\"11\",\"h\":1},{\"g\":2,\"a\":\"7\",\"b\":\"12\",\"f\":6},{\"r\":4,\"u\":\"7\",\"c\":5}]')\nassert str['b']['t']['a'] == 'sup' and str['a'][1]['b'][0]['c'] == str['b']['t']\noo = parse('[{\"a\":\"1\",\"b\":\"0\",\"c\":\"2\"},{\"aa\":\"3\"},{\"ca\":\"4\",\"cb\":\"5\",\"cc\":\"6\",\"cd\":\"7\",\"ce\":\"8\",\"cf\":\"9\"},{\"aaa\":\"10\"},{\"caa\":\"4\"},{\"cba\":\"5\"},{\"cca\":\"2\"},{\"cda\":\"4\"},\"value2\",\"value3\",\"value1\"]');\nassert oo['a']['aa']['aaa'] == 'value1' and oo == oo['b'] and oo['c']['ca']['caa'] == oo['c']['ca']\nprint('OK')",
+        "detail": "client.derp-client.node_modules.flatted.python.test",
+        "documentation": {}
+    },
+    {
+        "label": "oo",
+        "kind": 5,
+        "importPath": "client.derp-client.node_modules.flatted.python.test",
+        "description": "client.derp-client.node_modules.flatted.python.test",
+        "peekOfCode": "oo = parse('[{\"a\":\"1\",\"b\":\"0\",\"c\":\"2\"},{\"aa\":\"3\"},{\"ca\":\"4\",\"cb\":\"5\",\"cc\":\"6\",\"cd\":\"7\",\"ce\":\"8\",\"cf\":\"9\"},{\"aaa\":\"10\"},{\"caa\":\"4\"},{\"cba\":\"5\"},{\"cca\":\"2\"},{\"cda\":\"4\"},\"value2\",\"value3\",\"value1\"]');\nassert oo['a']['aa']['aaa'] == 'value1' and oo == oo['b'] and oo['c']['ca']['caa'] == oo['c']['ca']\nprint('OK')",
+        "detail": "client.derp-client.node_modules.flatted.python.test",
         "documentation": {}
     },
     {
@@ -1784,7 +2100,7 @@
         "kind": 6,
         "importPath": "derp.academic.serializers",
         "description": "derp.academic.serializers",
-        "peekOfCode": "class MonthlySubjectSyllabusStatusSerializer(serializers.ModelSerializer):\n    class Meta:\n        model= MonthlySubjectSyllabusStatus\n        fields='__all__'\nclass SyllabusStatusVerificationSerializer(serializers.ModelSerializer):\n    class Meta:\n        model= SyllabusStatusVerification\n        fields='__all__'\nclass TimeTableSerializer(serializers.ModelSerializer):\n    class Meta:",
+        "peekOfCode": "class MonthlySubjectSyllabusStatusSerializer(serializers.ModelSerializer):\n    class Meta:\n        model= MonthlySubjectSyllabusStatus\n        fields='__all__'\nclass SyllabusStatusVerificationSerializer(serializers.ModelSerializer):\n    class Meta:\n        model= SyllabusStatusVerification\n        fields='__all__'\nclass SyllabusTypeSerializer(serializers.ModelSerializer):\n    class Meta:",
         "detail": "derp.academic.serializers",
         "documentation": {}
     },
@@ -1793,7 +2109,16 @@
         "kind": 6,
         "importPath": "derp.academic.serializers",
         "description": "derp.academic.serializers",
-        "peekOfCode": "class SyllabusStatusVerificationSerializer(serializers.ModelSerializer):\n    class Meta:\n        model= SyllabusStatusVerification\n        fields='__all__'\nclass TimeTableSerializer(serializers.ModelSerializer):\n    class Meta:\n        model= TimeTable\n        fields='__all__'\nclass VacationPeriodSerializer(serializers.ModelSerializer):\n    class Meta:",
+        "peekOfCode": "class SyllabusStatusVerificationSerializer(serializers.ModelSerializer):\n    class Meta:\n        model= SyllabusStatusVerification\n        fields='__all__'\nclass SyllabusTypeSerializer(serializers.ModelSerializer):\n    class Meta:\n        model = SyllabusType\n        fields = ['__all__']\nclass TimeTableSerializer(serializers.ModelSerializer):\n    class Meta:",
+        "detail": "derp.academic.serializers",
+        "documentation": {}
+    },
+    {
+        "label": "SyllabusTypeSerializer",
+        "kind": 6,
+        "importPath": "derp.academic.serializers",
+        "description": "derp.academic.serializers",
+        "peekOfCode": "class SyllabusTypeSerializer(serializers.ModelSerializer):\n    class Meta:\n        model = SyllabusType\n        fields = ['__all__']\nclass TimeTableSerializer(serializers.ModelSerializer):\n    class Meta:\n        model= TimeTable\n        fields='__all__'\nclass VacationPeriodSerializer(serializers.ModelSerializer):\n    class Meta:",
         "detail": "derp.academic.serializers",
         "documentation": {}
     },
@@ -1906,12 +2231,48 @@
         "documentation": {}
     },
     {
+        "label": "SyllabusTypeView",
+        "kind": 6,
+        "importPath": "derp.academic.views",
+        "description": "derp.academic.views",
+        "peekOfCode": "class SyllabusTypeView(viewsets.ViewSet):\n    def list(self, request):\n        queryset = SyllabusType.objects.all()\n        serializer = SyllabusTypeSerializer(queryset, many=True)\n        return Response(serializer.data)\n    def retrieve(self, request, pk):\n        try:\n            syllabus_type = SyllabusType.objects.get(pk=pk)\n        except SyllabusType.DoesNotExist:\n            return Response(status=status.HTTP_404_NOT_FOUND)",
+        "detail": "derp.academic.views",
+        "documentation": {}
+    },
+    {
         "label": "Migration",
         "kind": 6,
         "importPath": "derp.admission.migrations.0001_initial",
         "description": "derp.admission.migrations.0001_initial",
         "peekOfCode": "class Migration(migrations.Migration):\n    initial = True\n    dependencies = [\n        ('academic', '0001_initial'),\n    ]\n    operations = [\n        migrations.CreateModel(\n            name='Admission',\n            fields=[\n                ('id', models.CharField(editable=False, max_length=6, verbose_name=admission.models.shortuuid)),",
         "detail": "derp.admission.migrations.0001_initial",
+        "documentation": {}
+    },
+    {
+        "label": "AdmissionResource",
+        "kind": 6,
+        "importPath": "derp.admission.admin",
+        "description": "derp.admission.admin",
+        "peekOfCode": "class AdmissionResource(resources.ModelResource):\n    class Meta:\n        model = Admission\n        fields = [\n            'id', 'student_name', 'profile_image', 'applied_for', 'date_of_birth', \n            'state', 'district', 'locality', 'pincode', 'mobile_number', \n            'aadhar_number', 'previous_result_status', 'admission_status', \n            'previous_institution', 'previous_education', 'school_education', \n            'lc_given', 'pay_fees', 'fees_amount', 'required_donation', \n            'created_at', 'updated_at'",
+        "detail": "derp.admission.admin",
+        "documentation": {}
+    },
+    {
+        "label": "AdmissionAdmin",
+        "kind": 6,
+        "importPath": "derp.admission.admin",
+        "description": "derp.admission.admin",
+        "peekOfCode": "class AdmissionAdmin(ImportExportModelAdmin):\n    resource_class = AdmissionResource\n    list_display = [\n        'id', 'student_name', 'father_name', 'profile', 'applied_for', \n        'date_of_birth', 'state', 'district', 'locality', 'pincode', \n        'mobile_number', 'aadhar_number', 'previous_result_status', \n        'admission_status', 'previous_institution', 'previous_education', \n        'school_education', 'lc_given', 'pay_fees', 'fees_amount', \n        'required_donation', 'created_at', 'updated_at'\n    ]",
+        "detail": "derp.admission.admin",
+        "documentation": {}
+    },
+    {
+        "label": "StudentAdmin",
+        "kind": 6,
+        "importPath": "derp.admission.admin",
+        "description": "derp.admission.admin",
+        "peekOfCode": "class StudentAdmin(ImportExportModelAdmin):\n    list_display = ('get_student_name', 'profile', 'get_father_name', 'get_applied_for')\n    list_display_links = ['get_student_name']\n    search_fields = ('admission__student_name', 'admission__father_name')\n    list_filter = [\n        'admission__applied_for', 'admission__state', 'admission__district', \n        'admission__locality', 'admission__pincode', 'admission__previous_result_status', \n        'admission__admission_status', 'admission__previous_institution', \n        'admission__previous_education', 'admission__school_education', \n        'admission__lc_given', 'admission__pay_fees', 'admission__required_donation'",
+        "detail": "derp.admission.admin",
         "documentation": {}
     },
     {
@@ -1937,7 +2298,7 @@
         "kind": 6,
         "importPath": "derp.admission.dashboard",
         "description": "derp.admission.dashboard",
-        "peekOfCode": "class StudentDashboardView(APIView):\n    def get(self, request):\n        context = {\n            'total_students': self.get_total_students(),\n            'student_per_course': self.get_students_grouped_by('course__course_name'),  # Assuming course_name as field in Course model\n            'student_per_department': self.get_students_grouped_by('department__department_name'),  # Assuming department_name as field in Department model\n            'student_status_per_year': self.get_students_per_year(),\n            'student_status_distribution': self.get_students_grouped_by('student_status'),\n            'student_age_distribution': self.get_students_grouped_by_age(),\n            'student_per_city': self.get_students_grouped_by('admission__district'),  # Assuming district represents city",
+        "peekOfCode": "class StudentDashboardView(APIView):\n    def get(self, request):\n        context = {\n            'total_students': self.get_total_students(),\n            'student_per_course': self.get_students_grouped_by('course__name'), \n            'student_per_department': self.get_students_grouped_by('department__name'), \n            'student_status_per_year': self.get_students_per_year(),\n            'student_status_distribution': self.get_students_grouped_by('student_status'),\n            'student_age_distribution': self.get_students_grouped_by_age(),\n            'student_per_city': self.get_students_grouped_by('admission__district'),  ",
         "detail": "derp.admission.dashboard",
         "documentation": {}
     },
@@ -2005,6 +2366,15 @@
         "documentation": {}
     },
     {
+        "label": "AdmissionResource",
+        "kind": 6,
+        "importPath": "derp.admission.resource",
+        "description": "derp.admission.resource",
+        "peekOfCode": "class AdmissionResource(resources.ModelResource):\n    class Meta:\n        model = Admission\n        fields = [\n            'id', 'student_name', 'profile_image', 'applied_for', 'date_of_birth', \n            'state', 'district', 'locality', 'pincode', 'mobile_number', \n            'aadhar_number', 'previous_result_status', 'admission_status', \n            'previous_institution', 'previous_education', 'school_education', \n            'lc_given', 'pay_fees', 'fees_amount', 'required_donation', \n            'created_at', 'updated_at'",
+        "detail": "derp.admission.resource",
+        "documentation": {}
+    },
+    {
         "label": "AdmissionSerializer",
         "kind": 6,
         "importPath": "derp.admission.serializers",
@@ -2068,6 +2438,15 @@
         "documentation": {}
     },
     {
+        "label": "AdmissionImportView",
+        "kind": 6,
+        "importPath": "derp.admission.views",
+        "description": "derp.admission.views",
+        "peekOfCode": "class AdmissionImportView(BaseImportView):\n    resource_class = AdmissionResource",
+        "detail": "derp.admission.views",
+        "documentation": {}
+    },
+    {
         "label": "AlumniConfig",
         "kind": 6,
         "importPath": "derp.alumni.apps",
@@ -2099,7 +2478,7 @@
         "kind": 6,
         "importPath": "derp.attendance.dashboard",
         "description": "derp.attendance.dashboard",
-        "peekOfCode": "class AttendanceDashboardView(APIViews):\n    def get(self,request):\n        context={\n            'attendance_per_year': self.get_total_attendance_per_year(),\n       }\n        return Response(context)\n    def get_total_attendance_per_year(self,status=None):\n            queryset=Attendance.objects()\n            if status:\n                queryset = queryset.filter(status=status)",
+        "peekOfCode": "class AttendanceDashboardView(APIView):\n    def get(self,request):\n        context={\n            'attendance_per_year': self.get_total_attendance_per_year(),\n       }\n        return Response(context)\n    def get_total_attendance_per_year(self,status=None):\n            queryset=Attendance.objects()\n            if status:\n                queryset = queryset.filter(status=status)",
         "detail": "derp.attendance.dashboard",
         "documentation": {}
     },
@@ -2108,7 +2487,7 @@
         "kind": 6,
         "importPath": "derp.attendance.models",
         "description": "derp.attendance.models",
-        "peekOfCode": "class Attendance(models.Model):\n    attendance_id=models.CharField(default=shortuuid,max_length=6,editable=False,primary_key=True)\n    time_table=models.ForeignKey(TimeTable,on_delete=models.CASCADE)\n    student=models.ForeignKey(Student,on_delete=models.CASCADE)\n    date=models.DateField()\n    time=models.TimeField(auto_now=True)\n    status=models.BooleanField(default=False)\n    class Meta:\n        unique_together = ('time_table', 'student', 'date')\n    def __str__(self):",
+        "peekOfCode": "class Attendance(models.Model):\n    attendance_id=models.CharField(default=shortuuid, max_length=6,editable=False,primary_key=True)\n    time_table=models.ForeignKey(TimeTable,on_delete=models.CASCADE)\n    student=models.ForeignKey(Student,on_delete=models.CASCADE)\n    date=models.DateField()\n    time=models.TimeField(auto_now=True)\n    status=models.BooleanField(default=False)\n    class Meta:\n        unique_together = ('time_table', 'student', 'date')\n    def __str__(self):",
         "detail": "derp.attendance.models",
         "documentation": {}
     },
@@ -2126,7 +2505,7 @@
         "kind": 2,
         "importPath": "derp.attendance.models",
         "description": "derp.attendance.models",
-        "peekOfCode": "def shortuuid():\n    return str(uuid.uuid4().hex)[:6]\nclass Attendance(models.Model):\n    attendance_id=models.CharField(default=shortuuid,max_length=6,editable=False,primary_key=True)\n    time_table=models.ForeignKey(TimeTable,on_delete=models.CASCADE)\n    student=models.ForeignKey(Student,on_delete=models.CASCADE)\n    date=models.DateField()\n    time=models.TimeField(auto_now=True)\n    status=models.BooleanField(default=False)\n    class Meta:",
+        "peekOfCode": "def shortuuid():\n    return str(uuid.uuid4().hex)[:6]\nclass Attendance(models.Model):\n    attendance_id=models.CharField(default=shortuuid, max_length=6,editable=False,primary_key=True)\n    time_table=models.ForeignKey(TimeTable,on_delete=models.CASCADE)\n    student=models.ForeignKey(Student,on_delete=models.CASCADE)\n    date=models.DateField()\n    time=models.TimeField(auto_now=True)\n    status=models.BooleanField(default=False)\n    class Meta:",
         "detail": "derp.attendance.models",
         "documentation": {}
     },
@@ -2414,7 +2793,7 @@
         "kind": 5,
         "importPath": "derp.derp.urls",
         "description": "derp.derp.urls",
-        "peekOfCode": "urlpatterns = [\n    path('admin/', admin.site.urls),\n    # path('admin_tools_stats/', include('admin_tools_stats.urls')),\n    path('academic/',include('academic.urls',namespace='academic')),\n    path('admission/',include('admission.urls',namespace='admission')),\n    path('library/',include('library.urls',namespace='library')),\n    path('userauth/',include('userauth.urls',namespace='userauth')),\n]\nif settings.DEBUG:\n    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)",
+        "peekOfCode": "urlpatterns = [\n    path('admin/', admin.site.urls),\n    # path('admin_tools_stats/', include('admin_tools_stats.urls')),\n    path('academic/',include('academic.urls',namespace='academic')),\n    path('admission/',include('admission.urls',namespace='admission')),\n    path('library/',include('library.urls',namespace='library')),\n    path('attendance/',include('attendance.urls',namespace='attendance')),\n    path('examination/', include('examination.urls', namespace='examination')),\n    path('userauth/',include('userauth.urls',namespace='userauth')),\n]",
         "detail": "derp.derp.urls",
         "documentation": {}
     },
@@ -2511,37 +2890,37 @@
     {
         "label": "ExamTypeSerializer",
         "kind": 6,
-        "importPath": "derp.examination.serializer",
-        "description": "derp.examination.serializer",
-        "peekOfCode": "class ExamTypeSerializer(serializers.ModelSerializer):\n    class Meta:\n        model = ExamType\n        fields = '__all__'\nclass ExamTimeTableSerializer(serializers.ModelSerializer):\n    class Meta:\n        model = ExamTimeTable\n        fields = '__all__'\nclass MarksheetSerializer(serializers.ModelSerializer):\n    class Meta:",
-        "detail": "derp.examination.serializer",
+        "importPath": "derp.examination.serializers",
+        "description": "derp.examination.serializers",
+        "peekOfCode": "class ExamTypeSerializer(serializers.ModelSerializer):\n    class Meta:\n        model = ExamType\n        fields = '__all__'\nclass ExamTimeTableSerializer(serializers.ModelSerializer):\n    class Meta:\n        model = ExamTimeTable\n        fields = '__all__'\nclass MarkSheetSerializer(serializers.ModelSerializer):\n    class Meta:",
+        "detail": "derp.examination.serializers",
         "documentation": {}
     },
     {
         "label": "ExamTimeTableSerializer",
         "kind": 6,
-        "importPath": "derp.examination.serializer",
-        "description": "derp.examination.serializer",
-        "peekOfCode": "class ExamTimeTableSerializer(serializers.ModelSerializer):\n    class Meta:\n        model = ExamTimeTable\n        fields = '__all__'\nclass MarksheetSerializer(serializers.ModelSerializer):\n    class Meta:\n        model = Marksheet\n        fields = '__all__'\nclass ResultSheetSerializer(serializers.ModelSerializer):\n    class Meta:",
-        "detail": "derp.examination.serializer",
+        "importPath": "derp.examination.serializers",
+        "description": "derp.examination.serializers",
+        "peekOfCode": "class ExamTimeTableSerializer(serializers.ModelSerializer):\n    class Meta:\n        model = ExamTimeTable\n        fields = '__all__'\nclass MarkSheetSerializer(serializers.ModelSerializer):\n    class Meta:\n        model = MarkSheet\n        fields = '__all__'\nclass ResultSheetSerializer(serializers.ModelSerializer):\n    class Meta:",
+        "detail": "derp.examination.serializers",
         "documentation": {}
     },
     {
-        "label": "MarksheetSerializer",
+        "label": "MarkSheetSerializer",
         "kind": 6,
-        "importPath": "derp.examination.serializer",
-        "description": "derp.examination.serializer",
-        "peekOfCode": "class MarksheetSerializer(serializers.ModelSerializer):\n    class Meta:\n        model = Marksheet\n        fields = '__all__'\nclass ResultSheetSerializer(serializers.ModelSerializer):\n    class Meta:\n        model = ResultSheet\n        fields = '__all__'",
-        "detail": "derp.examination.serializer",
+        "importPath": "derp.examination.serializers",
+        "description": "derp.examination.serializers",
+        "peekOfCode": "class MarkSheetSerializer(serializers.ModelSerializer):\n    class Meta:\n        model = MarkSheet\n        fields = '__all__'\nclass ResultSheetSerializer(serializers.ModelSerializer):\n    class Meta:\n        model = ResultSheet\n        fields = '__all__'",
+        "detail": "derp.examination.serializers",
         "documentation": {}
     },
     {
         "label": "ResultSheetSerializer",
         "kind": 6,
-        "importPath": "derp.examination.serializer",
-        "description": "derp.examination.serializer",
+        "importPath": "derp.examination.serializers",
+        "description": "derp.examination.serializers",
         "peekOfCode": "class ResultSheetSerializer(serializers.ModelSerializer):\n    class Meta:\n        model = ResultSheet\n        fields = '__all__'",
-        "detail": "derp.examination.serializer",
+        "detail": "derp.examination.serializers",
         "documentation": {}
     },
     {
@@ -2572,11 +2951,11 @@
         "documentation": {}
     },
     {
-        "label": "MarksheetView",
+        "label": "MarkSheetView",
         "kind": 6,
         "importPath": "derp.examination.views",
         "description": "derp.examination.views",
-        "peekOfCode": "class MarksheetView(viewsets.ViewSet):\n    def list(self, request):\n        queryset = Marksheet.objects.all()\n        serializer = MarksheetSerializer(queryset, many=True)\n        return Response(serializer.data)\n    def create(self, request):\n        serializer = MarksheetSerializer(data=request.data)\n        if serializer.is_valid():\n            serializer.save()\n            return Response(serializer.data, status=201)",
+        "peekOfCode": "class MarkSheetView(viewsets.ViewSet):\n    def list(self, request):\n        queryset = MarkSheet.objects.all()\n        serializer = MarkSheetSerializer(queryset, many=True)\n        return Response(serializer.data)\n    def create(self, request):\n        serializer = MarkSheetSerializer(data=request.data)\n        if serializer.is_valid():\n            serializer.save()\n            return Response(serializer.data, status=201)",
         "detail": "derp.examination.views",
         "documentation": {}
     },
@@ -2594,7 +2973,7 @@
         "kind": 2,
         "importPath": "derp.examination.views",
         "description": "derp.examination.views",
-        "peekOfCode": "def generate_result_sheet(student_id):\n    student=get_object_or_404(Student,student_id=student_id)\n    marksheets=Marksheet.objects.filter(student=student)\n    result_sheet={\n        'student_id':student.student_id,\n        'student_name':student.name,\n        'exams':[]\n    }\n    total_marks_obtained=0\n    for marksheet in marksheets:",
+        "peekOfCode": "def generate_result_sheet(student_id):\n    student = get_object_or_404(Student, student_id=student_id)\n    marksheets = MarkSheet.objects.filter(student=student)\n    result_sheet = {\n        'student_id': student.student_id,\n        'student_name': student.name,\n        'exams': []\n    }\n    total_marks_obtained = 0\n    for marksheet in marksheets:",
         "detail": "derp.examination.views",
         "documentation": {}
     },
@@ -2603,7 +2982,7 @@
         "kind": 2,
         "importPath": "derp.examination.views",
         "description": "derp.examination.views",
-        "peekOfCode": "def result_sheet_view(request,student_id):\n    result_sheet=generate_result_sheet(student_id)\n    return JsonResponse(result_sheet)\ndef assign_rank():\n    result_sheets=ResultSheet.objects.all().order_by('-total_marks')\n    for rank,result_sheet in enumerate(result_sheets,start=1):\n        result_sheet.rank=rank\n        result_sheet.save\nclass ExamTypeView(viewsets.ViewSet):\n    def list(self, request):",
+        "peekOfCode": "def result_sheet_view(request, student_id):\n    result_sheet = generate_result_sheet(student_id)\n    return JsonResponse(result_sheet)\ndef assign_rank():\n    result_sheets = ResultSheet.objects.all().order_by('-total_marks_obtained')\n    for rank, result_sheet in enumerate(result_sheets, start=1):\n        result_sheet.rank = rank\n        result_sheet.save()\nclass ExamTypeView(viewsets.ViewSet):\n    def list(self, request):",
         "detail": "derp.examination.views",
         "documentation": {}
     },
@@ -2612,7 +2991,7 @@
         "kind": 2,
         "importPath": "derp.examination.views",
         "description": "derp.examination.views",
-        "peekOfCode": "def assign_rank():\n    result_sheets=ResultSheet.objects.all().order_by('-total_marks')\n    for rank,result_sheet in enumerate(result_sheets,start=1):\n        result_sheet.rank=rank\n        result_sheet.save\nclass ExamTypeView(viewsets.ViewSet):\n    def list(self, request):\n        queryset = ExamType.objects.all()\n        serializer = ExamTypeSerializer(queryset, many=True)\n        return Response(serializer.data)",
+        "peekOfCode": "def assign_rank():\n    result_sheets = ResultSheet.objects.all().order_by('-total_marks_obtained')\n    for rank, result_sheet in enumerate(result_sheets, start=1):\n        result_sheet.rank = rank\n        result_sheet.save()\nclass ExamTypeView(viewsets.ViewSet):\n    def list(self, request):\n        queryset = ExamType.objects.all()\n        serializer = ExamTypeSerializer(queryset, many=True)\n        return Response(serializer.data)",
         "detail": "derp.examination.views",
         "documentation": {}
     },
@@ -3055,6 +3434,15 @@
         "description": "derp.userauth.views",
         "peekOfCode": "class LogoutView(APIView):\n    permission_classes=[IsAuthenticated]\n    def post(self,request):\n        token=Token.objects.get(user=request.user)\n        token.delete()\n        response= Response({'message':'Logout successfull'})\n        response.delete_cookie('auth_token')\n        return response",
         "detail": "derp.userauth.views",
+        "documentation": {}
+    },
+    {
+        "label": "BaseImportView",
+        "kind": 6,
+        "importPath": "derp.helpers",
+        "description": "derp.helpers",
+        "peekOfCode": "class BaseImportView(APIView):\n    resource_class = None  \n    def post(self, request, format=None):\n        if self.resource_class is None or not issubclass(self.resource_class, ModelResource):\n            return Response({\"error\": \"Invalid resource class.\"}, status=status.HTTP_400_BAD_REQUEST)\n        file = request.FILES.get('file')\n        if not file:\n            return Response({\"error\": \"No file provided.\"}, status=status.HTTP_400_BAD_REQUEST)\n        dataset = Dataset()\n        imported_data = dataset.load(file.read(), format='xlsx')  # Adapt the format as needed",
+        "detail": "derp.helpers",
         "documentation": {}
     },
     {

@@ -20,9 +20,9 @@ import { syllabusStatusSchema } from '@/lib/zodschema'
 import { CREATE_SYLLABUS_STATUS_VERIFICATION } from '@/lib/routePath'
 import { Plus } from 'lucide-react'
 import { submitForm } from '@/lib/helper'
-import { failedToastMessage, successToastMessage } from '@/lib/services'
 import { FormInput } from '@/app/_component/FormInput'
 import SubmitButton from '@/app/_component/SubmitButton'
+import { failedToastMessage, successToastMessage } from '@/lib/client-helpers'
 
 const AddSyllabusStatus = () => {
   const router = useRouter();

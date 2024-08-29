@@ -2,10 +2,9 @@ import { Button } from "@/components/ui/button";
 import { ColumnDef } from "@tanstack/react-table";
 import { ArrowUpDown } from "lucide-react";
 import UpdateSyllabusType from "./UpdateSyllabusType";
-import { AiFillDelete } from "react-icons/ai";
-import DeleteButton from "../_component/DeleteButton";
 import { DELETE_SYLLABUS_TYPE, RETRIEVE_SYLLABUS_TYPE } from "@/lib/routePath";
-import RetrieveDetail from "../_component/RetriveDetail";
+import RetrieveDetail from "@/app/_component/RetriveDetail";
+import DeleteButton from "@/app/_component/DeleteButton";
 
 export type SyllabusType = {
   type_id: string;
@@ -43,12 +42,12 @@ export const columns: ColumnDef<SyllabusType>[] = [
 
       return (
         <div className="flex items-center space-x-2">
-          <RetrieveDetail 
+          {/* <RetrieveDetail 
             id={syllabusType.type_id} 
             endpoint={`${RETRIEVE_SYLLABUS_TYPE}`}
             onSuccess={handleSuccess}
-          />
-          <DeleteButtom 
+          /> */}
+          <DeleteButton
             id={syllabusType.type_id} 
             endpoint={`${DELETE_SYLLABUS_TYPE}`}
             onSuccess={handleSuccess}

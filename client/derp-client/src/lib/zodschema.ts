@@ -57,3 +57,31 @@ export const syllabusStatusSchema = z.object({
   approved_date: z.string(), // DateTime should be in ISO 8601 format as a string
 });
 
+export const SyllabusTypeSchema = z.object({
+    type_id: z.string().max(6),
+    name: z.string().max(50),
+  });
+  
+  // Define a TypeScript type based on the schema
+  export type SyllabusType = z.infer<typeof SyllabusTypeSchema>;
+
+
+// Define the schema for the `TimeTable`
+export const timeTableSchema = z.object({
+    time_table_id: z.string().length(6).optional(), // CharField with max_length=6
+    subject: z.string(), // ForeignKey to Subject, represented by its `subject_id`
+    teacher: z.string().max(20), // CharField with max_length=20
+    time: z.string().regex(/^\d{2}:\d{2}(:\d{2})?$/), // TimeField in HH:MM or HH:MM:SS format
+    effective_date: z.string().regex(/^\d{4}-\d{2}-\d{2}$/), // DateField in YYYY-MM-DD format
+  });
+  
+
+// Define the schema for the `VacationPeriod`
+export const vacationPeriodSchema = z.object({
+    vacation_id: z.string().length(6).optional(), // CharField with max_length=6, automatically generated
+    name: z.string().max(100), // CharField with max_length=100
+    start_date: z.string().regex(/^\d{4}-\d{2}-\d{2}$/), // DateField in YYYY-MM-DD format
+    end_date: z.string().regex(/^\d{4}-\d{2}-\d{2}$/), // DateField in YYYY-MM-DD format
+    description: z.string().max(254).nullable().optional(), // CharField with max_length=254, nullable and optional
+  });
+  

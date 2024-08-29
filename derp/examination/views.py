@@ -119,14 +119,14 @@ class ExamTimeTableView(viewsets.ViewSet):
         return Response(status=204)
 
 
-class MarksheetView(viewsets.ViewSet):
+class MarkSheetView(viewsets.ViewSet):
     def list(self, request):
         queryset = MarkSheet.objects.all()
-        serializer = MarksheetSerializer(queryset, many=True)
+        serializer = MarkSheetSerializer(queryset, many=True)
         return Response(serializer.data)
 
     def create(self, request):
-        serializer = MarksheetSerializer(data=request.data)
+        serializer = MarkSheetSerializer(data=request.data)
         if serializer.is_valid():
             serializer.save()
             return Response(serializer.data, status=201)
@@ -134,12 +134,12 @@ class MarksheetView(viewsets.ViewSet):
 
     def retrieve(self, request, pk=None):
         marksheet = get_object_or_404(MarkSheet, pk=pk)
-        serializer = MarksheetSerializer(marksheet)
+        serializer = MarkSheetSerializer(marksheet)
         return Response(serializer.data)
 
     def update(self, request, pk=None):
         marksheet = get_object_or_404(MarkSheet, pk=pk)
-        serializer = MarksheetSerializer(marksheet, data=request.data)
+        serializer = MarkSheetSerializer(marksheet, data=request.data)
         if serializer.is_valid():
             serializer.save()
             return Response(serializer.data, status=200)

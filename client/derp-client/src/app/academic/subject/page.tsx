@@ -8,6 +8,7 @@ import AddDepartment from './AddSubject'
 import ViewDepartment from './ViewSubject'
 import AddSubject from './AddSubject'
 import ViewSubject from './ViewSubject'
+import SideBar from '@/app/_component/SideBar'
 const items = [
   { href: "/", label: "Home" },
   { href: "/components", label: "Components" },
@@ -21,7 +22,7 @@ const Page =async () => {
 
 
 
-<Sidebar >
+<SideBar breadcrumbs={items}>
 <div className=''>
 <BreadcrumbWithCustomSeparator items={items} separator={<span> :: </span>} />
 </div>
@@ -31,7 +32,7 @@ const Page =async () => {
   <AddSubject />
   <ViewSubject  data={data}/>
 </div>
-</Sidebar>
+</SideBar>
 
 </>
   )

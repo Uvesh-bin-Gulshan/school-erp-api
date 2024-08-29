@@ -7,7 +7,6 @@ import { BreadcrumbWithCustomSeparator } from '@/app/_component/BreadCrumb'
 import AddDepartment from './AddDepartment'
 import ViewDepartment from './ViewDepartment'
 import { MdOutlineNavigateNext } from 'react-icons/md'
-import PageTitle from '../_component/PageTitle'
 import { title } from 'process'
 const items = [
   {  label: "Academics" },

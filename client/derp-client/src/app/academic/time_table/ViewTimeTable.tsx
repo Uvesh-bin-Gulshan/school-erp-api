@@ -1,9 +1,9 @@
 "use client"
 
 import React from 'react'
-import { DataTable } from '@/app/_component/DataTable'
-import { columns } from './columns'
 import { ColumnFiltersState } from '@tanstack/react-table'
+import { columns } from './colums'
+import { DataTable } from '@/app/_component/DataTable'
 
 const ViewTimeTable = ({ data }: { data: any }) => {
   const columnFilters: ColumnFiltersState = []

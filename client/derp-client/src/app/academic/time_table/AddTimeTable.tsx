@@ -1,9 +1,5 @@
 "use client"
 
-import React from 'react'
-import { useForm } from 'react-hook-form'
-import { zodResolver } from '@hookform/resolvers/zod'
-import { useRouter } from 'next/navigation'
 import {
   Dialog,
   DialogContent,
@@ -13,14 +9,18 @@ import {
   DialogTrigger,
 } from "@/components/ui/dialog"
 import { Form, FormControl, FormField, FormItem, FormMessage } from '@/components/ui/form'
-import { Input } from '@/components/ui/input'
 import { Button } from '@/components/ui/button'
-import { timeTableSchema } from '@/lib/zodschema'
-import { submitForm, successToastMessage, failedToastMessage } from '@/lib/services'
-import { FormInput } from '../_component/FormInput'
-import SubmitButton from '../_component/SubmitButton'
-import { CREATE_TIME_TABLE } from '@/lib/routePath'
-import { Plus } from 'lucide-react'
+
+
+import { failedToastMessage, successToastMessage } from '@/lib/client-helpers'
+import { submitForm } from '@/lib/helper'
+import { FormInput } from '@/app/_component/FormInput'
+import SubmitButton from '@/app/_component/SubmitButton'
+import { useRouter } from "next/router"
+import { CREATE_TIMETABLE } from "@/lib/routePath"
+import { timeTableSchema } from "@/lib/zodschema"
+import { Plus } from "lucide-react"
+import { useForm } from "react-hook-form"
 
 const AddTimeTable = () => {
   const router = useRouter();
@@ -38,7 +38,7 @@ const AddTimeTable = () => {
     event.preventDefault();
     const all_values = form.getValues();
     try {
-      const response = await submitForm(CREATE_TIME_TABLE, all_values, 'POST');
+      const response = await submitForm(CREATE_TIMETABLE, all_values, 'POST');
       if (response?.success) {
         successToastMessage("Successfully created");
       } else {
@@ -111,4 +111,8 @@ const AddTimeTable = () => {
 }
 
 export default AddTimeTable;
+
+function zodResolver(timeTableSchema: any) {
+  throw new Error("Function not implemented.")
+}
 

@@ -1,5 +1,5 @@
 from django.urls import path
-from .views import DepartmentView, SubjectView, CourseView, AnnuallySubjectSyllabusStatusView, MonthlySubjectSyllabusStatusView, SyllabusStatusVerificationView, TimeTableView, VacationPeriodView
+from .views import DepartmentView, SubjectView, CourseView, AnnuallySubjectSyllabusStatusView, MonthlySubjectSyllabusStatusView, SyllabusStatusVerificationView, SyllabusTypeView, TimeTableView, VacationPeriodView
 from .dashboard import AcademicDashboardView
 app_name='academic'
 urlpatterns = [
@@ -58,6 +58,13 @@ urlpatterns = [
    path('vacationperiod/retrieve/<str:pk>/', VacationPeriodView.as_view({'get': 'retrieve'}), name='vacationperiod-retrieve'),
    path('vacationperiod/update/<str:pk>/', VacationPeriodView.as_view({'put': 'update'}), name='vacationperiod-update'),
    path('vacationperiod/delete/<str:pk>/', VacationPeriodView.as_view({'delete': 'delete'}), name='vacationperiod-delete'),
+
+    #SyllabusType APIs
+    path('syllabustype/list/', SyllabusTypeView.as_view({'get': 'list'}), name='syllabustype-list'),
+    path('syllabustype/create/', SyllabusTypeView.as_view({'post': 'create'}), name='syllabustype-create'),
+    path('syllabustype/retrieve/<str:pk>/', SyllabusTypeView.as_view({'get': 'retrieve'}), name='syllabustype-retrieve'),
+    path('syllabustype/update/<str:pk>/', SyllabusTypeView.as_view({'put': 'update'}), name='syllabustype-update'),
+    path('syllabustype/delete/<str:pk>/', SyllabusTypeView.as_view({'delete': 'delete'}), name='syllabustype-delete'),
 
     # Dashboard APIs
     path('academic-dashboard/', AcademicDashboardView.as_view(), name='academic-dashboard'),  # Done Alhamdulillah

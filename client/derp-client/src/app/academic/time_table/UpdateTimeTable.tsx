@@ -16,11 +16,12 @@ import { Form, FormControl, FormField, FormItem, FormMessage } from '@/component
 import { Input } from '@/components/ui/input'
 import { Button } from '@/components/ui/button'
 import { timeTableSchema } from '@/lib/zodschema'
-import { submitForm, successToastMessage, failedToastMessage } from '@/lib/services'
-import { FormInput } from '../_component/FormInput'
-import SubmitButton from '../_component/SubmitButton'
-import { UPDATE_TIME_TABLE } from '@/lib/routePath'
 import { MdModeEdit } from 'react-icons/md'
+import { UPDATE_TIMETABLE } from '@/lib/routePath'
+import { failedToastMessage, successToastMessage } from '@/lib/client-helpers'
+import { submitForm } from '@/lib/helper'
+import { FormInput } from '@/app/_component/FormInput'
+import SubmitButton from '@/app/_component/SubmitButton'
 
 const UpdateTimeTable = ({ timeTable }: { timeTable: any }) => {
   const form = useForm({
@@ -37,7 +38,7 @@ const UpdateTimeTable = ({ timeTable }: { timeTable: any }) => {
     event.preventDefault();
     const all_values = form.getValues();
     try {
-      const response = await submitForm(`${UPDATE_TIME_TABLE}/${timeTable.time_table_id}/`, all_values, 'PUT');
+      const response = await submitForm(`${UPDATE_TIMETABLE}/${timeTable.time_table_id}/`, all_values, 'PUT');
       if (response?.success) {
         successToastMessage("Successfully updated");
       } else {
