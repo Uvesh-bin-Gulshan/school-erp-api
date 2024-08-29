@@ -5,6 +5,9 @@ from django.utils.html import format_html
 from .models import Admission, Student
 
 class AdmissionResource(resources.ModelResource):
+
+    def get_instance(self, instance_loader, row):
+        return self._meta.model.objects.filter(admission_id=row['admission_id']).first()
     class Meta:
         model = Admission
         fields = [

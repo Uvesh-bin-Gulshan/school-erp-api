@@ -18,7 +18,7 @@ const Page =async () => {
 <Sidebar breadcrumbs={items}>
 
 
-<div className='  h-96'>
+<div className=' overflow-auto h-96'>
 <AdmissionDashboard dashboardData={dashboardData} />
 
 </div>

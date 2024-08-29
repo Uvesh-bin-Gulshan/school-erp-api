@@ -20,8 +20,6 @@ export type ChartConfig = {
 
 type ChartContextProps = {
   config: ChartConfig
-  className?: string;
-  children: React.ReactNode;
 }
 
 const ChartContext = React.createContext<ChartContextProps | null>(null)
