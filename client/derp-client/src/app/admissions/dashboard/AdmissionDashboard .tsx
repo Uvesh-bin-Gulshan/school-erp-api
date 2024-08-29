@@ -22,19 +22,32 @@ const AdmissionDashboard = ({dashboardData}: any) => {
     <div className="space-y-8">
 
       {/* Combined Line Chart for Admissions Trends */}
-      <ChartContainer config={chartConfig} className="h-72 w-full">
-        <LineChart data={dashboardData.admission_applied_per_year}>
+
+      {/* <ChartContainer config={chartConfig} className="h-72 w-full">
+        <BarChart data={dashboardData.admission_applied_per_year}>
           <CartesianGrid strokeDasharray="3 3" />
           <XAxis dataKey="year" />
           <YAxis />
           <Tooltip />
           <Legend />
-          <Line type="monotone" dataKey="count" stroke={chartConfig.applied.color} name="Applied" />
-          <Line type="monotone" dataKey="count" stroke={chartConfig.approved.color} name="Approved" />
-          <Line type="monotone" dataKey="count" stroke={chartConfig.pending.color} name="Pending" />
-          <Line type="monotone" dataKey="count" stroke={chartConfig.left.color} name="Left" />
-        </LineChart>
-      </ChartContainer>
+          <Bar dataKey="applied" fill="#2563eb" name="Applied" />
+          <Bar dataKey="approved" fill="#60a5fa" name="Approved" />
+          <Bar dataKey="pending" fill="#fbbf24" name="Pending" />
+          <Bar dataKey="left" fill="#ef4444" name="Left" />
+        </BarChart>
+      </ChartContainer> */}
+      <ChartContainer config={chartConfig} className="h-72 w-full">
+      <BarChart accessibilityLayer data={dashboardData.admission_applied_per_year}>
+          <CartesianGrid strokeDasharray="3 3" />
+
+        <Bar dataKey="count" fill={chartConfig.applied.color} radius={4} />
+        <Bar  dataKey="count" fill={chartConfig.approved.color} radius={4} />
+        <Bar dataKey="count" fill={chartConfig.pending.color} radius={4} />
+        <Bar dataKey="count" fill={chartConfig.left.color} radius={4} />
+
+      </BarChart>
+    </ChartContainer>
+
 
       {/* Stacked Bar Chart for Admissions by Course and Department */}
       <ChartContainer config={chartConfig} className="h-72 w-full">

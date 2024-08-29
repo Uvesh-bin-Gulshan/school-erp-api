@@ -3,6 +3,10 @@ import { getAdmissionDashboard, getAdmissionList } from '@/lib/services'
 import Sidebar from '@/app/_component/SideBar'
 import { BreadcrumbWithCustomSeparator } from '@/app/_component/BreadCrumb'
 import AdmissionDashboard from './AdmissionDashboard ';
+import AdmissionStatusDashboard from './AdmissionStatusDashboard';
+import AdmissionLocationDashboard from './AdmissionLocationDashboard';
+import AdmissionAgeDashboard from './AdmissionAgeDashboard';
+import AdmissionDepartmentCourseDashboard from './AdmissionDepartmentCourseDashboard';
 const items = [
   { href: "/", label: "Home" },
   { href: "/components", label: "Components" },
@@ -19,8 +23,11 @@ const Page =async () => {
 
 
 <div className=' overflow-auto h-96'>
-<AdmissionDashboard dashboardData={dashboardData} />
-
+{/* <AdmissionDashboard dashboardData={dashboardData} /> */}
+<AdmissionStatusDashboard dashboardData={dashboardData}/>
+<AdmissionDepartmentCourseDashboard dashboardData={dashboardData}/>
+<AdmissionLocationDashboard dashboardData={dashboardData}/>
+<AdmissionAgeDashboard dashboardData={dashboardData} />
 </div>
 
 </Sidebar>
