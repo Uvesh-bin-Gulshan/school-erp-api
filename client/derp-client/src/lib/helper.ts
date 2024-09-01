@@ -17,27 +17,26 @@ export const fetchData = async (endpoint: string) => {
 };
 
 
-export const submitForm = async (url:any,data:any,method:string) => {
-    try {
-      const response = await fetch(url, {
-        method,
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(data),
-      });
-      
-      console.log(response)
-   if(response.ok){
-    return{success:true}
-   }else{
-    return{success:false}
-   }
-  
-    } catch (error) {
-      console.error('Error submitting form:', error);
+export const submitForm = async (url: string, data: object, method: string) => {
+  try {
+    // Ensure the data is a plain object
+    const plainData = JSON.parse(JSON.stringify(data));
+
+    const response = await fetch(url, {
+      method,
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(plainData),
+    });
+
+    if (response.ok) {
+      return { success: true };
+    } else {
+      return { success: false };
     }
-  };
-
-  
-
+  } catch (error) {
+    console.error('Error submitting form:', error);
+    return { success: false };
+  }
+};

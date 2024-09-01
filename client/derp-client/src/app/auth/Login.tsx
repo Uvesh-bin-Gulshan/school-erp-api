@@ -25,7 +25,7 @@ import SelectComponent from '../_component/SelectComponent'
 import SubmitButton from '../_component/SubmitButton'
 import { LOGIN } from '@/lib/routePath'
 import { submitForm } from '@/lib/helper'
-import { failedToastMessage, successToastMessage } from '@/lib/services'
+import { failedToastMessage, successToastMessage } from '@/lib/client-helpers'
 // import {page}  from '@/app/admin/page'
 const Login = () => {
   const form = useForm({

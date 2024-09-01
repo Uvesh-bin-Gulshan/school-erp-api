@@ -1,10 +1,23 @@
-import React from 'react';
+"use client"
+import React, { useState } from 'react';
 import { useFormContext } from 'react-hook-form';
 import { FormField, FormItem, FormLabel, FormControl, FormMessage } from '@/components/ui/form';
 import { Input } from '@/components/ui/input';
 
-const PersonalInformation = ({ onFileChange }: any) => {
+const PersonalInformation = () => {
   const { control, setValue } = useFormContext();
+  const [fileName, setFileName] = useState('');
+
+  const handleFileChange = (event: any) => {
+    const file = event.target.files[0];
+    if (file) {
+      setFileName(file.name); // Store the file name for display
+      setValue('profile_image', file); // Set the file in the form context
+    } else {
+      setFileName(''); // Clear file name if no file is selected
+      setValue('profile_image', null); // Clear the file in the form context
+    }
+  };
 
   return (
     <>
@@ -59,13 +72,13 @@ const PersonalInformation = ({ onFileChange }: any) => {
               <FormLabel>Profile Image</FormLabel>
               <FormControl>
                 <Input
+                  {...field}
                   type="file"
                   onChange={(e) => {
-                    const file = e.target.files?.[0];
-                    setValue('profile_image', file); // Manually set the file in the form state
-                    onFileChange(file); // Call the onFileChange callback if needed
+                    handleFileChange(e); // Handle file change
                   }}
                   onBlur={field.onBlur}
+                  value={undefined} // Avoid setting value to null or empty string
                 />
               </FormControl>
               <FormMessage />
