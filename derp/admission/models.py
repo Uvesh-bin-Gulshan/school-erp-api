@@ -8,6 +8,7 @@ from django.dispatch import receiver
 def shortuuid():
    return str(uuid.uuid4().hex)[:6]
 
+from django.utils import timezone
 
 
 class Admission(models.Model):
@@ -29,9 +30,9 @@ class Admission(models.Model):
     pincode = models.CharField(max_length=6)
     mobile_number = models.CharField(max_length=12)
     aadhar_number = models.CharField(max_length=12, unique=True)
-    created_at = models.DateField()
-    updated_at = models.DateField()
-    date_of_admission = models.DateField()
+    created_at = models.DateField(auto_now_add=True)
+    updated_at = models.DateField(auto_now_add=True)
+    date_of_admission = models.DateField(default=timezone.now)
 
     RESULT_STATUS = (
         ('pass', 'PASS'),

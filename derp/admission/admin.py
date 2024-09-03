@@ -28,7 +28,7 @@ class AdmissionAdmin(ImportExportModelAdmin):
         'mobile_number', 'aadhar_number', 'previous_result_status', 
         'admission_status', 'previous_institution', 'previous_education', 
         'school_education', 'lc_given', 'pay_fees', 'fees_amount', 
-        'required_donation', 'created_at', 'updated_at'
+        'required_donation'
     ]
     list_display_links = ['student_name']
     list_filter = [

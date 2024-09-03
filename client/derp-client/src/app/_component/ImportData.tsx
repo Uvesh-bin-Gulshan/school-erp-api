@@ -1,11 +1,15 @@
+"use client";
 import { useState } from 'react';
 
-const ImportComponent = ({ apiUrl, onSuccess, onError }:any) => {
-  const [file, setFile] = useState(null);
+const ImportComponent = ({ apiUrl, onSuccess, onError }: any) => {
+  const [file, setFile] = useState<File | null>(null);
   const [loading, setLoading] = useState(false);
+  const [errors, setErrors] = useState<any[]>([]);
 
-  const handleFileChange = (event:any) => {
-    setFile(event.target.files[0]);
+  const handleFileChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    if (event.target.files) {
+      setFile(event.target.files[0]);
+    }
   };
 
   const handleImport = async () => {
@@ -26,10 +30,15 @@ const ImportComponent = ({ apiUrl, onSuccess, onError }:any) => {
 
       if (response.ok) {
         const data = await response.json();
-        if (onSuccess) {
-          onSuccess(data);
+        if (data.errors && Array.isArray(data.errors)) {
+          setErrors(data.errors);
+          alert("Import completed with errors. Check details below.");
+        } else {
+          if (onSuccess) {
+            onSuccess(data);
+          }
+          alert("File imported successfully!");
         }
-        alert("File imported successfully!");
       } else {
         const errorData = await response.json();
         if (onError) {
@@ -51,6 +60,7 @@ const ImportComponent = ({ apiUrl, onSuccess, onError }:any) => {
       <button onClick={handleImport} disabled={loading}>
         {loading ? "Importing..." : "Import"}
       </button>
+     
     </div>
   );
 };
