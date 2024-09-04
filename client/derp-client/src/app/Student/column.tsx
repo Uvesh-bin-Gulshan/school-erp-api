@@ -5,7 +5,7 @@ import UpdateStudent from "./UpdateStudent";
 import { AiFillDelete } from "react-icons/ai";
 import DeleteButton from "../_component/DeleteButton";
 import { DELETE_STUDENT, RETRIEVE_STUDENT } from "@/lib/routePath";
-import RetrieveDetail from "../_component/RetrieveDetail";
+import RetrieveDetail from "../_component/RetriveDetail";
 
 export type Student = {
   student_id: string;
@@ -52,11 +52,11 @@ export const columns: ColumnDef<Student>[] = [
 
       return (
         <div className="flex items-center space-x-2">
-          <RetrieveDetail
+          {/* <RetrieveDetail
             id={student.student_id}
             endpoint={`${RETRIEVE_STUDENT}`}
             onSuccess={handleSuccess}
-          />
+          /> */}
           <DeleteButton
             id={student.student_id}
             endpoint={`${DELETE_STUDENT}`}

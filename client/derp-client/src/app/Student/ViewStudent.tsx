@@ -2,8 +2,8 @@
 
 import React from 'react'
 import { DataTable } from '@/app/_component/DataTable'
-import { columns } from './columns'
 import { ColumnFiltersState } from '@tanstack/react-table'
+import { columns } from './column'
 
 const ViewStudent = ({ data }: { data: any }) => {
   const columnFilters: ColumnFiltersState = []

@@ -123,6 +123,38 @@
         "documentation": {}
     },
     {
+        "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
         "label": "models",
         "importPath": "django.db",
         "description": "django.db",
@@ -939,6 +971,22 @@
         "documentation": {}
     },
     {
+        "label": "post_save",
+        "importPath": "django.db.models.signals",
+        "description": "django.db.models.signals",
+        "isExtraImport": true,
+        "detail": "django.db.models.signals",
+        "documentation": {}
+    },
+    {
+        "label": "receiver",
+        "importPath": "django.dispatch",
+        "description": "django.dispatch",
+        "isExtraImport": true,
+        "detail": "django.dispatch",
+        "documentation": {}
+    },
+    {
         "label": "receiver",
         "importPath": "django.dispatch",
         "description": "django.dispatch",
@@ -1389,6 +1437,31 @@
         "documentation": {}
     },
     {
+        "label": "Admission",
+        "importPath": "admission.models",
+        "description": "admission.models",
+        "isExtraImport": true,
+        "detail": "admission.models",
+        "documentation": {}
+    },
+    {
+        "label": "Student",
+        "importPath": "admission.models",
+        "description": "admission.models",
+        "isExtraImport": true,
+        "detail": "admission.models",
+        "documentation": {}
+    },
+    {
+        "label": "django.utils.timezone",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "django.utils.timezone",
+        "description": "django.utils.timezone",
+        "detail": "django.utils.timezone",
+        "documentation": {}
+    },
+    {
         "label": "resources",
         "importPath": "import_export",
         "description": "import_export",
@@ -1434,6 +1507,14 @@
         "description": "django.utils.html",
         "isExtraImport": true,
         "detail": "django.utils.html",
+        "documentation": {}
+    },
+    {
+        "label": "timezone",
+        "importPath": "django.utils",
+        "description": "django.utils",
+        "isExtraImport": true,
+        "detail": "django.utils",
         "documentation": {}
     },
     {
@@ -1653,15 +1734,6 @@
         "documentation": {}
     },
     {
-        "label": "django.utils.timezone",
-        "kind": 6,
-        "isExtraImport": true,
-        "importPath": "django.utils.timezone",
-        "description": "django.utils.timezone",
-        "detail": "django.utils.timezone",
-        "documentation": {}
-    },
-    {
         "label": "UserAdmin",
         "importPath": "django.contrib.auth.admin",
         "description": "django.contrib.auth.admin",
@@ -1707,6 +1779,40 @@
         "description": "rest_framework.authtoken.models",
         "isExtraImport": true,
         "detail": "rest_framework.authtoken.models",
+        "documentation": {}
+    },
+    {
+        "label": "random",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "random",
+        "description": "random",
+        "detail": "random",
+        "documentation": {}
+    },
+    {
+        "label": "Faker",
+        "importPath": "faker",
+        "description": "faker",
+        "isExtraImport": true,
+        "detail": "faker",
+        "documentation": {}
+    },
+    {
+        "label": "datetime",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "django",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "django",
+        "description": "django",
+        "detail": "django",
         "documentation": {}
     },
     {
@@ -2249,11 +2355,29 @@
         "documentation": {}
     },
     {
+        "label": "Migration",
+        "kind": 6,
+        "importPath": "derp.admission.migrations.0002_alter_admission_created_at_and_more",
+        "description": "derp.admission.migrations.0002_alter_admission_created_at_and_more",
+        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        ('admission', '0001_initial'),\n    ]\n    operations = [\n        migrations.AlterField(\n            model_name='admission',\n            name='created_at',\n            field=models.DateField(auto_now_add=True),\n        ),",
+        "detail": "derp.admission.migrations.0002_alter_admission_created_at_and_more",
+        "documentation": {}
+    },
+    {
+        "label": "Migration",
+        "kind": 6,
+        "importPath": "derp.admission.migrations.0003_alter_admission_date_of_admission",
+        "description": "derp.admission.migrations.0003_alter_admission_date_of_admission",
+        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        ('admission', '0002_alter_admission_created_at_and_more'),\n    ]\n    operations = [\n        migrations.AlterField(\n            model_name='admission',\n            name='date_of_admission',\n            field=models.DateField(default=django.utils.timezone.now),\n        ),",
+        "detail": "derp.admission.migrations.0003_alter_admission_date_of_admission",
+        "documentation": {}
+    },
+    {
         "label": "AdmissionResource",
         "kind": 6,
         "importPath": "derp.admission.admin",
         "description": "derp.admission.admin",
-        "peekOfCode": "class AdmissionResource(resources.ModelResource):\n    class Meta:\n        model = Admission\n        fields = [\n            'id', 'student_name', 'profile_image', 'applied_for', 'date_of_birth', \n            'state', 'district', 'locality', 'pincode', 'mobile_number', \n            'aadhar_number', 'previous_result_status', 'admission_status', \n            'previous_institution', 'previous_education', 'school_education', \n            'lc_given', 'pay_fees', 'fees_amount', 'required_donation', \n            'created_at', 'updated_at'",
+        "peekOfCode": "class AdmissionResource(resources.ModelResource):\n    def get_instance(self, instance_loader, row):\n        return self._meta.model.objects.filter(admission_id=row['admission_id']).first()\n    class Meta:\n        model = Admission\n        fields = [\n            'id', 'student_name', 'profile_image', 'applied_for', 'date_of_birth', \n            'state', 'district', 'locality', 'pincode', 'mobile_number', \n            'aadhar_number', 'previous_result_status', 'admission_status', \n            'previous_institution', 'previous_education', 'school_education', ",
         "detail": "derp.admission.admin",
         "documentation": {}
     },
@@ -2262,7 +2386,7 @@
         "kind": 6,
         "importPath": "derp.admission.admin",
         "description": "derp.admission.admin",
-        "peekOfCode": "class AdmissionAdmin(ImportExportModelAdmin):\n    resource_class = AdmissionResource\n    list_display = [\n        'id', 'student_name', 'father_name', 'profile', 'applied_for', \n        'date_of_birth', 'state', 'district', 'locality', 'pincode', \n        'mobile_number', 'aadhar_number', 'previous_result_status', \n        'admission_status', 'previous_institution', 'previous_education', \n        'school_education', 'lc_given', 'pay_fees', 'fees_amount', \n        'required_donation', 'created_at', 'updated_at'\n    ]",
+        "peekOfCode": "class AdmissionAdmin(ImportExportModelAdmin):\n    resource_class = AdmissionResource\n    list_display = [\n        'id', 'student_name', 'father_name', 'profile', 'applied_for', \n        'date_of_birth', 'state', 'district', 'locality', 'pincode', \n        'mobile_number', 'aadhar_number', 'previous_result_status', \n        'admission_status', 'previous_institution', 'previous_education', \n        'school_education', 'lc_given', 'pay_fees', 'fees_amount', \n        'required_donation'\n    ]",
         "detail": "derp.admission.admin",
         "documentation": {}
     },
@@ -2343,7 +2467,7 @@
         "kind": 2,
         "importPath": "derp.admission.models",
         "description": "derp.admission.models",
-        "peekOfCode": "def shortuuid():\n   return str(uuid.uuid4().hex)[:6]\nclass Admission(models.Model):\n    id=models.CharField(shortuuid,max_length=6,editable=False)\n    admission_id = models.CharField(primary_key=True, default=shortuuid, max_length=6)\n    student_name = models.CharField(max_length=200)\n    father_name = models.CharField(max_length=50)\n    date_of_birth = models.DateField()\n    profile_image = models.ImageField(\n    upload_to='admission_images/',",
+        "peekOfCode": "def shortuuid():\n   return str(uuid.uuid4().hex)[:6]\nfrom django.utils import timezone\nclass Admission(models.Model):\n    id=models.CharField(shortuuid,max_length=6,editable=False)\n    admission_id = models.CharField(primary_key=True, default=shortuuid, max_length=6)\n    student_name = models.CharField(max_length=200)\n    father_name = models.CharField(max_length=50)\n    date_of_birth = models.DateField()\n    profile_image = models.ImageField(",
         "detail": "derp.admission.models",
         "documentation": {}
     },
@@ -2379,7 +2503,7 @@
         "kind": 6,
         "importPath": "derp.admission.serializers",
         "description": "derp.admission.serializers",
-        "peekOfCode": "class AdmissionSerializer(serializers.ModelSerializer):\n    class Meta:\n        model= Admission\n        fields='__all__'\nclass StudentSerializer(serializers.ModelSerializer):\n    class Meta:\n        model= Student\n        fields='__all__'\nclass AlumniSerializer(serializers.ModelSerializer):\n    class Meta:",
+        "peekOfCode": "class AdmissionSerializer(serializers.ModelSerializer):\n    date_of_birth = serializers.DateField(format=\"%Y-%m-%d\")\n    created_at = serializers.DateField(format=\"%Y-%m-%d\")\n    updated_at = serializers.DateField(format=\"%Y-%m-%d\")\n    date_of_admission = serializers.DateField(format=\"%Y-%m-%d\")\n    class Meta:\n        model= Admission\n        fields='__all__'\nclass StudentSerializer(serializers.ModelSerializer):\n    class Meta:",
         "detail": "derp.admission.serializers",
         "documentation": {}
     },
@@ -3437,11 +3561,38 @@
         "documentation": {}
     },
     {
+        "label": "generate_and_save_mock_data",
+        "kind": 2,
+        "importPath": "derp.generate_data",
+        "description": "derp.generate_data",
+        "peekOfCode": "def generate_and_save_mock_data(num_records):\n    statuses = ['approved', 'pending', 'left']\n    courses = ['5644', 'H', 'M', 'B']\n    previous_educations = ['ARBI HAFTUM', 'DARS', 'HIFZ', 'FAZIL']\n    states = ['GUJARAT', 'MAHARASHTRA', 'RAJASTHAN', 'DELHI']\n    districts = ['ALWAR', 'BHARUCH', 'MUMBAI', 'DELHI']\n    localities = ['ANJAR', 'SURAT', 'BARODA', 'BHAVNAGAR']\n    for _ in range(num_records):\n        admission = Admission(\n            admission_id=faker.uuid4()[:6],",
+        "detail": "derp.generate_data",
+        "documentation": {}
+    },
+    {
+        "label": "create_student",
+        "kind": 2,
+        "importPath": "derp.generate_data",
+        "description": "derp.generate_data",
+        "peekOfCode": "def create_student(sender, instance, created, **kwargs):\n    if created:\n        # Create the Student object with the necessary course_id\n        Student.objects.create(admission=instance, course=instance.course)\n# Generate and save 50 records to the database\ngenerate_and_save_mock_data(50)",
+        "detail": "derp.generate_data",
+        "documentation": {}
+    },
+    {
+        "label": "faker",
+        "kind": 5,
+        "importPath": "derp.generate_data",
+        "description": "derp.generate_data",
+        "peekOfCode": "faker = Faker()\ndef generate_and_save_mock_data(num_records):\n    statuses = ['approved', 'pending', 'left']\n    courses = ['5644', 'H', 'M', 'B']\n    previous_educations = ['ARBI HAFTUM', 'DARS', 'HIFZ', 'FAZIL']\n    states = ['GUJARAT', 'MAHARASHTRA', 'RAJASTHAN', 'DELHI']\n    districts = ['ALWAR', 'BHARUCH', 'MUMBAI', 'DELHI']\n    localities = ['ANJAR', 'SURAT', 'BARODA', 'BHAVNAGAR']\n    for _ in range(num_records):\n        admission = Admission(",
+        "detail": "derp.generate_data",
+        "documentation": {}
+    },
+    {
         "label": "BaseImportView",
         "kind": 6,
         "importPath": "derp.helpers",
         "description": "derp.helpers",
-        "peekOfCode": "class BaseImportView(APIView):\n    resource_class = None  \n    def post(self, request, format=None):\n        if self.resource_class is None or not issubclass(self.resource_class, ModelResource):\n            return Response({\"error\": \"Invalid resource class.\"}, status=status.HTTP_400_BAD_REQUEST)\n        file = request.FILES.get('file')\n        if not file:\n            return Response({\"error\": \"No file provided.\"}, status=status.HTTP_400_BAD_REQUEST)\n        dataset = Dataset()\n        imported_data = dataset.load(file.read(), format='xlsx')  # Adapt the format as needed",
+        "peekOfCode": "class BaseImportView(APIView):\n    resource_class = None\n    def post(self, request):\n        file = request.FILES.get('file')\n        if not file:\n            return Response({\"error\": \"No file provided.\"}, status=status.HTTP_400_BAD_REQUEST)\n        dataset = Dataset()\n        try:\n            imported_data = dataset.load(file.read(), format='xlsx')\n        except Exception as e:",
         "detail": "derp.helpers",
         "documentation": {}
     },

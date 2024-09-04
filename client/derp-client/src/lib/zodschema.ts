@@ -84,4 +84,22 @@ export const vacationPeriodSchema = z.object({
     end_date: z.string().regex(/^\d{4}-\d{2}-\d{2}$/), // DateField in YYYY-MM-DD format
     description: z.string().max(254).nullable().optional(), // CharField with max_length=254, nullable and optional
   });
-  
+
+
+// Student Schema
+export const studentSchema = z.object({
+  student_id: z.string().length(6).optional(), // CharField with max_length=6, automatically generated
+  admission: z.string().uuid(), // Assuming Admission is represented by a UUID string
+  course: z.string().uuid(), // Assuming Course is represented by a UUID string
+  department: z.string().uuid(), // Assuming Department is represented by a UUID string
+  student_status: z.enum(['pursuing', 'completed', 'left']).default('pursuing'), // Choices for student_status with default
+});
+
+// Exam Type
+export const examTypeSchema = z.object({
+  name: z.string().min(1, "Exam Type Name is required"),
+  effective_date: z.string().nonempty("Effective Date is required"),
+});
+
+export type ExamTypeSchema = z.infer<typeof examTypeSchema>;
+

@@ -1,6 +1,6 @@
 "use server";
 import { NextApiRequest, NextApiResponse } from 'next';
-import {ADMISSION_DASHBOARD, ADMISSION_LIST, ANNUALLY_SYLLABUS_STATUS_LIST, COURSE_LIST, DEPARTMENT_LIST, LOGIN, MONTHLY_SYLLABUS_STATUS_LIST, RETRIEVE_DEPARTMENT, SUBJECT_LIST, SYLLABUS_STATUS_VERIFICATION_LIST, SYLLABUS_TYPE_LIST, TIMETABLE_LIST} from './routePath'
+import {ADMISSION_DASHBOARD, ADMISSION_LIST, ANNUALLY_SYLLABUS_STATUS_LIST, COURSE_LIST, DEPARTMENT_LIST, EXAMTYPE_LIST, LOGIN, MONTHLY_SYLLABUS_STATUS_LIST, RETRIEVE_DEPARTMENT, SUBJECT_LIST, SYLLABUS_STATUS_VERIFICATION_LIST, SYLLABUS_TYPE_LIST, TIMETABLE_LIST} from './routePath'
 import { fetchData } from './helper';
 import { exportToExcel } from './import_export';
 
@@ -49,6 +49,14 @@ export const getSyllabusTypeList = async () => {
 
 export const getTimeTableList = async () => {
   return fetchData(TIMETABLE_LIST);
+};
+
+export const getStudentList = async () => {
+  return fetchData(SUBJECT_LIST);
+};
+
+export const getExamTypeList = async () => {
+  return fetchData(EXAMTYPE_LIST);
 };
 
 

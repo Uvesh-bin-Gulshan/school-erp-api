@@ -15,12 +15,13 @@ import {
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from '@/components/ui/form'
 import { Input } from '@/components/ui/input'
 import { Button } from '@/components/ui/button'
-import { studentSchema } from '@/lib/zodschema'
-import { submitForm, successtoastMessage, failedtoastMessage } from '@/lib/services'
 import { FormInput } from '../_component/FormInput'
 import SubmitButton from '../_component/SubmitButton'
-import { CREATE_STUDENT } from '@/lib/routePath'
 import { Plus } from 'lucide-react'
+import { failedToastMessage, successToastMessage } from '@/lib/client-helpers'
+import { submitForm } from '@/lib/helper'
+import { studentSchema } from '@/lib/zodschema'
+import { CREATE_STUDENT } from '@/lib/routePath'
 
 const AddStudent = () => {
   const router = useRouter();
@@ -39,9 +40,9 @@ const AddStudent = () => {
     try {
       const response = await submitForm(CREATE_STUDENT, all_values, 'POST');
       if (response?.success) {
-        successtoastMessage("Student successfully added");
+        successToastMessage("Student successfully added");
       } else {
-        failedtoastMessage("Failed to add student");
+        failedToastMessage("Failed to add student");
       }
     } catch (error) {
       console.error('Failed to Add Student:', error);
