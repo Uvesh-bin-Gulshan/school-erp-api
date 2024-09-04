@@ -63,9 +63,8 @@ const AddAdmissions = () => {
 
   const handleForm = async (data: any) => {
     try {
-      console.log('Form data:', data);
       const formData = new FormData();
-    
+  
       // Append form fields to FormData
       Object.keys(data).forEach(key => {
         if (data[key] instanceof File) {
@@ -74,10 +73,16 @@ const AddAdmissions = () => {
           formData.append(key, data[key]);
         }
       });
-      const response = await submitForm(CREATE_ADMISSION, data, 'POST');
-      console.log('Response:', response);
-
-      if (response?.success) {
+  
+      // Send the form data using fetch
+      const response = await fetch(CREATE_ADMISSION, {
+        method: 'POST',
+        body: formData,
+      });
+  
+      const result = await response.json();
+  
+      if (result?.success) {
         successToastMessage("Admission successfully created");
         router.push('../admissions/');
       } else {
@@ -87,6 +92,7 @@ const AddAdmissions = () => {
       console.error('Failed to submit form:', error);
     }
   };
+  
 
   return (
     <FormProvider {...form}>
