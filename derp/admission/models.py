@@ -32,7 +32,7 @@ class Admission(models.Model):
     aadhar_number = models.CharField(max_length=12, unique=True)
     created_at = models.DateField(auto_now_add=True)
     updated_at = models.DateField(auto_now_add=True)
-    date_of_admission = models.DateField(default=timezone.now)
+    date_of_admission = models.DateField(default=timezone.now())
 
     RESULT_STATUS = (
         ('pass', 'PASS'),
