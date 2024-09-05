@@ -4,6 +4,7 @@ import AddStudent from './AddStudent'
 import Sidebar from '@/app/_component/SideBar'
 import { BreadcrumbWithCustomSeparator } from '@/app/_component/BreadCrumb'
 import { getStudentList } from '@/lib/services'
+import SideBar from '@/app/_component/SideBar'
 
 const items = [
   { href: "/", label: "Home" },
@@ -17,7 +18,7 @@ const Page = async () => {
 
   return (
     <>
-      <Sidebar>
+      <SideBar breadcrumbs={items}>
         <div className=''>
           <BreadcrumbWithCustomSeparator items={items} separator={<span> :: </span>} />
         </div>
@@ -26,7 +27,7 @@ const Page = async () => {
           <AddStudent />
           <ViewStudent data={data} />
         </div>
-      </Sidebar>
+      </SideBar>
     </>
   )
 }

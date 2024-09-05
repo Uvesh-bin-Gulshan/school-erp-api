@@ -68,3 +68,23 @@ export const RETRIEVE_VACATION_PERIOD = `${BASE_HOST}vacationperiod/retrieve`;
 export const UPDATE_VACATION_PERIOD = `${BASE_HOST}vacationperiod/update`;
 export const DELETE_VACATION_PERIOD = `${BASE_HOST}vacationperiod/delete`;
 
+// Student
+export const STUDENT_LIST = `${BASE_HOST}student/list`;
+export const CREATE_STUDENT = `${BASE_HOST}student/create`;
+export const RETRIEVE_STUDENT = `${BASE_HOST}student/retrieve`;
+export const UPDATE_STUDENT = `${BASE_HOST}student/update`;
+export const DELETE_STUDENT = `${BASE_HOST}student/delete`;
+
+// Exam Type
+export const EXAMTYPE_LIST = '/examtype/list/';
+export const CREATE_EXAMTYPE = '/examtype/create/';
+export const RETRIEVE_EXAMTYPE = '/examtype/retrieve';
+export const UPDATE_EXAMTYPE = '/examtype/update';
+export const DELETE_EXAMTYPE = '/examtype/delete';
+
+// New ExamTimeTable routes
+export const EXAMTIMETABLE_LIST = '/examtimetable/list/';
+export const CREATE_EXAMTIMETABLE = '/examtimetable/create/';
+export const RETRIEVE_EXAMTIMETABLE = '/examtimetable/retrieve';
+export const UPDATE_EXAMTIMETABLE = '/examtimetable/update';
+export const DELETE_EXAMTIMETABLE = '/examtimetable/delete/';

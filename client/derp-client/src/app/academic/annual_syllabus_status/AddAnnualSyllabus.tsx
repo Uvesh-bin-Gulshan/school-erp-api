@@ -22,7 +22,7 @@ import { Plus } from 'lucide-react'
 import { FormInput } from '@/app/_component/FormInput'
 import SubmitButton from '@/app/_component/SubmitButton'
 import { submitForm } from '@/lib/helper'
-import { failedToastMessage, successToastMessage } from '@/lib/services'
+import { failedToastMessage, successToastMessage } from '@/lib/client-helpers'
 
 const AddCourse = () => {
   const router = useRouter();

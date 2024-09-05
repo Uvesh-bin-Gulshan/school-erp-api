@@ -16,11 +16,12 @@ import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from '
 import { Input } from '@/components/ui/input'
 import { Button } from '@/components/ui/button'
 import { studentSchema } from '@/lib/zodschema'
-import { submitForm, successtoastMessage, failedtoastMessage } from '@/lib/services'
 import { FormInput } from '../_component/FormInput'
 import SubmitButton from '../_component/SubmitButton'
 import { UPDATE_STUDENT } from '@/lib/routePath'
 import { MdModeEdit } from 'react-icons/md'
+import { failedToastMessage, successToastMessage } from '@/lib/client-helpers'
+import { submitForm } from '@/lib/helper'
 
 const UpdateStudent = ({ student }: { student: any }) => {
   const router = useRouter();
@@ -39,9 +40,9 @@ const UpdateStudent = ({ student }: { student: any }) => {
     try {
       const response = await submitForm(`${UPDATE_STUDENT}/${student.student_id}/`, all_values, 'PUT');
       if (response?.success) {
-        successtoastMessage("Student successfully updated");
+        successToastMessage("Student successfully updated");
       } else {
-        failedtoastMessage("Failed to update student");
+        failedToastMessage("Failed to update student");
       }
     } catch (error) {
       console.error('Failed to Update Student:', error);
