@@ -1,3 +1,4 @@
+import logging
 from django.shortcuts import render
 
 from helpers import BaseImportView
@@ -25,11 +26,17 @@ class AdmissionView(viewsets.ViewSet):
         return Response(serializer.data)
 
     def create(self, request):
+        logging.debug(f"Request data: {request.data}")
+
         serializer = AdmissionSerializer(data=request.data)
         if serializer.is_valid():
             serializer.save()
+
+          
             return Response(serializer.data, status=status.HTTP_201_CREATED)
-        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+        logging.error(f"Validation errors: {serializer.errors}")
+
+        return Response({'success': False, 'errors': serializer.errors}, status=status.HTTP_400_BAD_REQUEST)
 
     def update(self, request, pk):
         try:

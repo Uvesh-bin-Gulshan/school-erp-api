@@ -3,12 +3,17 @@ from .models import Admission, Student, Alumni
 
 
 class AdmissionSerializer(serializers.ModelSerializer):
-    date_of_birth = serializers.DateField(format="%Y-%m-%d")
-    created_at = serializers.DateField(format="%Y-%m-%d")
-    updated_at = serializers.DateField(format="%Y-%m-%d")
+   
     class Meta:
         model= Admission
-        fields='__all__'
+        fields = [
+            'id', 'admission_id', 'student_name', 'father_name', 'date_of_birth',
+            'profile_image', 'state', 'district', 'locality', 'pincode', 'mobile_number',
+            'aadhar_number', 'date_of_admission', 'previous_result_status', 'previous_institution',
+            'previous_education', 'school_education', 'applied_for', 'lc_given', 'pay_fees',
+            'fees_amount', 'required_donation', 'admission_status'
+        ]
+
 
 class StudentSerializer(serializers.ModelSerializer):
     class Meta:

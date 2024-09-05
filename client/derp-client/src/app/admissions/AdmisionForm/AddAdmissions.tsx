@@ -60,7 +60,6 @@ const AddAdmissions = () => {
   const handlePrev = () => {
     setCurrentStep((prevStep) => prevStep - 1);
   };
-
   const handleForm = async (data: any) => {
     try {
       const formData = new FormData();
@@ -68,16 +67,19 @@ const AddAdmissions = () => {
       // Append form fields to FormData
       Object.keys(data).forEach(key => {
         if (data[key] instanceof File) {
-          formData.append(key, data[key]); // Append file directly
+          formData.append(key, data[key]);
         } else {
           formData.append(key, data[key]);
         }
       });
   
-      // Send the form data using fetch
+      // Send the form data
       const response = await fetch(CREATE_ADMISSION, {
         method: 'POST',
         body: formData,
+        headers: {
+          'Accept': 'application/json',
+        },
       });
   
       const result = await response.json();
@@ -86,12 +88,16 @@ const AddAdmissions = () => {
         successToastMessage("Admission successfully created");
         router.push('../admissions/');
       } else {
-        failedToastMessage("Failed to create admission");
+        // Display error messages from the API response
+        const errorMessages = Object.values(result.errors).flat().join('\n');
+        failedToastMessage(`Failed to create admission: ${errorMessages}`);
       }
     } catch (error) {
       console.error('Failed to submit form:', error);
+      failedToastMessage("An unexpected error occurred.");
     }
   };
+  
   
 
   return (
