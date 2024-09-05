@@ -81,3 +81,10 @@ export const CREATE_EXAMTYPE = '/examtype/create/';
 export const RETRIEVE_EXAMTYPE = '/examtype/retrieve';
 export const UPDATE_EXAMTYPE = '/examtype/update';
 export const DELETE_EXAMTYPE = '/examtype/delete';
+
+// New ExamTimeTable routes
+export const EXAMTIMETABLE_LIST = '/examtimetable/list/';
+export const CREATE_EXAMTIMETABLE = '/examtimetable/create/';
+export const RETRIEVE_EXAMTIMETABLE = '/examtimetable/retrieve';
+export const UPDATE_EXAMTIMETABLE = '/examtimetable/update';
+export const DELETE_EXAMTIMETABLE = '/examtimetable/delete/';

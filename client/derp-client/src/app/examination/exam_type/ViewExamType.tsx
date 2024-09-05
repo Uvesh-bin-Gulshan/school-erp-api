@@ -2,7 +2,7 @@
 
 import { DataTable } from '@/app/_component/DataTable'
 import React from 'react'
-import { columns } from './columns'
+import { columns } from './colums'
 import { ColumnFiltersState } from '@tanstack/react-table'
 
 const ViewExamType = ({ data }: { data: any }) => {

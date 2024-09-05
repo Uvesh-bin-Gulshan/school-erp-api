@@ -101,5 +101,15 @@ export const examTypeSchema = z.object({
   effective_date: z.string().nonempty("Effective Date is required"),
 });
 
+
+export const examTimeTableSchema = z.object({
+  exam_type: z.string().min(1, { message: "Exam Type is required" }),
+  subject: z.string().min(1, { message: "Subject is required" }),
+  total_marks: z.number().min(0, { message: "Total marks are required" }),
+  passing_marks: z.number().min(0, { message: "Passing marks are required" }),
+  time: z.string().min(1, { message: "Time is required" }),
+});
+
+
 export type ExamTypeSchema = z.infer<typeof examTypeSchema>;
 
