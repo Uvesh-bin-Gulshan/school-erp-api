@@ -18,6 +18,14 @@ urlpatterns = [
     path('examtimetable/update/<str:pk>/', ExamTimeTableView.as_view({'put': 'update'}), name='examtimetable-update'),
     path('examtimetable/delete/<str:pk>/', ExamTimeTableView.as_view({'delete': 'delete'}), name='examtimetable-delete'),
 
+    # HallTicket APIs
+    path('hallticket/list/', HallTicketView.as_view({'get': 'list'}), name='hallticket-list'),
+    path('hallticket/create/', HallTicketView.as_view({'post': 'create'}), name='hallticket-create'),
+    path('hallticket/retrieve/<str:pk>/', HallTicketView.as_view({'get': 'retrieve'}), name='hallticket-retrieve'),
+    path('hallticket/update/<str:pk>/', HallTicketView.as_view({'put': 'update'}), name='hallticket-update'),
+    path('hallticket/delete/<str:pk>/', HallTicketView.as_view({'delete': 'delete'}), name='hallticket-delete'),
+
+
     # Marksheet APIs
     path('marksheet/list/', MarkSheetView.as_view({'get': 'list'}), name='marksheet-list'),
     path('marksheet/create/', MarkSheetView.as_view({'post': 'create'}), name='marksheet-create'),

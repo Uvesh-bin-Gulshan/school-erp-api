@@ -4,8 +4,8 @@
 
 import { DataTable } from '@/app/_component/DataTable';
 import React from 'react';
-import { columns } from './columns';
 import { ColumnFiltersState } from '@tanstack/react-table';
+import { columns } from './colums';
 
 const ViewExamTimeTable = ({ data }: { data: any }) => {
   const columnFilters: ColumnFiltersState = [];

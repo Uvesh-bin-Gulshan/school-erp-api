@@ -2,7 +2,7 @@
 
 import React from 'react'
 import { ColumnFiltersState } from '@tanstack/react-table'
-import { columns } from './colums'
+import { columns } from './columns'
 import { DataTable } from '@/app/_component/DataTable'
 
 const ViewTimeTable = ({ data }: { data: any }) => {
