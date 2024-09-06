@@ -31,13 +31,14 @@ class Admission(models.Model):
     mobile_number = models.CharField(max_length=12)
     aadhar_number = models.CharField(max_length=12, unique=True)
     created_at = models.DateField(auto_now_add=True)
-    updated_at = models.DateField(auto_now_add=True)
+    updated_at = models.DateField(auto_now=True)
     date_of_admission = models.DateField(default=timezone.now())
 
     RESULT_STATUS = (
         ('pass', 'PASS'),
         ('fail', 'FAIL')
     )
+
     previous_result_status = models.CharField(choices=RESULT_STATUS, default='pass', max_length=10)  # Changed default value
     
     previous_institution = models.CharField(max_length=200, null=False, blank=False)

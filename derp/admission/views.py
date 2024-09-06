@@ -139,3 +139,4 @@ class AlumniView(viewsets.ViewSet):
 
 class AdmissionImportView(BaseImportView):
     resource_class = AdmissionResource
+    

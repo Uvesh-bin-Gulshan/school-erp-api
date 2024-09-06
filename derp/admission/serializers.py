@@ -1,3 +1,4 @@
+from django.utils import timezone
 from rest_framework import serializers
 from .models import Admission, Student, Alumni
 
@@ -5,6 +6,8 @@ from .models import Admission, Student, Alumni
 class AdmissionSerializer(serializers.ModelSerializer):
    
     class Meta:
+        # date_of_admission = serializers.DateField(default=timezone.now)
+
         model= Admission
         fields = [
             'id', 'admission_id', 'student_name', 'father_name', 'date_of_birth',
