@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useForm, FormProvider } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useRouter } from "next/navigation";
@@ -7,45 +7,44 @@ import { admissionSchema } from "@/lib/zodschema";
 import PersonalInformation from "./steps/PersonalInformation";
 import ApplicationDetails from "./steps/ApplicationDetails";
 import { MdNavigateNext } from "react-icons/md";
-import { CREATE_ADMISSION } from "@/lib/routePath";
+import { UPDATE_ADMISSION } from "@/lib/routePath";
 import { failedToastMessage, successToastMessage } from "@/lib/client-helpers";
 import AddressInformation from "./steps/AddressInformation ";
 
-const AddAdmissions = () => {
+const UpdateAdmission = ({ admissionData }: { admissionData: any }) => {
   const router = useRouter();
   const [currentStep, setCurrentStep] = useState(1);
 
   const form = useForm({
     resolver: zodResolver(admissionSchema),
     defaultValues: {
-      student_name: "",
-      father_name: "",
-      date_of_birth: "",
-      profile_image: null,
-      state: "",
-      district: "",
-      locality: "",
-      pincode: "",
-      mobile_number: "",
-      aadhar_number: "",
-      previous_institution: "",
-      previous_education: "",
-      school_education: "",
-      previous_result_status: "pass",
-      applied_for: "",
-      lc_given: false,
-      pay_fees: false,
-      fees_amount: "",
-      required_donation: false,
-      admission_status: "pending",
+      student_name: admissionData?.student_name || "",
+      father_name: admissionData?.father_name || "",
+      date_of_birth: admissionData?.date_of_birth || "",
+      profile_image: admissionData?.profile_image || null,
+      state: admissionData?.state || "",
+      district: admissionData?.district || "",
+      locality: admissionData?.locality || "",
+      pincode: admissionData?.pincode || "",
+      mobile_number: admissionData?.mobile_number || "",
+      aadhar_number: admissionData?.aadhar_number || "",
+      previous_institution: admissionData?.previous_institution || "",
+      previous_education: admissionData?.previous_education || "",
+      school_education: admissionData?.school_education || "",
+      previous_result_status: admissionData?.previous_result_status || "pass",
+      applied_for: admissionData?.applied_for || "",
+      lc_given: admissionData?.lc_given || false,
+      pay_fees: admissionData?.pay_fees || false,
+      fees_amount: admissionData?.fees_amount || "",
+      required_donation: admissionData?.required_donation || false,
+      admission_status: admissionData?.admission_status || "pending",
     },
   });
 
-  // Define the fields to validate for each step
   const stepFields = [
-    ["student_name", "father_name", "date_of_birth", "profile_image"], // PersonalInformation fields
-    ["state", "district", "locality", "pincode", "mobile_number", "aadhar_number"], // AddressInformation fields
-    ["previous_institution", "previous_education", "school_education", "applied_for", "fees_amount"], // ApplicationDetails fields
+    ["student_name", "father_name", "date_of_birth", "profile_image"],
+    ["state", "district", "locality", "pincode", "mobile_number", "aadhar_number"],
+    ["previous_institution", "previous_education", "school_education", "applied_for", "fees_amount"],
   ];
 
   const steps = [
@@ -71,7 +70,6 @@ const AddAdmissions = () => {
     try {
       const formData = new FormData();
 
-      // Append form fields to FormData
       Object.keys(data).forEach((key) => {
         if (data[key] instanceof File) {
           formData.append(key, data[key]);
@@ -80,8 +78,8 @@ const AddAdmissions = () => {
         }
       });
 
-      const response = await fetch(CREATE_ADMISSION, {
-        method: "POST",
+      const response = await fetch(`${UPDATE_ADMISSION}/${admissionData.id}`, {
+        method: "PUT",
         body: formData,
         headers: {
           Accept: "application/json",
@@ -91,11 +89,11 @@ const AddAdmissions = () => {
       const result = await response.json();
 
       if (result?.success) {
-        successToastMessage("Admission successfully created");
+        successToastMessage("Admission successfully updated");
         router.push("../admissions/");
       } else {
         const errorMessages = Object.values(result.errors).flat().join("\n");
-        failedToastMessage(`Failed to create admission: ${errorMessages}`);
+        failedToastMessage(`Failed to update admission: ${errorMessages}`);
       }
     } catch (error) {
       console.error("Failed to submit form:", error);
@@ -114,7 +112,7 @@ const AddAdmissions = () => {
       >
         {steps[currentStep - 1]}
 
-        <div className="flex justify-between mt-4 p-24 overflow-hidden ">
+        <div className="flex justify-between mt-4 p-24 overflow-hidden">
           {currentStep > 1 && (
             <button type="button" onClick={handlePrev}>
               Previous
@@ -133,4 +131,4 @@ const AddAdmissions = () => {
   );
 };
 
-export default AddAdmissions;
+export default UpdateAdmission;

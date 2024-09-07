@@ -6,11 +6,14 @@ import PreviousEducation from './steps/PreviousEducation'
 import ApplicationDetails from './steps/ApplicationDetails'
 import AddAdmissions from './AddAdmissions'
 import Sidebar from '@/app/_component/SideBar'
+import UpdateAdmission from './UpdateAdmission'
+import { getAdmissionList } from '@/lib/services'
 const items = [
     { href: "/", label: "Home" },
     { href: "/components", label: "Components" },
   ];
-const Page = () => {
+const Page =async () => {
+  const admissionData= await getAdmissionList()
 
 
 return (
@@ -20,6 +23,7 @@ return (
 
 <div className='  h-96'>
 <AddAdmissions/>
+<UpdateAdmission admissionData={admissionData}/>
 
 </div>
 

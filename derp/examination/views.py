@@ -1,11 +1,11 @@
 from django.shortcuts import render, get_object_or_404
-from rest_framework import viewsets
+from rest_framework import viewsets, status
 from rest_framework.response import Response
 from django.http import JsonResponse
 from django.db.models import Sum, F
 from admission.models import Student
-from .models import ExamType, ExamTimeTable, MarkSheet, ResultSheet
-from .serializers import ExamTypeSerializer, ExamTimeTableSerializer, MarkSheetSerializer, ResultSheetSerializer
+from .models import ExamType, ExamTimeTable, MarkSheet, ResultSheet, HallTicket
+from .serializers import ExamTypeSerializer, ExamTimeTableSerializer, MarkSheetSerializer, ResultSheetSerializer, HallTicketSerializer
 
 
 def generate_result_sheet(student_id):
@@ -117,6 +117,47 @@ class ExamTimeTableView(viewsets.ViewSet):
         exam_time_table = get_object_or_404(ExamTimeTable, pk=pk)
         exam_time_table.delete()
         return Response(status=204)
+
+
+class HallTicketView(viewsets.ViewSet):
+    def list(self, request):
+        queryset = HallTicket.objects.all()
+        serializer = HallTicketSerializer(queryset, many=True)
+        return Response(serializer.data)
+
+    def retrieve(self, request, pk):
+        try:
+            hall_ticket = HallTicket.objects.get(pk=pk)
+        except HallTicket.DoesNotExist:
+            return Response(status=status.HTTP_404_NOT_FOUND)
+        serializer = HallTicketSerializer(hall_ticket)
+        return Response(serializer.data)
+
+    def create(self, request):
+        serializer = HallTicketSerializer(data=request.data)
+        if serializer.is_valid():
+            serializer.save()
+            return Response(serializer.data, status=status.HTTP_201_CREATED)
+        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+
+    def update(self, request, pk):
+        try:
+            hall_ticket = HallTicket.objects.get(pk=pk)
+        except HallTicket.DoesNotExist:
+            return Response(status=status.HTTP_404_NOT_FOUND)
+        serializer = HallTicketSerializer(hall_ticket, data=request.data)
+        if serializer.is_valid():
+            serializer.save()
+            return Response(serializer.data, status=status.HTTP_200_OK)
+        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+
+    def delete(self, request, pk):
+        try:
+            hall_ticket = HallTicket.objects.get(pk=pk)
+        except HallTicket.DoesNotExist:
+            return Response(status=status.HTTP_404_NOT_FOUND)
+        hall_ticket.delete()
+        return Response(status=status.HTTP_204_NO_CONTENT)
 
 
 class MarkSheetView(viewsets.ViewSet):

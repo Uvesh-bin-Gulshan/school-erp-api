@@ -86,6 +86,7 @@ const PersonalInformation = () => {
           )}
         />
       </div>
+      
     </>
   );
 };

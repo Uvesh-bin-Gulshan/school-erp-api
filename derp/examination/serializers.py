@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from .models import ExamType, ExamTimeTable, MarkSheet, ResultSheet
+from .models import ExamType, ExamTimeTable, MarkSheet, ResultSheet, HallTicket
 
 class ExamTypeSerializer(serializers.ModelSerializer):
     class Meta:
@@ -9,6 +9,10 @@ class ExamTypeSerializer(serializers.ModelSerializer):
 class ExamTimeTableSerializer(serializers.ModelSerializer):
     class Meta:
         model = ExamTimeTable
+        fields = '__all__'
+class HallTicketSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = HallTicket
         fields = '__all__'
 
 class MarkSheetSerializer(serializers.ModelSerializer):

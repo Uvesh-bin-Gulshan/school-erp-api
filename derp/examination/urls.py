@@ -1,5 +1,5 @@
 from django.urls import path # type: ignore
-from .views import ExamTypeView, ExamTimeTableView, MarkSheetView, ResultSheetView
+from .views import ExamTypeView, ExamTimeTableView, MarkSheetView, ResultSheetView, HallTicketView
 from .dashboard import ResultDashboardView
 app_name='examination'
 

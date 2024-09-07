@@ -88,3 +88,10 @@ export const CREATE_EXAMTIMETABLE = '/examtimetable/create/';
 export const RETRIEVE_EXAMTIMETABLE = '/examtimetable/retrieve';
 export const UPDATE_EXAMTIMETABLE = '/examtimetable/update';
 export const DELETE_EXAMTIMETABLE = '/examtimetable/delete/';
+
+// HallTicket routes
+export const HALLTICKET_LIST = `${BASE_HOST}hallticket/list`;
+export const CREATE_HALLTICKET = `${BASE_HOST}hallticket/create`;
+export const RETRIEVE_HALLTICKET = `${BASE_HOST}hallticket/retrieve`;
+export const UPDATE_HALLTICKET = `${BASE_HOST}hallticket/update`;
+export const DELETE_HALLTICKET = `${BASE_HOST}hallticket/delete`;
