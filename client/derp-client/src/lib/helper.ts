@@ -17,7 +17,7 @@ export const fetchData = async (endpoint: string) => {
 };
 
 
-export const submitForm = async (url: string, data: object, method: string) => {
+export const submitForm = async (url: any, data: object, method: string) => {
   try {
     // Ensure the data is a plain object
     const plainData = JSON.parse(JSON.stringify(data));

@@ -1,62 +1,65 @@
 "use server";
 import { NextApiRequest, NextApiResponse } from 'next';
-import {ADMISSION_DASHBOARD, ADMISSION_LIST, ANNUALLY_SYLLABUS_STATUS_LIST, COURSE_LIST, DEPARTMENT_LIST, EXAMTYPE_LIST, LOGIN, MONTHLY_SYLLABUS_STATUS_LIST, RETRIEVE_DEPARTMENT, SUBJECT_LIST, SYLLABUS_STATUS_VERIFICATION_LIST, SYLLABUS_TYPE_LIST, TIMETABLE_LIST} from './routePath'
 import { fetchData } from './helper';
 import { exportToExcel } from './import_export';
+import { routes } from './routePath';
 
 
-export const getDepartmentDetail = async (department_id: string) => {
-  return fetchData(`${RETRIEVE_DEPARTMENT}${department_id}`);
-};
-
+//ADMISSION
 export const getAdmissionDashboard = async () => {
-  return fetchData(ADMISSION_DASHBOARD);
+  return fetchData(routes.ADMISSION_DASHBOARD);
 };
 
 export const getAdmissionList = async () => {
-  return fetchData(ADMISSION_LIST);
+  return fetchData(routes.ADMISSION_LIST);
 
 };
+export const getAdmissionDetail = async (admission_id: string) => {
+  return fetchData(`${routes.RETRIEVE_ADMISSION}/${admission_id}/`);
+};
 
-
+//ACADEMICS
 export const getCourseList = async () => {
-  return fetchData(COURSE_LIST);
+  return fetchData(routes.COURSE_LIST);
 };
 
 export const getSubjectList = async () => {
-  return fetchData(SUBJECT_LIST);
+  return fetchData(routes.SUBJECT_LIST);
 };
 
 export const getMonthlyStatusList = async () => {
-  return fetchData(MONTHLY_SYLLABUS_STATUS_LIST);
+  return fetchData(routes.MONTHLY_SYLLABUS_STATUS_LIST);
 };
 
 export const getAnnualStatusList = async () => {
-  return fetchData(ANNUALLY_SYLLABUS_STATUS_LIST);
+  return fetchData(routes.ANNUALLY_SYLLABUS_STATUS_LIST);
 };
 
 export const getDepartmentList = async () => {
-  return fetchData(DEPARTMENT_LIST);
+  return fetchData(routes.DEPARTMENT_LIST);
 };
 
 export const getSyllabusStatusList = async () => {
-  return fetchData(SYLLABUS_STATUS_VERIFICATION_LIST);
+  return fetchData(routes.SYLLABUS_STATUS_VERIFICATION_LIST);
 };
 
 export const getSyllabusTypeList = async () => {
-  return fetchData(SYLLABUS_TYPE_LIST);
+  return fetchData(routes.SYLLABUS_TYPE_LIST);
 };
 
 export const getTimeTableList = async () => {
-  return fetchData(TIMETABLE_LIST);
+  return fetchData(routes.TIMETABLE_LIST);
 };
 
 export const getStudentList = async () => {
-  return fetchData(SUBJECT_LIST);
+  return fetchData(routes.SUBJECT_LIST);
 };
 
 export const getExamTypeList = async () => {
-  return fetchData(EXAMTYPE_LIST);
+  return fetchData(routes.EXAMTYPE_LIST);
 };
 
 
+export const getDepartmentDetail = async (department_id: string) => {
+  return fetchData(`${routes.RETRIEVE_DEPARTMENT}${department_id}`);
+};

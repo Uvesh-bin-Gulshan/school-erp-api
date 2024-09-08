@@ -1,5 +1,3 @@
-"use client"
-
 import {
   ColumnDef,
   ColumnFiltersState,
@@ -43,6 +41,12 @@ export function DataTable<TData, TValue>({
   const [selectedColumn, setSelectedColumn] = React.useState<string | undefined>(undefined)
   const [filterValue, setFilterValue] = React.useState<string>("")
 
+  // Custom filter function for 'startsWith'
+  const startsWithFilter = (rowValue: string, filterValue: string) => {
+    if (!rowValue) return false
+    return rowValue.toLowerCase().startsWith(filterValue.toLowerCase())
+  }
+
   const table = useReactTable({
     data,
     columns,
@@ -55,6 +59,9 @@ export function DataTable<TData, TValue>({
     state: {
       sorting,
       columnFilters,
+    },
+    filterFns: {
+      startsWith: startsWithFilter,  // Registering custom 'startsWith' filter
     },
   })
 
@@ -76,7 +83,7 @@ export function DataTable<TData, TValue>({
 
   return (
     <>
-      <div className="flex items-center   py-4 m-2 space-x-4">
+      <div className="flex items-center py-4 m-2 space-x-4">
         <Select onValueChange={(value) => setSelectedColumn(value)}>
           <SelectTrigger className="w-48 ml-2 bg-slate-200/50">
             <SelectValue placeholder="Select a column" />
@@ -93,17 +100,17 @@ export function DataTable<TData, TValue>({
           placeholder="Enter filter value"
           value={filterValue}
           onChange={(event) => setFilterValue(event.target.value)}
-          className="max-w-sm "
+          className="max-w-sm"
           disabled={!selectedColumn}
         />
       </div>
-      <div className="  mx-4">
+      <div className="mx-4">
         <Table>
-          <TableHeader className=" rounded-xl bg-slate-100 text-sx">
+          <TableHeader className="rounded-xl bg-slate-100 text-sx">
             {table.getHeaderGroups().map((headerGroup) => (
-              <TableRow className="rounded-xl hover:bg-slate-100 " key={headerGroup.id}>
+              <TableRow className="rounded-xl hover:bg-slate-100" key={headerGroup.id}>
                 {headerGroup.headers.map((header) => (
-                  <TableHead className="" key={header.id}>
+                  <TableHead key={header.id}>
                     {header.isPlaceholder
                       ? null
                       : flexRender(
@@ -120,7 +127,7 @@ export function DataTable<TData, TValue>({
               table.getRowModel().rows.map((row) => (
                 <TableRow key={row.id} data-state={row.getIsSelected() && "selected"}>
                   {row.getVisibleCells().map((cell) => (
-                    <TableCell key={cell.id} className=" ">
+                    <TableCell key={cell.id}>
                       {flexRender(cell.column.columnDef.cell, cell.getContext())}
                     </TableCell>
                   ))}

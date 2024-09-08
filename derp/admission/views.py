@@ -49,12 +49,14 @@ class AdmissionView(viewsets.ViewSet):
             return Response(serializer.data, status=status.HTTP_200_OK)
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
-    def destroy(self, request, pk):
+    def delete(self, request, pk):
         try:
             admission = Admission.objects.get(pk=pk)
             admission.delete()
+            return Response({"success": True, "message": "Admission deleted successfully."}, status=status.HTTP_204_NO_CONTENT)
         except Admission.DoesNotExist:
-            return Response(status=status.HTTP_404_NOT_FOUND)
+            return Response({"success": False, "error": "Admission not found."}, status=status.HTTP_404_NOT_FOUND)
+
 
 class StudentView(viewsets.ViewSet):
     def list(self, request):

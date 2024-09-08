@@ -23,7 +23,6 @@ const RetrieveDetail: React.FC<RetrieveDetailProps> = ({ item,id, endpoint, onSu
   const [data, setData] = useState<any>(null);
   const [loading, setLoading] = useState<boolean>(true);
   const [error, setError] = useState<string | null>(null);
-
   const handleRetrive=async()=>{
     try{
       const response =await fetch(`${endpoint}/${id}`,{
@@ -32,8 +31,9 @@ const RetrieveDetail: React.FC<RetrieveDetailProps> = ({ item,id, endpoint, onSu
       })
       if(response.ok){
         const result = await response.json();
-
+                 console.log(result,"demo ")
         setData(result);
+
         onSuccess(result);
         console.log("item retrived successfully")
       }else{

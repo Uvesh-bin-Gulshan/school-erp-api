@@ -29,10 +29,5 @@ urlpatterns = [
     path('student-dashboard/', StudentDashboardView.as_view(), name='student-dashboard'), # Done Alhamdulillah
     path('alumni-dashboard/', AlumniDashboardView.as_view(), name='alumni-dashboard'), # pending
     path('import-admission/', AdmissionImportView.as_view(), name='import-admission'),
-
-
-
-
-
 ]
 
