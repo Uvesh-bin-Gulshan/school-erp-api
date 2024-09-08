@@ -41,12 +41,22 @@ const UpdateAdmission = ({ admissionData }: { admissionData: any }) => {
     },
   });
 
+  // Wait until admissionData is available before rendering the form
+  if (!admissionData) {
+    return <div>Loading...</div>;
+  }
+
   const stepFields = [
     ["student_name", "father_name", "date_of_birth", "profile_image"],
     ["state", "district", "locality", "pincode", "mobile_number", "aadhar_number"],
     ["previous_institution", "previous_education", "school_education", "applied_for", "fees_amount"],
   ];
-
+  useEffect(() => {
+    if (admissionData) {
+      form.reset(admissionData);  // Reset the form when admissionData is loaded
+    }
+  }, [admissionData, form]);
+  
   const steps = [
     <PersonalInformation key="1" />,
     <AddressInformation key="2" />,
@@ -132,3 +142,4 @@ const UpdateAdmission = ({ admissionData }: { admissionData: any }) => {
 };
 
 export default UpdateAdmission;
+

@@ -1,6 +1,10 @@
 import { Button } from "@/components/ui/button";
 import { ColumnDef } from "@tanstack/react-table";
 import { ArrowUpDown } from "lucide-react";
+import UpdateAdmission from "./AdmisionForm/update_admission/UpdateAdmission";
+import RetrieveDetail from "../_component/RetriveDetail";
+import Link from "next/link";
+import { MdModeEdit } from "react-icons/md";
 
 export type Admission = {
   id: number;
@@ -77,68 +81,37 @@ export const columns: ColumnDef<Admission>[] = [
     accessorKey: "locality",
     header: "Locality",
   },
-  // {
-  //   accessorKey: "pincode",
-  //   header: "Pincode",
-  // },
-  // {
-  //   accessorKey: "mobile_number",
-  //   header: "Mobile Number",
-  // },
-  // {
-  //   accessorKey: "addhar_number",
-  //   header: "Aadhar Number",
-  // },
-  // {
-  //   accessorKey: "previous_result_status",
-  //   header: "Previous Result Status",
-  // },
-  // {
-  //   accessorKey: "admission_status",
-  //   header: "Admission Status",
-  // },
-  // {
-  //   accessorKey: "previous_institution",
-  //   header: "Previous Institution",
-  // },
-  // {
-  //   accessorKey: "previous_education",
-  //   header: "Previous Education",
-  // },
-  // {
-  //   accessorKey: "worldly_studies",
-  //   header: "Worldly Studies",
-  // },
-  // {
-  //   accessorKey: "lc_given",
-  //   header: "LC Given",
-  // },
-  // {
-  //   accessorKey: "donation",
-  //   header: "Donation",
-  // },
-  // {
-  //   accessorKey: "donation_amount",
-  //   header: "Donation Amount",
-  // },
-  // {
-  //   accessorKey: "require_donation",
-  //   header: "Require Donation",
-  // },
-  // {
-  //   accessorKey: "created_at",
-  //   header: "Created At",
-  // },
-  // {
-  //   accessorKey: "updated_at",
-  //   header: "Updated At",
-  // },
-  // {
-  //   accessorKey: "date_of_admission",
-  //   header: "Date of Admission",
-  // },
-  // {
-  //   accessorKey: "applied_for",
-  //   header: "Applied For",
-  // },
+  {
+    accessorKey: "action",
+    header: "Action",
+    cell: ({ row }) => {
+      const admissionData = row.original; 
+      
+      const handleSuccess = () => {
+        // handle successful deletion, e.g., refresh the table
+        console.log("Department deleted, refresh the table or state");
+      };
+
+      return (
+        <div className="flex items-center  space-x-3">
+          <Link href={{
+    pathname: "../admissions/AdmisionForm/update_admission",
+    query: { id: admissionData.admission_id }, // pass the admission ID
+  }}  >  <MdModeEdit /></Link>
+          {/* <RetrieveDetail 
+                 item={'admission'}     id={admissionData.admission_id} 
+
+            endpoint={`${RETR}`}
+            onSuccess={handleSuccess}/> */}
+          {/* <DeleteButtom 
+            item={'department'}
+            id={admissionData.admission_id} 
+            endpoint={`${DELE}`}
+            onSuccess={handleSuccess}
+          /> */}
+        </div>
+      );
+    },
+  },
+
 ];
