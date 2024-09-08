@@ -53,9 +53,29 @@ const UpdateAdmission = ({ admissionData }: { admissionData: any }) => {
   ];
   useEffect(() => {
     if (admissionData) {
-      form.reset(admissionData);  // Reset the form when admissionData is loaded
+      form.setValue("student_name", admissionData.student_name || "");
+      form.setValue("father_name", admissionData.father_name || "");
+      form.setValue("date_of_birth", admissionData.date_of_birth || "");
+      form.setValue("profile_image", admissionData.profile_image || null);
+      form.setValue("state", admissionData.state || "");
+      form.setValue("district", admissionData.district || "");
+      form.setValue("locality", admissionData.locality || "");
+      form.setValue("pincode", admissionData.pincode || "");
+      form.setValue("mobile_number", admissionData.mobile_number || "");
+      form.setValue("aadhar_number", admissionData.aadhar_number || "");
+      form.setValue("previous_institution", admissionData.previous_institution || "");
+      form.setValue("previous_education", admissionData.previous_education || "");
+      form.setValue("school_education", admissionData.school_education || "");
+      form.setValue("previous_result_status", admissionData.previous_result_status || "pass");
+      form.setValue("applied_for", admissionData.applied_for || "");
+      form.setValue("lc_given", admissionData.lc_given || false);
+      form.setValue("pay_fees", admissionData.pay_fees || false);
+      form.setValue("fees_amount", admissionData.fees_amount || "");
+      form.setValue("required_donation", admissionData.required_donation || false);
+      form.setValue("admission_status", admissionData.admission_status || "pending");
     }
   }, [admissionData, form]);
+  
   
   const steps = [
     <PersonalInformation key="1" />,
