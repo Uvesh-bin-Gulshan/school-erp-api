@@ -84,13 +84,12 @@ export interface Admission {
     }>;
   }
   
-
-// Define the shape of the context state
-interface AdmissionContextType {
-  data: Admission[] | null;
-  dashboard: DashboardData | null;
-  loading: boolean;
-}
+  export interface AdmissionContextType {
+    data: Admission[] | null;
+    dashboard: DashboardData | null;
+    loading: boolean;
+  }
+  
 
 // Create the context
 const AdmissionContext = createContext<AdmissionContextType | undefined>(undefined);
@@ -104,16 +103,11 @@ export const useAdmissionContext = () => {
   return context;
 };
 
-// Provider component props type
-interface AdmissionProviderProps {
-  children: ReactNode;
-}
-
-// Provider component to wrap the app
-export const AdmissionProvider = ({ children }: AdmissionProviderProps) => {
+// Provider component
+export const AdmissionProvider = ({ children }: { children: ReactNode }) => {
   const [data, setData] = useState<Admission[] | null>(null);
   const [dashboard, setDashboard] = useState<DashboardData | null>(null);
-  const [loading, setLoading] = useState<boolean>(true);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     const fetchData = async () => {

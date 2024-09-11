@@ -7,16 +7,16 @@ import { admissionSchema } from "@/lib/zodschema";
 import PersonalInformation from "../steps/PersonalInformation";
 import ApplicationDetails from "../steps/ApplicationDetails";
 import { MdNavigateNext } from "react-icons/md";
-import { CREATE_ADMISSION } from "@/lib/routePath";
-import { failedToastMessage, successToastMessage } from "@/lib/client-helpers";
+import { failedToastMessage, successToastMessage, useDynamicFormConfig } from "@/lib/client-helpers";
 import AddressInformation from "../steps/AddressInformation ";
+import { routes } from "@/lib/routePath";
 
 const AddAdmissions = () => {
   const router = useRouter();
   const [currentStep, setCurrentStep] = useState(1);
 
-  const form = useForm({
-    resolver: zodResolver(admissionSchema),
+  const form = useDynamicFormConfig(admissionSchema, {
+
     defaultValues: {
       student_name: "",
       father_name: "",
@@ -80,7 +80,7 @@ const AddAdmissions = () => {
         }
       });
 
-      const response = await fetch(CREATE_ADMISSION, {
+      const response = await fetch(routes.CREATE_ADMISSION, {
         method: "POST",
         body: formData,
         headers: {

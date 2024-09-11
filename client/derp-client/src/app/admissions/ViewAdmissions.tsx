@@ -1,55 +1,42 @@
-"use client"
-import { DataTable } from '@/app/_component/DataTable'
-import React from 'react'
-import { columns } from './columns'
-import { getAsset } from 'node:sea'
-import { ColumnFiltersState } from '@tanstack/react-table'
-import AddAdmissions from './AdmisionForm/add_admission/AddAdmissions'
-import Link from 'next/link'
-import CustomButton from '../_component/CustomButton'
-import { FileDown, FileUp, LayoutDashboard, Plus } from 'lucide-react'
-import { exportAdmissions } from '@/lib/import_export'
-import ImportAdmission from './ImportAdmission/ImportAdmission'
+"use client";
+import { DataTable } from '@/app/_component/DataTable';
+import React from 'react';
+import { columns } from './columns';
+import { ColumnFiltersState } from '@tanstack/react-table';
+import AddAdmissions from './AdmisionForm/add_admission/AddAdmissions';
+import Link from 'next/link';
+import CustomButton from '../_component/CustomButton';
+import { FileDown, FileUp, Plus } from 'lucide-react';
+import { exportAdmissions } from '@/lib/import_export';
+import { AdmissionProvider } from './AdmissionContext';
 
-const ViewAdmissions = ({data}:{data:any}) => {
-  const columnFilters: ColumnFiltersState = []
-  console.log(data)
+interface ViewAdmissionsProps {
+  data: any;
+}
+
+const ViewAdmissions: React.FC<ViewAdmissionsProps> = ({ data }:{data:any}) => {
+  const columnFilters: ColumnFiltersState = [];
 
   return (
-    <>
-    <div className="w-full relative ">
-      
-    <div className='absolute right-4 mt-4 gap-4'>
-    
-    <Link  className="mr-2"   href="../admissions/ImportAdmission">     
-       <CustomButton className="w-36" text="Import" icon={<FileUp />} />
-    </Link>
-      {/* <ImportAdmission /> */}
-    <CustomButton className="w-36 mr-2" text="Export"  onClick={exportAdmissions} icon={<FileDown />}/>
+    <AdmissionProvider>
+      <div className="w-full relative">
+        <div className="absolute right-4 mt-4 flex gap-4">
+          <Link className="mr-2" href="/admissions/ImportAdmission">
+            <CustomButton className="w-36" text="Import" icon={<FileUp />} />
+          </Link>
+          
+          <CustomButton className="w-36 mr-2" text="Export" onClick={exportAdmissions} icon={<FileDown />} />
+          
+          <Link href="/admissions/AdmisionForm/add_admission">
+            <CustomButton className="w-36 mr-1" text="Admission" icon={<Plus />} />
+          </Link>
+          
+        </div>
 
-    <Link href="../admissions/AdmisionForm">     
-       <CustomButton className="w-36 mr-1" text="Admission" icon={<Plus />} />
-    </Link>
-    
-    </div>
-    
-    <DataTable 
-    
-    columns={columns}
-    
-    initialColumnFilters={columnFilters}
-    
-    
-    data={data}/>
-    
-    </div>
-    
-    
-    </>
-    
-    
-    
-    )
-  }
+        <DataTable columns={columns} initialColumnFilters={columnFilters} data={data} />
+      </div>
+    </AdmissionProvider>
+  );
+};
 
-export default ViewAdmissions
+export default ViewAdmissions;

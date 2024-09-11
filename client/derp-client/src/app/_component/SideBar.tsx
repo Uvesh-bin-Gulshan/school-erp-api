@@ -39,9 +39,9 @@ const SideBar = ({ children, breadcrumbs }: SideBarProps) => {
    }`}
         >
           <div
-            className={`flex justify-center p-2 mt-4 mx-2 
+            className={`flex justify-center items-center  p-2 mt-4  
                rounded-full   bg-slate-100 
-    ${open ? "w-16 h-16" : "w-12 h-12"}`}
+    ${open ? "w-16 h-16 mx-10" : "w-12 h-12 mx-1"}`}
           >
             <Image
               src="/logo.png"

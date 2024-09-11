@@ -1,4 +1,14 @@
 import toast from "react-hot-toast"
+import { useForm } from "react-hook-form";
+import { zodResolver } from "@hookform/resolvers/zod";
+import { ZodSchema } from "zod";
+
+export const useDynamicFormConfig = (schema: ZodSchema, defaultValues: any) => {
+  return useForm({
+    resolver: zodResolver(schema),
+    defaultValues,
+  });
+};
 
 
 export const successToastMessage = (message: string) => {
@@ -10,3 +20,4 @@ export const successToastMessage = (message: string) => {
   };
   
   
+
