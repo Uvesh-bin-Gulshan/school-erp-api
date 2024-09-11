@@ -19,7 +19,7 @@ import { Button } from '@/components/ui/button';
 import { examTimeTableSchema } from '@/lib/zodschema/examTimeTableSchema';
 import { submitForm, successtoastMessage, failedtoastMessage, getExamTypes, getStudents } from '@/lib/services';
 import SubmitButton from '../_component/SubmitButton';
-import { UPDATE_EXAMTIMETABLE } from '@/lib/routePath';
+import { routes } from "@/lib/routePath";
 import { MdModeEdit } from 'react-icons/md';
 
 const UpdateExamTimeTable = ({ examTimeTable }: { examTimeTable: any }) => {
@@ -66,7 +66,7 @@ const UpdateExamTimeTable = ({ examTimeTable }: { examTimeTable: any }) => {
     event.preventDefault();
     const all_values = form.getValues();
     try {
-      const response = await submitForm(`${UPDATE_EXAMTIMETABLE}/${examTimeTable.exam_time_table_id}/`, all_values, 'PUT');
+      const response = await submitForm(`${routes.UPDATE_EXAMTIMETABLE}/${examTimeTable.exam_time_table_id}/`, all_values, 'PUT');
       if (response?.success) {
         successtoastMessage("Successfully updated");
       } else {

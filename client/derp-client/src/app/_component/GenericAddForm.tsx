@@ -14,23 +14,25 @@ import {
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from '@/components/ui/form'
 import { Input } from '@/components/ui/input'
 import { Button } from '@/components/ui/button'
-import { FormInput } from '../_component/FormInput'
-import SubmitButton from '../_component/SubmitButton'
-import { MdModeEdit } from 'react-icons/md'
+import { FormInput } from './FormInput'
+import SubmitButton from './SubmitButton'
+import { MdAdd } from 'react-icons/md'
 import { submitForm } from '@/lib/helper'
 import { failedToastMessage, successToastMessage } from '@/lib/client-helpers'
+import CustomButton from './CustomButton'
 
-const GenericForm = ({ schema, fields, apiEndpoint, successMessage, failureMessage, triggerIcon: TriggerIcon, dialogTitle, dialogDescription }:any) => {
+
+const GenericAddForm = ({ schema, fields, apiEndpoint, successMessage, failureMessage, triggerIcon: TriggerIcon = MdAdd, dialogTitle, dialogDescription }: any) => {
   const router = useRouter();
   const form = useForm({
     resolver: zodResolver(schema),
-    defaultValues: fields.reduce((acc:any, field:any) => {
+    defaultValues: fields.reduce((acc: any, field: any) => {
       acc[field.name] = field.defaultValue || '';
       return acc;
     }, {}),
   });
 
-  const handleForm = async (event:any) => {
+  const handleForm = async (event: any) => {
     event.preventDefault();
     const all_values = form.getValues();
     const formData = new FormData();
@@ -44,18 +46,20 @@ const GenericForm = ({ schema, fields, apiEndpoint, successMessage, failureMessa
     });
 
     try {
-      const response = await submitForm(apiEndpoint, formData, 'PUT');
+      const response = await submitForm(apiEndpoint, formData, 'POST');
       if (response?.success) {
         successToastMessage(successMessage);
+        router.refresh();  // Optionally refresh the page or route
       } else {
         failedToastMessage(failureMessage);
       }
     } catch (error) {
       console.error('Failed to submit form:', error);
+      failedToastMessage(failureMessage);
     }
   };
 
-  const renderField = (field:any) => {
+  const renderField = (field: any) => {
     switch (field.type) {
       case 'text':
         return (
@@ -82,7 +86,7 @@ const GenericForm = ({ schema, fields, apiEndpoint, successMessage, failureMessa
                 <FormLabel htmlFor={field.name}>{field.label}</FormLabel>
                 <FormControl>
                   <select {...formField} id={field.name} className="input">
-                    {field.options.map(option => (
+                    {field.options.map((option: any) => (
                       <option key={option.value} value={option.value}>
                         {option.label}
                       </option>
@@ -118,7 +122,7 @@ const GenericForm = ({ schema, fields, apiEndpoint, successMessage, failureMessa
   return (
     <Dialog>
       <DialogTrigger asChild>
-        <TriggerIcon />
+        <CustomButton  text={"Add"} />
       </DialogTrigger>
       <DialogContent>
         <DialogHeader>
@@ -136,4 +140,4 @@ const GenericForm = ({ schema, fields, apiEndpoint, successMessage, failureMessa
   );
 };
 
-export default GenericForm
+export default GenericAddForm;

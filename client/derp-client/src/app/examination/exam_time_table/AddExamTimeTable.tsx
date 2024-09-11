@@ -17,7 +17,7 @@ import { Form, FormControl, FormField, FormItem, FormMessage } from '@/component
 import { Input } from '@/components/ui/input';
 import { Button } from '@/components/ui/button';
 
-import { CREATE_EXAMTIMETABLE } from '@/lib/routePath';
+import { routes } from "@/lib/routePath";
 import { Plus } from 'lucide-react';
 import { examTimeTableSchema } from '@/lib/zodschema';
 import { submitForm } from '@/lib/helper';
@@ -68,7 +68,7 @@ const AddExamTimeTable = () => {
     event.preventDefault();
     const all_values = form.getValues();
     try {
-      const response = await submitForm(CREATE_EXAMTIMETABLE, all_values, 'POST');
+      const response = await submitForm(routes.CREATE_EXAMTIMETABLE, all_values, 'POST');
       if (response?.success) {
         successToastMessage("Successfully created");
       } else {

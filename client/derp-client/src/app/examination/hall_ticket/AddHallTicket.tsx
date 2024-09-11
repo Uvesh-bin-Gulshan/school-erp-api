@@ -14,9 +14,10 @@ import {
 } from "@/components/ui/dialog";
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from '@/components/ui/form';
 import { Input } from '@/components/ui/input';
+import { routes } from "@/lib/routePath";
 import { Button } from '@/components/ui/button';
 import { hallTicketSchema } from '@/lib/zodschema';
-import { CREATE_HALLTICKET } from '@/lib/routePath';
+
 import { Plus } from 'lucide-react';
 import { failedToastMessage, successToastMessage } from '@/lib/client-helpers';
 import { submitForm } from '@/lib/helper';
@@ -37,7 +38,7 @@ const AddHallTicket = () => {
     event.preventDefault();
     const all_values = form.getValues();
     try {
-      const response = await submitForm(CREATE_HALLTICKET, all_values, 'POST');
+      const response = await submitForm(routes.CREATE_HALLTICKET, all_values, 'POST');
       if (response?.success) {
         successToastMessage("Hall ticket successfully created");
       } else {

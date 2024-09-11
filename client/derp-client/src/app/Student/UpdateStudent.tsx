@@ -18,7 +18,7 @@ import { Button } from '@/components/ui/button'
 import { studentSchema } from '@/lib/zodschema'
 import { FormInput } from '../_component/FormInput'
 import SubmitButton from '../_component/SubmitButton'
-import { UPDATE_STUDENT } from '@/lib/routePath'
+import { routes } from '@/lib/routePath'
 import { MdModeEdit } from 'react-icons/md'
 import { failedToastMessage, successToastMessage } from '@/lib/client-helpers'
 import { submitForm } from '@/lib/helper'
@@ -38,7 +38,7 @@ const UpdateStudent = ({ student }: { student: any }) => {
     event.preventDefault();
     const all_values = form.getValues();
     try {
-      const response = await submitForm(`${UPDATE_STUDENT}/${student.student_id}/`, all_values, 'PUT');
+      const response = await submitForm(`${routes.UPDATE_STUDENT}/${student.student_id}/`, all_values, 'PUT');
       if (response?.success) {
         successToastMessage("Student successfully updated");
       } else {

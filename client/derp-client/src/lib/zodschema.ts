@@ -121,14 +121,16 @@ export const vacationPeriodSchema = z.object({
   });
 
 
-// Student Schema
-export const studentSchema = z.object({
-  student_id: z.string().length(6).optional(), // CharField with max_length=6, automatically generated
-  admission: z.string().uuid(), // Assuming Admission is represented by a UUID string
-  course: z.string().uuid(), // Assuming Course is represented by a UUID string
-  department: z.string().uuid(), // Assuming Department is represented by a UUID string
-  student_status: z.enum(['pursuing', 'completed', 'left']).default('pursuing'), // Choices for student_status with default
-});
+  export const studentSchema = z.object({
+    admission: z.string(), // Assuming this is the ID of the related Admission
+    course: z.string(), // Assuming this is the course_id
+    department: z.string(), // Assuming this is the department_id
+    student_status: z.enum(['pursuing', 'completed', 'left']).default('pursuing'),
+  });
+  
+
+ 
+  
 
 // Exam Type
 export const examTypeSchema = z.object({

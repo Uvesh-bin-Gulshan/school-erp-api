@@ -18,40 +18,47 @@ import { Button } from '@/components/ui/button'
 import { FormInput } from '../_component/FormInput'
 import SubmitButton from '../_component/SubmitButton'
 import { Plus } from 'lucide-react'
-import { failedToastMessage, successToastMessage } from '@/lib/client-helpers'
+import { failedToastMessage, successToastMessage, useDynamicFormConfig } from '@/lib/client-helpers'
 import { submitForm } from '@/lib/helper'
 import { studentSchema } from '@/lib/zodschema'
-import { CREATE_STUDENT } from '@/lib/routePath'
+import { routes } from "@/lib/routePath";
+import GenericUpdateForm from '../_component/GenericUpdateForm'
+import { MdModeEdit } from 'react-icons/md'
+import GenericAddForm from '../_component/GenericAddForm'
+import { studentFields } from '@/lib/fields'
 
 const AddStudent = () => {
   const router = useRouter();
-  const form = useForm({
-    resolver: zodResolver(studentSchema),
-    defaultValues: {
-      name: "",
-      age: "",
-      grade: "",
-    }
-  })
+  // const form = useDynamicFormConfig(studentSchema, {
 
-  const handleForm = async (event: React.FormEvent) => {
-    event.preventDefault();
-    const all_values = form.getValues();
-    try {
-      const response = await submitForm(CREATE_STUDENT, all_values, 'POST');
-      if (response?.success) {
-        successToastMessage("Student successfully added");
-      } else {
-        failedToastMessage("Failed to add student");
-      }
-    } catch (error) {
-      console.error('Failed to Add Student:', error);
-    }
-  };
+  //   defaultValues: {
+  //    student_id:"",
+  //    admission:"",
+  //    course:"",
+  //    department:"",
+  //    student_status:"",
+     
+  //   },
+  // });
+
+  // const handleForm = async (event: React.FormEvent) => {
+  //   event.preventDefault();
+  //   const all_values = form.getValues();
+  //   try {
+  //     const response = await submitForm(routes.CREATE_STUDENT, all_values, 'POST');
+  //     if (response?.success) {
+  //       successToastMessage("Student successfully added");
+  //     } else {
+  //       failedToastMessage("Failed to add student");
+  //     }
+  //   } catch (error) {
+  //     console.error('Failed to Add Student:', error);
+  //   }
+  // };
 
   return (
     <>
-      <Dialog>
+      {/* <Dialog>
         <DialogTrigger asChild>
           <Button><Plus />Student</Button>
         </DialogTrigger>
@@ -96,7 +103,19 @@ const AddStudent = () => {
             </form>
           </Form>
         </DialogContent>
-      </Dialog>
+      </Dialog> */}
+
+
+<GenericAddForm
+        schema={studentSchema}
+        fields={studentFields}
+        apiEndpoint={`${routes.CREATE_STUDENT}`}
+        successMessage="Student updated successfully"
+        failureMessage="Failed to update student"
+        dialogTitle="Update Student"
+        dialogDescription="Update student details here"
+      />   
+
     </>
   );
 }

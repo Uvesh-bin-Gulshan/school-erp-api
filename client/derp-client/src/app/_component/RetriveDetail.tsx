@@ -52,7 +52,8 @@ const RetrieveDetail: React.FC<RetrieveDetailProps> = ({ item,id, endpoint, onSu
       <DialogTrigger onClick={handleRetrive} className='cursor-pointer text-lg  text-cyan-700' asChild>
       <BiSolidDetail />
       </DialogTrigger>
-      <DialogContent className="sm:max-w-[425px]">
+      <DialogContent className="sm:max-w-[425px] 
+      w-full  max-h-[90vh] overflow-auto">
         <DialogHeader>
           <DialogTitle>
             {item} Details
@@ -61,22 +62,19 @@ const RetrieveDetail: React.FC<RetrieveDetailProps> = ({ item,id, endpoint, onSu
           </DialogDescription>
         </DialogHeader>
       
-          <div className="py-2">
-          {loading && <p>Loading...</p>}
           {error && <p className="text-red-500">{error}</p>}
           {data && (
-            <table className="table-auto  w-full">
+            <table className="table-auto   w-full">
               <tbody>
                 {Object.entries(data).map(([key, value]) => (
-                  <tr key={key}>
-                    <td className=" px-4 py-2 border-cyan-700 border-y  font-bold">{key}</td>
-                    <td className=" px-4 border-b-1 border-cyan-700 border-t border-b py-2">{value}</td>
+                  <tr key={key} className='bg-cyan-100 mt-2'>
+                    <td className="    font-bold">{key}</td>
+                    <td className="   py-2">{value}</td>
                   </tr>
                 ))}
               </tbody>
             </table>
           )}
-        </div>
       </DialogContent>
     </Dialog>
  
