@@ -22,7 +22,7 @@ const NavBar: React.FC<NavBarProps> = ({ open }) => {
         <div>
           <div
             onClick={() => handleDropDown("student")}
-            className="pointer text-center text-white mb-8"
+            className="pointer text-center text-white mb-6 md:mb-8"
           >
             <div className="flex justify-center text-2xl">
               <MdSupervisorAccount />
@@ -154,7 +154,7 @@ p-1.5 justify-center flex rounded-full mt-1  ${open ? "visible " : "hidden"}`}
           </div>
         </div>
 
-        <div className="bottom-0 fixed mr-1 my-2 ml-1.5 ">
+        <div className=" mr-1 my-1.5 ml-1.5 ">
         <UserProfile/>
 
         </div>

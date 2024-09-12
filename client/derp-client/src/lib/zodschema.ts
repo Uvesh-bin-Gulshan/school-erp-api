@@ -127,6 +127,14 @@ export const vacationPeriodSchema = z.object({
     department: z.string(), // Assuming this is the department_id
     student_status: z.enum(['pursuing', 'completed', 'left']).default('pursuing'),
   });
+
+  export const alumniSchema = z.object({
+    alumni_id: z.string().optional(),
+    student: z.string().min(1, "Student is required"),
+    occupation: z.string().min(1, "Occupation is required"),
+    work_place: z.string().min(1, "Workplace is required"),
+    residence: z.string().min(1, "Residence is required"),
+  });
   
 
  

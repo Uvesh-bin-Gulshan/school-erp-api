@@ -73,11 +73,18 @@ export const  routes={
       DELETE_VACATION_PERIOD : `${BASE_HOST}vacationperiod/delete`,
 
     // Student
-      STUDENT_LIST : `${BASE_HOST}student/list`,
-      CREATE_STUDENT : `${BASE_HOST}student/create`,
-      RETRIEVE_STUDENT : `${BASE_HOST}student/retrieve`,
-      UPDATE_STUDENT : `${BASE_HOST}student/update`,
-      DELETE_STUDENT : `${BASE_HOST}student/delete`,
+      STUDENT_LIST : `${BASE_HOST}admission/student/list`,
+      CREATE_STUDENT : `${BASE_HOST}admission/student/create`,
+      RETRIEVE_STUDENT : `${BASE_HOST}admission/student/retrieve`,
+      UPDATE_STUDENT : `${BASE_HOST}admission/student/update`,
+      DELETE_STUDENT : `${BASE_HOST}admission/student/delete`,
+      
+    // Alumni 
+      ALUMNI_LIST: `${BASE_HOST}admission/alumni/list/`,
+      CREATE_ALUMNI: `${BASE_HOST}admission/alumni/create/`,
+      RETRIEVE_ALUMNI: `${BASE_HOST}admission/alumni/retrieve/`, // append ID dynamically
+      UPDATE_ALUMNI: `${BASE_HOST}admission/alumni/update/`, // append ID dynamically
+      DELETE_ALUMNI: `${BASE_HOST}admission/alumni/delete/`, // append ID dynamically
     
     // Exam Type
       EXAMTYPE_LIST : '/examtype/list/',

@@ -52,7 +52,11 @@ export const getTimeTableList = async () => {
 };
 
 export const getStudentList = async () => {
-  return fetchData(routes.SUBJECT_LIST);
+  return fetchData(routes.STUDENT_LIST);
+};
+
+export const getAlumniList = async () => {
+  return fetchData(routes.ALUMNI_LIST);
 };
 
 export const getExamTypeList = async () => {

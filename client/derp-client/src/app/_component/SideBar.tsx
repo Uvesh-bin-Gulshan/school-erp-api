@@ -30,18 +30,18 @@ const SideBar = ({ children, breadcrumbs }: SideBarProps) => {
 
   return (
     <>
-      <div className="h-screen  flex  bg-white   ">
+      <div className="h-screen  flex  bg-white   overflow-hidden">
         <div
-          className={` duration-300 h-screen text-cyan-500 
-  bg-gradient-to-t from-cyan-900 via-cyan-700 to-cyan-600 
+          className={` overflow-auto duration-300 h-screen text-cyan-500 
+  
    text-center relative h-full  ${
-     open ? "w-[13%] text-sm " : "w-[5%] text-xs text-wrap "
+     open ? "md:w-[10%] w-screen text-sm " : "md:w-[5%] md:block hidden text-xs text-wrap "
    }`}
         >
           <div
-            className={`flex justify-center items-center  p-2 mt-4  
+            className={`flex justify-center place-items-center  p-2 mt-4  
                rounded-full   bg-slate-100 
-    ${open ? "w-16 h-16 mx-10" : "w-12 h-12 mx-1"}`}
+    ${open ? "w-16 h-16 mx-12 md:mx-5" : "w-12 h-12 mx-1.5"}`}
           >
             <Image
               src="/logo.png"
@@ -50,11 +50,11 @@ const SideBar = ({ children, breadcrumbs }: SideBarProps) => {
               alt="Matliwala Charitable Trust"
             />
           </div>
-          <div className="mt-12  ">
+          <div className="mt-8  ">
             <NavBar open={open} />
           </div>
         </div>
-        <div className={`w-full overflow-hidden  `}>
+        <div className={`w-full overflow-hidden `}>
           <div
             className="  flex  text-xl px-0.5 py-2
              h-8 text-black ml-4 justify-between w-[100%] 

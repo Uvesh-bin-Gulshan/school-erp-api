@@ -1,24 +1,22 @@
 import React from 'react'
-import ViewStudent from './ViewStudent'
-import AddStudent from './AddStudent'
-import Sidebar from '@/app/_component/SideBar'
-import { BreadcrumbWithCustomSeparator } from '@/app/_component/BreadCrumb'
-import { getStudentList } from '@/lib/services'
+import ViewAlumni from './ViewAlumni'
+import AddAlumni from './AddAlumni'
 import SideBar from '@/app/_component/SideBar'
-import GenericUpdateForm from '../_component/GenericUpdateForm'
-import { studentSchema } from '@/lib/zodschema'
+import { BreadcrumbWithCustomSeparator } from '@/app/_component/BreadCrumb'
+import { getAlumniList } from '@/lib/services'
+import { alumniSchema } from '@/lib/zodschema'
 import { routes } from '@/lib/routePath'
 import { MdModeEdit } from 'react-icons/md'
 
 const items = [
   { href: "/", label: "Home" },
   { href: "/components", label: "Components" },
-  { label: "Students" },
+  { label: "Alumni" },
 ];
 
 const Page = async () => {
-  const data = await getStudentList()
-  console.log(data)
+  const data = await getAlumniList();
+  console.log(data);
 
   return (
     <>
@@ -28,12 +26,12 @@ const Page = async () => {
         </div>
 
         <div className='m-12 bg-white p-4 h-96'>
-          <AddStudent/>
-          <ViewStudent data={data} />
+          <AddAlumni/>
+          <ViewAlumni data={data} />
         </div>
       </SideBar>
     </>
-  )
+  );
 }
 
-export default Page
+export default Page;
