@@ -3,7 +3,7 @@
 import React from 'react';
 import { DataTable } from '@/app/_component/DataTable';
 import { ColumnFiltersState } from '@tanstack/react-table';
-import { columns } from './Columns';
+import { columns } from './columns';
 
 const ViewSyllabusType = ({ data }: { data: any }) => {
   const columnFilters: ColumnFiltersState = [];

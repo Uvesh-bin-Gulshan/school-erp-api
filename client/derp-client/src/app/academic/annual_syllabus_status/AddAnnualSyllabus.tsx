@@ -1,88 +1,23 @@
-"use client"
+"use client";
 
-import React from 'react'
-import { useForm } from 'react-hook-form'
-import { zodResolver } from '@hookform/resolvers/zod'
-import { useRouter } from 'next/navigation'
-import {
-  Dialog,
-  DialogContent,
-  DialogDescription,
-  DialogHeader,
-  DialogTitle,
-  DialogTrigger,
-} from "@/components/ui/dialog"
-import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from '@/components/ui/form'
-import { Input } from '@/components/ui/input'
-import { Button } from '@/components/ui/button'
-import { departmentSchema, loginSchema } from '@/lib/zodschema'
+import React from 'react';
+import { routes } from '@/lib/routePath';
+import GenericAddForm from '@/app/_component/GenericAddForm';
+import { annuallySubjectSyllabusStatusSchema } from '@/lib/zodschema';
+import { annuallySubjectSyllabusStatusFields } from '@/lib/fields';
 
-import { CREATE_COURSE, CREATE_DEPARTMENT } from '@/lib/routePath'
-import { Plus } from 'lucide-react'
-import { FormInput } from '@/app/_component/FormInput'
-import SubmitButton from '@/app/_component/SubmitButton'
-import { submitForm } from '@/lib/helper'
-import { failedToastMessage, successToastMessage } from '@/lib/client-helpers'
-
-const AddCourse = () => {
-  const router = useRouter();
-  const form = useForm({
-    resolver: zodResolver(departmentSchema),
-    defaultValues: {
-    name:"",
-
-  }})
-
-  const handleForm = async (event: React.FormEvent) => {
-    event.preventDefault();
-    const all_values = form.getValues();
-    try {
-      const response = await submitForm(CREATE_COURSE,all_values,'POST');
-      if (response?.success) {
-        successToastMessage("successfully created");
-      } else {
-        failedToastMessage("Invalid");
-      }
-    } catch (error) {
-      console.error('Failed to Create Department:', error);
-    }
-  };
-
+const AddAnnuallySubjectSyllabusStatus = () => {
   return (
-    <>
-      <Dialog>
-        <DialogTrigger asChild>
-          <Button><Plus />Department</Button>
-        </DialogTrigger>
-        <DialogContent>
-          <DialogHeader>
-            <DialogTitle>Add new department</DialogTitle>
-            <DialogDescription>
-              Add all required details
-            </DialogDescription>
-          </DialogHeader>
-         
-<Form {...form} >
-      <form onSubmit={handleForm} className="">
-        <FormField  name="name" render={({ field }) => (
-          <FormItem >
-            <FormControl>
-            <FormInput {...field} id="name" label="Department Name" type="text" />
-
-            </FormControl>
-        
-            <FormMessage />
-          </FormItem>
-        )} />
-       
-       
-      <SubmitButton className="w-full" text="Submit"  />
-      </form>
-    </Form>
-        </DialogContent>
-      </Dialog>
-    </>
+    <GenericAddForm
+      schema={annuallySubjectSyllabusStatusSchema}
+      fields={annuallySubjectSyllabusStatusFields}
+      apiEndpoint={routes.CREATE_ANNUALLY_SUBJECT_SYLLABUS_STATUS}
+      successMessage="Annually Subject Syllabus Status added successfully"
+      failureMessage="Failed to add syllabus status"
+      dialogTitle="Add New Annually Subject Syllabus Status"
+      dialogDescription="Fill in the details to add a new annually subject syllabus status."
+    />
   );
-}
+};
 
-export default AddCourse;
+export default AddAnnuallySubjectSyllabusStatus;

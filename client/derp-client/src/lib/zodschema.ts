@@ -94,9 +94,39 @@ export const syllabusStatusSchema = z.object({
   approved_date: z.string(), // DateTime should be in ISO 8601 format as a string
 });
 
+// annual subject syllabus status
+export const annuallySubjectSyllabusStatusSchema = z.object({
+  annual_status_id: z.string().optional(),
+  subject: z.string().min(1, { message: "Subject is required" }),
+  teacher: z.string().min(1, { message: "Teacher is required" }),
+  yearly_status: z.number().min(0, { message: "Yearly status must be a number" }),
+  yearly_summary: z.string().min(1, { message: "Yearly summary is required" }),
+});
+
+// monthlySubjectSyllabusStatusSchema
+export const monthlySubjectSyllabusStatusSchema = z.object({
+  month_status_id: z.string().optional(),
+  month: z.string().refine((val) => !isNaN(Date.parse(val)), { message: "Invalid date" }),
+  annual_status: z.string().min(1, { message: "Annual status is required" }),
+  target_type: z.string().min(1, { message: "Target type is required" }),
+  count: z.number().min(0, { message: "Count must be a positive number" }),
+  monthly_summary: z.string().max(300, { message: "Summary must be less than 300 characters" }),
+});
+
+// syllabus type 
 export const syllabusTypeSchema = z.object({
   type_id: z.string().optional(),
   name: z.string().min(1, { message: "Syllabus Type name is required" }),
+});
+
+// subject 
+export const subjectSchema = z.object({
+  subject_id: z.string().optional(),
+  name: z.string().min(1, { message: "Subject name is required" }),
+  syllabus_count: z.number().min(0, { message: "Syllabus count must be non-negative" }),
+  syllabus_type: z.string().min(1, { message: "Syllabus type is required" }),
+  description: z.string().optional(),
+  course: z.string().min(1, { message: "Course is required" }),
 });
   
 

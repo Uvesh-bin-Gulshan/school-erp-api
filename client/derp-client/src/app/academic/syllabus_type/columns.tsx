@@ -2,12 +2,13 @@ import { Button } from "@/components/ui/button";
 import { ColumnDef } from "@tanstack/react-table";
 import { ArrowUpDown } from "lucide-react";
 import { AiFillDelete } from "react-icons/ai";
-import GenericUpdateForm from '../_component/GenericUpdateForm';
-import { DeleteButton } from "@/app/_component/DeleteButton";
-import { syllabusTypeSchema } from '@/lib/schema';
-import { syllabusTypeFields } from '@/lib/fields';
+
 import { routes } from "@/lib/routePath";
 import { MdModeEdit } from "react-icons/md";
+import GenericUpdateForm from "@/app/_component/GenericUpdateForm";
+import { syllabusTypeSchema } from "@/lib/zodschema";
+import DeleteButton from "@/app/_component/DeleteButton";
+import { syllabusTypeFields } from "@/lib/fields";
 
 export type SyllabusType = {
   type_id: string;

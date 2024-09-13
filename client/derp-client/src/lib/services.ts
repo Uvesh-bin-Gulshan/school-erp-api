@@ -32,7 +32,7 @@ export const getMonthlyStatusList = async () => {
 };
 
 export const getAnnualStatusList = async () => {
-  return fetchData(routes.ANNUALLY_SYLLABUS_STATUS_LIST);
+  return fetchData(routes.ANNUALLY_SUBJECT_SYLLABUS_STATUS_LIST);
 };
 
 export const getDepartmentList = async () => {

@@ -1,40 +1,32 @@
-import React from 'react'
-import ViewAdmissions from './ViewMonthlySyllabus'
-import { getAdmissionList, getCourseList, getDepartmentDetail, getDepartmentList, getMonthlyStatusList, getSubjectList } from '@/lib/services'
-import AddAdmissions from './AddMonthlySyllabus'
-import Sidebar from '@/app/_component/SideBar'
-import { BreadcrumbWithCustomSeparator } from '@/app/_component/BreadCrumb'
-import AddDepartment from './AddMonthlySyllabus'
-import ViewDepartment from './ViewMonthlySyllabus'
-import AddSubject from './AddMonthlySyllabus'
-import ViewSubject from './ViewMonthlySyllabus'
+import React from 'react';
+import Sidebar from '@/app/_component/SideBar';
+import { BreadcrumbWithCustomSeparator } from '@/app/_component/BreadCrumb';
+import AddMonthlySubjectSyllabusStatus from './AddMonthlySyllabus';
+import ViewMonthlySubjectSyllabusStatus from './ViewMonthlySyllabus';
+import { getMonthlyStatusList } from '@/lib/services';
+
 const items = [
   { href: "/", label: "Home" },
-  { href: "/components", label: "Components" },
-  { label: "Admissions" },
+  { href: "/monthly-syllabus-status", label: "Monthly Syllabus Status" },
 ];
-const Page =async () => {
-    const data= await getMonthlyStatusList()
-    console.log(data)
+
+const Page = async () => {
+  const data = await getMonthlyStatusList();
+
   return (
-<>
+    <>
+      <Sidebar breadcrumbs={items}>
+        <div className="">
+          <BreadcrumbWithCustomSeparator items={items} separator={<span> :: </span>} />
+        </div>
 
+        <div className="m-12 bg-white p-4 h-96">
+          <AddMonthlySubjectSyllabusStatus />
+          <ViewMonthlySubjectSyllabusStatus data={data} />
+        </div>
+      </Sidebar>
+    </>
+  );
+};
 
-
-<Sidebar breadcrumbs={items}>
-<div className=''>
-<BreadcrumbWithCustomSeparator items={items} separator={<span> :: </span>} />
-</div>
-
-
-<div className='m-12 bg-white  p-4  h-96 '>
-  <AddSubject />
-  <ViewSubject  data={data}/>
-</div>
-</Sidebar>
-
-</>
-  )
-}
-
-export default Page
+export default Page;

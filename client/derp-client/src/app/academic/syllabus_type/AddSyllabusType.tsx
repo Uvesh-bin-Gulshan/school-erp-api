@@ -1,10 +1,11 @@
 "use client";
 
 import React from 'react';
-import GenericAddForm from '../_component/GenericAddForm';
-import { syllabusTypeSchema } from '@/lib/schema';
+
 import { syllabusTypeFields } from '@/lib/fields';
 import { routes } from '@/lib/routePath';
+import GenericAddForm from '@/app/_component/GenericAddForm';
+import { syllabusTypeSchema } from '@/lib/zodschema';
 
 const AddSyllabusType = () => {
   return (
