@@ -21,7 +21,6 @@ import { submitForm } from '@/lib/helper'
 import { failedToastMessage, successToastMessage } from '@/lib/client-helpers'
 
 const GenericUpdateForm = ({ schema, fields, apiEndpoint, successMessage, failureMessage, triggerIcon: TriggerIcon, dialogTitle, dialogDescription }:any) => {
-  const router = useRouter();
   const form = useForm({
     resolver: zodResolver(schema),
     defaultValues: fields.reduce((acc:any, field:any) => {
@@ -44,7 +43,10 @@ const GenericUpdateForm = ({ schema, fields, apiEndpoint, successMessage, failur
     });
 
     try {
-      const response = await submitForm(apiEndpoint, formData, 'PUT');
+      const response = await submitForm(
+        apiEndpoint, formData, 'PUT'
+      
+      );
       if (response?.success) {
         successToastMessage(successMessage);
       } else {

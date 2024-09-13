@@ -63,6 +63,7 @@ const GenericAddForm = ({ schema, fields, apiEndpoint, successMessage, failureMe
     switch (field.type) {
       case 'text':
         return (
+          
           <FormField
             key={field.name}
             name={field.name}
