@@ -18,11 +18,11 @@ const NavBar: React.FC<NavBarProps> = ({ open }) => {
 
   return (
     <>
-      <div className="">
-        <div>
+      <div className="overflow-auto">
+        <div className="">
           <div
             onClick={() => handleDropDown("student")}
-            className="pointer text-center text-white mb-6 md:mb-8"
+            className="pointer text-center text-cyan-500 mb-6 md:mb-8"
           >
             <div className="flex justify-center text-2xl">
               <MdSupervisorAccount />
@@ -50,7 +50,7 @@ const NavBar: React.FC<NavBarProps> = ({ open }) => {
           <div>
             <div
               onClick={() => handleDropDown("academic")}
-              className="pointer text-center text-white mb-8"
+              className="pointer text-center text-cyan-500 mb-8"
             >
               <div className="flex justify-center  text-2xl">
                 <IoBookSharp />
@@ -86,7 +86,7 @@ const NavBar: React.FC<NavBarProps> = ({ open }) => {
           <div>
             <div
               onClick={() => handleDropDown("library")}
-              className="pointer text-center text-white mb-8"
+              className="pointer text-center text-cyan-500 mb-8"
             >
               <div className="flex justify-center text-2xl">
                 <ImBooks />
@@ -121,7 +121,7 @@ p-1.5 justify-center flex rounded-full mt-1  ${open ? "visible " : "hidden"}`}
           <div>
             <div
               onClick={() => handleDropDown("alumni")}
-              className="pointer text-center text-white "
+              className="pointer text-center text-cyan-500 "
             >
               <div className="flex justify-center text-2xl">
               <HiAcademicCap />
@@ -154,11 +154,11 @@ p-1.5 justify-center flex rounded-full mt-1  ${open ? "visible " : "hidden"}`}
           </div>
         </div>
 
+      </div>
         <div className=" mr-1 my-1.5 ml-1.5 ">
         <UserProfile/>
 
         </div>
-      </div>
     </>
   );
 };
