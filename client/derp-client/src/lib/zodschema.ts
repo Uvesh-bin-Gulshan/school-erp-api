@@ -12,15 +12,17 @@ export const loginSchema=z.object({
 
 })
 
-export const departmentSchema=z.object({
+export const departmentSchema = z.object({
+  department_id: z.string().optional(),
+  name: z.string().min(1, "Department name is required").max(70, "Name is too long"),
+});
 
-    name:z.string().min(3,{
-        message:"department name must be at least 3 characters"
-    }),
-   
-
-})
-
+export const courseSchema = z.object({
+  course_id: z.string().optional(),
+  name: z.string().min(1, { message: "Course name is required" }),
+  department: z.string().min(1, { message: "Department is required" }),
+  effective_date: z.string().refine((val) => !isNaN(Date.parse(val)), { message: "Invalid date" }),
+});
 
 // const personalInfoSchema = z.object({
 //   student_name: z.string().min(1, "Required"),
@@ -92,13 +94,41 @@ export const syllabusStatusSchema = z.object({
   approved_date: z.string(), // DateTime should be in ISO 8601 format as a string
 });
 
-export const SyllabusTypeSchema = z.object({
-    type_id: z.string().max(6),
-    name: z.string().max(50),
-  });
+// annual subject syllabus status
+export const annuallySubjectSyllabusStatusSchema = z.object({
+  annual_status_id: z.string().optional(),
+  subject: z.string().min(1, { message: "Subject is required" }),
+  teacher: z.string().min(1, { message: "Teacher is required" }),
+  yearly_status: z.number().min(0, { message: "Yearly status must be a number" }),
+  yearly_summary: z.string().min(1, { message: "Yearly summary is required" }),
+});
+
+// monthlySubjectSyllabusStatusSchema
+export const monthlySubjectSyllabusStatusSchema = z.object({
+  month_status_id: z.string().optional(),
+  month: z.string().refine((val) => !isNaN(Date.parse(val)), { message: "Invalid date" }),
+  annual_status: z.string().min(1, { message: "Annual status is required" }),
+  target_type: z.string().min(1, { message: "Target type is required" }),
+  count: z.number().min(0, { message: "Count must be a positive number" }),
+  monthly_summary: z.string().max(300, { message: "Summary must be less than 300 characters" }),
+});
+
+// syllabus type 
+export const syllabusTypeSchema = z.object({
+  type_id: z.string().optional(),
+  name: z.string().min(1, { message: "Syllabus Type name is required" }),
+});
+
+// subject 
+export const subjectSchema = z.object({
+  subject_id: z.string().optional(),
+  name: z.string().min(1, { message: "Subject name is required" }),
+  syllabus_count: z.number().min(0, { message: "Syllabus count must be non-negative" }),
+  syllabus_type: z.string().min(1, { message: "Syllabus type is required" }),
+  description: z.string().optional(),
+  course: z.string().min(1, { message: "Course is required" }),
+});
   
-  // Define a TypeScript type based on the schema
-  export type SyllabusType = z.infer<typeof SyllabusTypeSchema>;
 
 
 // Define the schema for the `TimeTable`
@@ -168,3 +198,4 @@ export const hallTicketSchema = z.object({
 
 // Infer the type from the schema
 export type HallTicket = z.infer<typeof hallTicketSchema>;
+

@@ -1,41 +1,35 @@
-import React from 'react'
-import ViewAdmissions from './ViewAnnualSyllabus'
-import { getAdmissionList, getAnnualStatusList, getCourseList, getDepartmentDetail, getDepartmentList, getMonthlyStatusList, getSubjectList } from '@/lib/services'
-import AddAdmissions from './AddAnnualSyllabus'
-import { BreadcrumbWithCustomSeparator } from '@/app/_component/BreadCrumb'
-import AddDepartment from './AddAnnualSyllabus'
-import ViewDepartment from './ViewAnnualSyllabus'
-import AddSubject from './AddAnnualSyllabus'
-import ViewSubject from './ViewAnnualSyllabus'
-import { ChevronsRight } from 'lucide-react'
-import SideBar from '@/app/_component/SideBar'
+import React from 'react';
+import Sidebar from '@/app/_component/SideBar';
+import { BreadcrumbWithCustomSeparator } from '@/app/_component/BreadCrumb';
+import AddAnnuallySubjectSyllabusStatus from './AddAnnualSyllabus';
+import ViewAnnuallySubjectSyllabusStatus from './ViewAnnualSyllabus';
+
 const items = [
   { href: "/", label: "Home" },
-  { href: "/components", label: "Components" },
-  { label: "Admissions" },
+  { href: "/annually-subject-syllabus-status", label: "Annually Subject Syllabus Status" },
 ];
-const Page =async () => {
-    const data= await getAnnualStatusList()
-    console.log(data)
+
+const Page = async () => {
+  const data = await getAnnuallySubjectSyllabusStatusList();
+
   return (
-<>
+    <>
+      <Sidebar breadcrumbs={items}>
+        <div className="">
+          <BreadcrumbWithCustomSeparator items={items} separator={<span> :: </span>} />
+        </div>
 
+        <div className="m-12 bg-white p-4 h-96">
+          <AddAnnuallySubjectSyllabusStatus />
+          <ViewAnnuallySubjectSyllabusStatus data={data} />
+        </div>
+      </Sidebar>
+    </>
+  );
+};
 
-<SideBar breadcrumbs={items}>
-<div className=''>
-<BreadcrumbWithCustomSeparator items={items} separator={<span> <ChevronsRight/>
-  </span>} />
-</div>
-
-
-<div className='m-12 bg-white  p-4  h-96 '>
-  <AddSubject />
-  <ViewSubject  data={data}/>
-</div>
-</SideBar>
-
-</>
-  )
+export default Page;
+function getAnnuallySubjectSyllabusStatusList() {
+  throw new Error('Function not implemented.');
 }
 
-export default Page

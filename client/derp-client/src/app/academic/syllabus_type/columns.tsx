@@ -1,10 +1,14 @@
 import { Button } from "@/components/ui/button";
 import { ColumnDef } from "@tanstack/react-table";
 import { ArrowUpDown } from "lucide-react";
-import UpdateSyllabusType from "./UpdateSyllabusType";
-import { DELETE_SYLLABUS_TYPE, RETRIEVE_SYLLABUS_TYPE } from "@/lib/routePath";
-import RetrieveDetail from "@/app/_component/RetriveDetail";
+import { AiFillDelete } from "react-icons/ai";
+
+import { routes } from "@/lib/routePath";
+import { MdModeEdit } from "react-icons/md";
+import GenericUpdateForm from "@/app/_component/GenericUpdateForm";
+import { syllabusTypeSchema } from "@/lib/zodschema";
 import DeleteButton from "@/app/_component/DeleteButton";
+import { syllabusTypeFields } from "@/lib/fields";
 
 export type SyllabusType = {
   type_id: string;
@@ -13,22 +17,15 @@ export type SyllabusType = {
 
 export const columns: ColumnDef<SyllabusType>[] = [
   {
-    accessorKey: "type_id",
+    accessorKey: "name",
     header: ({ column }) => (
-      <div className="flex items-center">
-        <span>ID</span>
-        <Button
-          variant="ghost"
-          onClick={() => column.toggleSorting(column.getIsSorted() === "asc")}
-        >
+      <>
+        <span>Syllabus Type Name</span>
+        <Button variant="ghost" onClick={() => column.toggleSorting(column.getIsSorted() === "asc")}>
           <ArrowUpDown className="ml-0.5 h-4 w-4" />
         </Button>
-      </div>
+      </>
     ),
-  },
-  {
-    accessorKey: "name",
-    header: "Syllabus Type Name",
   },
   {
     accessorKey: "action",
@@ -37,19 +34,24 @@ export const columns: ColumnDef<SyllabusType>[] = [
       const syllabusType = row.original;
 
       const handleSuccess = () => {
-        console.log("Syllabus Type deleted, refresh the table or state");
+        console.log("Syllabus Type deleted, refresh the table");
       };
 
       return (
         <div className="flex items-center space-x-2">
-          {/* <RetrieveDetail 
-            id={syllabusType.type_id} 
-            endpoint={`${RETRIEVE_SYLLABUS_TYPE}`}
-            onSuccess={handleSuccess}
-          /> */}
+          <GenericUpdateForm
+            schema={syllabusTypeSchema}
+            fields={syllabusTypeFields}
+            apiEndpoint={`${routes.UPDATE_SYLLABUS_TYPE}/${syllabusType.type_id}`}
+            successMessage="Syllabus Type updated successfully"
+            failureMessage="Failed to update Syllabus Type"
+            triggerIcon={() => <MdModeEdit />}
+            dialogTitle="Update Syllabus Type"
+            dialogDescription="Update Syllabus Type details here"
+          />
           <DeleteButton
-            id={syllabusType.type_id} 
-            endpoint={`${DELETE_SYLLABUS_TYPE}`}
+            id={syllabusType.type_id}
+            endpoint={`${routes.DELETE_SYLLABUS_TYPE}/${syllabusType.type_id}`}
             onSuccess={handleSuccess}
           />
         </div>

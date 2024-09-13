@@ -1,77 +1,80 @@
 import { Button } from "@/components/ui/button";
 import { ColumnDef } from "@tanstack/react-table";
 import { ArrowUpDown } from "lucide-react";
-import UpdateDepartment from "./UpdateMonthlySyllabus";
 import { AiFillDelete } from "react-icons/ai";
-import DeleteButtom from "../_component/DeleteButtom";
-import { DELETE_DEPARTMENT, RETRIEVE_COURSE, RETRIEVE_DEPARTMENT } from "@/lib/routePath";
-import RetrieveDetail from "../_component/RetriveDetail";
+import { monthlySubjectSyllabusStatusFields } from '@/lib/fields';
+import { routes } from "@/lib/routePath";
+import { MdModeEdit } from "react-icons/md";
+import GenericUpdateForm from "@/app/_component/GenericUpdateForm";
+import { monthlySubjectSyllabusStatusSchema } from "@/lib/zodschema";
+import DeleteButton from "@/app/_component/DeleteButton";
 
-export type Course = {
-  course_id:string;
-  name: string;
-  department:string;
-  effective_date:string
+export type MonthlySubjectSyllabusStatus = {
+  month_status_id: string;
+  month: string;
+  annual_status: string;
+  target_type: string;
+  count: number;
+  monthly_summary: string;
 };
 
-export const columns: ColumnDef<Course>[] = [
+export const columns: ColumnDef<MonthlySubjectSyllabusStatus>[] = [
   {
     accessorKey: "month",
-    header: ({ column }) => {
-
-      return (
-        <>
-        
-        <div className="">
-
-
-        <span>Sr No.</span>
-        <Button
-          variant="ghost"
-          onClick={() => column.toggleSorting(column.getIsSorted() === "asc")}
-        >
-      
+    header: ({ column }) => (
+      <>
+        <span>Month</span>
+        <Button variant="ghost" onClick={() => column.toggleSorting(column.getIsSorted() === "asc")}>
           <ArrowUpDown className="ml-0.5 h-4 w-4" />
         </Button>
-
-        </div>
-        </>
-      )
-    },
+      </>
+    ),
   },
-
   {
-    accessorKey: "name",
-    header: "Course Name",
+    accessorKey: "annual_status",
+    header: "Annual Status",
+  },
+  {
+    accessorKey: "target_type",
+    header: "Target Type",
+  },
+  {
+    accessorKey: "count",
+    header: "Count",
+  },
+  {
+    accessorKey: "monthly_summary",
+    header: "Monthly Summary",
   },
   {
     accessorKey: "action",
     header: "Action",
     cell: ({ row }) => {
-      const course = row.original; 
-      
+      const syllabusStatus = row.original;
+
       const handleSuccess = () => {
-        // handle successful deletion, e.g., refresh the table
-        console.log("Department deleted, refresh the table or state");
+        console.log("Syllabus status deleted, refresh the table");
       };
 
       return (
-        <div className="flex items-center  space-x-2">
-          {/* <UpdateDepartment course={department} /> */}
-          <RetrieveDetail 
-                      id={course.course_id} 
-
-            endpoint={`${RETRIEVE_COURSE}`}
-            onSuccess={handleSuccess}/>
-          <DeleteButtom 
-            id={course.course_id} 
-            endpoint={`${DELETE_DEPARTMENT}`}
+        <div className="flex items-center space-x-2">
+          <GenericUpdateForm
+            schema={monthlySubjectSyllabusStatusSchema}
+            fields={monthlySubjectSyllabusStatusFields}
+            apiEndpoint={`${routes.UPDATE_MONTHLY_SYLLABUS_STATUS}/${syllabusStatus.month_status_id}`}
+            successMessage="Monthly Syllabus Status updated successfully"
+            failureMessage="Failed to update Monthly Syllabus Status"
+            triggerIcon={() => <MdModeEdit />}
+            dialogTitle="Update Monthly Syllabus Status"
+            dialogDescription="Update syllabus status details here"
+          />
+          <DeleteButton
+            id={syllabusStatus.month_status_id}
+            endpoint={`${routes.DELETE_MONTHLY_SYLLABUS_STATUS}/${syllabusStatus.month_status_id}`}
             onSuccess={handleSuccess}
           />
         </div>
       );
     },
   },
- 
-    
 ];

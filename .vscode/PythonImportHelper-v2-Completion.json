@@ -1140,6 +1140,14 @@
         "documentation": {}
     },
     {
+        "label": "status",
+        "importPath": "rest_framework",
+        "description": "rest_framework",
+        "isExtraImport": true,
+        "detail": "rest_framework",
+        "documentation": {}
+    },
+    {
         "label": "serializers",
         "importPath": "rest_framework",
         "description": "rest_framework",
@@ -3092,7 +3100,7 @@
         "kind": 6,
         "importPath": "derp.examination.serializers",
         "description": "derp.examination.serializers",
-        "peekOfCode": "class ExamTypeSerializer(serializers.ModelSerializer):\n    class Meta:\n        model = ExamType\n        fields = '__all__'\nclass ExamTimeTableSerializer(serializers.ModelSerializer):\n    class Meta:\n        model = ExamTimeTable\n        fields = '__all__'\nclass MarkSheetSerializer(serializers.ModelSerializer):\n    class Meta:",
+        "peekOfCode": "class ExamTypeSerializer(serializers.ModelSerializer):\n    class Meta:\n        model = ExamType\n        fields = '__all__'\nclass ExamTimeTableSerializer(serializers.ModelSerializer):\n    class Meta:\n        model = ExamTimeTable\n        fields = '__all__'\nclass HallTicketSerializer(serializers.ModelSerializer):\n    class Meta:",
         "detail": "derp.examination.serializers",
         "documentation": {}
     },
@@ -3101,7 +3109,16 @@
         "kind": 6,
         "importPath": "derp.examination.serializers",
         "description": "derp.examination.serializers",
-        "peekOfCode": "class ExamTimeTableSerializer(serializers.ModelSerializer):\n    class Meta:\n        model = ExamTimeTable\n        fields = '__all__'\nclass MarkSheetSerializer(serializers.ModelSerializer):\n    class Meta:\n        model = MarkSheet\n        fields = '__all__'\nclass ResultSheetSerializer(serializers.ModelSerializer):\n    class Meta:",
+        "peekOfCode": "class ExamTimeTableSerializer(serializers.ModelSerializer):\n    class Meta:\n        model = ExamTimeTable\n        fields = '__all__'\nclass HallTicketSerializer(serializers.ModelSerializer):\n    class Meta:\n        model = HallTicket\n        fields = '__all__'\nclass MarkSheetSerializer(serializers.ModelSerializer):\n    class Meta:",
+        "detail": "derp.examination.serializers",
+        "documentation": {}
+    },
+    {
+        "label": "HallTicketSerializer",
+        "kind": 6,
+        "importPath": "derp.examination.serializers",
+        "description": "derp.examination.serializers",
+        "peekOfCode": "class HallTicketSerializer(serializers.ModelSerializer):\n    class Meta:\n        model = HallTicket\n        fields = '__all__'\nclass MarkSheetSerializer(serializers.ModelSerializer):\n    class Meta:\n        model = MarkSheet\n        fields = '__all__'\nclass ResultSheetSerializer(serializers.ModelSerializer):\n    class Meta:",
         "detail": "derp.examination.serializers",
         "documentation": {}
     },
@@ -3147,6 +3164,15 @@
         "importPath": "derp.examination.views",
         "description": "derp.examination.views",
         "peekOfCode": "class ExamTimeTableView(viewsets.ViewSet):\n    def list(self, request):\n        queryset = ExamTimeTable.objects.all()\n        serializer = ExamTimeTableSerializer(queryset, many=True)\n        return Response(serializer.data)\n    def create(self, request):\n        serializer = ExamTimeTableSerializer(data=request.data)\n        if serializer.is_valid():\n            serializer.save()\n            return Response(serializer.data, status=201)",
+        "detail": "derp.examination.views",
+        "documentation": {}
+    },
+    {
+        "label": "HallTicketView",
+        "kind": 6,
+        "importPath": "derp.examination.views",
+        "description": "derp.examination.views",
+        "peekOfCode": "class HallTicketView(viewsets.ViewSet):\n    def list(self, request):\n        queryset = HallTicket.objects.all()\n        serializer = HallTicketSerializer(queryset, many=True)\n        return Response(serializer.data)\n    def retrieve(self, request, pk):\n        try:\n            hall_ticket = HallTicket.objects.get(pk=pk)\n        except HallTicket.DoesNotExist:\n            return Response(status=status.HTTP_404_NOT_FOUND)",
         "detail": "derp.examination.views",
         "documentation": {}
     },

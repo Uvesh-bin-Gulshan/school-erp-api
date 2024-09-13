@@ -1,77 +1,77 @@
 import { Button } from "@/components/ui/button";
 import { ColumnDef } from "@tanstack/react-table";
 import { ArrowUpDown } from "lucide-react";
-import UpdateDepartment from "./UpdateDepartment";
 import { AiFillDelete } from "react-icons/ai";
-import DeleteButtom from "../_component/DeleteButtom";
-import { DELETE_DEPARTMENT, RETRIEVE_COURSE, RETRIEVE_DEPARTMENT } from "@/lib/routePath";
-import RetrieveDetail from "../_component/RetriveDetail";
 
-export type Course = {
-  course_id:string;
+import { subjectFields } from '@/lib/fields';
+import { routes } from "@/lib/routePath";
+import { MdModeEdit } from "react-icons/md";
+import GenericUpdateForm from "@/app/_component/GenericUpdateForm";
+import { subjectSchema } from "@/lib/zodschema";
+import DeleteButton from "@/app/_component/DeleteButton";
+
+export type Subject = {
+  subject_id: string;
   name: string;
-  department:string;
-  effective_date:string
+  syllabus_count: number;
+  syllabus_type: string;
+  description: string;
+  course: string;
 };
 
-export const columns: ColumnDef<Course>[] = [
-  {
-    accessorKey: "course_id",
-    header: ({ column }) => {
-
-      return (
-        <>
-        
-        <div className="">
-
-
-        <span>Sr No.</span>
-        <Button
-          variant="ghost"
-          onClick={() => column.toggleSorting(column.getIsSorted() === "asc")}
-        >
-      
-          <ArrowUpDown className="ml-0.5 h-4 w-4" />
-        </Button>
-
-        </div>
-        </>
-      )
-    },
-  },
-
+export const columns: ColumnDef<Subject>[] = [
   {
     accessorKey: "name",
-    header: "Course Name",
+    header: ({ column }) => (
+      <>
+        <span>Subject Name</span>
+        <Button variant="ghost" onClick={() => column.toggleSorting(column.getIsSorted() === "asc")}>
+          <ArrowUpDown className="ml-0.5 h-4 w-4" />
+        </Button>
+      </>
+    ),
+  },
+  {
+    accessorKey: "syllabus_count",
+    header: "Syllabus Count",
+  },
+  {
+    accessorKey: "syllabus_type",
+    header: "Syllabus Type",
+  },
+  {
+    accessorKey: "course",
+    header: "Course",
   },
   {
     accessorKey: "action",
     header: "Action",
     cell: ({ row }) => {
-      const course = row.original; 
-      
+      const subject = row.original;
+
       const handleSuccess = () => {
-        // handle successful deletion, e.g., refresh the table
-        console.log("Department deleted, refresh the table or state");
+        console.log("Subject deleted, refresh the table");
       };
 
       return (
-        <div className="flex items-center  space-x-2">
-          {/* <UpdateDepartment course={department} /> */}
-          <RetrieveDetail 
-                      id={course.course_id} 
-
-            endpoint={`${RETRIEVE_COURSE}`}
-            onSuccess={handleSuccess}/>
-          <DeleteButtom 
-            id={course.course_id} 
-            endpoint={`${DELETE_DEPARTMENT}`}
+        <div className="flex items-center space-x-2">
+          <GenericUpdateForm
+            schema={subjectSchema}
+            fields={subjectFields}
+            apiEndpoint={`${routes.UPDATE_SUBJECT}/${subject.subject_id}`}
+            successMessage="Subject updated successfully"
+            failureMessage="Failed to update subject"
+            triggerIcon={() => <MdModeEdit />}
+            dialogTitle="Update Subject"
+            dialogDescription="Update subject details here"
+          />
+          <DeleteButton
+            id={subject.subject_id}
+            endpoint={`${routes.DELETE_SUBJECT}/${subject.subject_id}`}
             onSuccess={handleSuccess}
           />
         </div>
       );
     },
   },
- 
-    
 ];
