@@ -12,15 +12,17 @@ export const loginSchema=z.object({
 
 })
 
-export const departmentSchema=z.object({
+export const departmentSchema = z.object({
+  department_id: z.string().optional(),
+  name: z.string().min(1, "Department name is required").max(70, "Name is too long"),
+});
 
-    name:z.string().min(3,{
-        message:"department name must be at least 3 characters"
-    }),
-   
-
-})
-
+export const courseSchema = z.object({
+  course_id: z.string().optional(),
+  name: z.string().min(1, { message: "Course name is required" }),
+  department: z.string().min(1, { message: "Department is required" }),
+  effective_date: z.string().refine((val) => !isNaN(Date.parse(val)), { message: "Invalid date" }),
+});
 
 // const personalInfoSchema = z.object({
 //   student_name: z.string().min(1, "Required"),
@@ -92,13 +94,11 @@ export const syllabusStatusSchema = z.object({
   approved_date: z.string(), // DateTime should be in ISO 8601 format as a string
 });
 
-export const SyllabusTypeSchema = z.object({
-    type_id: z.string().max(6),
-    name: z.string().max(50),
-  });
+export const syllabusTypeSchema = z.object({
+  type_id: z.string().optional(),
+  name: z.string().min(1, { message: "Syllabus Type name is required" }),
+});
   
-  // Define a TypeScript type based on the schema
-  export type SyllabusType = z.infer<typeof SyllabusTypeSchema>;
 
 
 // Define the schema for the `TimeTable`
@@ -168,3 +168,4 @@ export const hallTicketSchema = z.object({
 
 // Infer the type from the schema
 export type HallTicket = z.infer<typeof hallTicketSchema>;
+

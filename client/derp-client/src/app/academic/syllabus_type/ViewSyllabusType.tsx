@@ -1,12 +1,12 @@
-"use client"
+"use client";
 
-import { DataTable } from '@/app/_component/DataTable'
-import React from 'react'
-import { columns } from './columns'
-import { ColumnFiltersState } from '@tanstack/react-table'
+import React from 'react';
+import { DataTable } from '@/app/_component/DataTable';
+import { ColumnFiltersState } from '@tanstack/react-table';
+import { columns } from './Columns';
 
 const ViewSyllabusType = ({ data }: { data: any }) => {
-  const columnFilters: ColumnFiltersState = []
+  const columnFilters: ColumnFiltersState = [];
 
   return (
     <div className="w-full">
@@ -16,7 +16,7 @@ const ViewSyllabusType = ({ data }: { data: any }) => {
         data={data}
       />
     </div>
-  )
-}
+  );
+};
 
-export default ViewSyllabusType
+export default ViewSyllabusType;

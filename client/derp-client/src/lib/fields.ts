@@ -38,3 +38,33 @@ export const studentFields = [
     },
   ];
   
+  export const departmentFields = [
+    {
+      name: 'name',
+      label: 'Department Name',
+      type: 'text',
+      placeholder: 'Enter department name',
+    },
+  ];
+
+  export const courseFields = [
+    {
+      name: 'name',
+      label: 'Course Name',
+      type: 'text',
+      placeholder: 'Enter course name',
+    },
+    {
+      name: 'department',
+      label: 'Department',
+      type: 'text',
+      placeholder: 'Enter department',
+    },
+    {
+      name: 'effective_date',
+      label: 'Effective Date',
+      type: 'date',
+      placeholder: 'Select effective date',
+    },
+  ];
+   

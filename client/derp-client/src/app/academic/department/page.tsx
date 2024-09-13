@@ -1,39 +1,30 @@
-import React from 'react'
-import ViewAdmissions from './ViewDepartment'
-import { getAdmissionList, getDepartmentDetail, getDepartmentList } from '@/lib/services'
-import AddAdmissions from './AddDepartment'
-import Sidebar from '@/app/_component/SideBar'
-import { BreadcrumbWithCustomSeparator } from '@/app/_component/BreadCrumb'
-import AddDepartment from './AddDepartment'
-import ViewDepartment from './ViewDepartment'
-import { MdOutlineNavigateNext } from 'react-icons/md'
-import { title } from 'process'
+import React from 'react';
+import ViewDepartment from './ViewDepartment';
+import AddDepartment from './AddDepartment';
+import SideBar from '@/app/_component/SideBar';
+import { BreadcrumbWithCustomSeparator } from '@/app/_component/BreadCrumb';
+import { getDepartmentList } from '@/lib/services';
+
 const items = [
-  {  label: "Academics" },
-  { href: "/department", label: "Department" },
+  { href: "/", label: "Home" },
+  { href: "/components", label: "Components" },
+  { label: "Departments" },
 ];
-const Page =async () => {
-    const data= await getDepartmentList()
-    console.log(data)
+
+const Page = async () => {
+  const data = await getDepartmentList();
+  
   return (
-<>
-
-
-
-<Sidebar breadcrumbs={items}>
-<div className=''>
-
-</div>
-
- 
-<div className='   h-96 '>
- 
-  <ViewDepartment  data={data}/>
-</div>
-</Sidebar>
-
-</>
-  )
+    <SideBar breadcrumbs={items}>
+      <div className=''>
+        <BreadcrumbWithCustomSeparator items={items} separator={<span> :: </span>} />
+      </div>
+      <div className='m-12 bg-white p-4 h-96'>
+        <AddDepartment/>
+        <ViewDepartment data={data} />
+      </div>
+    </SideBar>
+  );
 }
 
-export default Page
+export default Page;

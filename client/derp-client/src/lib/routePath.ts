@@ -30,20 +30,22 @@ export const  routes={
       UPDATE_SUBJECT:`${BASE_HOST}academic/subject/update`,
       RETRIEVE_SUBJECT:`${BASE_HOST}academic/subject/retrieve`,
       DELETE_SUBJECT:`${BASE_HOST}academic/subject/delete`,
-    //monthlySyllabusStatus 
+    
+      //monthlySyllabusStatus 
       MONTHLY_SYLLABUS_STATUS_LIST:`${BASE_HOST}academic/monthlySubjectSyllabusStatus/list`,
       CREATE_MONTHLY_SYLLABUS_STATUS:`${BASE_HOST}academic/monthlySubjectSyllabusStatus/create`,
       UPDATE_MONTHLY_SYLLABUS_STATUS:`${BASE_HOST}academic/monthlySubjectSyllabusStatus/update`,
       RETRIEVE_MONTHLY_SYLLABUS_STATUS:`${BASE_HOST}academic/monthlySubjectSyllabusStatus/retrieve`,
       DELETE_MONTHLY_SYLLABUS_STATUS:`${BASE_HOST}academic/monthlySubjectSyllabusStatus/delete`,
-    //annuallySyllabusStatus 
+
+      //annuallySyllabusStatus 
       ANNUALLY_SYLLABUS_STATUS_LIST:`${BASE_HOST}academic/annuallySubjectSyllabusStatus/list`,
       CREATE_ANNUALLY_SYLLABUS_STATUS:`${BASE_HOST}academic/annuallySubjectSyllabusStatus/create`,
       UPDATE_ANNUALLY_SYLLABUS_STATUS:`${BASE_HOST}academic/annuallySubjectSyllabusStatus/update`,
       RETRIEVE_ANNUALLY_SYLLABUS_STATUS:`${BASE_HOST}academic/annuallySubjectSyllabusStatus/retrieve`,
       DELETE_ANNUALLY_SYLLABUS_STATUS:`${BASE_HOST}academic/annuallySubjectSyllabusStatus/delete`,
     
-    //syllabusStatusVerification
+      //syllabusStatusVerification
       SYLLABUS_STATUS_VERIFICATION_LIST:`${BASE_HOST}academic/verification/list`,
       CREATE_SYLLABUS_STATUS_VERIFICATION:`${BASE_HOST}academic/verification/create`,
       UPDATE_SYLLABUS_STATUS_VERIFICATION:`${BASE_HOST}academic/verification/update`,
