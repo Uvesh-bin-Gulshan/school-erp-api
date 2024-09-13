@@ -1,9 +1,12 @@
-import React from 'react'
-import ViewVacationPeriod from './ViewVacationPeriod'
-import { getVacationPeriodList } from '@/lib/services'
-import AddVacationPeriod from './AddVacationPeriod'
-import Sidebar from '@/app/_component/SideBar'
-import { BreadcrumbWithCustomSeparator } from '@/app/_component/BreadCrumb'
+import React from 'react';
+import ViewVacationPeriod from './ViewVacationPeriod';
+import Sidebar from '@/app/_component/SideBar';
+import { BreadcrumbWithCustomSeparator } from '@/app/_component/BreadCrumb';
+import { getVacationList } from '@/lib/services';
+import { vacationSchema } from '@/lib/zodschema';
+import { routes } from '@/lib/routePath';
+import { vacationFields } from '@/lib/fields';
+import GenericForm from '../_component/GenericForm';
 
 const items = [
   { href: "/", label: "Home" },
@@ -12,23 +15,28 @@ const items = [
 ];
 
 const Page = async () => {
-  const data = await getVacationPeriodList()
-  console.log(data)
-  
+  const data = await getVacationList();
+
   return (
     <>
-      <Sidebar>
-        <div className=''>
+      <Sidebar breadcrumbs={items}>
+        <div className="">
           <BreadcrumbWithCustomSeparator items={items} separator={<span> :: </span>} />
         </div>
 
-        <div className='m-12 bg-white p-4 h-96'>
-          <AddVacationPeriod />
+        <div className="m-12 bg-white p-4 h-96">
+          <GenericForm
+            schema={vacationSchema}
+            fields={vacationFields}
+            apiEndpoint={`${routes.CREATE_VACATION}`}
+            title="Create Vacation Period"
+            description="Create a new vacation period here"
+          />
           <ViewVacationPeriod data={data} />
         </div>
       </Sidebar>
     </>
-  )
-}
+  );
+};
 
-export default Page
+export default Page;

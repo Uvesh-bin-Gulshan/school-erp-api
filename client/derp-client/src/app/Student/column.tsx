@@ -1,15 +1,14 @@
 import { Button } from "@/components/ui/button";
 import { ColumnDef } from "@tanstack/react-table";
 import { ArrowUpDown } from "lucide-react";
-import UpdateStudent from "./UpdateStudent";
 import { AiFillDelete } from "react-icons/ai";
 import DeleteButton from "../_component/DeleteButton";
 import { routes } from "@/lib/routePath";
 import RetrieveDetail from "../_component/RetriveDetail";
-import GenericUpdateForm from "../_component/GenericUpdateForm";
 import { MdModeEdit } from "react-icons/md";
 import { studentSchema } from "@/lib/zodschema";
 import { studentFields } from "@/lib/fields";
+import GenericForm from "../_component/GenericForm";
 
 export type Student = {
   student_id: string;
@@ -56,15 +55,12 @@ export const columns: ColumnDef<Student>[] = [
 
       return (
         <div className="flex items-center space-x-2">
-          <GenericUpdateForm
+          <GenericForm
             schema={studentSchema}
             fields={studentFields}
             apiEndpoint={`${routes.UPDATE_STUDENT}/${student.student_id}`}
-            successMessage="Student updated successfully"
-            failureMessage="Failed to update student"
-            triggerIcon={() => <MdModeEdit />}
-            dialogTitle="Update Student"
-            dialogDescription="Update student details here"
+            title="Update Student"
+            description="Update student details here"
           />
           <RetrieveDetail
             item={"student"}

@@ -5,7 +5,7 @@ import { AiFillDelete } from "react-icons/ai";
 import { annuallySubjectSyllabusStatusFields } from '@/lib/fields';
 import { routes } from "@/lib/routePath";
 import { MdModeEdit } from "react-icons/md";
-import GenericUpdateForm from "@/app/_component/GenericUpdateForm";
+import GenericForm from "@/app/_component/GenericForm";
 import { annuallySubjectSyllabusStatusSchema } from "@/lib/zodschema";
 import DeleteButton from "@/app/_component/DeleteButton";
 
@@ -53,15 +53,12 @@ export const columns: ColumnDef<AnnuallySubjectSyllabusStatus>[] = [
 
       return (
         <div className="flex items-center space-x-2">
-          <GenericUpdateForm
+          <GenericForm
             schema={annuallySubjectSyllabusStatusSchema}
             fields={annuallySubjectSyllabusStatusFields}
             apiEndpoint={`${routes.ANNUALLY_SUBJECT_SYLLABUS_STATUS_LIST}/${status.annual_status_id}`}
-            successMessage="Syllabus status updated successfully"
-            failureMessage="Failed to update syllabus status"
-            triggerIcon={() => <MdModeEdit />}
-            dialogTitle="Update Annually Subject Syllabus Status"
-            dialogDescription="Update syllabus status details here"
+            title="Update Annually Subject Syllabus Status"
+            description="Update syllabus status details here"
           />
           <DeleteButton
             id={status.annual_status_id}

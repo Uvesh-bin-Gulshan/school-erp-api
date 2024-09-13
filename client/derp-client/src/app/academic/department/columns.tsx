@@ -6,7 +6,7 @@ import { MdModeEdit } from "react-icons/md";
 import { routes } from "@/lib/routePath";
 import { departmentSchema } from '@/lib/zodschema';
 import { departmentFields } from '@/lib/fields';
-import GenericUpdateForm from "@/app/_component/GenericUpdateForm";
+import GenericUpdateForm from "@/app/_component/GenericForm";
 import RetrieveDetail from "@/app/_component/RetriveDetail";
 import DeleteButton from "@/app/_component/DeleteButton";
 

@@ -1,11 +1,13 @@
 import { Button } from "@/components/ui/button";
 import { ColumnDef } from "@tanstack/react-table";
 import { ArrowUpDown } from "lucide-react";
-import UpdateTimeTable from "./UpdateTimeTable";
 import { AiFillDelete } from "react-icons/ai";
-import DeleteButton from "@/app/_component/DeleteButton";
-import RetrieveDetail from "@/app/_component/RetriveDetail";
-import { DELETE_TIMETABLE, RETRIEVE_TIMETABLE } from "@/lib/routePath";
+import DeleteButton from "../_component/DeleteButton";
+import RetrieveDetail from "../_component/RetriveDetail";
+import { MdModeEdit } from "react-icons/md";
+import { timetableFields } from "@/lib/fields";
+import GenericForm from "../_component/GenericForm";
+import { routes } from "@/lib/routePath";
 
 export type TimeTable = {
   time_table_id: string;
@@ -17,22 +19,20 @@ export type TimeTable = {
 
 export const columns: ColumnDef<TimeTable>[] = [
   {
-    accessorKey: "time_table_id",
-    header: ({ column }) => (
-      <div className="flex items-center">
-        <span>ID</span>
-        <Button
-          variant="ghost"
-          onClick={() => column.toggleSorting(column.getIsSorted() === "asc")}
-        >
-          <ArrowUpDown className="ml-0.5 h-4 w-4" />
-        </Button>
-      </div>
-    ),
-  },
-  {
     accessorKey: "subject",
-    header: "Subject",
+    header: ({ column }) => (
+      <>
+        <div className="">
+          <span>Subject</span>
+          <Button
+            variant="ghost"
+            onClick={() => column.toggleSorting(column.getIsSorted() === "asc")}
+          >
+            <ArrowUpDown className="ml-0.5 h-4 w-4" />
+          </Button>
+        </div>
+      </>
+    ),
   },
   {
     accessorKey: "teacher",
@@ -50,7 +50,7 @@ export const columns: ColumnDef<TimeTable>[] = [
     accessorKey: "action",
     header: "Action",
     cell: ({ row }) => {
-      const timeTable = row.original;
+      const timetable = row.original;
 
       const handleSuccess = () => {
         console.log("TimeTable deleted, refresh the table or state");
@@ -58,14 +58,21 @@ export const columns: ColumnDef<TimeTable>[] = [
 
       return (
         <div className="flex items-center space-x-2">
-          {/* <RetrieveDetail 
-            id={timeTable.time_table_id} 
-            endpoint={`${RETRIEVE_TIMETABLE}`}
+          <GenericForm
+            fields={timetableFields}
+            apiEndpoint={`${routes.UPDATE_TIMETABLE}/${timetable.time_table_id}`}
+            title="Update TimeTable"
+            description="Update timetable details here"
+          />
+          <RetrieveDetail
+            item={"timetable"}
+            id={timetable.time_table_id}
+            endpoint={`${routes.RETRIEVE_TIMETABLE}`}
             onSuccess={handleSuccess}
-          /> */}
+          />
           <DeleteButton
-            id={timeTable.time_table_id} 
-            endpoint={`${DELETE_TIMETABLE}`}
+            id={timetable.time_table_id}
+            endpoint={`${routes.DELETE_TIMETABLE}`}
             onSuccess={handleSuccess}
           />
         </div>

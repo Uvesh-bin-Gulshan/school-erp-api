@@ -39,7 +39,7 @@ export const getDepartmentList = async () => {
   return fetchData(routes.DEPARTMENT_LIST);
 };
 
-export const getSyllabusStatusList = async () => {
+export const getSyllabusStatusVerificationList = async () => {
   return fetchData(routes.SYLLABUS_STATUS_VERIFICATION_LIST);
 };
 

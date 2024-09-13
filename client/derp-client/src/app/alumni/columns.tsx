@@ -4,7 +4,7 @@ import { ArrowUpDown } from "lucide-react";
 import { AiFillDelete } from "react-icons/ai";
 import DeleteButton from "../_component/DeleteButton";
 import RetrieveDetail from "../_component/RetriveDetail";
-import GenericUpdateForm from "../_component/GenericUpdateForm";
+import GenericUpdateForm from "../_component/GenericForm";
 import { MdModeEdit } from "react-icons/md";
 import { alumniSchema } from "@/lib/zodschema";
 import { alumniFields } from "@/lib/fields";
@@ -62,12 +62,9 @@ export const columns: ColumnDef<Alumni>[] = [
           <GenericUpdateForm
             schema={alumniSchema}
             fields={alumniFields}
-            apiEndpoint={`${routes.UPDATE_ALUMNI}/${alumni.alumni_id}`}
-            successMessage="Alumni updated successfully"
-            failureMessage="Failed to update alumni"
-            triggerIcon={() => <MdModeEdit />}
-            dialogTitle="Update Alumni"
-            dialogDescription="Update alumni details here"
+            apiEndpoint={`${routes.UPDATE_ALUMNI}/${alumni.alumni_id}`}            
+            title="Update Alumni"
+            description="Update alumni details here"
           />
           <RetrieveDetail
             item="alumni"

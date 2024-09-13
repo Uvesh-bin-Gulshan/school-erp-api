@@ -17,7 +17,7 @@ export const fetchData = async (endpoint: string) => {
 };
 
 
-export const submitForm = async (url: any, data: object, method: string) => {
+export const submitForm = async (url: string, data: object, method: string) => {
   try {
     // Ensure the data is a plain object
     const plainData = JSON.parse(JSON.stringify(data));
@@ -30,13 +30,17 @@ export const submitForm = async (url: any, data: object, method: string) => {
       body: JSON.stringify(plainData),
     });
 
+    const responseData = await response.json();
+
     if (response.ok) {
-      return { success: true };
+      // Assuming the backend returns a 'message' field in the response
+      return { success: true, message: responseData.message || 'Form submitted successfully!' };
     } else {
-      return { success: false };
+      return { success: false, message: responseData.message || 'Failed to submit form' };
     }
   } catch (error) {
     console.error('Error submitting form:', error);
-    return { success: false };
+    return { success: false, message: 'An error occurred while submitting the form' };
   }
 };
+

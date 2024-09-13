@@ -5,7 +5,7 @@ import { AiFillDelete } from "react-icons/ai";
 import { monthlySubjectSyllabusStatusFields } from '@/lib/fields';
 import { routes } from "@/lib/routePath";
 import { MdModeEdit } from "react-icons/md";
-import GenericUpdateForm from "@/app/_component/GenericUpdateForm";
+import GenericUpdateForm from "@/app/_component/GenericForm";
 import { monthlySubjectSyllabusStatusSchema } from "@/lib/zodschema";
 import DeleteButton from "@/app/_component/DeleteButton";
 

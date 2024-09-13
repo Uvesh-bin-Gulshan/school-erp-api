@@ -5,7 +5,7 @@ import { AiFillDelete } from "react-icons/ai";
 
 import { routes } from "@/lib/routePath";
 import { MdModeEdit } from "react-icons/md";
-import GenericUpdateForm from "@/app/_component/GenericUpdateForm";
+import GenericUpdateForm from "@/app/_component/GenericForm";
 import { syllabusTypeSchema } from "@/lib/zodschema";
 import DeleteButton from "@/app/_component/DeleteButton";
 import { syllabusTypeFields } from "@/lib/fields";
@@ -39,15 +39,12 @@ export const columns: ColumnDef<SyllabusType>[] = [
 
       return (
         <div className="flex items-center space-x-2">
-          <GenericUpdateForm
+          <GenericForm
             schema={syllabusTypeSchema}
             fields={syllabusTypeFields}
-            apiEndpoint={`${routes.UPDATE_SYLLABUS_TYPE}/${syllabusType.type_id}`}
-            successMessage="Syllabus Type updated successfully"
-            failureMessage="Failed to update Syllabus Type"
-            triggerIcon={() => <MdModeEdit />}
-            dialogTitle="Update Syllabus Type"
-            dialogDescription="Update Syllabus Type details here"
+            apiEndpoint={`${routes.UPDATE_SYLLABUS_TYPE}/${syllabusType.type_id}`}            
+            title="Update Syllabus Type"
+            description="Update Syllabus Type details here"
           />
           <DeleteButton
             id={syllabusType.type_id}

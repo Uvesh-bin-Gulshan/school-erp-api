@@ -12,17 +12,18 @@ export const loginSchema=z.object({
 
 })
 
-export const departmentSchema = z.object({
-  department_id: z.string().optional(),
-  name: z.string().min(1, "Department name is required").max(70, "Name is too long"),
-});
+export const departmentSchema=z.object({
 
-export const courseSchema = z.object({
-  course_id: z.string().optional(),
-  name: z.string().min(1, { message: "Course name is required" }),
-  department: z.string().min(1, { message: "Department is required" }),
-  effective_date: z.string().refine((val) => !isNaN(Date.parse(val)), { message: "Invalid date" }),
-});
+    name:z.string().min(3,{
+        message:"department name must be at least 3 characters"
+    }),
+   
+
+})
+
+
+
+
 
 // const personalInfoSchema = z.object({
 //   student_name: z.string().min(1, "Required"),
@@ -87,68 +88,36 @@ export const admissionSchema = z.object({
 
 // Define the schema for SyllabusStatusVerification
 export const syllabusStatusSchema = z.object({
-  status_verification_id: z.string().length(6), // Assuming the ID is always 6 characters
-  monthly_syllabus_approval: z.string(), // Assuming this is a reference ID
-  feedback: z.string().max(300).optional(), // Feedback is optional and has a max length
-  is_approved: z.boolean(), // Boolean field
-  approved_date: z.string(), // DateTime should be in ISO 8601 format as a string
+  feedback: z.string().max(300, "Feedback cannot exceed 300 characters"),
+  is_approved: z.boolean(),
+  approved_date: z.string(),
 });
 
-// annual subject syllabus status
-export const annuallySubjectSyllabusStatusSchema = z.object({
-  annual_status_id: z.string().optional(),
-  subject: z.string().min(1, { message: "Subject is required" }),
-  teacher: z.string().min(1, { message: "Teacher is required" }),
-  yearly_status: z.number().min(0, { message: "Yearly status must be a number" }),
-  yearly_summary: z.string().min(1, { message: "Yearly summary is required" }),
-});
-
-// monthlySubjectSyllabusStatusSchema
-export const monthlySubjectSyllabusStatusSchema = z.object({
-  month_status_id: z.string().optional(),
-  month: z.string().refine((val) => !isNaN(Date.parse(val)), { message: "Invalid date" }),
-  annual_status: z.string().min(1, { message: "Annual status is required" }),
-  target_type: z.string().min(1, { message: "Target type is required" }),
-  count: z.number().min(0, { message: "Count must be a positive number" }),
-  monthly_summary: z.string().max(300, { message: "Summary must be less than 300 characters" }),
-});
-
-// syllabus type 
-export const syllabusTypeSchema = z.object({
-  type_id: z.string().optional(),
-  name: z.string().min(1, { message: "Syllabus Type name is required" }),
-});
-
-// subject 
-export const subjectSchema = z.object({
-  subject_id: z.string().optional(),
-  name: z.string().min(1, { message: "Subject name is required" }),
-  syllabus_count: z.number().min(0, { message: "Syllabus count must be non-negative" }),
-  syllabus_type: z.string().min(1, { message: "Syllabus type is required" }),
-  description: z.string().optional(),
-  course: z.string().min(1, { message: "Course is required" }),
-});
+export const SyllabusTypeSchema = z.object({
+    type_id: z.string().max(6),
+    name: z.string().max(50),
+  });
   
+  // Define a TypeScript type based on the schema
+  export type SyllabusType = z.infer<typeof SyllabusTypeSchema>;
 
 
 // Define the schema for the `TimeTable`
-export const timeTableSchema = z.object({
-    time_table_id: z.string().length(6).optional(), // CharField with max_length=6
-    subject: z.string(), // ForeignKey to Subject, represented by its `subject_id`
-    teacher: z.string().max(20), // CharField with max_length=20
-    time: z.string().regex(/^\d{2}:\d{2}(:\d{2})?$/), // TimeField in HH:MM or HH:MM:SS format
-    effective_date: z.string().regex(/^\d{4}-\d{2}-\d{2}$/), // DateField in YYYY-MM-DD format
-  });
+export const timetableSchema = z.object({
+  subject: z.string().min(1, { message: "Subject is required" }),
+  teacher: z.string().min(1, { message: "Teacher is required" }),
+  time: z.string().min(1, { message: "Time is required" }),
+  effective_date: z.string().min(1, { message: "Effective Date is required" }),
+});
   
 
 // Define the schema for the `VacationPeriod`
-export const vacationPeriodSchema = z.object({
-    vacation_id: z.string().length(6).optional(), // CharField with max_length=6, automatically generated
-    name: z.string().max(100), // CharField with max_length=100
-    start_date: z.string().regex(/^\d{4}-\d{2}-\d{2}$/), // DateField in YYYY-MM-DD format
-    end_date: z.string().regex(/^\d{4}-\d{2}-\d{2}$/), // DateField in YYYY-MM-DD format
-    description: z.string().max(254).nullable().optional(), // CharField with max_length=254, nullable and optional
-  });
+export const vacationSchema = z.object({
+  name: z.string().min(1, "Vacation name is required"),
+  start_date: z.string().min(1, "Start date is required"),
+  end_date: z.string().min(1, "End date is required"),
+  description: z.string().optional(),
+});
 
 
   export const studentSchema = z.object({
@@ -198,4 +167,3 @@ export const hallTicketSchema = z.object({
 
 // Infer the type from the schema
 export type HallTicket = z.infer<typeof hallTicketSchema>;
-

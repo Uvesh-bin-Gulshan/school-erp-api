@@ -20,7 +20,15 @@ const Page = async () => {
         <BreadcrumbWithCustomSeparator items={items} separator={<span> :: </span>} />
       </div>
       <div className='m-12 bg-white p-4 h-96'>
-        <AddDepartment/>
+      <GenericAddForm
+      schema={departmentSchema}
+      fields={departmentFields}
+      apiEndpoint={`${routes.CREATE_DEPARTMENT}`}
+      successMessage="Department added successfully"
+      failureMessage="Failed to add department"
+      dialogTitle="Add Department"
+      dialogDescription="Enter department details here"
+      />
         <ViewDepartment data={data} />
       </div>
     </SideBar>

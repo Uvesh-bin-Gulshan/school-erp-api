@@ -21,7 +21,15 @@ const Page = async () => {
         </div>
 
         <div className="m-12 bg-white p-4 h-96">
-          <AddSubject />
+        <GenericAddForm
+      schema={subjectSchema}
+      fields={subjectFields}
+      apiEndpoint={routes.CREATE_SUBJECT}
+      successMessage="Subject added successfully"
+      failureMessage="Failed to add subject"
+      dialogTitle="Add New Subject"
+      dialogDescription="Fill in the details to add a new subject."
+    />
           <ViewSubject data={data} />
         </div>
       </Sidebar>

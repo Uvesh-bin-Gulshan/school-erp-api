@@ -5,9 +5,9 @@ import { AiFillDelete } from "react-icons/ai";
 import { courseFields } from '@/lib/fields';
 import { routes } from "@/lib/routePath";
 import { MdModeEdit } from "react-icons/md";
-import GenericUpdateForm from "@/app/_component/GenericUpdateForm";
 import { courseSchema } from "@/lib/zodschema";
 import DeleteButton from "@/app/_component/DeleteButton";
+import GenericForm from "@/app/_component/GenericForm";
 
 export type Course = {
   course_id: string;
@@ -48,15 +48,12 @@ export const columns: ColumnDef<Course>[] = [
 
       return (
         <div className="flex items-center space-x-2">
-          <GenericUpdateForm
+          <GenericForm
             schema={courseSchema}
             fields={courseFields}
-            apiEndpoint={`${routes.UPDATE_COURSE}/${course.course_id}`}
-            successMessage="Course updated successfully"
-            failureMessage="Failed to update course"
-            triggerIcon={() => <MdModeEdit />}
-            dialogTitle="Update Course"
-            dialogDescription="Update course details here"
+            apiEndpoint={`${routes.UPDATE_COURSE}/${course.course_id}`}          
+            title="Update Course"
+            description="Update course details here"
           />
           <DeleteButton
             id={course.course_id}

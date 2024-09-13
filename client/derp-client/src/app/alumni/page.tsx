@@ -6,8 +6,8 @@ import { getAlumniList } from "@/lib/services";
 import { alumniSchema } from "@/lib/zodschema";
 import { routes } from "@/lib/routePath";
 import { MdModeEdit } from "react-icons/md";
-import GenericAddForm from "../_component/GenericAddForm";
 import { alumniFields } from "@/lib/fields";
+import GenericForm from "../_component/GenericForm";
 
 const items = [
   { href: "/", label: "Home" },
@@ -30,14 +30,12 @@ const Page = async () => {
         </div>
 
         <div className="m-12 bg-white p-4 h-96">
-          <GenericAddForm
+          <GenericForm
             schema={alumniSchema}
             fields={alumniFields}
             apiEndpoint={`${routes.CREATE_ALUMNI}`}
-            successMessage="Alumni added successfully"
-            failureMessage="Failed to add alumni"
-            dialogTitle="Add Alumni"
-            dialogDescription="Add alumni details here"
+            title="Add Alumni"
+            description="Add alumni details here"
           />
           <ViewAlumni data={data} />
         </div>

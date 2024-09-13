@@ -1,37 +1,41 @@
 import { Button } from "@/components/ui/button";
 import { ColumnDef } from "@tanstack/react-table";
 import { ArrowUpDown } from "lucide-react";
-import UpdateSyllabusStatus from "./UpdateSyllabusStatus";
 import { AiFillDelete } from "react-icons/ai";
-import { DELETE_SYLLABUS_STATUS_VERIFICATION, RETRIEVE_SYLLABUS_STATUS_VERIFICATION } from "@/lib/routePath";
-import RetrieveDetail from "@/app/_component/RetriveDetail";
+import { routes } from "@/lib/routePath";
+import { syllabusStatusSchema } from "@/lib/zodschema";
+import { syllabusStatusFields } from "@/lib/fields";
+import GenericForm from "@/app/_component/GenericForm";
 import DeleteButton from "@/app/_component/DeleteButton";
+import RetrieveDetail from "@/app/_component/RetriveDetail";
 
-export type SyllabusStatus = {
+export type SyllabusStatusVerification = {
   status_verification_id: string;
-  monthly_syllabus_approval: string;
   feedback: string;
   is_approved: boolean;
   approved_date: string;
 };
 
-export const columns: ColumnDef<SyllabusStatus>[] = [
-  {
-    accessorKey: "status_verification_id",
-    header: "Verification ID",
-  },
-  {
-    accessorKey: "monthly_syllabus_approval",
-    header: "Monthly Syllabus Approval",
-  },
+export const columns: ColumnDef<SyllabusStatusVerification>[] = [
   {
     accessorKey: "feedback",
-    header: "Feedback",
+    header: ({ column }) => (
+      <>
+        <div className="">
+          <span>Feedback</span>
+          <Button
+            variant="ghost"
+            onClick={() => column.toggleSorting(column.getIsSorted() === "asc")}
+          >
+            <ArrowUpDown className="ml-0.5 h-4 w-4" />
+          </Button>
+        </div>
+      </>
+    ),
   },
   {
     accessorKey: "is_approved",
-    header: "Approved",
-    cell: ({ row }) => (row.original.is_approved ? "Yes" : "No"),
+    header: "Approved Status",
   },
   {
     accessorKey: "approved_date",
@@ -41,25 +45,32 @@ export const columns: ColumnDef<SyllabusStatus>[] = [
     accessorKey: "action",
     header: "Action",
     cell: ({ row }) => {
-      const syllabusStatus = row.original;
+      const verification = row.original;
 
       const handleSuccess = () => {
-        console.log("Syllabus status verification deleted, refresh the table or state");
+        console.log("Verification status deleted, refresh the table or state");
       };
 
       return (
         <div className="flex items-center space-x-2">
-          {/* <RetrieveDetail 
-            id={syllabusStatus.status_verification_id} 
-            endpoint={`${RETRIEVE_SYLLABUS_STATUS_VERIFICATION}`}
-            onSuccess={handleSuccess}
-          /> */}
-          <DeleteButton
-            id={syllabusStatus.status_verification_id} 
-            endpoint={`${DELETE_SYLLABUS_STATUS_VERIFICATION}`}
+          <GenericForm
+            schema={syllabusStatusSchema}
+            fields={syllabusStatusFields}
+            apiEndpoint={`${routes.UPDATE_SYLLABUS_STATUS_VERIFICATION}/${verification.status_verification_id}`}
+            title="Update Verification"
+            description="Update verification details here"
+          />
+          <RetrieveDetail
+            item={"verification"}
+            id={verification.status_verification_id}
+            endpoint={`${routes.RETRIEVE_SYLLABUS_STATUS_VERIFICATION}`}
             onSuccess={handleSuccess}
           />
-          <UpdateSyllabusStatus syllabusStatus={syllabusStatus} />
+          <DeleteButton
+            id={verification.status_verification_id}
+            endpoint={`${routes.DELETE_SYLLABUS_STATUS_VERIFICATION}`}
+            onSuccess={handleSuccess}
+          />
         </div>
       );
     },

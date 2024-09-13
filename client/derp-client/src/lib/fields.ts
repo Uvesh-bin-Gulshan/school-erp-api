@@ -1,5 +1,4 @@
-// studentFields
-export const studentFields = [
+  export const studentFields = [
     {
       name: 'student_status',
       label: 'Student Status',
@@ -14,8 +13,7 @@ export const studentFields = [
 
     // Add more fields based on the `Student` model
   ];
-  
-  // alumniFields
+
   export const alumniFields = [
     {
       name: 'student',
@@ -39,7 +37,7 @@ export const studentFields = [
       type: 'text',
     },
   ];
-  
+
   // departmentFields
   export const departmentFields = [
     {
@@ -175,6 +173,74 @@ export const studentFields = [
       label: 'Monthly Summary',
       type: 'text',
       placeholder: 'Enter monthly summary',
+    },
+  ];
+
+  // syllabusStatusFields
+  export const syllabusStatusFields = [
+    {
+      name: 'feedback',
+      label: 'Feedback',
+      type: 'textarea',
+      placeholder: 'Enter feedback',
+    },
+    {
+      name: 'is_approved',
+      label: 'Approved Status',
+      type: 'checkbox',
+      defaultValue: false,
+    },
+    {
+      name: 'approved_date',
+      label: 'Approved Date',
+      type: 'date',
+    },
+  ];
+
+  // timetableFields
+  export const timetableFields = [
+    {
+      name: 'subject',
+      label: 'Subject',
+      type: 'text',
+    },
+    {
+      name: 'teacher',
+      label: 'Teacher',
+      type: 'text',
+    },
+    {
+      name: 'time',
+      label: 'Time',
+      type: 'time',
+    },
+    {
+      name: 'effective_date',
+      label: 'Effective Date',
+      type: 'date',
+    },
+  ];
+
+  export const vacationFields = [
+    {
+      name: 'name',
+      label: 'Vacation Name',
+      type: 'text',
+    },
+    {
+      name: 'start_date',
+      label: 'Start Date',
+      type: 'date',
+    },
+    {
+      name: 'end_date',
+      label: 'End Date',
+      type: 'date',
+    },
+    {
+      name: 'description',
+      label: 'Description',
+      type: 'textarea',
     },
   ];
   

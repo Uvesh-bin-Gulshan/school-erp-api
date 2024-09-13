@@ -21,7 +21,13 @@ const Page = async () => {
         </div>
 
         <div className="m-12 bg-white p-4 h-96">
-          <AddSyllabusType />
+        <GenericForm
+      schema={syllabusTypeSchema}
+      fields={syllabusTypeFields}
+      apiEndpoint={routes.CREATE_SYLLABUS_TYPE}
+      title="Add New Syllabus Type"
+      description="Fill in the details to add a new Syllabus Type."
+        />
           <ViewSyllabusType data={data} />
         </div>
       </Sidebar>

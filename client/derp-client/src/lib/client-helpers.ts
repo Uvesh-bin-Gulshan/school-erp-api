@@ -11,13 +11,16 @@ export const useDynamicFormConfig = (schema: ZodSchema, defaultValues: any) => {
 };
 
 
-export const successToastMessage = (message: string) => {
-    toast.success(message);
-  };
-  
-  export const failedToastMessage = (message: string) => {
-    toast.error(message);
-  };
-  
-  
 
+export const successToastMessage = (message: string) => {
+  toast.success(message);
+};
+
+export const failedToastMessage = (message: string) => {
+  toast.error(message);
+};
+
+
+export const handleToast = (success: boolean, message: string) => {
+  success ? successToastMessage(message) : failedToastMessage(message);
+};
