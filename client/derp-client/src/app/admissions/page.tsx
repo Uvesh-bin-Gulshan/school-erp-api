@@ -29,17 +29,14 @@ const PageContent = () => {
 
   return (
     <Sidebar breadcrumbs={items}>
-      <Link className="" href="../admissions/dashboard">
-        <CustomButton className="w-36 ml-4" text="Dashboard" icon={<LayoutDashboard />} />
-      </Link>
-      <div className="h-96">
+   
+      <div className="h-[80vh] mt-10">
         <DynamicViewAdmissions data={data} />
       </div>
     </Sidebar>
   );
 };
 
-// Wrap PageContent with dynamic import to ensure it's only rendered on the client
 const DynamicPageContent = dynamic(() => Promise.resolve(PageContent), { ssr: false });
 
 const Page: React.FC = () => {

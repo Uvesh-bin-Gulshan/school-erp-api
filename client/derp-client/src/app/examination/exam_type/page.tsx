@@ -1,10 +1,12 @@
-import React from 'react'
-import ViewExamType from './ViewExamType'
-import { getExamTypeList } from '@/lib/services'
-import AddExamType from './AddExamType'
-import Sidebar from '@/app/_component/SideBar'
-import { BreadcrumbWithCustomSeparator } from '@/app/_component/BreadCrumb'
-import SideBar from '@/app/_component/SideBar'
+import React from 'react';
+import ViewExamType from './ViewExamType';
+import Sidebar from '@/app/_component/SideBar';
+import { BreadcrumbWithCustomSeparator } from '@/app/_component/BreadCrumb';
+import { getExamTypeList } from '@/lib/services';
+import { examTypeSchema } from '@/lib/zodschema';
+import { routes } from '@/lib/routePath';
+import { examTypeFields } from '@/lib/fields';
+import GenericForm from '../_component/GenericForm';
 
 const items = [
   { href: "/", label: "Home" },
@@ -13,22 +15,28 @@ const items = [
 ];
 
 const Page = async () => {
-  const data = await getExamTypeList()
-  console.log(data)
+  const data = await getExamTypeList();
 
   return (
     <>
-      <SideBar breadcrumbs={items}>
-        <div className=''>
+      <Sidebar breadcrumbs={items}>
+        <div className="">
           <BreadcrumbWithCustomSeparator items={items} separator={<span> :: </span>} />
         </div>
-        <div className='m-12 bg-white p-4 h-96'>
-          <AddExamType />
+
+        <div className="m-12 bg-white p-4 h-96">
+          <GenericForm
+            schema={examTypeSchema}
+            fields={examTypeFields}
+            apiEndpoint={`${routes.CREATE_EXAM_TYPE}`}
+            title="Create Exam Type"
+            description="Create a new exam type here"
+          />
           <ViewExamType data={data} />
         </div>
-      </SideBar>
+      </Sidebar>
     </>
-  )
-}
+  );
+};
 
-export default Page
+export default Page;

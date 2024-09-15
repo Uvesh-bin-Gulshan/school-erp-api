@@ -44,7 +44,7 @@ const SideBar = ({ children, breadcrumbs }: SideBarProps) => {
             className={`flex absolute justify-center
                place-items-center  px-1.5  
                rounded-full   bg-transparent mt-1
-    ${open ? "w-18 h-18 mx-12 md:mx-5" : "w-16 h-16 mx-1"}`}
+    ${open ? "w-18 h-18 mx-12 md:mx-5 mt-4" : "w-16 h-16 "}`}
           >
             <Image
               src="/logo.png"
@@ -60,18 +60,18 @@ const SideBar = ({ children, breadcrumbs }: SideBarProps) => {
         <div className={`w-full `}>
           <div
             className="  flex  text-xl px-0.5 py-2
-             h-8 text-black ml-4 justify-between w-[100%] 
-               rounded-r-lg mt-6 mb-12"
+             h-8 text-gray-500 ml-4 justify-between w-[100%] 
+               rounded-r-lg mt-8 "
           >
-            <div onClick={handleClick} className="text-2xl  ">
+            <div onClick={handleClick} className="text-xl  ">
               <FaBars />
             </div>
             <div className="mr-[47%]">
               <BreadcrumbWithCustomSeparator items={breadcrumbs} />
             </div>
 
-            <div className="w-[30%] justify-between mr-8 flex ">
-              <Input placeholder="search" />
+            <div className="w-[30%]  justify-between mr-8 flex ">
+              <Input className="h-8 " placeholder="search" />
               <div></div>
             </div>
           </div>

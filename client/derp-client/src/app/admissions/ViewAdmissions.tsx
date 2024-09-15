@@ -6,7 +6,7 @@ import { ColumnFiltersState } from '@tanstack/react-table';
 import AddAdmissions from './AdmisionForm/add_admission/AddAdmissions';
 import Link from 'next/link';
 import CustomButton from '../_component/CustomButton';
-import { FileDown, FileUp, Plus } from 'lucide-react';
+import { FileDown, FileUp, LayoutDashboard, Plus } from 'lucide-react';
 import { exportAdmissions } from '@/lib/import_export';
 import { AdmissionProvider } from './AdmissionContext';
 
@@ -20,7 +20,14 @@ const ViewAdmissions: React.FC<ViewAdmissionsProps> = ({ data }:{data:any}) => {
   return (
     <AdmissionProvider>
       <div className="w-full relative">
-        <div className="absolute right-4 mt-4 flex gap-4">
+      
+        <div className="absolute right-4 flex  gap-4">
+
+
+      <Link className=" " href="../admissions/dashboard">
+        <CustomButton className="w-" text="Admission Dashboard" icon={<LayoutDashboard />} />
+      </Link>
+
           <Link className="mr-2" href="/admissions/ImportAdmission">
             <CustomButton className="w-36" text="Import" icon={<FileUp />} />
           </Link>
@@ -32,9 +39,14 @@ const ViewAdmissions: React.FC<ViewAdmissionsProps> = ({ data }:{data:any}) => {
           </Link>
           
         </div>
+        <div className='mt-8 absolute'>
+
 
         <DataTable columns={columns} initialColumnFilters={columnFilters} data={data} />
+        </div>
+
       </div>
+      
     </AdmissionProvider>
   );
 };

@@ -1,21 +1,21 @@
 import React from 'react'
-import ViewExamTimeTable from './ViewExamTimeTable'
+import ViewMarkSheet from './ViewMarkSheet'
 import Sidebar from '@/app/_component/SideBar'
 import { BreadcrumbWithCustomSeparator } from '@/app/_component/BreadCrumb'
-import { getExamTimeTableList } from '@/lib/services'
-import { examTimeTableSchema } from '@/lib/zodschema'
+import { getMarkSheetList } from '@/lib/services'
+import { markSheetSchema } from '@/lib/zodschema'
 import { routes } from '@/lib/routePath'
-import { examTimeTableFields } from '@/lib/fields'
+import { markSheetFields } from '@/lib/fields'
 import GenericForm from '../_component/GenericForm'
 
 const items = [
   { href: "/", label: "Home" },
   { href: "/components", label: "Components" },
-  { label: "ExamTimeTable" },
+  { label: "MarkSheets" },
 ];
 
 const Page = async () => {
-  const data = await getExamTimeTableList()
+  const data = await getMarkSheetList()
   console.log(data)
 
   return (
@@ -27,13 +27,13 @@ const Page = async () => {
 
         <div className='m-12 bg-white p-4 h-96'>
           <GenericForm
-            schema={examTimeTableSchema}
-            fields={examTimeTableFields}
-            apiEndpoint={`${routes.CREATE_EXAM_TIME_TABLE}`}
-            title="Create ExamTimeTable"
-            description="Add a new exam time table"
+            schema={markSheetSchema}
+            fields={markSheetFields}
+            apiEndpoint={`${routes.CREATE_MARK_SHEET}`}
+            title="Create MarkSheet"
+            description="Add a new marksheet"
           />
-          <ViewExamTimeTable data={data} />
+          <ViewMarkSheet data={data} />
         </div>
       </Sidebar>
     </>

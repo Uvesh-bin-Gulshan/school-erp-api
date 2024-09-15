@@ -140,30 +140,39 @@ export const vacationSchema = z.object({
   
 
 // Exam Type
+
 export const examTypeSchema = z.object({
-  name: z.string().min(1, "Exam Type Name is required"),
-  effective_date: z.string().nonempty("Effective Date is required"),
+  name: z.string().min(1, "Exam type name is required"),
+  effective_date: z.string().min(1, "Effective date is required"),
 });
 
 
 export const examTimeTableSchema = z.object({
-  exam_type: z.string().min(1, { message: "Exam Type is required" }),
-  subject: z.string().min(1, { message: "Subject is required" }),
-  total_marks: z.number().min(0, { message: "Total marks are required" }),
-  passing_marks: z.number().min(0, { message: "Passing marks are required" }),
-  time: z.string().min(1, { message: "Time is required" }),
+  exam_type: z.string().min(1, "Exam Type is required"),
+  subject: z.string().min(1, "Subject is required"),
+  total_marks: z.number().min(1, "Total Marks is required"),
+  passing_marks: z.number().min(1, "Passing Marks is required"),
+  time: z.string().min(1, "Time is required"),
 });
-
 
 export type ExamTypeSchema = z.infer<typeof examTypeSchema>;
 
 
 // Define the schema for HallTicket using Zod
 export const hallTicketSchema = z.object({
-  hall_ticket_number: z.string().max(6).optional(), // Optional since it's auto-generated
-  exam_time_table: z.string().min(1, "Exam Time Table ID is required"), // Foreign Key to ExamTimeTable
-  student: z.string().min(1, "Student ID is required"), // Foreign Key to Student
+  exam_time_table: z.string().min(1, "Exam Time Table is required"),
+  student: z.string().min(1, "Student is required"),
 });
+
+
 
 // Infer the type from the schema
 export type HallTicket = z.infer<typeof hallTicketSchema>;
+
+// markSheetSchema
+export const markSheetSchema = z.object({
+  exam_detail: z.string().min(1, "Exam detail is required"),
+  student: z.string().min(1, "Student is required"),
+  marks_obtained: z.number().min(0, "Marks obtained is required"),
+  result: z.string().min(1, "Result is required"),
+});

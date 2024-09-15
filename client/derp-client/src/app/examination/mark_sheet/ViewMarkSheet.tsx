@@ -5,7 +5,7 @@ import { DataTable } from '@/app/_component/DataTable'
 import { ColumnFiltersState } from '@tanstack/react-table'
 import { columns } from './columns'
 
-const ViewHallTicket = ({ data }: { data: any }) => {
+const ViewMarkSheet = ({ data }: { data: any }) => {
   const columnFilters: ColumnFiltersState = []
 
   return (
@@ -19,4 +19,4 @@ const ViewHallTicket = ({ data }: { data: any }) => {
   )
 }
 
-export default ViewHallTicket
+export default ViewMarkSheet

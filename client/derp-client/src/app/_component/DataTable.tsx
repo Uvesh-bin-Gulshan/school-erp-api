@@ -22,6 +22,9 @@ import React from "react"
 import { Input } from "@/components/ui/input"
 import { Button } from "@/components/ui/button"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
+import { DropdownMenu, DropdownMenuCheckboxItem, DropdownMenuContent, DropdownMenuTrigger } from "@/components/ui/dropdown-menu"
+import { FaFilter } from "react-icons/fa"
+import { AiFillEyeInvisible } from "react-icons/ai"
 
 interface DataTableProps<TData, TValue> {
   columns: ColumnDef<TData, TValue>[]
@@ -83,10 +86,38 @@ export function DataTable<TData, TValue>({
 
   return (
     <>
-      <div className="flex items-center py-4 m-2 space-x-4">
+      <div className="flex items-center justify-end mr-5 py-4 m-2 space-x-4">
+      <DropdownMenu>
+          <DropdownMenuTrigger asChild>
+            <Button variant="outline"  className="w-12 ml-2 border text-gray-500 bg-slate-200/50">
+            <AiFillEyeInvisible />
+            </Button>
+          </DropdownMenuTrigger>
+          <DropdownMenuContent align="end">
+            {table
+              .getAllColumns()
+              .filter(
+                (column) => column.getCanHide()
+              )
+              .map((column) => {
+                return (
+                  <DropdownMenuCheckboxItem
+                    key={column.id}
+                    className="capitalize"
+                    checked={column.getIsVisible()}
+                    onCheckedChange={(value) =>
+                      column.toggleVisibility(!!value)
+                    }
+                  >
+                    {column.id}
+                  </DropdownMenuCheckboxItem>
+                )
+              })}
+          </DropdownMenuContent>
+        </DropdownMenu>
         <Select onValueChange={(value) => setSelectedColumn(value)}>
-          <SelectTrigger className="w-48 ml-2 bg-slate-200/50">
-            <SelectValue placeholder="Select a column" />
+          <SelectTrigger className="w-48 ml-2 border text-gray-500 bg-slate-200/50">
+            <SelectValue placeholder="Filter By Column" />
           </SelectTrigger>
           <SelectContent>
             {columns.map((column) => (
@@ -100,9 +131,10 @@ export function DataTable<TData, TValue>({
           placeholder="Enter filter value"
           value={filterValue}
           onChange={(event) => setFilterValue(event.target.value)}
-          className="max-w-sm"
+          className="max-w-[50%]"
           disabled={!selectedColumn}
         />
+         
       </div>
       <div className="mx-4">
         <Table>

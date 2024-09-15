@@ -221,6 +221,7 @@
     },
   ];
 
+  //vacationFields
   export const vacationFields = [
     {
       name: 'name',
@@ -243,5 +244,93 @@
       type: 'textarea',
     },
   ];
+
+  // examTypeFields
+  export const examTypeFields = [
+    {
+      name: 'name',
+      label: 'Exam Type Name',
+      type: 'text',
+    },
+    {
+      name: 'effective_date',
+      label: 'Effective Date',
+      type: 'date',
+    },
+  ];
+
+  // examTimeTableFields
+  export const examTimeTableFields = [
+  {
+    name: 'exam_type',
+    label: 'Exam Type',
+    type: 'text',
+  },
+  {
+    name: 'subject',
+    label: 'Subject',
+    type: 'text',
+  },
+  {
+    name: 'total_marks',
+    label: 'Total Marks',
+    type: 'number',
+  },
+  {
+    name: 'passing_marks',
+    label: 'Passing Marks',
+    type: 'number',
+  },
+  {
+    name: 'time',
+    label: 'Time',
+    type: 'time',
+  },
+];
+
+//hallTicketFields
+export const hallTicketFields = [
+  {
+    name: 'exam_time_table',
+    label: 'Exam Time Table',
+    type: 'text',
+  },
+  {
+    name: 'student',
+    label: 'Student',
+    type: 'text',
+  },
+];
+
+// markSheetFields
+export const markSheetFields = [
+  {
+    name: 'exam_detail',
+    label: 'Exam Detail',
+    type: 'text',
+  },
+  {
+    name: 'student',
+    label: 'Student',
+    type: 'text',
+  },
+  {
+    name: 'marks_obtained',
+    label: 'Marks Obtained',
+    type: 'number',
+  },
+  {
+    name: 'result',
+    label: 'Result',
+    type: 'text',
+  },
+];
+
+
+
+
+
+
+  
   
   

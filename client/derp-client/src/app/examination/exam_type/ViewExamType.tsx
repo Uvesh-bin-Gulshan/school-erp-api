@@ -1,25 +1,18 @@
-"use client"
+"use client";
 
-import { DataTable } from '@/app/_component/DataTable'
-import React from 'react'
-import { columns } from './colums'
-import { ColumnFiltersState } from '@tanstack/react-table'
+import React from "react";
+import { DataTable } from "@/app/_component/DataTable";
+import { ColumnFiltersState } from "@tanstack/react-table";
+import { columns } from "./columns";
 
 const ViewExamType = ({ data }: { data: any }) => {
-  const columnFilters: ColumnFiltersState = []
-  console.log(data)
+  const columnFilters: ColumnFiltersState = [];
 
   return (
-    <>
-      <div className="w-full">
-        <DataTable
-          columns={columns}
-          initialColumnFilters={columnFilters}
-          data={data}
-        />
-      </div>
-    </>
-  )
-}
+    <div className="w-full">
+      <DataTable columns={columns} initialColumnFilters={columnFilters} data={data} />
+    </div>
+  );
+};
 
-export default ViewExamType
+export default ViewExamType;
