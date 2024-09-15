@@ -30,31 +30,33 @@ const SideBar = ({ children, breadcrumbs }: SideBarProps) => {
 
   return (
     <>
-      <div className="h-screen  flex  bg-white   overflow-hidden">
+      <div className="h-[97vh] flex overflow-hidden bg-white  ">
         <div
-          className={` overflow-auto duration-300 h-screen text-cyan-500 
+          className={`  duration-300 h-screen
+               bg-gray-300/50 border border-gray-200  rounded-md py-1.5 m-1.5  text-cyan-500 
   
    text-center relative h-full  ${
-     open ? "md:w-[10%] w-screen text-sm " : "md:w-[5%] md:block hidden text-xs text-wrap "
+     open ? "md:w-[10%] w-screen text-sm " : "md:w-[6%] md:block hidden text-xs text-wrap "
    }`}
         >
           <div
-            className={`flex justify-center place-items-center  p-2 mt-4  
-               rounded-full   bg-slate-100 
-    ${open ? "w-16 h-16 mx-12 md:mx-5" : "w-12 h-12 mx-1.5"}`}
+            className={`flex absolute justify-center
+               place-items-center  px-1.5  
+               rounded-full   bg-transparent
+    ${open ? "w-18 h-18 mx-12 md:mx-5" : "w-16 h-16 mx-1"}`}
           >
             <Image
               src="/logo.png"
-              width={150}
-              height={150}
+              width={200}
+              height={200}
               alt="Matliwala Charitable Trust"
             />
           </div>
-          <div className="mt-8  ">
+          <div className="mt-24  shadow-xl">
             <NavBar open={open} />
           </div>
         </div>
-        <div className={`w-full overflow-hidden `}>
+        <div className={`w-full `}>
           <div
             className="  flex  text-xl px-0.5 py-2
              h-8 text-black ml-4 justify-between w-[100%] 
@@ -74,9 +76,9 @@ const SideBar = ({ children, breadcrumbs }: SideBarProps) => {
           </div>
 
           {children}
-          <div className="  w-full bg-slate-200 
-           p-4 mt-1 text-sm text-slate-600 lowercase 
-           text-left fixed  bottom-0 fixed h-[7%]  w-full">
+          <div className=" absolute w-screen    bg-gray-50 shadow-xl 
+           p-4  text-sm text-slate-600 lowercase 
+           text-left fixed  bottom-1.5  h-[7%]  ">
             <div className="flex">
 
 

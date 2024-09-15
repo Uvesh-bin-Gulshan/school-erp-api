@@ -16,10 +16,10 @@ const NavLink:React.FC<NavLinkProps> = ({href,children,activeClassName}) => {
   };
   return (
    <>
-   <div className={` p-2 duration-300  text-white
+   <div className={` p-2 duration-300  text-cyan
    
    text-center relative ${
-     open ? "w-[13%] text-sm " : "w-[5%] text-xs text-wrap "
+     open ? "w-[13%] text-sm " : "w-[2%] text-xs text-wrap "
    }`}>
     
    <Link  href={href} className={isActive ? activeClassName:''}>{children}
