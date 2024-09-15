@@ -108,4 +108,6 @@ export const  routes={
       RETRIEVE_HALLTICKET : `${BASE_HOST}hallticket/retrieve`,
       UPDATE_HALLTICKET : `${BASE_HOST}hallticket/update`,
       DELETE_HALLTICKET : `${BASE_HOST}hallticket/delete`,
+
+      
 }

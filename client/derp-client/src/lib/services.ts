@@ -67,3 +67,8 @@ export const getExamTypeList = async () => {
 export const getDepartmentDetail = async (department_id: string) => {
   return fetchData(`${routes.RETRIEVE_DEPARTMENT}${department_id}`);
 };
+
+export const getMarksSheet = async (department_id: string) => {
+  // return fetchData(`${routes.}${department_id}`);
+};
+
