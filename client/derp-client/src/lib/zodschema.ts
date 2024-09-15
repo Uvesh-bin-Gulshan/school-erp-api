@@ -176,3 +176,11 @@ export const markSheetSchema = z.object({
   marks_obtained: z.number().min(0, "Marks obtained is required"),
   result: z.string().min(1, "Result is required"),
 });
+
+// resultSheetSchema
+export const resultSheetSchema = z.object({
+  student: z.string().min(1, "Student is required"),
+  // result_data: z.object({})("Result data is required"),
+  total_marks_obtained: z.number().min(0, "Total marks obtained should be a positive number"),
+  rank: z.number().min(0, "Rank should be a positive number"),
+});

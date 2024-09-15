@@ -54,11 +54,11 @@ export const  routes={
     
     
     // SyllabusType
-      SYLLABUS_TYPE_LIST : `${BASE_HOST}syllabustype/list/`,
-      CREATE_SYLLABUS_TYPE : `${BASE_HOST}syllabustype/create/`,
-      RETRIEVE_SYLLABUS_TYPE : `${BASE_HOST}syllabustype/retrieve/`,
-      UPDATE_SYLLABUS_TYPE : `${BASE_HOST}syllabustype/update/`,
-      DELETE_SYLLABUS_TYPE : `${BASE_HOST}syllabustype/delete/`,
+      SYLLABUS_TYPE_LIST : `${BASE_HOST}academic/syllabustype/list/`,
+      CREATE_SYLLABUS_TYPE : `${BASE_HOST}academic/syllabustype/create/`,
+      RETRIEVE_SYLLABUS_TYPE : `${BASE_HOST}academic/syllabustype/retrieve/`,
+      UPDATE_SYLLABUS_TYPE : `${BASE_HOST}academic/syllabustype/update/`,
+      DELETE_SYLLABUS_TYPE : `${BASE_HOST}academic/syllabustype/delete/`,
     
     // Route paths for `TimeTable`
       TIMETABLE_LIST : `${BASE_HOST}timetable/list/`,
@@ -89,25 +89,37 @@ export const  routes={
       DELETE_ALUMNI: `${BASE_HOST}admission/alumni/delete/`, // append ID dynamically
     
     // Exam Type
-      EXAMTYPE_LIST : '/examtype/list/',
-      CREATE_EXAMTYPE : '/examtype/create/',
-      RETRIEVE_EXAMTYPE : '/examtype/retrieve',
-      UPDATE_EXAMTYPE : '/examtype/update',
-      DELETE_EXAMTYPE : '/examtype/delete',
+      EXAMTYPE_LIST : `${BASE_HOST}examtype/list/`,
+      CREATE_EXAMTYPE : `${BASE_HOST}examtype/create/`,
+      RETRIEVE_EXAMTYPE : `${BASE_HOST}examtype/retrieve`,
+      UPDATE_EXAMTYPE : `${BASE_HOST}examtype/update`,
+      DELETE_EXAMTYPE : `${BASE_HOST}examtype/delete`,
     
     // New ExamTimeTable routes
-      EXAMTIMETABLE_LIST : '/examtimetable/list/',
-      CREATE_EXAMTIMETABLE : '/examtimetable/create/',
-      RETRIEVE_EXAMTIMETABLE : '/examtimetable/retrieve',
-      UPDATE_EXAMTIMETABLE : '/examtimetable/update',
-      DELETE_EXAMTIMETABLE : '/examtimetable/delete/',
+      EXAMTIMETABLE_LIST : `${BASE_HOST}examination/examtimetable/list/`,
+      CREATE_EXAMTIMETABLE : `${BASE_HOST}examination/examtimetable/create/`,
+      RETRIEVE_EXAMTIMETABLE : `${BASE_HOST}examination/examtimetable/retrieve`,
+      UPDATE_EXAMTIMETABLE : `${BASE_HOST}examination/examtimetable/update`,
+      DELETE_EXAMTIMETABLE : `${BASE_HOST}examination/examtimetable/delete`,
     
     // HallTicket routes
-      HALLTICKET_LIST : `${BASE_HOST}hallticket/list`,
-      CREATE_HALLTICKET : `${BASE_HOST}hallticket/create`,
-      RETRIEVE_HALLTICKET : `${BASE_HOST}hallticket/retrieve`,
-      UPDATE_HALLTICKET : `${BASE_HOST}hallticket/update`,
-      DELETE_HALLTICKET : `${BASE_HOST}hallticket/delete`,
-
+      HALLTICKET_LIST : `${BASE_HOST}examination/hallticket/list`,
+      CREATE_HALLTICKET : `${BASE_HOST}examination/hallticket/create`,
+      RETRIEVE_HALLTICKET : `${BASE_HOST}examination/hallticket/retrieve`,
+      UPDATE_HALLTICKET : `${BASE_HOST}examination/hallticket/update`,
+      DELETE_HALLTICKET : `${BASE_HOST}examination/hallticket/delete`,
       
+      // Marksheet
+      MARK_SHEET_LIST : `${BASE_HOST}examination/marksheet/list`,
+      CREATE_MARK_SHEET: `${BASE_HOST}examination/marksheet/create`,
+      RETRIEVE_MARK_SHEET: `${BASE_HOST}examination/marksheet/retrieve`,
+      UPDATE_MARK_SHEET: `${BASE_HOST}examination/marksheet/update`,
+      DELETE_MARK_SHEET: `${BASE_HOST}examination/marksheet/delete`,
+      
+      // Result Sheet
+      RESULT_SHEET_LIST: `${BASE_HOST}examination/resultsheet/list`,
+      CREATE_RESULT_SHEET: `${BASE_HOST}examination/resultsheet/create`,
+      RETRIEVE_RESULT_SHEET: `${BASE_HOST}examination/resultsheet/retrieve`,
+      UPDATE_RESULT_SHEET: `${BASE_HOST}examination/resultsheet/update`,
+      DELETE_RESULT_SHEET: `${BASE_HOST}examination/resultsheet/delete`,
 }

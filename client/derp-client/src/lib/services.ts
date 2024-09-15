@@ -68,7 +68,7 @@ export const getDepartmentDetail = async (department_id: string) => {
   return fetchData(`${routes.RETRIEVE_DEPARTMENT}${department_id}`);
 };
 
-export const getMarksSheet = async (department_id: string) => {
-  // return fetchData(`${routes.}${department_id}`);
+export const getMarkSheet = async (department_id: string) => {
+  return fetchData(routes.MARK_SHEET_LIST);
 };
 

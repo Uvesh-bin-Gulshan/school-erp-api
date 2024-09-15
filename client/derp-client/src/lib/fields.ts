@@ -326,6 +326,30 @@ export const markSheetFields = [
   },
 ];
 
+// resultSheetFields
+export const resultSheetFields = [
+  {
+    name: 'student',
+    label: 'Student',
+    type: 'text',
+  },
+  {
+    name: 'result_data',
+    label: 'Result Data',
+    type: 'json',
+  },
+  {
+    name: 'total_marks_obtained',
+    label: 'Total Marks Obtained',
+    type: 'number',
+  },
+  {
+    name: 'rank',
+    label: 'Rank',
+    type: 'number',
+  },
+];
+
 
 
 
