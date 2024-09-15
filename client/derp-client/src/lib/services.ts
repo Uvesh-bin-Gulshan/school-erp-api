@@ -30,7 +30,7 @@ export const getSubjectList = async () => {
 export const getMonthlyStatusList = async () => {
   return fetchData(routes.MONTHLY_SYLLABUS_STATUS_LIST);
 };
-
+   
 export const getAnnualStatusList = async () => {
   return fetchData(routes.ANNUALLY_SUBJECT_SYLLABUS_STATUS_LIST);
 };
@@ -51,14 +51,17 @@ export const getTimeTableList = async () => {
   return fetchData(routes.TIMETABLE_LIST);
 };
 
+//STUDENTS
 export const getStudentList = async () => {
   return fetchData(routes.STUDENT_LIST);
 };
 
+// ALUMNI
 export const getAlumniList = async () => {
   return fetchData(routes.ALUMNI_LIST);
 };
 
+// EXAMINATION
 export const getExamTypeList = async () => {
   return fetchData(routes.EXAMTYPE_LIST);
 };
@@ -68,7 +71,19 @@ export const getDepartmentDetail = async (department_id: string) => {
   return fetchData(`${routes.RETRIEVE_DEPARTMENT}${department_id}`);
 };
 
-export const getMarkSheet = async (department_id: string) => {
+export const getMarkSheetList = async () => {
   return fetchData(routes.MARK_SHEET_LIST);
 };
 
+export const getResultSheetList = async () => {
+  return fetchData(routes.RESULT_SHEET_LIST);
+};
+
+
+export const getHallTicketList = async () => {
+  return fetchData(routes.HALLTICKET_LIST);
+};
+
+export const getExamTimeTableList = async () => {
+  return fetchData(routes.EXAMTIMETABLE_LIST);
+};

@@ -2,12 +2,14 @@ import { Button } from "@/components/ui/button";
 import { ColumnDef } from "@tanstack/react-table";
 import { ArrowUpDown } from "lucide-react";
 import { AiFillDelete } from "react-icons/ai";
-import DeleteButton from "../_component/DeleteButton";
-import RetrieveDetail from "../_component/RetriveDetail";
+
 import { MdModeEdit } from "react-icons/md";
 import { timetableFields } from "@/lib/fields";
-import GenericForm from "../_component/GenericForm";
 import { routes } from "@/lib/routePath";
+import RetrieveDetail from "@/app/_component/RetriveDetail";
+import DeleteButton from "@/app/_component/DeleteButton";
+import GenericForm from "@/app/_component/GenericForm";
+import { timeTableSchema } from "@/lib/zodschema";
 
 export type TimeTable = {
   time_table_id: string;
@@ -59,10 +61,11 @@ export const columns: ColumnDef<TimeTable>[] = [
       return (
         <div className="flex items-center space-x-2">
           <GenericForm
-            fields={timetableFields}
-            apiEndpoint={`${routes.UPDATE_TIMETABLE}/${timetable.time_table_id}`}
-            title="Update TimeTable"
-            description="Update timetable details here"
+          schema={timeTableSchema}
+          fields={timetableFields}
+          apiEndpoint={`${routes.UPDATE_TIMETABLE}/${timetable.time_table_id}`}
+          title="Update TimeTable"
+          description="Update timetable details here"
           />
           <RetrieveDetail
             item={"timetable"}

@@ -2,13 +2,14 @@ import { Button } from "@/components/ui/button";
 import { ColumnDef } from "@tanstack/react-table";
 import { ArrowUpDown } from "lucide-react";
 import { AiFillDelete } from "react-icons/ai";
-import DeleteButton from "../_component/DeleteButton";
-import { routes } from "@/lib/routePath";
-import RetrieveDetail from "../_component/RetriveDetail";
+
 import { MdModeEdit } from "react-icons/md";
 import { examTypeSchema } from "@/lib/zodschema";
 import { examTypeFields } from "@/lib/fields";
-import GenericForm from "../_component/GenericForm";
+import GenericForm from "@/app/_component/GenericForm";
+import { routes } from "@/lib/routePath";
+import RetrieveDetail from "@/app/_component/RetriveDetail";
+import DeleteButton from "@/app/_component/DeleteButton";
 
 export type ExamType = {
   exam_type_id: string;
@@ -52,19 +53,19 @@ export const columns: ColumnDef<ExamType>[] = [
           <GenericForm
             schema={examTypeSchema}
             fields={examTypeFields}
-            apiEndpoint={`${routes.UPDATE_EXAM_TYPE}/${examType.exam_type_id}`}
+            apiEndpoint={`${routes.UPDATE_EXAMTYPE}/${examType.exam_type_id}`}
             title="Update Exam Type"
             description="Update exam type details here"
           />
           <RetrieveDetail
             item={"exam type"}
             id={examType.exam_type_id}
-            endpoint={`${routes.RETRIEVE_EXAM_TYPE}`}
+            endpoint={`${routes.RETRIEVE_EXAMTYPE}`}
             onSuccess={handleSuccess}
           />
           <DeleteButton
             id={examType.exam_type_id}
-            endpoint={`${routes.DELETE_EXAM_TYPE}`}
+            endpoint={`${routes.DELETE_EXAMTYPE}`}
             onSuccess={handleSuccess}
           />
         </div>

@@ -6,8 +6,9 @@ import { monthlySubjectSyllabusStatusFields } from '@/lib/fields';
 import { routes } from "@/lib/routePath";
 import { MdModeEdit } from "react-icons/md";
 import GenericUpdateForm from "@/app/_component/GenericForm";
-import { monthlySubjectSyllabusStatusSchema } from "@/lib/zodschema";
 import DeleteButton from "@/app/_component/DeleteButton";
+import GenericForm from "@/app/_component/GenericForm";
+import { monthlySubjectSyllabusStatusSchema } from "@/lib/zodschema";
 
 export type MonthlySubjectSyllabusStatus = {
   month_status_id: string;
@@ -58,15 +59,12 @@ export const columns: ColumnDef<MonthlySubjectSyllabusStatus>[] = [
 
       return (
         <div className="flex items-center space-x-2">
-          <GenericUpdateForm
+          <GenericForm
             schema={monthlySubjectSyllabusStatusSchema}
             fields={monthlySubjectSyllabusStatusFields}
             apiEndpoint={`${routes.UPDATE_MONTHLY_SYLLABUS_STATUS}/${syllabusStatus.month_status_id}`}
-            successMessage="Monthly Syllabus Status updated successfully"
-            failureMessage="Failed to update Monthly Syllabus Status"
-            triggerIcon={() => <MdModeEdit />}
-            dialogTitle="Update Monthly Syllabus Status"
-            dialogDescription="Update syllabus status details here"
+            title="Update Monthly Syllabus Status"
+            description="Update syllabus status details here"
           />
           <DeleteButton
             id={syllabusStatus.month_status_id}

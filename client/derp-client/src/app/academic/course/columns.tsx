@@ -5,9 +5,9 @@ import { AiFillDelete } from "react-icons/ai";
 import { courseFields } from '@/lib/fields';
 import { routes } from "@/lib/routePath";
 import { MdModeEdit } from "react-icons/md";
-import { courseSchema } from "@/lib/zodschema";
 import DeleteButton from "@/app/_component/DeleteButton";
 import GenericForm from "@/app/_component/GenericForm";
+import { courseSchema } from "@/lib/zodschema";
 
 export type Course = {
   course_id: string;

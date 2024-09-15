@@ -5,7 +5,8 @@ import { BreadcrumbWithCustomSeparator } from '@/app/_component/BreadCrumb';
 import { getTimeTableList } from '@/lib/services';
 import { timetableFields } from '@/lib/fields';
 import { routes } from '@/lib/routePath';
-import GenericForm from '../_component/GenericForm';
+import GenericForm from '@/app/_component/GenericForm';
+import { timeTableSchema } from '@/lib/zodschema';
 
 const items = [
   { href: "/", label: "Home" },
@@ -26,6 +27,7 @@ const Page = async () => {
 
         <div className="m-12 bg-white p-4 h-96">
           <GenericForm
+            schema={timeTableSchema}
             fields={timetableFields}
             apiEndpoint={`${routes.CREATE_TIMETABLE}`}
             title="Add TimeTable"

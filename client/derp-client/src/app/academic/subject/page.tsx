@@ -2,8 +2,11 @@ import React from 'react';
 import Sidebar from '@/app/_component/SideBar';
 import { BreadcrumbWithCustomSeparator } from '@/app/_component/BreadCrumb';
 import { getSubjectList } from '@/lib/services';
-import AddSubject from './AddSubject';
 import ViewSubject from './ViewSubject';
+import GenericForm from '@/app/_component/GenericForm';
+import { subjectFields } from '@/lib/fields';
+import { routes } from '@/lib/routePath';
+import { subjectSchema } from '@/lib/zodschema';
 
 const items = [
   { href: "/", label: "Home" },
@@ -21,14 +24,12 @@ const Page = async () => {
         </div>
 
         <div className="m-12 bg-white p-4 h-96">
-        <GenericAddForm
-      schema={subjectSchema}
-      fields={subjectFields}
-      apiEndpoint={routes.CREATE_SUBJECT}
-      successMessage="Subject added successfully"
-      failureMessage="Failed to add subject"
-      dialogTitle="Add New Subject"
-      dialogDescription="Fill in the details to add a new subject."
+        <GenericForm
+          fields={subjectFields}
+          apiEndpoint={routes.CREATE_SUBJECT}        
+          schema={subjectSchema}
+          title="Add New Subject"
+          description="Fill in the details to add a new subject."
     />
           <ViewSubject data={data} />
         </div>

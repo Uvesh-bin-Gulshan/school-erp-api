@@ -2,8 +2,11 @@ import React from 'react';
 import Sidebar from '@/app/_component/SideBar';
 import { BreadcrumbWithCustomSeparator } from '@/app/_component/BreadCrumb';
 import { getSyllabusTypeList } from '@/lib/services';
-import AddSyllabusType from './AddSyllabusType';
 import ViewSyllabusType from './ViewSyllabusType';
+import { syllabusTypeSchema } from '@/lib/zodschema';
+import { syllabusTypeFields } from '@/lib/fields';
+import { routes } from '@/lib/routePath';
+import GenericForm from '@/app/_component/GenericForm';
 
 const items = [
   { href: "/", label: "Home" },

@@ -2,12 +2,13 @@ import { Button } from "@/components/ui/button";
 import { ColumnDef } from "@tanstack/react-table";
 import { ArrowUpDown } from "lucide-react";
 import { AiFillDelete } from "react-icons/ai";
-import DeleteButton from "../_component/DeleteButton";
-import { routes } from "@/lib/routePath";
-import RetrieveDetail from "../_component/RetriveDetail";
+
 import { examTimeTableSchema } from "@/lib/zodschema";
 import { examTimeTableFields } from "@/lib/fields";
-import GenericForm from "../_component/GenericForm";
+import GenericForm from "@/app/_component/GenericForm";
+import { routes } from "@/lib/routePath";
+import RetrieveDetail from "@/app/_component/RetriveDetail";
+import DeleteButton from "@/app/_component/DeleteButton";
 
 export type ExamTimeTable = {
   exam_time_table_id: string;
@@ -54,19 +55,19 @@ export const columns: ColumnDef<ExamTimeTable>[] = [
           <GenericForm
             schema={examTimeTableSchema}
             fields={examTimeTableFields}
-            apiEndpoint={`${routes.UPDATE_EXAM_TIME_TABLE}/${examTimeTable.exam_time_table_id}`}
+            apiEndpoint={`${routes.UPDATE_EXAMTIMETABLE}/${examTimeTable.exam_time_table_id}`}
             title="Update ExamTimeTable"
             description="Update exam time table details"
           />
           <RetrieveDetail
             item={"exam_time_table"}
             id={examTimeTable.exam_time_table_id}
-            endpoint={`${routes.RETRIEVE_EXAM_TIME_TABLE}`}
+            endpoint={`${routes.RETRIEVE_EXAMTIMETABLE}`}
             onSuccess={handleSuccess}
           />
           <DeleteButton
             id={examTimeTable.exam_time_table_id}
-            endpoint={`${routes.DELETE_EXAM_TIME_TABLE}`}
+            endpoint={`${routes.DELETE_EXAMTIMETABLE}`}
             onSuccess={handleSuccess}
           />
         </div>

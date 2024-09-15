@@ -7,8 +7,9 @@ import { subjectFields } from '@/lib/fields';
 import { routes } from "@/lib/routePath";
 import { MdModeEdit } from "react-icons/md";
 import GenericUpdateForm from "@/app/_component/GenericForm";
-import { subjectSchema } from "@/lib/zodschema";
 import DeleteButton from "@/app/_component/DeleteButton";
+import GenericForm from "@/app/_component/GenericForm";
+import { subjectSchema } from "@/lib/zodschema";
 
 export type Subject = {
   subject_id: string;
@@ -55,15 +56,12 @@ export const columns: ColumnDef<Subject>[] = [
 
       return (
         <div className="flex items-center space-x-2">
-          <GenericUpdateForm
+          <GenericForm
             schema={subjectSchema}
-            fields={subjectFields}
-            apiEndpoint={`${routes.UPDATE_SUBJECT}/${subject.subject_id}`}
-            successMessage="Subject updated successfully"
-            failureMessage="Failed to update subject"
-            triggerIcon={() => <MdModeEdit />}
-            dialogTitle="Update Subject"
-            dialogDescription="Update subject details here"
+            apiEndpoint={routes.CREATE_SUBJECT}
+            fields={subjectFields}            
+            title="Update Subject"
+            description="Update subject details here"
           />
           <DeleteButton
             id={subject.subject_id}

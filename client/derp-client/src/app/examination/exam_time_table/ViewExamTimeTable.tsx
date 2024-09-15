@@ -1,43 +1,22 @@
+"use client";
+
 import React from 'react'
-import ViewExamTimeTable from './ViewExamTimeTable'
-import Sidebar from '@/app/_component/SideBar'
-import { BreadcrumbWithCustomSeparator } from '@/app/_component/BreadCrumb'
-import { getExamTimeTableList } from '@/lib/services'
-import { examTimeTableSchema } from '@/lib/zodschema'
-import { routes } from '@/lib/routePath'
-import { examTimeTableFields } from '@/lib/fields'
-import GenericForm from '../_component/GenericForm'
+import { DataTable } from '@/app/_component/DataTable'
+import { ColumnFiltersState } from '@tanstack/react-table'
+import { columns } from './columns'
 
-const items = [
-  { href: "/", label: "Home" },
-  { href: "/components", label: "Components" },
-  { label: "ExamTimeTable" },
-];
-
-const Page = async () => {
-  const data = await getExamTimeTableList()
-  console.log(data)
+const ViewExamTimeTable = ({ data }: { data: any }) => {
+  const columnFilters: ColumnFiltersState = []
 
   return (
-    <>
-      <Sidebar breadcrumbs={items}>
-        <div className=''>
-          <BreadcrumbWithCustomSeparator items={items} separator={<span> :: </span>} />
-        </div>
-
-        <div className='m-12 bg-white p-4 h-96'>
-          <GenericForm
-            schema={examTimeTableSchema}
-            fields={examTimeTableFields}
-            apiEndpoint={`${routes.CREATE_EXAM_TIME_TABLE}`}
-            title="Create ExamTimeTable"
-            description="Add a new exam time table"
-          />
-          <ViewExamTimeTable data={data} />
-        </div>
-      </Sidebar>
-    </>
+    <div className="w-full">
+      <DataTable 
+        columns={columns}
+        initialColumnFilters={columnFilters}
+        data={data}
+      />
+    </div>
   )
 }
 
-export default Page
+export default ViewExamTimeTable

@@ -2,12 +2,12 @@ import { Button } from "@/components/ui/button";
 import { ColumnDef } from "@tanstack/react-table";
 import { ArrowUpDown } from "lucide-react";
 import { AiFillDelete } from "react-icons/ai";
-import DeleteButton from "../_component/DeleteButton";
-import { routes } from "@/lib/routePath";
-import RetrieveDetail from "../_component/RetriveDetail";
 import { hallTicketSchema } from "@/lib/zodschema";
 import { hallTicketFields } from "@/lib/fields";
-import GenericForm from "../_component/GenericForm";
+import GenericForm from "@/app/_component/GenericForm";
+import RetrieveDetail from "@/app/_component/RetriveDetail";
+import DeleteButton from "@/app/_component/DeleteButton";
+import { routes } from "@/lib/routePath";
 
 export type HallTicket = {
   hall_ticket_number: string;
@@ -43,19 +43,19 @@ export const columns: ColumnDef<HallTicket>[] = [
           <GenericForm
             schema={hallTicketSchema}
             fields={hallTicketFields}
-            apiEndpoint={`${routes.UPDATE_HALL_TICKET}/${hallTicket.hall_ticket_number}`}
+            apiEndpoint={`${routes.UPDATE_HALLTICKET}/${hallTicket.hall_ticket_number}`}
             title="Update HallTicket"
             description="Update hall ticket details"
           />
           <RetrieveDetail
             item={"hall_ticket"}
             id={hallTicket.hall_ticket_number}
-            endpoint={`${routes.RETRIEVE_HALL_TICKET}`}
+            endpoint={`${routes.RETRIEVE_HALLTICKET}`}
             onSuccess={handleSuccess}
           />
           <DeleteButton
             id={hallTicket.hall_ticket_number}
-            endpoint={`${routes.DELETE_HALL_TICKET}`}
+            endpoint={`${routes.DELETE_HALLTICKET}`}
             onSuccess={handleSuccess}
           />
         </div>

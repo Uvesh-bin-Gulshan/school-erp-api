@@ -6,9 +6,10 @@ import { AiFillDelete } from "react-icons/ai";
 import { routes } from "@/lib/routePath";
 import { MdModeEdit } from "react-icons/md";
 import GenericUpdateForm from "@/app/_component/GenericForm";
-import { syllabusTypeSchema } from "@/lib/zodschema";
 import DeleteButton from "@/app/_component/DeleteButton";
 import { syllabusTypeFields } from "@/lib/fields";
+import GenericForm from "@/app/_component/GenericForm";
+import { syllabusTypeSchema } from "@/lib/zodschema";
 
 export type SyllabusType = {
   type_id: string;

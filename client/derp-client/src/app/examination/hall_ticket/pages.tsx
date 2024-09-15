@@ -2,11 +2,11 @@ import React from 'react'
 import ViewHallTicket from './ViewHallTicket'
 import Sidebar from '@/app/_component/SideBar'
 import { BreadcrumbWithCustomSeparator } from '@/app/_component/BreadCrumb'
-import { getHallTicketList } from '@/lib/services'
 import { hallTicketSchema } from '@/lib/zodschema'
 import { routes } from '@/lib/routePath'
 import { hallTicketFields } from '@/lib/fields'
-import GenericForm from '../_component/GenericForm'
+import GenericForm from '@/app/_component/GenericForm'
+import { getHallTicketList } from '@/lib/services'
 
 const items = [
   { href: "/", label: "Home" },
@@ -29,7 +29,7 @@ const Page = async () => {
           <GenericForm
             schema={hallTicketSchema}
             fields={hallTicketFields}
-            apiEndpoint={`${routes.CREATE_HALL_TICKET}`}
+            apiEndpoint={`${routes.CREATE_HALLTICKET}`}
             title="Create HallTicket"
             description="Add a new hall ticket"
           />

@@ -6,7 +6,7 @@ import { getMarkSheetList } from '@/lib/services'
 import { markSheetSchema } from '@/lib/zodschema'
 import { routes } from '@/lib/routePath'
 import { markSheetFields } from '@/lib/fields'
-import GenericForm from '../_component/GenericForm'
+import GenericForm from '@/app/_component/GenericForm'
 
 const items = [
   { href: "/", label: "Home" },

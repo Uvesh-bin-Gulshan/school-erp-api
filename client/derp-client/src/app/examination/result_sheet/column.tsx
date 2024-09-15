@@ -2,12 +2,12 @@ import { Button } from "@/components/ui/button";
 import { ColumnDef } from "@tanstack/react-table";
 import { ArrowUpDown } from "lucide-react";
 import { AiFillDelete } from "react-icons/ai";
-import DeleteButton from "../_component/DeleteButton";
 import { routes } from "@/lib/routePath";
-import RetrieveDetail from "../_component/RetriveDetail";
 import { resultSheetSchema } from "@/lib/zodschema";
 import { resultSheetFields } from "@/lib/fields";
-import GenericForm from "../_component/GenericForm";
+import GenericForm from "@/app/_component/GenericForm";
+import RetrieveDetail from "@/app/_component/RetriveDetail";
+import DeleteButton from "@/app/_component/DeleteButton";
 
 export type ResultSheet = {
   result_sheet_id: string;

@@ -2,11 +2,11 @@ import React from 'react'
 import ViewExamTimeTable from './ViewExamTimeTable'
 import Sidebar from '@/app/_component/SideBar'
 import { BreadcrumbWithCustomSeparator } from '@/app/_component/BreadCrumb'
-import { getExamTimeTableList } from '@/lib/services'
 import { examTimeTableSchema } from '@/lib/zodschema'
 import { routes } from '@/lib/routePath'
 import { examTimeTableFields } from '@/lib/fields'
-import GenericForm from '../_component/GenericForm'
+import { getExamTimeTableList } from '@/lib/services'
+import GenericForm from '@/app/_component/GenericForm'
 
 const items = [
   { href: "/", label: "Home" },
@@ -29,7 +29,7 @@ const Page = async () => {
           <GenericForm
             schema={examTimeTableSchema}
             fields={examTimeTableFields}
-            apiEndpoint={`${routes.CREATE_EXAM_TIME_TABLE}`}
+            apiEndpoint={`${routes.CREATE_EXAMTIMETABLE}`}
             title="Create ExamTimeTable"
             description="Add a new exam time table"
           />

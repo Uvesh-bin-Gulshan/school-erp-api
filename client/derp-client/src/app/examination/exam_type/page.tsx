@@ -6,7 +6,7 @@ import { getExamTypeList } from '@/lib/services';
 import { examTypeSchema } from '@/lib/zodschema';
 import { routes } from '@/lib/routePath';
 import { examTypeFields } from '@/lib/fields';
-import GenericForm from '../_component/GenericForm';
+import GenericForm from '@/app/_component/GenericForm';
 
 const items = [
   { href: "/", label: "Home" },
@@ -28,7 +28,7 @@ const Page = async () => {
           <GenericForm
             schema={examTypeSchema}
             fields={examTypeFields}
-            apiEndpoint={`${routes.CREATE_EXAM_TYPE}`}
+            apiEndpoint={`${routes.CREATE_EXAMTYPE}`}
             title="Create Exam Type"
             description="Create a new exam type here"
           />

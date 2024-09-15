@@ -2,11 +2,11 @@ import React from 'react'
 import ViewResultSheet from './ViewResultSheet'
 import Sidebar from '@/app/_component/SideBar'
 import { BreadcrumbWithCustomSeparator } from '@/app/_component/BreadCrumb'
-import { getResultSheetList } from '@/lib/services'
 import { resultSheetSchema } from '@/lib/zodschema'
 import { routes } from '@/lib/routePath'
 import { resultSheetFields } from '@/lib/fields'
-import GenericForm from '../_component/GenericForm'
+import { getResultSheetList } from '@/lib/services'
+import GenericForm from '@/app/_component/GenericForm'
 
 const items = [
   { href: "/", label: "Home" },

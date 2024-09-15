@@ -42,12 +42,9 @@ export const columns: ColumnDef<Department>[] = [
           <GenericUpdateForm
             schema={departmentSchema}
             fields={departmentFields}
-            apiEndpoint={`${routes.UPDATE_DEPARTMENT}/${department.department_id}`}
-            successMessage="Department updated successfully"
-            failureMessage="Failed to update department"
-            triggerIcon={() => <MdModeEdit />}
-            dialogTitle="Update Department"
-            dialogDescription="Update department details here"
+            apiEndpoint={`${routes.UPDATE_DEPARTMENT}/${department.department_id}`}          
+            title="Update Department"
+            description="Update department details here"
           />
           <RetrieveDetail
             item={"department"}

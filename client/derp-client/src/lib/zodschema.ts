@@ -85,6 +85,15 @@ export const admissionSchema = z.object({
   admission_status: z.enum(["pending", "accepted", "rejected"]).default("pending"),
 });
 
+// subject
+export const subjectSchema = z.object({
+  name: z.string().min(1, "Name is required"),
+  syllabus_count: z.number().min(0, "Syllabus count must be a positive number"),
+  syllabus_type: z.string().min(1, "Syllabus type is required"),
+  description: z.string().optional(),
+  course: z.string().min(1, "Course is required"),
+});
+
 
 // Define the schema for SyllabusStatusVerification
 export const syllabusStatusSchema = z.object({
@@ -92,6 +101,27 @@ export const syllabusStatusSchema = z.object({
   is_approved: z.boolean(),
   approved_date: z.string(),
 });
+
+
+// annual subject syllabus status
+export const annuallySubjectSyllabusStatusSchema = z.object({
+  annual_status_id: z.string().optional(),
+  subject: z.string().min(1, { message: "Subject is required" }),
+  teacher: z.string().min(1, { message: "Teacher is required" }),
+  yearly_status: z.number().min(0, { message: "Yearly status must be a number" }),
+  yearly_summary: z.string().min(1, { message: "Yearly summary is required" }),
+});
+
+// monthlySubjectSyllabusStatusSchema
+export const monthlySubjectSyllabusStatusSchema = z.object({
+  month_status_id: z.string().optional(),
+  month: z.string().refine((val) => !isNaN(Date.parse(val)), { message: "Invalid date" }),
+  annual_status: z.string().min(1, { message: "Annual status is required" }),
+  target_type: z.string().min(1, { message: "Target type is required" }),
+  count: z.number().min(0, { message: "Count must be a positive number" }),
+  monthly_summary: z.string().max(300, { message: "Summary must be less than 300 characters" }),
+});
+
 
 export const SyllabusTypeSchema = z.object({
     type_id: z.string().max(6),
@@ -164,6 +194,30 @@ export const hallTicketSchema = z.object({
   student: z.string().min(1, "Student is required"),
 });
 
+// course
+export const courseSchema = z.object({
+  course_id: z.string().max(6).optional(),
+  name: z.string().min(1, "Course name is required").max(70, "Course name cannot exceed 70 characters"),
+  department: z.string().min(1, "Department is required"),
+  effective_date: z.string().min(1, "Effective date is required").refine(
+    (date) => !isNaN(Date.parse(date)),
+    { message: "Invalid date format" }
+  ),
+});
+
+export const syllabusTypeSchema = z.object({
+  type_id: z.string().optional(),
+  name: z.string().min(1, { message: "Syllabus Type name is required" }),
+});
+
+export const timeTableSchema = z.object({
+  time_table_id: z.string().length(6, "Time table ID must be 6 characters long"),
+  subject: z.string().min(1, "Subject is required"),
+  teacher: z.string().min(1, "Teacher is required").max(20, "Teacher name cannot exceed 20 characters"),
+  time: z.string().regex(/^([01]\d|2[0-3]):([0-5]\d):([0-5]\d)$/, "Time must be in HH:MM:SS format"),
+  effective_date: z.string().regex(/^\d{4}-\d{2}-\d{2}$/, "Date must be in YYYY-MM-DD format"),
+});
+
 
 
 // Infer the type from the schema
@@ -180,7 +234,7 @@ export const markSheetSchema = z.object({
 // resultSheetSchema
 export const resultSheetSchema = z.object({
   student: z.string().min(1, "Student is required"),
-  // result_data: z.object({})("Result data is required"),
+  result_data: z.record(z.any()),
   total_marks_obtained: z.number().min(0, "Total marks obtained should be a positive number"),
   rank: z.number().min(0, "Rank should be a positive number"),
 });
