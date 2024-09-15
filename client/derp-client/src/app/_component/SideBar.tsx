@@ -30,19 +30,20 @@ const SideBar = ({ children, breadcrumbs }: SideBarProps) => {
 
   return (
     <>
-      <div className="h-[97vh] flex overflow-hidden bg-white  ">
+      <div className="h-screen   flex overflow-hidden bg-transparent  ">
         <div
-          className={`  duration-300 h-screen
-               bg-gray-300/50 border border-gray-200  rounded-md py-1.5 m-1.5  text-cyan-500 
+          className={`h-[96.5vh]  duration-300
+               bg-gray-300/50 border border-gray-200  
+               rounded-md  m-2.5 text-cyan-500 
   
    text-center relative h-full  ${
-     open ? "md:w-[10%] w-screen text-sm " : "md:w-[6%] md:block hidden text-xs text-wrap "
+     open ? "md:w-[10%] w-screen text-sm " : "md:w-[5.5%] md:block hidden text-xs text-wrap "
    }`}
         >
           <div
             className={`flex absolute justify-center
                place-items-center  px-1.5  
-               rounded-full   bg-transparent
+               rounded-full   bg-transparent mt-1
     ${open ? "w-18 h-18 mx-12 md:mx-5" : "w-16 h-16 mx-1"}`}
           >
             <Image
@@ -76,10 +77,10 @@ const SideBar = ({ children, breadcrumbs }: SideBarProps) => {
           </div>
 
           {children}
-          <div className=" absolute w-screen    bg-gray-50 shadow-xl 
-           p-4  text-sm text-slate-600 lowercase 
-           text-left fixed  bottom-1.5  h-[7%]  ">
-            <div className="flex">
+          <div className="    px-2 py-4 bg-transparent 
+            max-w-full text-xs text-gray-400 lowercase 
+           text-left   bottom-0 h-[10%]  ">
+            <div className="flex ">
 
 
             <span className="capitalize">copyright@2024-institute managemnet</span>

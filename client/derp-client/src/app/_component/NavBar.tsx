@@ -18,11 +18,12 @@ const NavBar: React.FC<NavBarProps> = ({ open }) => {
   };
 
   return (
-    <div className="  flex flex-col h-full justify-between">
+    <div className="  flex flex-col  justify-between">
       <div className="h-[70vh] place-items-center  mx-1 mb-4 overflow-y-auto side-scroll-bar">
         <div
           onClick={() => handleDropDown("student")}
-          className="cursor-pointer text-center text-cyan-500 mb-6">
+          className="cursor-pointer text-center 
+          text-cyan-600 hover:text-cyan-800 mb-12">
           <div className="flex justify-center text-2xl">
             <MdSupervisorAccount />
           </div>
@@ -34,8 +35,8 @@ const NavBar: React.FC<NavBarProps> = ({ open }) => {
             Students
           </h6>
           {openDropDown === "student" && (
-            <div className="mt-2 space-y-1">
-              <NavLink href="/">Home</NavLink>
+            <div className="mt-3 items-center flex-cols-1 mx-0.5 grid grid-cols-1 place-items-center space-y-1">
+              <NavLink  href="/">Home</NavLink>
               <NavLink href="../admissions/page.tsx">Admissions</NavLink>
               <NavLink href="../admin/">Student</NavLink>
             </div>
@@ -44,7 +45,7 @@ const NavBar: React.FC<NavBarProps> = ({ open }) => {
 
         <div
           onClick={() => handleDropDown("academic")}
-          className="cursor-pointer text-center text-cyan-500 mb-6"
+          className="cursor-pointer text-center text-cyan-600 hover:text-cyan-800 mb-12"
         >
           <div className="flex justify-center text-2xl">
             <IoBookSharp />
@@ -73,7 +74,7 @@ const NavBar: React.FC<NavBarProps> = ({ open }) => {
 
         <div
           onClick={() => handleDropDown("library")}
-          className="cursor-pointer text-center text-cyan-500 mb-6"
+          className="cursor-pointer text-center text-cyan-600 hover:text-cyan-800 mb-12"
         >
           <div className="flex justify-center text-2xl">
             <ImBooks />
@@ -102,7 +103,7 @@ const NavBar: React.FC<NavBarProps> = ({ open }) => {
 
         <div
           onClick={() => handleDropDown("alumni")}
-          className="cursor-pointer text-center text-cyan-500 mb-6"
+          className="cursor-pointer text-center text-cyan-600 hover:text-cyan-800 mb-12"
         >
           <div className="flex justify-center text-2xl">
             <HiAcademicCap />
@@ -130,7 +131,8 @@ const NavBar: React.FC<NavBarProps> = ({ open }) => {
         </div>
       </div>
 
-      <div className="mb-4 p-2">
+      <div  className="duration-300 justify-center flex mb-0.5 "
+            >
         <UserProfile />
       </div>
     </div>
