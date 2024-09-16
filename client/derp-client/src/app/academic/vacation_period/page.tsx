@@ -2,11 +2,11 @@ import React from 'react';
 import ViewVacationPeriod from './ViewVacationPeriod';
 import Sidebar from '@/app/_component/SideBar';
 import { BreadcrumbWithCustomSeparator } from '@/app/_component/BreadCrumb';
-import { getVacationList } from '@/lib/services';
 import { vacationSchema } from '@/lib/zodschema';
 import { routes } from '@/lib/routePath';
 import { vacationFields } from '@/lib/fields';
-import GenericForm from '../_component/GenericForm';
+import GenericForm from '@/app/_component/GenericForm';
+import { getVacationPeriodList } from '@/lib/services';
 
 const items = [
   { href: "/", label: "Home" },
@@ -15,7 +15,7 @@ const items = [
 ];
 
 const Page = async () => {
-  const data = await getVacationList();
+  const data = await getVacationPeriodList();
 
   return (
     <>
@@ -28,7 +28,7 @@ const Page = async () => {
           <GenericForm
             schema={vacationSchema}
             fields={vacationFields}
-            apiEndpoint={`${routes.CREATE_VACATION}`}
+            apiEndpoint={`${routes.CREATE_VACATION_PERIOD}`}
             title="Create Vacation Period"
             description="Create a new vacation period here"
           />

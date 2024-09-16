@@ -2,13 +2,13 @@ import { Button } from "@/components/ui/button";
 import { ColumnDef } from "@tanstack/react-table";
 import { ArrowUpDown } from "lucide-react";
 import { AiFillDelete } from "react-icons/ai";
-import DeleteButton from "../_component/DeleteButton";
 import { routes } from "@/lib/routePath";
-import RetrieveDetail from "../_component/RetriveDetail";
 import { MdModeEdit } from "react-icons/md";
 import { vacationSchema } from "@/lib/zodschema";
 import { vacationFields } from "@/lib/fields";
-import GenericForm from "../_component/GenericForm";
+import GenericForm from "@/app/_component/GenericForm";
+import RetrieveDetail from "@/app/_component/RetriveDetail";
+import DeleteButton from "@/app/_component/DeleteButton";
 
 export type VacationPeriod = {
   vacation_id: string;
@@ -62,19 +62,19 @@ export const columns: ColumnDef<VacationPeriod>[] = [
           <GenericForm
             schema={vacationSchema}
             fields={vacationFields}
-            apiEndpoint={`${routes.UPDATE_VACATION}/${vacation.vacation_id}`}
+            apiEndpoint={`${routes.UPDATE_VACATION_PERIOD}/${vacation.vacation_id}`}
             title="Update Vacation Period"
             description="Update vacation period details here"
           />
           <RetrieveDetail
             item={"vacation period"}
             id={vacation.vacation_id}
-            endpoint={`${routes.RETRIEVE_VACATION}`}
+            endpoint={`${routes.RETRIEVE_VACATION_PERIOD}`}
             onSuccess={handleSuccess}
           />
           <DeleteButton
             id={vacation.vacation_id}
-            endpoint={`${routes.DELETE_VACATION}`}
+            endpoint={`${routes.DELETE_VACATION_PERIOD}`}
             onSuccess={handleSuccess}
           />
         </div>

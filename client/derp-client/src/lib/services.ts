@@ -87,3 +87,7 @@ export const getHallTicketList = async () => {
 export const getExamTimeTableList = async () => {
   return fetchData(routes.EXAMTIMETABLE_LIST);
 };
+export const getVacationPeriodList = async () => {
+  return fetchData(routes.VACATION_PERIOD_LIST);
+};
+
