@@ -350,6 +350,150 @@ export const resultSheetFields = [
   },
 ];
 
+//attendanceFields
+export const attendanceFields = [
+  {
+    name: 'time_table',
+    label: 'Time Table',
+    type: 'text',
+  },
+  {
+    name: 'student',
+    label: 'Student',
+    type: 'text',
+  },
+  {
+    name: 'date',
+    label: 'Date',
+    type: 'date',
+  },
+  {
+    name: 'time',
+    label: 'Time',
+    type: 'time',
+  },
+  {
+    name: 'status',
+    label: 'Status',
+    type: 'checkbox',
+  },
+];
+
+// fingerRecordFields
+export const fingerRecordFields = [
+  {
+    name: 'student',
+    label: 'Student',
+    type: 'text',
+  },
+  {
+    name: 'fingerprint_data',
+    label: 'Fingerprint Data',
+    type: 'text',
+  },
+];
+
+// authorFields
+export const authorFields = [
+  {
+    name: 'first_name',
+    label: 'First Name',
+    type: 'text',
+  },
+  {
+    name: 'last_name',
+    label: 'Last Name',
+    type: 'text',
+  },
+  {
+    name: 'short_bio',
+    label: 'Short Bio',
+    type: 'textarea',
+  },
+  {
+    name: 'date_of_birth',
+    label: 'Date of Birth',
+    type: 'date',
+  },
+  {
+    name: 'date_of_death',
+    label: 'Date of Death',
+    type: 'date',
+  },
+];
+
+//categoryFields
+export const categoryFields = [
+  {
+    name: 'name',
+    label: 'Category Name',
+    type: 'text',
+  },
+];
+
+// bookFields
+export const bookFields = [
+  {
+    name: 'title',
+    label: 'Title',
+    type: 'text',
+  },
+  {
+    name: 'author',
+    label: 'Author',
+    type: 'text',
+  },
+  {
+    name: 'summary',
+    label: 'Summary',
+    type: 'textarea',
+  },
+  {
+    name: 'isbn',
+    label: 'ISBN',
+    type: 'text',
+  },
+  {
+    name: 'category',
+    label: 'Category',
+    type: 'select',
+    options: [
+      { label: 'Fiction', value: 'fiction' },
+      { label: 'Non-fiction', value: 'non_fiction' },
+      // Add more categories as required
+    ],
+  },
+];
+
+// checkoutFields
+export const checkoutFields = [
+  {
+    name: 'book',
+    label: 'Book',
+    type: 'text',
+  },
+  {
+    name: 'member',
+    label: 'Member',
+    type: 'text',
+  },
+  {
+    name: 'due_date',
+    label: 'Due Date',
+    type: 'date',
+  },
+  {
+    name: 'returned',
+    label: 'Returned',
+    type: 'checkbox',
+  },
+];
+
+
+
+
+
+
 
 
 

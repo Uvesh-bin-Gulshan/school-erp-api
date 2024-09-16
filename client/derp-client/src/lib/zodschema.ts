@@ -238,3 +238,49 @@ export const resultSheetSchema = z.object({
   total_marks_obtained: z.number().min(0, "Total marks obtained should be a positive number"),
   rank: z.number().min(0, "Rank should be a positive number"),
 });
+
+// attendanceSchema
+export const attendanceSchema = z.object({
+  time_table: z.string().min(1, "Time Table is required"),
+  student: z.string().min(1, "Student is required"),
+  date: z.string().min(1, "Date is required"),
+  time: z.string().min(1, "Time is required"),
+  status: z.boolean(),
+});
+
+// fingerRecordSchema
+export const fingerRecordSchema = z.object({
+  student: z.string().min(1, "Student is required"),
+  fingerprint_data: z.string().min(1, "Fingerprint Data is required"),
+});
+
+// authorSchema
+export const authorSchema = z.object({
+  first_name: z.string().min(1, "First name is required"),
+  last_name: z.string().min(1, "Last name is required"),
+  short_bio: z.string().min(1, "Short bio is required"),
+  date_of_birth: z.string().optional(),
+  date_of_death: z.string().optional(),
+});
+
+// categorySchema
+export const categorySchema = z.object({
+  name: z.string().min(1, "Category name is required"),
+});
+
+// bookSchema
+export const bookSchema = z.object({
+  title: z.string().min(1, "Title is required"),
+  author: z.string().optional(),
+  summary: z.string().min(1, "Summary is required"),
+  isbn: z.string().length(13, "ISBN must be exactly 13 characters"),
+  category: z.array(z.string()),
+});
+
+// Checkout
+export const checkoutSchema = z.object({
+  book: z.string().min(1, "Book is required"),
+  member: z.string().min(1, "Member is required"),
+  due_date: z.string().min(1, "Due date is required"),
+  returned: z.boolean(),
+});

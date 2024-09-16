@@ -79,7 +79,6 @@ export const getResultSheetList = async () => {
   return fetchData(routes.RESULT_SHEET_LIST);
 };
 
-
 export const getHallTicketList = async () => {
   return fetchData(routes.HALLTICKET_LIST);
 };
@@ -87,7 +86,33 @@ export const getHallTicketList = async () => {
 export const getExamTimeTableList = async () => {
   return fetchData(routes.EXAMTIMETABLE_LIST);
 };
+
 export const getVacationPeriodList = async () => {
   return fetchData(routes.VACATION_PERIOD_LIST);
 };
+
+export const getAttendanceList = async () => {
+  return fetchData(routes.ATTENDANCE_LIST);
+};
+
+export const getFingerRecordList = async () => {
+  return fetchData(routes.FINGER_RECORD_LIST);
+};
+
+export const getAuthorList = async () => {
+  return fetchData(routes.AUTHOR_LIST);
+};
+
+export const getCategoryList = async () => {
+  return fetchData(routes.CATEGORY_LIST);
+};
+
+export const getBookList = async () => {
+  return fetchData(routes.BOOK_LIST);
+};
+
+export const getCheckoutList = async () => {
+  return fetchData(routes.CHECKOUT_LIST);
+};
+
 

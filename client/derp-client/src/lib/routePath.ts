@@ -122,4 +122,46 @@ export const  routes={
       RETRIEVE_RESULT_SHEET: `${BASE_HOST}examination/resultsheet/retrieve`,
       UPDATE_RESULT_SHEET: `${BASE_HOST}examination/resultsheet/update`,
       DELETE_RESULT_SHEET: `${BASE_HOST}examination/resultsheet/delete`,
+
+      // Attendance
+      ATTENDANCE_LIST: `${BASE_HOST}attendance/attendance/list`,
+      RETRIEVE_ATTENDANCE: `${BASE_HOST}attendance/attendance/retrieve`,
+      UPDATE_ATTENDANCE: `${BASE_HOST}attendance/attendance/update`,
+      DELETE_ATTENDANCE: `${BASE_HOST}attendance/attendance/delete`,
+      CREATE_ATTENDANCE: `${BASE_HOST}attendance/attendance/create`,
+
+      //Finger Record
+      FINGER_RECORD_LIST: `${BASE_HOST}attencance/fingerrecord/list`,
+      RETRIEVE_FINGER_RECORD: `${BASE_HOST}attencance/fingerrecord/retrieve`,
+      UPDATE_FINGER_RECORD: `${BASE_HOST}attencance/fingerrecord/update`,
+      DELETE_FINGER_RECORD: `${BASE_HOST}attencance/fingerrecord/delete`,
+      CREATE_FINGER_RECORD: `${BASE_HOST}attencance/fingerrecord/create`,
+
+      // Author 
+      AUTHOR_LIST: `${BASE_HOST}library/author/list`,
+      CREATE_AUTHOR: `${BASE_HOST}library/author/create`,
+      RETRIEVE_AUTHOR: `${BASE_HOST}library/author/retrieve`,
+      UPDATE_AUTHOR: `${BASE_HOST}library/author/update`,
+      DELETE_AUTHOR: `${BASE_HOST}library/author/delete`,
+
+      // category
+      CATEGORY_LIST: `${BASE_HOST}library/category/list`,
+      CREATE_CATEGORY: `${BASE_HOST}library/category/create`,
+      RETRIEVE_CATEGORY: `${BASE_HOST}library/category/retrieve`,
+      UPDATE_CATEGORY: `${BASE_HOST}library/category/update`,
+      DELETE_CATEGORY: `${BASE_HOST}library/category/delete`,
+
+      // book in library
+      BOOK_LIST: `${BASE_HOST}library/book/list`,
+      CREATE_BOOK: `${BASE_HOST}library/book/create`,
+      RETRIEVE_BOOK: `${BASE_HOST}library/book/retrieve`,
+      UPDATE_BOOK: `${BASE_HOST}library/book/update`,
+      DELETE_BOOK: `${BASE_HOST}library/book/delete`,
+
+      // checkout
+      CHECKOUT_LIST: `${BASE_HOST}library/checkout/list`,
+      CREATE_CHECKOUT: `${BASE_HOST}library/checkout/create`,
+      RETRIEVE_CHECKOUT: `${BASE_HOST}library/checkout/retrieve`,
+      UPDATE_CHECKOUT: `${BASE_HOST}library/checkout/update`,
+      DELETE_CHECKOUT: `${BASE_HOST}library/checkout/delete`,
 }
