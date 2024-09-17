@@ -32,7 +32,7 @@ const SideBar = ({ children, breadcrumbs }: SideBarProps) => {
     <>
       <div className="h-screen   flex overflow-hidden bg-transparent  ">
         <div
-          className={`h-[96.5vh]  duration-300
+          className={`h-[96.4vh]  duration-300
                bg-gray-300/50 border border-gray-200  
                rounded-md  m-2.5 text-cyan-500 
   

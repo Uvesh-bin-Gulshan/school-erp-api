@@ -30,7 +30,7 @@ const PageContent = () => {
   return (
     <Sidebar breadcrumbs={items}>
    
-      <div className="h-[80vh] mt-10">
+      <div className="h-[73vh] mt-10">
         <DynamicViewAdmissions data={data} />
       </div>
     </Sidebar>

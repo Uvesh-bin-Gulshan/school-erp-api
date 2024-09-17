@@ -1,5 +1,6 @@
 "use client";
 import { useState } from 'react';
+import CustomButton from './CustomButton';
 
 const ImportComponent = ({ apiUrl, onSuccess, onError }: any) => {
   const [file, setFile] = useState<File | null>(null);
@@ -55,11 +56,11 @@ const ImportComponent = ({ apiUrl, onSuccess, onError }: any) => {
   };
 
   return (
-    <div>
-      <input type="file" onChange={handleFileChange} />
-      <button onClick={handleImport} disabled={loading}>
+    <div className='justify-center flex mt-2'>
+      <input className="bg-gray-100 rounded-r-lg " type="file" onChange={handleFileChange} />
+      <CustomButton text='Save' className='' onClick={handleImport} disabled={loading}>
         {loading ? "Importing..." : "Import"}
-      </button>
+      </CustomButton>
      
     </div>
   );
