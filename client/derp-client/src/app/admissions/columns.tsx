@@ -7,6 +7,7 @@ import Link from "next/link";
 import { MdModeEdit } from "react-icons/md";
 import { routes } from "@/lib/routePath";
 import DeleteButton from "../_component/DeleteButton";
+import Profile from "../_component/Profile";
 
 export type Admission = {
   id: number;
@@ -100,12 +101,23 @@ export const columns: ColumnDef<Admission>[] = [
     pathname: "../admissions/AdmisionForm/update_admission",
     query: { id: admissionData.admission_id }, // pass the admission ID
   }}  >  <MdModeEdit /></Link>
-<RetrieveDetail 
+{/* <RetrieveDetail 
   item={'admission'}    
   id={admissionData.admission_id} 
   endpoint={`${routes.RETRIEVE_ADMISSION}`}
   onSuccess={handleSuccess}
-/>
+/> */}
+
+
+    <Profile
+     id={admissionData.admission_id} 
+     endpoint={`${routes.RETRIEVE_ADMISSION}`}
+      title="Student Profile"
+    />
+
+
+
+
 
           <DeleteButton
             item={'department'}

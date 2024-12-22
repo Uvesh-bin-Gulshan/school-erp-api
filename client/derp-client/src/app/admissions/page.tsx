@@ -3,9 +3,6 @@
 import React from 'react';
 import dynamic from 'next/dynamic';
 import Sidebar from '@/app/_component/SideBar';
-import Link from 'next/link';
-import CustomButton from '../_component/CustomButton';
-import { LayoutDashboard } from 'lucide-react';
 import { AdmissionProvider, useAdmissionContext } from './AdmissionContext';
 
 const items = [
@@ -13,25 +10,54 @@ const items = [
   { href: "/components", label: "Components" },
 ];
 
-// Dynamically import the ViewAdmissions component
 const DynamicViewAdmissions = dynamic(() => import('./ViewAdmissions'), { ssr: false });
 
-// Create a separate component for the content that uses the context
 const PageContent = () => {
-  const { data, dashboard, loading } = useAdmissionContext();
+  const { data, loading } = useAdmissionContext();
 
   if (loading) {
     return <div>Loading...</div>;
   }
 
-  console.log(dashboard);
-  console.log(data);
+  // Ensure data is not empty and get the first admission record
+  const admissionData = data.length > 0 ? data[0] : null;
 
+  if (!admissionData) {
+    return <div>No admission data available.</div>;
+  }
+
+  // Separate basic admission details and other details
+  const basic_info = {
+    admission_id: admissionData.admission_id,
+    student_name: admissionData.student_name,
+    date_of_admission: admissionData.date_of_admission,
+    father_name: admissionData.father_name,
+    date_of_birth: admissionData.date_of_birth,
+    admission_status: admissionData.admission_status,
+    applied_for: admissionData.applied_for,
+  };
+
+  const other_info = {
+    aadhar_number: admissionData.aadhar_number,
+    district: admissionData.district,
+    locality: admissionData.locality,
+    pincode: admissionData.pincode,
+    mobile_number: admissionData.mobile_number,
+    previous_education: admissionData.previous_education,
+    previous_institution: admissionData.previous_institution,
+    previous_result_status: admissionData.previous_result_status,
+    profile_image: admissionData.profile_image,
+    state: admissionData.state,
+    fees_amount: admissionData.fees_amount,
+    pay_fees: admissionData.pay_fees,
+    required_donation: admissionData.required_donation,
+    lc_given: admissionData.lc_given,
+  };
+console.log(basic_info,"basic page")
   return (
     <Sidebar breadcrumbs={items}>
-   
       <div className="h-[73vh] mt-10">
-        <DynamicViewAdmissions data={data} />
+        <DynamicViewAdmissions data={data} basic_info={basic_info} other_info={other_info} />
       </div>
     </Sidebar>
   );

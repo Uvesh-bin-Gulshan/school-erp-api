@@ -7,6 +7,8 @@ import { routes } from './routePath';
 
 //ADMISSION
 export const getAdmissionDashboard = async () => {
+
+  
   return fetchData(routes.ADMISSION_DASHBOARD);
 };
 
@@ -70,6 +72,8 @@ export const getExamTypeList = async () => {
 export const getDepartmentDetail = async (department_id: string) => {
   return fetchData(`${routes.RETRIEVE_DEPARTMENT}${department_id}`);
 };
+
+
 
 export const getMarkSheetList = async () => {
   return fetchData(routes.MARK_SHEET_LIST);

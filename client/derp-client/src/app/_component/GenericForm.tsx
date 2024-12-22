@@ -33,6 +33,7 @@ interface GenericFormProps {
   initialData?: any;
   title: string;
   description: string;
+  dataSource?:any;
 }
 
 const GenericForm = ({
@@ -42,6 +43,7 @@ const GenericForm = ({
   fields,
   apiEndpoint,
   initialData,
+  dataSource
 }: GenericFormProps) => {
   const form = useDynamicFormConfig(schema, {
     defaultValues: {
@@ -87,7 +89,7 @@ const GenericForm = ({
         <Form {...form}>
           <form onSubmit={handleForm} className="">
             {fields.map((field: any) => (
-              <FieldRenderer key={field.name} field={field} />
+              <FieldRenderer key={field.name} field={field} dataSource={dataSource} />
             ))}
             <SubmitButton className="w-full" text="Submit" />
           </form>

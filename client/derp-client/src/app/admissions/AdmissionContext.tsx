@@ -86,6 +86,8 @@ export interface Admission {
   
   export interface AdmissionContextType {
     data: Admission[] | null;
+    basic_info:Admission[]
+    other_info:Admission[]
     dashboard: DashboardData | null;
     loading: boolean;
   }
@@ -106,6 +108,8 @@ export const useAdmissionContext = () => {
 // Provider component
 export const AdmissionProvider = ({ children }: { children: ReactNode }) => {
   const [data, setData] = useState<Admission[] | null>(null);
+  const [basic_info, setBasicInfo] = useState<Admission[] | null>(null);
+
   const [dashboard, setDashboard] = useState<DashboardData | null>(null);
   const [loading, setLoading] = useState(true);
 
@@ -124,9 +128,8 @@ export const AdmissionProvider = ({ children }: { children: ReactNode }) => {
     };
     fetchData();
   }, []);
-
   return (
-    <AdmissionContext.Provider value={{ data, dashboard, loading }}>
+    <AdmissionContext.Provider value={{ data: data || [], basic_info: basic_info || [], other_info: [], dashboard, loading }}>
       {children}
     </AdmissionContext.Provider>
   );

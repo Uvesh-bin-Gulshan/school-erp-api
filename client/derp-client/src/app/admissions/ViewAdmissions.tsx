@@ -12,9 +12,11 @@ import { AdmissionProvider } from './AdmissionContext';
 
 interface ViewAdmissionsProps {
   data: any;
+  basic_info:any;
+  other_info:any;
 }
 
-const ViewAdmissions: React.FC<ViewAdmissionsProps> = ({ data }:{data:any}) => {
+const ViewAdmissions: React.FC<ViewAdmissionsProps> = ({ data ,basic_info,other_info}:any) => {
   const columnFilters: ColumnFiltersState = [];
 
   return (

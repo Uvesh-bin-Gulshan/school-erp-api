@@ -5,9 +5,10 @@ import { FormInput } from './FormInput';
 
 interface FieldProps {
   field: any;
+  dataSource :any;
 }
 
-const FieldRenderer: React.FC<FieldProps> = ({ field }) => {
+const FieldRenderer: React.FC<FieldProps> = ({ field,dataSource  }) => {
   switch (field.type) {
     case 'text':
       return (
@@ -32,39 +33,28 @@ const FieldRenderer: React.FC<FieldProps> = ({ field }) => {
           )}
         />
       );
-    case 'select':
-      return (
-        <FormField
-          key={field.name}
-          name={field.name}
-          render={({ field: formField }) => (
-            <FormItem>
-              <FormLabel htmlFor={field.name}>{field.label}</FormLabel>
-              <FormControl>
-                {/* <select {...formField} id={field.name} className="input">
-                  {field.options.map((option: any) => (
-                    <option key={option.value} value={option.value}>
-                      {option.label}
-                    </option>
-                  ))}
-                </select> */}
-                <SelectComponent
-                  id={field.name}
-                  label={field.label}
-                  options={field.options}
-                  placeholder="Select an option"
-                  {...formField} // Pass form field props
-                />
-
-
-      
-
-              </FormControl>
-              <FormMessage />
-            </FormItem>
-          )}
-        />
-      );
+      case 'select':
+        return (
+          <FormField
+            key={field.name}
+            name={field.name}
+            render={({ field: formField }) => (
+              <FormItem>
+                <FormLabel htmlFor={field.name}>{field.label}</FormLabel>
+                <FormControl>
+                  <SelectComponent
+                    id={field.name}
+                    label={field.label}
+                    options={dataSource[field.name]} // Use dataSource for options
+                    placeholder="Select an option"
+                    {...formField}
+                  />
+                </FormControl>
+                <FormMessage />
+              </FormItem>
+            )}
+          />
+        );
     case 'file':
       return (
         <FormField
