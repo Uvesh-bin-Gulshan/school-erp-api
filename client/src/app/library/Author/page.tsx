@@ -1,12 +1,12 @@
 import React from 'react';
 import ViewAuthor from './ViewAuthor';
-import Sidebar from '@/app/_component/SideBar';
-import { BreadcrumbWithCustomSeparator } from '@/app/_component/BreadCrumb';
+import Sidebar from '@/components/custom-components/SideBar';
+import { BreadcrumbWithCustomSeparator } from '@/components/custom-components/BreadCrumb';
 import { getAuthorList } from '@/lib/services';
 import { authorSchema } from '@/lib/zodschema';
 import { routes } from '@/lib/routePath';
 import { authorFields } from '@/lib/fields';
-import GenericForm from '@/app/_component/GenericForm';
+import GenericForm from '@/components/custom-components/GenericForm';
 
 const items = [
   { href: "/", label: "Home" },

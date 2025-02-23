@@ -1,7 +1,7 @@
 "use client";
 import { useState } from 'react';
-import { IMPORT_ADMISSION } from "@/lib/routePath";
-import ImportComponent from '@/app/_component/ImportData';
+import { routes } from "@/lib/routePath";
+import ImportComponent from '@/components/custom-components/ImportData';
 
 const ImportPage = () => {
   const [errorLogs, setErrorLogs] = useState<any[]>([]);
@@ -20,7 +20,7 @@ const ImportPage = () => {
     <div>
       <h1>Import Data</h1>
       <ImportComponent
-        apiUrl={IMPORT_ADMISSION}
+        apiUrl={routes.IMPORT_ADMISSION}
         onSuccess={handleSuccess}
         onError={handleError}
       />

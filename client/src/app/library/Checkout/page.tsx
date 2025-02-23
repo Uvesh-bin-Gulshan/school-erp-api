@@ -1,12 +1,12 @@
 import React from 'react';
 import ViewCheckout from './ViewCheckout';
-import Sidebar from '@/app/_component/SideBar';
-import { BreadcrumbWithCustomSeparator } from '@/app/_component/BreadCrumb';
+import Sidebar from '@/components/custom-components/SideBar';
+import { BreadcrumbWithCustomSeparator } from '@/components/custom-components/BreadCrumb';
 import { getCheckoutList } from '@/lib/services';
 import { checkoutSchema } from '@/lib/zodschema';
 import { routes } from '@/lib/routePath';
 import { checkoutFields } from '@/lib/fields';
-import GenericForm from '@/app/_component/GenericForm';
+import GenericForm from '@/components/custom-components/GenericForm';
 
 const items = [
   { href: "/", label: "Home" },

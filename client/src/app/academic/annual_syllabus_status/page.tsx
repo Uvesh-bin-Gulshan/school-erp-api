@@ -1,8 +1,8 @@
 import React from 'react';
-import Sidebar from '@/app/_component/SideBar';
-import { BreadcrumbWithCustomSeparator } from '@/app/_component/BreadCrumb';
+import Sidebar from '@/components/custom-components/SideBar';
+import { BreadcrumbWithCustomSeparator } from '@/components/custom-components/BreadCrumb';
 import ViewAnnuallySubjectSyllabusStatus from './ViewAnnualSyllabus';
-import GenericForm from '@/app/_component/GenericForm';
+import GenericForm from '@/components/custom-components/GenericForm';
 import { annuallySubjectSyllabusStatusSchema } from '@/lib/zodschema';
 import { annuallySubjectSyllabusStatusFields } from '@/lib/fields';
 import { routes } from '@/lib/routePath';

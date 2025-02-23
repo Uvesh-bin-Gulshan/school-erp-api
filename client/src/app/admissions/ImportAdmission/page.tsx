@@ -1,6 +1,6 @@
 import React from 'react'
 import ImportAdmission from './ImportAdmission'
-import Sidebar from '@/app/_component/SideBar';
+import Sidebar from '@/components/custom-components/SideBar';
 const items = [
   { href: "/", label: "Home" },
   { href: "/components", label: "Components" },

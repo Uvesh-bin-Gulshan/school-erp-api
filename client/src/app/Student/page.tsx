@@ -1,14 +1,13 @@
 import React from 'react'
 import ViewStudent from './ViewStudent'
-import Sidebar from '@/app/_component/SideBar'
-import { BreadcrumbWithCustomSeparator } from '@/app/_component/BreadCrumb'
+import Sidebar from '@/components/custom-components/SideBar'
+import { BreadcrumbWithCustomSeparator } from '@/components/custom-components/BreadCrumb'
 import { getStudentList } from '@/lib/services'
-import SideBar from '@/app/_component/SideBar'
 import { studentSchema } from '@/lib/zodschema'
 import { routes } from '@/lib/routePath'
 import { MdModeEdit } from 'react-icons/md'
 import { studentFields } from '@/lib/fields'
-import GenericForm from '../_component/GenericForm'
+import GenericForm from '@/components/custom-components/GenericForm'
 
 const items = [
   { href: "/", label: "Home" },
@@ -22,7 +21,7 @@ const Page = async () => {
 
   return (
     <>
-      <SideBar breadcrumbs={items}>
+      <Sidebar breadcrumbs={items}>
         <div className=''>
           <BreadcrumbWithCustomSeparator items={items} separator={<span> :: </span>} />
         </div>
@@ -37,7 +36,7 @@ const Page = async () => {
       /> 
           <ViewStudent data={data} />
         </div>
-      </SideBar>
+      </Sidebar>
     </>
   )
 }

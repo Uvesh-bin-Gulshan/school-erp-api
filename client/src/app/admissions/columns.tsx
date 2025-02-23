@@ -2,12 +2,12 @@ import { Button } from "@/components/ui/button";
 import { ColumnDef } from "@tanstack/react-table";
 import { ArrowUpDown } from "lucide-react";
 import UpdateAdmission from "./AdmisionForm/update_admission/UpdateAdmission";
-import RetrieveDetail from "../_component/RetriveDetail";
+import RetrieveDetail from "@/components/custom-components/RetriveDetail";
 import Link from "next/link";
 import { MdModeEdit } from "react-icons/md";
 import { routes } from "@/lib/routePath";
-import DeleteButton from "../_component/DeleteButton";
-import Profile from "../_component/Profile";
+import DeleteButton from "@/components/custom-components/DeleteButton";
+import Profile from "@/components/custom-components/Profile";
 
 export type Admission = {
   id: number;
@@ -113,8 +113,9 @@ export const columns: ColumnDef<Admission>[] = [
      id={admissionData.admission_id} 
      endpoint={`${routes.RETRIEVE_ADMISSION}`}
       title="Student Profile"
+      basic_info={''}
+      other_info={''}
     />
-
 
 
 

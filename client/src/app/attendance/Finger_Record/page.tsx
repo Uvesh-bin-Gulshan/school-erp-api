@@ -1,12 +1,12 @@
 import React from 'react';
 import ViewFingerRecord from './ViewFingerRecord';
-import Sidebar from '@/app/_component/SideBar';
-import { BreadcrumbWithCustomSeparator } from '@/app/_component/BreadCrumb';
+import Sidebar from '@/components/custom-components/SideBar';
+import { BreadcrumbWithCustomSeparator } from '@/components/custom-components/BreadCrumb';
 import { getFingerRecordList } from '@/lib/services';
 import { fingerRecordSchema } from '@/lib/zodschema';
 import { routes } from '@/lib/routePath';
 import { fingerRecordFields } from '@/lib/fields';
-import GenericForm from '@/app/_component/GenericForm';
+import GenericForm from '@/components/custom-components/GenericForm';
 
 const items = [
   { href: "/", label: "Home" },

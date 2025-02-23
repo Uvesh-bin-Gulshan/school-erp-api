@@ -1,12 +1,12 @@
 import React from 'react'
 import ViewExamTimeTable from './ViewExamTimeTable'
-import Sidebar from '@/app/_component/SideBar'
-import { BreadcrumbWithCustomSeparator } from '@/app/_component/BreadCrumb'
+import Sidebar from '@/components/custom-components/SideBar'
+import { BreadcrumbWithCustomSeparator } from '@/components/custom-components/BreadCrumb'
 import { examTimeTableSchema } from '@/lib/zodschema'
 import { routes } from '@/lib/routePath'
 import { examTimeTableFields } from '@/lib/fields'
 import { getExamTimeTableList } from '@/lib/services'
-import GenericForm from '@/app/_component/GenericForm'
+import GenericForm from '@/components/custom-components/GenericForm'
 
 const items = [
   { href: "/", label: "Home" },

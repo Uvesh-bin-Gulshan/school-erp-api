@@ -5,9 +5,9 @@ import { AiFillDelete } from "react-icons/ai";
 import { routes } from "@/lib/routePath";
 import { resultSheetSchema } from "@/lib/zodschema";
 import { resultSheetFields } from "@/lib/fields";
-import GenericForm from "@/app/_component/GenericForm";
-import RetrieveDetail from "@/app/_component/RetriveDetail";
-import DeleteButton from "@/app/_component/DeleteButton";
+import GenericForm from "@/components/custom-components/GenericForm";
+import RetrieveDetail from "@/components/custom-components/RetriveDetail";
+import DeleteButton from "@/components/custom-components/DeleteButton";
 
 export type ResultSheet = {
   result_sheet_id: string;

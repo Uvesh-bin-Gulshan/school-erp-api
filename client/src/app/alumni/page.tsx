@@ -1,13 +1,13 @@
 import React from "react";
 import ViewAlumni from "./ViewAlumni";
-import SideBar from "@/app/_component/SideBar";
-import { BreadcrumbWithCustomSeparator } from "@/app/_component/BreadCrumb";
+import SideBar from "@/components/custom-components/SideBar";
+import { BreadcrumbWithCustomSeparator } from "@/components/custom-components/BreadCrumb";
 import { getAlumniList } from "@/lib/services";
 import { alumniSchema } from "@/lib/zodschema";
 import { routes } from "@/lib/routePath";
 import { MdModeEdit } from "react-icons/md";
 import { alumniFields } from "@/lib/fields";
-import GenericForm from "../_component/GenericForm";
+import GenericForm from "@/components/custom-components/GenericForm";
 
 const items = [
   { href: "/", label: "Home" },

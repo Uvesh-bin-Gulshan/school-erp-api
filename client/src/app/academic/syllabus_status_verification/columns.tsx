@@ -5,9 +5,9 @@ import { AiFillDelete } from "react-icons/ai";
 import { routes } from "@/lib/routePath";
 import { syllabusStatusSchema } from "@/lib/zodschema";
 import { syllabusStatusFields } from "@/lib/fields";
-import GenericForm from "@/app/_component/GenericForm";
-import DeleteButton from "@/app/_component/DeleteButton";
-import RetrieveDetail from "@/app/_component/RetriveDetail";
+import GenericForm from "@/components/custom-components/GenericForm";
+import DeleteButton from "@/components/custom-components/DeleteButton";
+import RetrieveDetail from "@/components/custom-components/RetriveDetail";
 
 export type SyllabusStatusVerification = {
   status_verification_id: string;
