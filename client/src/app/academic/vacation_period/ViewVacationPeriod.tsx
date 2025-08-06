@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import { DataTable } from "@/app/_component/DataTable";
+import { DataTable } from "@/components/custom-components/DataTable";
 import { ColumnFiltersState } from "@tanstack/react-table";
 import { columns } from "./columns";
 

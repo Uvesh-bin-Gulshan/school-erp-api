@@ -2,9 +2,9 @@ import { ColumnDef } from "@tanstack/react-table";
 import { routes } from "@/lib/routePath";
 import { bookSchema } from "@/lib/zodschema";
 import { bookFields } from "@/lib/fields";
-import GenericForm from "@/app/_component/GenericForm";
-import RetrieveDetail from "@/app/_component/RetriveDetail";
-import DeleteButton from "@/app/_component/DeleteButton";
+import GenericForm from "@/components/custom-components/GenericForm";
+import RetrieveDetail from "@/components/custom-components/RetriveDetail";
+import DeleteButton from "@/components/custom-components/DeleteButton";
 
 export type Book = {
   id: string;

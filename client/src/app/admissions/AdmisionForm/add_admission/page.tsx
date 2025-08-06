@@ -5,7 +5,7 @@ import ContactInformation from '../steps/ContactInformation'
 import PreviousEducation from '../steps/PreviousEducation'
 import ApplicationDetails from '../steps/ApplicationDetails'
 import AddAdmissions from './AddAdmissions'
-import Sidebar from '@/app/_component/SideBar'
+import Sidebar from '@/components/custom-components/SideBar'
 import UpdateAdmission from '../update_admission/UpdateAdmission'
 import { getAdmissionList } from '@/lib/services'
 const items = [

@@ -5,9 +5,9 @@ import { AiFillDelete } from "react-icons/ai";
 import { annuallySubjectSyllabusStatusFields } from '@/lib/fields';
 import { routes } from "@/lib/routePath";
 import { MdModeEdit } from "react-icons/md";
-import GenericForm from "@/app/_component/GenericForm";
+import GenericForm from "@/components/custom-components/GenericForm";
 import { annuallySubjectSyllabusStatusSchema } from "@/lib/zodschema";
-import DeleteButton from "@/app/_component/DeleteButton";
+import DeleteButton from "@/components/custom-components/DeleteButton";
 
 export type AnnuallySubjectSyllabusStatus = {
   annual_status_id: string;

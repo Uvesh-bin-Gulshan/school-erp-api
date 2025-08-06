@@ -5,10 +5,10 @@ import { AiFillDelete } from "react-icons/ai";
 
 import { examTimeTableSchema } from "@/lib/zodschema";
 import { examTimeTableFields } from "@/lib/fields";
-import GenericForm from "@/app/_component/GenericForm";
+import GenericForm from "@/components/custom-components/GenericForm";
 import { routes } from "@/lib/routePath";
-import RetrieveDetail from "@/app/_component/RetriveDetail";
-import DeleteButton from "@/app/_component/DeleteButton";
+import DeleteButton from "@/components/custom-components/DeleteButton";
+import RetrieveDetail from "@/components/custom-components/RetriveDetail";
 
 export type ExamTimeTable = {
   exam_time_table_id: string;

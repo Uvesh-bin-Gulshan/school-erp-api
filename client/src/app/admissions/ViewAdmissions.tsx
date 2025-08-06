@@ -1,11 +1,11 @@
 "use client";
-import { DataTable } from '@/app/_component/DataTable';
+import { DataTable } from '@/components/custom-components/DataTable';
 import React from 'react';
 import { columns } from './columns';
 import { ColumnFiltersState } from '@tanstack/react-table';
 import AddAdmissions from './AdmisionForm/add_admission/AddAdmissions';
 import Link from 'next/link';
-import CustomButton from '../_component/CustomButton';
+import CustomButton from '@/components/custom-components/CustomButton';
 import { FileDown, FileUp, LayoutDashboard, Plus } from 'lucide-react';
 import { exportAdmissions } from '@/lib/import_export';
 import { AdmissionProvider } from './AdmissionContext';

@@ -1,11 +1,11 @@
 import React from 'react'
 import ViewHallTicket from './ViewHallTicket'
-import Sidebar from '@/app/_component/SideBar'
-import { BreadcrumbWithCustomSeparator } from '@/app/_component/BreadCrumb'
+import Sidebar from '@/components/custom-components/SideBar'
+import { BreadcrumbWithCustomSeparator } from '@/components/custom-components/BreadCrumb'
 import { hallTicketSchema } from '@/lib/zodschema'
 import { routes } from '@/lib/routePath'
 import { hallTicketFields } from '@/lib/fields'
-import GenericForm from '@/app/_component/GenericForm'
+import GenericForm from '@/components/custom-components/GenericForm'
 import { getHallTicketList } from '@/lib/services'
 
 const items = [

@@ -1,32 +1,25 @@
-"use client"
-import React from 'react'
-
+"use client";
+import React from "react";
 
 import {
   Form,
   FormControl,
-  FormDescription,
   FormField,
   FormItem,
-  FormLabel,
   FormMessage,
-} from "@/components/ui/form"
-import { Input } from '@/components/ui/input'
-import { Button } from '@/components/ui/button'
-import { useForm } from 'react-hook-form';
-import { zodResolver } from '@hookform/resolvers/zod';
-import { z } from 'zod'
-import {loginSchema} from '@/lib/zodschema'
-import toast from "react-hot-toast"
-import { redirect } from 'next/navigation'
-import { useRouter } from 'next/navigation'
-import { FormInput } from '../_component/FormInput'
-import SelectComponent from '../_component/SelectComponent'
-import SubmitButton from '../_component/SubmitButton'
-import { LOGIN } from '@/lib/routePath'
-import { submitForm } from '@/lib/helper'
-import { failedToastMessage, successToastMessage } from '@/lib/client-helpers'
-// import {page}  from '@/app/admin/page'
+} from "@/components/ui/form";
+import { zodResolver } from "@hookform/resolvers/zod";
+import { useRouter } from "next/navigation";
+import { useForm } from "react-hook-form";
+
+import { FormInput } from "@/components/custom-components/FormInput";
+import SubmitButton from "@/components/custom-components/SubmitButton";
+import { failedToastMessage, successToastMessage } from "@/lib/client-helpers";
+import { submitForm } from "@/lib/helper";
+import { routes } from "@/lib/routePath";
+import { loginSchema } from "@/lib/zod-schema/auth-schema";
+import CustomForm from "@/components/custom-components/custom-form";
+
 const Login = () => {
   const form = useForm({
     resolver: zodResolver(loginSchema),
@@ -36,63 +29,58 @@ const Login = () => {
     },
   });
   const router = useRouter();
-  const options = [
-    { value: 'light', label: 'Light' },
-    { value: 'dark', label: 'Dark' },
-    { value: 'system', label: 'System' },
-  ]
-  const handleForm = async (event: React.FormEvent) => {
-    event.preventDefault();
-    
-    const all_values = form.getValues();
-    
-    try {
-      const response = await submitForm(LOGIN, all_values,'POST');
-      console.log(response?.success);
-      if (response?.success) {
-        successToastMessage("Successfully logged in");
-        router.push('../admissions');
-      } else {
-        failedToastMessage("Invalid credentials");
-      }
-    } catch (error) {
-      console.error('Failed to login:', error);
-    }
+  // const options = [
+  //   { value: "light", label: "Light" },
+  //   { value: "dark", label: "Dark" },
+  //   { value: "system", label: "System" },
+  // ];
+
+  const handleSuccess = () => {
+    router.push("../admissions");
   };
-  
+
   return (
-<>
-
-<Form {...form} >
-      <form onSubmit={handleForm} className="">
-        <FormField  name="username" render={({ field }) => (
-          <FormItem >
-            <FormControl>
-            <FormInput {...field} id="username" label="Username" type="text" />
-
-            </FormControl>
-        
-            <FormMessage />
-          </FormItem>
-        )} />
-       
-        <FormField name="password" render={({ field }) => (
+    <CustomForm 
+      form={form}
+      submitPath={routes.LOGIN}
+      onSuccess={handleSuccess}
+      buttonText="Login"
+    >
+      <FormField
+        name="username"
+        render={({ field }) => (
           <FormItem>
             <FormControl>
-            <FormInput {...field} id="password" label="Password" type="text" />
+              <FormInput
+                {...field}
+                id="username"
+                label="Username"
+                type="text"
+              />
             </FormControl>
-        
             <FormMessage />
           </FormItem>
-        )} />
-      <SubmitButton className="w-full" text="Save"  />
-      </form>
-<iframe src='https://www.google.com/'/>
-    </Form>
+        )}
+      />
 
-</>
+      <FormField
+        name="password"
+        render={({ field }) => (
+          <FormItem>
+            <FormControl>
+              <FormInput
+                {...field}
+                id="password"
+                label="Password"
+                type="password"
+              />
+            </FormControl>
+            <FormMessage />
+          </FormItem>
+        )}
+      />
+    </CustomForm>
+  );
+};
 
-)
-}
-
-export default Login
+export default Login;

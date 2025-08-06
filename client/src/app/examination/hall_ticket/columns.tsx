@@ -1,12 +1,9 @@
-import { Button } from "@/components/ui/button";
 import { ColumnDef } from "@tanstack/react-table";
-import { ArrowUpDown } from "lucide-react";
-import { AiFillDelete } from "react-icons/ai";
 import { hallTicketSchema } from "@/lib/zodschema";
 import { hallTicketFields } from "@/lib/fields";
-import GenericForm from "@/app/_component/GenericForm";
-import RetrieveDetail from "@/app/_component/RetriveDetail";
-import DeleteButton from "@/app/_component/DeleteButton";
+import GenericForm from "@/components/custom-components/GenericForm";
+import RetrieveDetail from "@/components/custom-components/RetriveDetail";
+import DeleteButton from "@/components/custom-components/DeleteButton";
 import { routes } from "@/lib/routePath";
 
 export type HallTicket = {

@@ -6,10 +6,10 @@ import { AiFillDelete } from "react-icons/ai";
 import { MdModeEdit } from "react-icons/md";
 import { examTypeSchema } from "@/lib/zodschema";
 import { examTypeFields } from "@/lib/fields";
-import GenericForm from "@/app/_component/GenericForm";
+import GenericForm from "@/components/custom-components/GenericForm";
 import { routes } from "@/lib/routePath";
-import RetrieveDetail from "@/app/_component/RetriveDetail";
-import DeleteButton from "@/app/_component/DeleteButton";
+import RetrieveDetail from "@/components/custom-components/RetriveDetail";
+import DeleteButton from "@/components/custom-components/DeleteButton";
 
 export type ExamType = {
   exam_type_id: string;

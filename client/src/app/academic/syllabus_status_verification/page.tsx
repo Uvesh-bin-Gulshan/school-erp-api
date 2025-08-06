@@ -1,10 +1,10 @@
 import React from 'react';
-import Sidebar from '@/app/_component/SideBar';
-import { BreadcrumbWithCustomSeparator } from '@/app/_component/BreadCrumb';
+import Sidebar from '@/components/custom-components/SideBar';
+import { BreadcrumbWithCustomSeparator } from '@/components/custom-components/BreadCrumb';
 import { syllabusStatusSchema } from '@/lib/zodschema';
 import { routes } from '@/lib/routePath';
 import { syllabusStatusFields } from '@/lib/fields';
-import GenericForm from '@/app/_component/GenericForm';
+import GenericForm from '@/components/custom-components/GenericForm';
 import ViewVerification from './ViewSyllabusStatus';
 import { getSyllabusStatusVerificationList } from '@/lib/services';
 

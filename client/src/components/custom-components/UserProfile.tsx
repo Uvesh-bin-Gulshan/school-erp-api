@@ -38,10 +38,13 @@ const UserProfile = () => {
     <>
       <DropdownMenu>
         <DropdownMenuTrigger asChild>
-          <Button variant="profile" className="w-16 text-3xl pb-4 px-2
-           focus:outline:none ring-none  text-cyan-600 hover:text-cyan-800">
+          <Button
+            variant="profile"
+            className="w-16 text-3xl pb-4 px-2
+           focus:outline:none ring-none  text-cyan-600 hover:text-cyan-800"
+          >
             {" "}
-            <IoSettingsSharp  />
+            <IoSettingsSharp />
           </Button>
         </DropdownMenuTrigger>
         <DropdownMenuContent className="w-56 ml-[5%]">

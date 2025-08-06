@@ -2,13 +2,13 @@ import { Button } from "@/components/ui/button";
 import { ColumnDef } from "@tanstack/react-table";
 import { ArrowUpDown } from "lucide-react";
 import { AiFillDelete } from "react-icons/ai";
-import DeleteButton from "../_component/DeleteButton";
+import DeleteButton from "@/components/custom-components/DeleteButton";
 import { routes } from "@/lib/routePath";
-import RetrieveDetail from "../_component/RetriveDetail";
+import RetrieveDetail from "@/components/custom-components/RetriveDetail";
 import { MdModeEdit } from "react-icons/md";
 import { studentSchema } from "@/lib/zodschema";
 import { studentFields } from "@/lib/fields";
-import GenericForm from "../_component/GenericForm";
+import GenericForm from "@/components/custom-components/GenericForm";
 
 export type Student = {
   student_id: string;

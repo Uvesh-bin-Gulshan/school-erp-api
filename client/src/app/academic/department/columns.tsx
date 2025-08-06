@@ -6,9 +6,9 @@ import { MdModeEdit } from "react-icons/md";
 import { routes } from "@/lib/routePath";
 import { departmentSchema } from '@/lib/zodschema';
 import { departmentFields } from '@/lib/fields';
-import GenericUpdateForm from "@/app/_component/GenericForm";
-import RetrieveDetail from "@/app/_component/RetriveDetail";
-import DeleteButton from "@/app/_component/DeleteButton";
+import GenericUpdateForm from "@/components/custom-components/GenericForm";
+import RetrieveDetail from "@/components/custom-components/RetriveDetail";
+import DeleteButton from "@/components/custom-components/DeleteButton";
 
 export type Department = {
   department_id: string;

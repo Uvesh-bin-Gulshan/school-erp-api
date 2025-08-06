@@ -1,9 +1,9 @@
 import React from 'react';
 import ViewDepartment from './ViewDepartment';
-import SideBar from '@/app/_component/SideBar';
-import { BreadcrumbWithCustomSeparator } from '@/app/_component/BreadCrumb';
+import SideBar from '@/components/custom-components/SideBar';
+import { BreadcrumbWithCustomSeparator } from '@/components/custom-components/BreadCrumb';
 import { getDepartmentList } from '@/lib/services';
-import GenericForm from '@/app/_component/GenericForm';
+import GenericForm from '@/components/custom-components/GenericForm';
 import { departmentSchema } from '@/lib/zodschema';
 import { departmentFields } from '@/lib/fields';
 import { routes } from '@/lib/routePath';

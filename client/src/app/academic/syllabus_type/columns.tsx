@@ -5,10 +5,10 @@ import { AiFillDelete } from "react-icons/ai";
 
 import { routes } from "@/lib/routePath";
 import { MdModeEdit } from "react-icons/md";
-import GenericUpdateForm from "@/app/_component/GenericForm";
-import DeleteButton from "@/app/_component/DeleteButton";
+import GenericUpdateForm from "@/components/custom-components/GenericForm";
+import DeleteButton from "@/components/custom-components/DeleteButton";
 import { syllabusTypeFields } from "@/lib/fields";
-import GenericForm from "@/app/_component/GenericForm";
+import GenericForm from "@/components/custom-components/GenericForm";
 import { syllabusTypeSchema } from "@/lib/zodschema";
 
 export type SyllabusType = {

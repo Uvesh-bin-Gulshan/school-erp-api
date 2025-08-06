@@ -1,9 +1,9 @@
 import React from 'react';
-import Sidebar from '@/app/_component/SideBar';
-import { BreadcrumbWithCustomSeparator } from '@/app/_component/BreadCrumb';
+import Sidebar from '@/components/custom-components/SideBar';
+import { BreadcrumbWithCustomSeparator } from '@/components/custom-components/BreadCrumb';
 import { getSubjectList } from '@/lib/services';
 import ViewSubject from './ViewSubject';
-import GenericForm from '@/app/_component/GenericForm';
+import GenericForm from '@/components/custom-components/GenericForm';
 import { subjectFields } from '@/lib/fields';
 import { routes } from '@/lib/routePath';
 import { subjectSchema } from '@/lib/zodschema';

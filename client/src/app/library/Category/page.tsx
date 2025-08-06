@@ -1,12 +1,12 @@
 import React from 'react';
 import ViewCategory from './ViewCategory';
-import Sidebar from '@/app/_component/SideBar';
-import { BreadcrumbWithCustomSeparator } from '@/app/_component/BreadCrumb';
+import Sidebar from '@/components/custom-components/SideBar';
+import { BreadcrumbWithCustomSeparator } from '@/components/custom-components/BreadCrumb';
 import { getCategoryList } from '@/lib/services';
 import { categorySchema } from '@/lib/zodschema';
 import { routes } from '@/lib/routePath';
 import { categoryFields } from '@/lib/fields';
-import GenericForm from '@/app/_component/GenericForm';
+import GenericForm from '@/components/custom-components/GenericForm';
 
 const items = [
   { href: "/", label: "Home" },

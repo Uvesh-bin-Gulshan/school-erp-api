@@ -1,29 +1,20 @@
 //make schema for client validatiion
-import {z} from "zod"
+import { z } from "zod";
 
-export const loginSchema=z.object({
+export const loginSchema = z.object({
+  username: z.string().min(3, {
+    message: "username must be at least 3 characters",
+  }),
+  password: z.string().min(8, {
+    message: "password must be at least 3 characters",
+  }),
+});
 
-    username:z.string().min(3,{
-        message:"username must be at least 3 characters"
-    }),
-    password:z.string().min(8,{
-        message:"password must be at least 3 characters"
-    })
-
-})
-
-export const departmentSchema=z.object({
-
-    name:z.string().min(3,{
-        message:"department name must be at least 3 characters"
-    }),
-   
-
-})
-
-
-
-
+export const departmentSchema = z.object({
+  name: z.string().min(3, {
+    message: "department name must be at least 3 characters",
+  }),
+});
 
 // const personalInfoSchema = z.object({
 //   student_name: z.string().min(1, "Required"),
@@ -60,8 +51,6 @@ export const departmentSchema=z.object({
 //   ...applicationDetailsSchema.shape,
 // });
 
-
-
 export const admissionSchema = z.object({
   student_name: z.string().nonempty("Student name is required"),
   father_name: z.string().nonempty("Father name is required"),
@@ -82,7 +71,9 @@ export const admissionSchema = z.object({
   pay_fees: z.boolean().default(false),
   fees_amount: z.string().nonempty("Fees amount is required"),
   required_donation: z.boolean().default(false),
-  admission_status: z.enum(["pending", "accepted", "rejected"]).default("pending"),
+  admission_status: z
+    .enum(["pending", "accepted", "rejected"])
+    .default("pending"),
 });
 
 // subject
@@ -94,7 +85,6 @@ export const subjectSchema = z.object({
   course: z.string().min(1, "Course is required"),
 });
 
-
 // Define the schema for SyllabusStatusVerification
 export const syllabusStatusSchema = z.object({
   feedback: z.string().max(300, "Feedback cannot exceed 300 characters"),
@@ -102,35 +92,38 @@ export const syllabusStatusSchema = z.object({
   approved_date: z.string(),
 });
 
-
 // annual subject syllabus status
 export const annuallySubjectSyllabusStatusSchema = z.object({
   annual_status_id: z.string().optional(),
   subject: z.string().min(1, { message: "Subject is required" }),
   teacher: z.string().min(1, { message: "Teacher is required" }),
-  yearly_status: z.number().min(0, { message: "Yearly status must be a number" }),
+  yearly_status: z
+    .number()
+    .min(0, { message: "Yearly status must be a number" }),
   yearly_summary: z.string().min(1, { message: "Yearly summary is required" }),
 });
 
 // monthlySubjectSyllabusStatusSchema
 export const monthlySubjectSyllabusStatusSchema = z.object({
   month_status_id: z.string().optional(),
-  month: z.string().refine((val) => !isNaN(Date.parse(val)), { message: "Invalid date" }),
+  month: z
+    .string()
+    .refine((val) => !isNaN(Date.parse(val)), { message: "Invalid date" }),
   annual_status: z.string().min(1, { message: "Annual status is required" }),
   target_type: z.string().min(1, { message: "Target type is required" }),
   count: z.number().min(0, { message: "Count must be a positive number" }),
-  monthly_summary: z.string().max(300, { message: "Summary must be less than 300 characters" }),
+  monthly_summary: z
+    .string()
+    .max(300, { message: "Summary must be less than 300 characters" }),
 });
 
-
 export const SyllabusTypeSchema = z.object({
-    type_id: z.string().max(6),
-    name: z.string().max(50),
-  });
-  
-  // Define a TypeScript type based on the schema
-  export type SyllabusType = z.infer<typeof SyllabusTypeSchema>;
+  type_id: z.string().max(6),
+  name: z.string().max(50),
+});
 
+// Define a TypeScript type based on the schema
+export type SyllabusType = z.infer<typeof SyllabusTypeSchema>;
 
 // Define the schema for the `TimeTable`
 export const timetableSchema = z.object({
@@ -139,7 +132,6 @@ export const timetableSchema = z.object({
   time: z.string().min(1, { message: "Time is required" }),
   effective_date: z.string().min(1, { message: "Effective Date is required" }),
 });
-  
 
 // Define the schema for the `VacationPeriod`
 export const vacationSchema = z.object({
@@ -149,25 +141,20 @@ export const vacationSchema = z.object({
   description: z.string().optional(),
 });
 
+export const studentSchema = z.object({
+  admission: z.string(), // Assuming this is the ID of the related Admission
+  course: z.string(), // Assuming this is the course_id
+  department: z.string(), // Assuming this is the department_id
+  student_status: z.enum(["pursuing", "completed", "left"]).default("pursuing"),
+});
 
-  export const studentSchema = z.object({
-    admission: z.string(), // Assuming this is the ID of the related Admission
-    course: z.string(), // Assuming this is the course_id
-    department: z.string(), // Assuming this is the department_id
-    student_status: z.enum(['pursuing', 'completed', 'left']).default('pursuing'),
-  });
-
-  export const alumniSchema = z.object({
-    alumni_id: z.string().optional(),
-    student: z.string().min(1, "Student is required"),
-    occupation: z.string().min(1, "Occupation is required"),
-    work_place: z.string().min(1, "Workplace is required"),
-    residence: z.string().min(1, "Residence is required"),
-  });
-  
-
- 
-  
+export const alumniSchema = z.object({
+  alumni_id: z.string().optional(),
+  student: z.string().min(1, "Student is required"),
+  occupation: z.string().min(1, "Occupation is required"),
+  work_place: z.string().min(1, "Workplace is required"),
+  residence: z.string().min(1, "Residence is required"),
+});
 
 // Exam Type
 
@@ -175,7 +162,6 @@ export const examTypeSchema = z.object({
   name: z.string().min(1, "Exam type name is required"),
   effective_date: z.string().min(1, "Effective date is required"),
 });
-
 
 export const examTimeTableSchema = z.object({
   exam_type: z.string().min(1, "Exam Type is required"),
@@ -187,7 +173,6 @@ export const examTimeTableSchema = z.object({
 
 export type ExamTypeSchema = z.infer<typeof examTypeSchema>;
 
-
 // Define the schema for HallTicket using Zod
 export const hallTicketSchema = z.object({
   exam_time_table: z.string().min(1, "Exam Time Table is required"),
@@ -197,12 +182,17 @@ export const hallTicketSchema = z.object({
 // course
 export const courseSchema = z.object({
   course_id: z.string().max(6).optional(),
-  name: z.string().min(1, "Course name is required").max(70, "Course name cannot exceed 70 characters"),
+  name: z
+    .string()
+    .min(1, "Course name is required")
+    .max(70, "Course name cannot exceed 70 characters"),
   department: z.string().min(1, "Department is required"),
-  effective_date: z.string().min(1, "Effective date is required").refine(
-    (date) => !isNaN(Date.parse(date)),
-    { message: "Invalid date format" }
-  ),
+  effective_date: z
+    .string()
+    .min(1, "Effective date is required")
+    .refine((date) => !isNaN(Date.parse(date)), {
+      message: "Invalid date format",
+    }),
 });
 
 export const syllabusTypeSchema = z.object({
@@ -211,14 +201,24 @@ export const syllabusTypeSchema = z.object({
 });
 
 export const timeTableSchema = z.object({
-  time_table_id: z.string().length(6, "Time table ID must be 6 characters long"),
+  time_table_id: z
+    .string()
+    .length(6, "Time table ID must be 6 characters long"),
   subject: z.string().min(1, "Subject is required"),
-  teacher: z.string().min(1, "Teacher is required").max(20, "Teacher name cannot exceed 20 characters"),
-  time: z.string().regex(/^([01]\d|2[0-3]):([0-5]\d):([0-5]\d)$/, "Time must be in HH:MM:SS format"),
-  effective_date: z.string().regex(/^\d{4}-\d{2}-\d{2}$/, "Date must be in YYYY-MM-DD format"),
+  teacher: z
+    .string()
+    .min(1, "Teacher is required")
+    .max(20, "Teacher name cannot exceed 20 characters"),
+  time: z
+    .string()
+    .regex(
+      /^([01]\d|2[0-3]):([0-5]\d):([0-5]\d)$/,
+      "Time must be in HH:MM:SS format"
+    ),
+  effective_date: z
+    .string()
+    .regex(/^\d{4}-\d{2}-\d{2}$/, "Date must be in YYYY-MM-DD format"),
 });
-
-
 
 // Infer the type from the schema
 export type HallTicket = z.infer<typeof hallTicketSchema>;
@@ -235,7 +235,9 @@ export const markSheetSchema = z.object({
 export const resultSheetSchema = z.object({
   student: z.string().min(1, "Student is required"),
   result_data: z.record(z.any()),
-  total_marks_obtained: z.number().min(0, "Total marks obtained should be a positive number"),
+  total_marks_obtained: z
+    .number()
+    .min(0, "Total marks obtained should be a positive number"),
   rank: z.number().min(0, "Rank should be a positive number"),
 });
 

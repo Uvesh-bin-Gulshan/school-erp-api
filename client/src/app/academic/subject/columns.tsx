@@ -6,9 +6,9 @@ import { AiFillDelete } from "react-icons/ai";
 import { subjectFields } from '@/lib/fields';
 import { routes } from "@/lib/routePath";
 import { MdModeEdit } from "react-icons/md";
-import GenericUpdateForm from "@/app/_component/GenericForm";
-import DeleteButton from "@/app/_component/DeleteButton";
-import GenericForm from "@/app/_component/GenericForm";
+import GenericUpdateForm from "@/components/custom-components/GenericForm";
+import DeleteButton from "@/components/custom-components/DeleteButton";
+import GenericForm from "@/components/custom-components/GenericForm";
 import { subjectSchema } from "@/lib/zodschema";
 
 export type Subject = {

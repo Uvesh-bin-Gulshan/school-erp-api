@@ -1,16 +1,18 @@
 "use client";
 
-import React from 'react';
-import dynamic from 'next/dynamic';
-import Sidebar from '@/app/_component/SideBar';
-import { AdmissionProvider, useAdmissionContext } from './AdmissionContext';
+import React from "react";
+import dynamic from "next/dynamic";
+import Sidebar from "@/components/custom-components/SideBar";
+import { AdmissionProvider, useAdmissionContext } from "./AdmissionContext";
 
 const items = [
   { href: "/", label: "Home" },
   { href: "/components", label: "Components" },
 ];
 
-const DynamicViewAdmissions = dynamic(() => import('./ViewAdmissions'), { ssr: false });
+const DynamicViewAdmissions = dynamic(() => import("./ViewAdmissions"), {
+  ssr: false,
+});
 
 const PageContent = () => {
   const { data, loading } = useAdmissionContext();
@@ -20,7 +22,7 @@ const PageContent = () => {
   }
 
   // Ensure data is not empty and get the first admission record
-  const admissionData = data.length > 0 ? data[0] : null;
+  const admissionData = data && data.length > 0 ? data[0] : null;
 
   if (!admissionData) {
     return <div>No admission data available.</div>;
@@ -53,17 +55,23 @@ const PageContent = () => {
     required_donation: admissionData.required_donation,
     lc_given: admissionData.lc_given,
   };
-console.log(basic_info,"basic page")
+  console.log(basic_info, "basic page");
   return (
     <Sidebar breadcrumbs={items}>
       <div className="h-[73vh] mt-10">
-        <DynamicViewAdmissions data={data} basic_info={basic_info} other_info={other_info} />
+        <DynamicViewAdmissions
+          data={data}
+          basic_info={basic_info}
+          other_info={other_info}
+        />
       </div>
     </Sidebar>
   );
 };
 
-const DynamicPageContent = dynamic(() => Promise.resolve(PageContent), { ssr: false });
+const DynamicPageContent = dynamic(() => Promise.resolve(PageContent), {
+  ssr: false,
+});
 
 const Page: React.FC = () => {
   return (

@@ -5,8 +5,8 @@ import { AiFillDelete } from "react-icons/ai";
 import { courseFields } from '@/lib/fields';
 import { routes } from "@/lib/routePath";
 import { MdModeEdit } from "react-icons/md";
-import DeleteButton from "@/app/_component/DeleteButton";
-import GenericForm from "@/app/_component/GenericForm";
+import DeleteButton from "@/components/custom-components/DeleteButton";
+import GenericForm from "@/components/custom-components/GenericForm";
 import { courseSchema } from "@/lib/zodschema";
 
 export type Course = {

@@ -1,11 +1,11 @@
 import React from 'react';
 import ViewTimeTable from './ViewTimeTable';
-import Sidebar from '@/app/_component/SideBar';
-import { BreadcrumbWithCustomSeparator } from '@/app/_component/BreadCrumb';
+import Sidebar from '@/components/custom-components/SideBar';
+import { BreadcrumbWithCustomSeparator } from '@/components/custom-components/BreadCrumb';
 import { getTimeTableList } from '@/lib/services';
 import { timetableFields } from '@/lib/fields';
 import { routes } from '@/lib/routePath';
-import GenericForm from '@/app/_component/GenericForm';
+import GenericForm from '@/components/custom-components/GenericForm';
 import { timeTableSchema } from '@/lib/zodschema';
 
 const items = [
